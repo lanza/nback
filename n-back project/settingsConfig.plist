@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<string>int</string>
+		<key>key</key>
+		<string>nbackLevel</string>
+		<key>label</key>
+		<string>n-back level</string>
+		<key>values</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>3</integer>
+			<integer>4</integer>
+			<integer>5</integer>
+			<integer>6</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>int</string>
+		<key>key</key>
+		<string>numberOfTurns</string>
+		<key>label</key>
+		<string>number of turns</string>
+		<key>values</key>
+		<array>
+			<integer>10</integer>
+			<integer>11</integer>
+			<integer>12</integer>
+			<integer>13</integer>
+			<integer>14</integer>
+			<integer>15</integer>
+			<integer>16</integer>
+			<integer>17</integer>
+			<integer>18</integer>
+			<integer>19</integer>
+			<integer>20</integer>
+			<integer>21</integer>
+			<integer>22</integer>
+			<integer>23</integer>
+			<integer>24</integer>
+			<integer>25</integer>
+			<integer>26</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>double</string>
+		<key>key</key>
+		<string>secondsBetweenTurns</string>
+		<key>label</key>
+		<string>seconds between turns</string>
+		<key>values</key>
+		<array>
+			<real>0.5</real>
+			<real>1</real>
+			<real>1.5</real>
+			<real>2</real>
+			<real>2.5</real>
+			<integer>3</integer>
+			<real>3.5</real>
+			<integer>4</integer>
+			<real>4.5</real>
+			<integer>5</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>double</string>
+		<key>key</key>
+		<string>blueSquareDuration</string>
+		<key>label</key>
+		<string>duration of blue squares</string>
+		<key>values</key>
+		<array>
+			<real>0.1</real>
+			<real>0.2</real>
+			<real>0.3</real>
+			<real>0.4</real>
+			<real>0.5</real>
+			<real>0.6</real>
+			<real>0.7</real>
+			<real>0.8</real>
+			<real>0.9</real>
+			<integer>1</integer>
+		</array>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,19 @@
+rearrange game mode into GameController and GameViewController.
+Implement audio only mode.
+Implement squares only mode.
+    Implement squares changing colors.
+    Implement squares having numbers that you have to add.
+decorate front page
+exit button in the game
+more information in OneHistoryController
+extremely detailed view? history of squares/letters and what you selected?
+
+On HistoryController, put the date as the view title and put only hte play time in the individual cells.
+
+Reimplement the square color timer and time between turns from the settings tab.
+
+
+
+
+Create a page showing in detail all the statistics. IE total correct/total wrong, averages, etc.
+    Include some sort of graphing feature along with the statistics page.

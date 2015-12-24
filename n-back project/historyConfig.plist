@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>sections</key>
+	<array>
+		<dict>
+			<key>elements</key>
+			<array>
+				<dict>
+					<key>label</key>
+					<string>Date Played</string>
+					<key>key</key>
+					<string>date</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>elements</key>
+			<array>
+				<dict>
+					<key>label</key>
+					<string>Correct</string>
+					<key>key</key>
+					<string>totalCorrect</string>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Out Of</string>
+					<key>key</key>
+					<string>outOf</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

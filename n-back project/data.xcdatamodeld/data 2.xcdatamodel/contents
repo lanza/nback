@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8166.2" systemVersion="15A226f" minimumToolsVersion="Automatic">
+    <entity name="GameResult" representedClassName=".GameResult" syncable="YES">
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <attribute name="lettersCorrect" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="lettersIncorrect" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="lettersMatched" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="squaresCorrect" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="squaresIncorrect" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="squaresMatched" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="trials" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GameResult" positionX="-63" positionY="-18" width="128" height="165"/>
+    </elements>
+</model>
