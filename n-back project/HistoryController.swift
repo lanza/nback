@@ -87,6 +87,10 @@ class HistoryController: UITableViewController, NSFetchedResultsControllerDelega
         cell.scoreLabel.text = result.scoreString
         cell.backAndTurnsLabel.text = result.backAndTurnsString
         
+       
+        
+
+        
     
         return cell
     }

@@ -1,5 +1,5 @@
 //
-//  GameResult+CoreDataProperties.swift
+//  BackTypeResult+CoreDataProperties.swift
 //  n-back project
 //
 //  Created by Nathan Lanza on 12/30/15.
@@ -12,12 +12,12 @@
 import Foundation
 import CoreData
 
-extension GameResult {
+extension BackTypeResult {
 
-    @NSManaged var date: NSDate!  
-    @NSManaged var nbackLevel: NSNumber!
-    @NSManaged var numberOfTurns: NSNumber!
-    @NSManaged var secondsBetweenTurns: NSNumber!
-    @NSManaged var backTypes: Set<BackTypeResult>!
+    @NSManaged var backType: NSNumber?
+    @NSManaged var correct: NSNumber? // true true
+    @NSManaged var incorrect: NSNumber? // false true
+    @NSManaged var matches: NSNumber? // true x
+    @NSManaged var game: GameResult?
 
 }

@@ -1,12 +1,5 @@
 import UIKit
 
-struct DefaultsConstants {
-    static var nbackLevelKey = "nbackLevel"
-    static var numberOfTurnsKey = "numberOfTurns"
-    static var secondsBetweenTurnsKey = "secondsBetweenTurns"
-    static var blueSquareDurationKey = "blueSquareDuration"
-}
-
 class SettingsController: UITableViewController {
     
     var defaults = NSUserDefaults.standardUserDefaults()

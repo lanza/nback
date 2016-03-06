@@ -13,6 +13,18 @@ import UIKit
 class OneHistoryController: UITableViewController {
     var gameResult: GameResult!
     
+    override func viewDidLoad() {
+                
+        
+        for backType in gameResult.backTypes {
+            print(backType)
+            print(backType.correct)
+            print(backType.incorrect)
+            print(backType.backType)
+            print(backType.matches)
+        }
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: Constants.reuseIdentifier)
         
@@ -24,7 +36,6 @@ class OneHistoryController: UITableViewController {
         let rows = section["elements"]! as! [AnyObject]
         let row = rows[indexPath.row] as! [String:String]
         let key = row["key"]!
-        
         
         if let theInt = gameResult.valueForKey(key)! as? Int {
             cell.detailTextLabel?.text = String(theInt)

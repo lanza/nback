@@ -5,33 +5,41 @@ import CoreData
 class GameResult: NSManagedObject {
 
     var totalCorrect: Int {
-        return lettersCorrect!.integerValue + squaresCorrect!.integerValue
+        var temporary = 0
+        for backType in backTypes!  {
+            temporary += Int(backType.correct!)
+        }
+        return temporary
     }
     
     var outOf: Int {
-        return lettersIncorrect!.integerValue + squaresIncorrect!.integerValue + lettersMatched!.integerValue + squaresMatched!.integerValue
+        
+        var temporary = 0
+        for backType in backTypes! {
+            temporary += (Int(backType.incorrect!) + Int(backType.matches!))
+        }
+        
+        return temporary
     }
     
     var scoreString: String {
         return "Score: \(self.totalCorrect)/\(self.outOf)"
     }
+    
     var dateString: String {
         let formatter = NSDateFormatter()
         formatter.timeStyle = .NoStyle
         formatter.dateStyle = .MediumStyle
-        let dateString = formatter.stringFromDate(self.date!)
+        let dateString = formatter.stringFromDate(self.date)
         formatter.timeStyle = .MediumStyle
         formatter.dateStyle = .NoStyle
-        let timeString = formatter.stringFromDate(self.date!)
+        let timeString = formatter.stringFromDate(self.date)
         return "Played on: " + dateString + " at " + timeString
     }
     var backAndTurnsString: String {
-        return "\(self.nbackLevel!)-back with \(self.numberOfTurns!) turns"
+        return "\(self.nbackLevel)-back with \(self.numberOfTurns) turns"
     }
 }
-
-import Foundation
-import CoreData
 
 struct Constants {
     static let gameResult = "GameResult"
@@ -48,9 +56,14 @@ struct Constants {
     static let numberOfTurnsKey = "numberOfTurns"
     static let nbackLevelKey = "nbackLevel"
     static let secondsBetweenTurnsKey = "secondsBetweenTurns"
+    static let blueSquareDurationKey = "blueSquareDuration"
+    
+    //here lies new stuff
+    static let backTypesKey = "backTypes"
+    //here lies new stuff
     
     static let lastGameTotalCorrectKey = "lastGameTotalCorrect"
-    //static let lastGame
+    
     
     static let reuseIdentifier = "cell"
     

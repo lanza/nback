@@ -18,33 +18,52 @@ class NewGameController: UIViewController {
     
     @IBOutlet weak var turnsButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var audioButton: UIButton!
     
     @IBAction func turnsButtonPushed(sender: AnyObject) {
-        var currentTurns = self.defaults.valueForKey(DefaultsConstants.numberOfTurnsKey) as! Int
+        var currentTurns = self.defaults.valueForKey(Constants.numberOfTurnsKey) as! Int
         switch (currentTurns) {
         case 26:
             currentTurns = 10
         default:
-            currentTurns++
+            currentTurns += 1
         }
-        self.defaults.setValue(currentTurns, forKey: DefaultsConstants.numberOfTurnsKey)
+        self.defaults.setValue(currentTurns, forKey: Constants.numberOfTurnsKey)
         
         self.turnsButton.setTitle("\(currentTurns) turns", forState: .Normal)
         self.turnsButton.setTitle("\(currentTurns) turns", forState: .Selected)
         
     }
     @IBAction func backButtonPushed(sender: AnyObject) {
-        var currentBack = self.defaults.valueForKey(DefaultsConstants.nbackLevelKey) as! Int
+        var currentBack = self.defaults.valueForKey(Constants.nbackLevelKey) as! Int
         switch (currentBack) {
         case 6:
             currentBack = 1
         default:
-            currentBack++
+            currentBack += 1
         }
-        self.defaults.setValue(currentBack, forKey: DefaultsConstants.nbackLevelKey)
+        self.defaults.setValue(currentBack, forKey: Constants.nbackLevelKey)
         
         self.backButton.setTitle("\(currentBack)-back", forState: .Normal)
         self.backButton.setTitle("\(currentBack)-back", forState: .Selected)
+    }
+    @IBAction func audioButtonPushed(sender: AnyObject) {
+        var backTypes = self.defaults.valueForKey(Constants.backTypesKey) as! [Int]
+        
+        if backTypes.contains(2) {
+            let indexOfNumbersType = backTypes.indexOf(2)
+            backTypes.removeAtIndex(indexOfNumbersType!)
+            self.defaults.setValue(backTypes, forKey: Constants.backTypesKey)
+            
+            
+            self.audioButton.setTitle("Audio Off", forState: .Normal)
+            self.audioButton.setTitle("Audio Off", forState: .Selected)
+        } else {
+            backTypes.append(2)
+            self.defaults.setValue(backTypes, forKey: Constants.backTypesKey)
+            self.audioButton.setTitle("Audio On", forState: .Normal)
+            self.audioButton.setTitle("Audio On", forState: .Selected)
+        }
     }
     
     
@@ -63,8 +82,8 @@ class NewGameController: UIViewController {
             self.lastPlayLabel.text = "Welcome to N-Back!"
         }
         
-        let back = self.defaults.valueForKey(DefaultsConstants.nbackLevelKey) as! Int
-        let turns = self.defaults.valueForKey(DefaultsConstants.numberOfTurnsKey) as! Int
+        let back = self.defaults.valueForKey(Constants.nbackLevelKey) as! Int
+        let turns = self.defaults.valueForKey(Constants.numberOfTurnsKey) as! Int
         
         self.backButton.setTitle("\(back)-back", forState: .Normal)
         self.backButton.setTitle("\(back)-back", forState: .Selected)

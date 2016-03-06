@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LQh-tb-07I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LQh-tb-07I">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -9,7 +9,7 @@
         <!--Play-->
         <scene sceneID="eXc-ot-5cJ">
             <objects>
-                <viewController id="GRL-F0-161" customClass="GameController" customModule="n_back_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GRL-F0-161" customClass="GameController" customModule="muffin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KfU-7k-PcV"/>
                         <viewControllerLayoutGuide type="bottom" id="cTc-OX-Axg"/>
@@ -20,28 +20,24 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwA-Tf-GfS">
                                 <rect key="frame" x="112" y="140" width="96" height="96"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iwA-Tf-GfS" secondAttribute="height" multiplier="1:1" id="NSz-Za-0Hc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6h-WV-QO6">
                                 <rect key="frame" x="208" y="140" width="96" height="96"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="u6h-WV-QO6" secondAttribute="height" multiplier="1:1" id="LuW-nq-58X"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQd-Bj-8hL">
                                 <rect key="frame" x="16" y="140" width="96" height="96"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cQd-Bj-8hL" secondAttribute="height" multiplier="1:1" id="x3X-BF-1qb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PT5-HG-qDR">
                                 <rect key="frame" x="112" y="236" width="96" height="96"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PT5-HG-qDR" secondAttribute="height" multiplier="1:1" id="dfM-XE-n3S"/>
                                 </constraints>
@@ -53,7 +49,6 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6v-GV-wLE">
                                 <rect key="frame" x="208" y="236" width="96" height="96"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="h6v-GV-wLE" secondAttribute="height" multiplier="1:1" id="aMd-gq-7Cl"/>
                                 </constraints>
@@ -65,7 +60,6 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7U-2L-lSy">
                                 <rect key="frame" x="16" y="236" width="96" height="96"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="e7U-2L-lSy" secondAttribute="height" multiplier="1:1" id="3tR-UH-JEe"/>
                                 </constraints>
@@ -77,7 +71,6 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-dN-nQp">
                                 <rect key="frame" x="112" y="332" width="96" height="96"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bF9-dN-nQp" secondAttribute="height" multiplier="1:1" id="1Qd-j3-w1W"/>
                                 </constraints>
@@ -89,7 +82,6 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VhJ-kV-Vkp">
                                 <rect key="frame" x="16" y="332" width="96" height="96"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="VhJ-kV-Vkp" secondAttribute="height" multiplier="1:1" id="957-be-iOI"/>
                                 </constraints>
@@ -106,16 +98,15 @@
                                     <constraint firstAttribute="height" constant="85" id="Dxh-xW-6Yt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="Letter">
+                                <state key="normal" title="Number">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="letterButton:" destination="GRL-F0-161" eventType="touchUpInside" id="lfI-yg-dvn"/>
+                                    <action selector="numberButton:" destination="GRL-F0-161" eventType="touchUpInside" id="jvn-et-zd5"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lH-X3-doD">
                                 <rect key="frame" x="208" y="332" width="96" height="96"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1lH-X3-doD" secondAttribute="height" multiplier="1:1" id="j1i-F6-bb3"/>
                                 </constraints>
@@ -163,6 +154,14 @@
                                     <constraint firstAttribute="height" constant="55" id="x5m-bk-GWd"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajJ-gc-0st">
+                                <rect key="frame" x="145" y="0.0" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Quit"/>
+                                <connections>
+                                    <action selector="quitButton:" destination="GRL-F0-161" eventType="touchUpInside" id="TwL-ZN-dJf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -235,7 +234,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="backLabel" destination="X8c-tN-U6R" id="ldT-ZE-QHI"/>
-                        <outlet property="letterMatchButton" destination="ufe-Hr-n90" id="0ju-HD-aDk"/>
+                        <outlet property="numberMatchButton" destination="ufe-Hr-n90" id="gdU-ZG-36t"/>
                         <outlet property="squareMatchButton" destination="sbR-MR-bBe" id="DXY-oR-WCM"/>
                         <outlet property="turnsLabel" destination="m9i-Io-HwF" id="auP-7p-WzF"/>
                         <outletCollection property="squares" destination="cQd-Bj-8hL" collectionClass="NSMutableArray" id="cve-OT-hFQ"/>
@@ -256,7 +255,7 @@
         <!--Play-->
         <scene sceneID="R2M-Wh-fLj">
             <objects>
-                <viewController id="pkB-7K-hfz" customClass="NewGameController" customModule="n_back_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pkB-7K-hfz" customClass="NewGameController" customModule="muffin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kgU-Tg-wGa"/>
                         <viewControllerLayoutGuide type="bottom" id="6jD-WH-4Re"/>
@@ -328,6 +327,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="96" height="65"/>
                                         <color key="backgroundColor" red="0.71900289566295328" green="0.69767701876749988" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Audio On"/>
+                                        <connections>
+                                            <action selector="audioButtonPushed:" destination="pkB-7K-hfz" eventType="touchUpInside" id="rGS-Bg-D4r"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJP-EK-HDY">
                                         <rect key="frame" x="96" y="0.0" width="96" height="65"/>
@@ -376,6 +378,7 @@
                     <tabBarItem key="tabBarItem" title="Play" id="KpO-gm-P1Z"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="audioButton" destination="f0q-6M-tdS" id="Bdh-pJ-gtZ"/>
                         <outlet property="backButton" destination="t9e-ea-nKN" id="EiJ-I1-Ivm"/>
                         <outlet property="lastPlayLabel" destination="AOj-sq-OUh" id="Lly-dY-knt"/>
                         <outlet property="turnsButton" destination="hkU-uq-lz6" id="wCg-zH-QpO"/>
@@ -443,24 +446,31 @@
         <!--Historical Dates Controller-->
         <scene sceneID="kMb-oJ-04b">
             <objects>
-                <tableViewController id="aeE-ON-mJf" customClass="HistoricalDatesController" customModule="n_back_project" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="jds-7F-V4i">
+                <tableViewController id="aeE-ON-mJf" customClass="HistoricalDatesController" customModule="muffin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="32" sectionHeaderHeight="22" sectionFooterHeight="22" id="jds-7F-V4i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="L2d-4c-t1x" rowHeight="65" style="IBUITableViewCellStyleDefault" id="Qnj-AJ-ryN">
-                                <rect key="frame" x="0.0" y="86" width="320" height="65"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="L2d-4c-t1x" detailTextLabel="ZE5-IK-GI6" rowHeight="32" style="IBUITableViewCellStyleValue1" id="Qnj-AJ-ryN">
+                                <rect key="frame" x="0.0" y="86" width="320" height="32"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qnj-AJ-ryN" id="60m-TE-Ib5">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="31"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L2d-4c-t1x">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="64"/>
+                                            <rect key="frame" x="15" y="6" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZE5-IK-GI6">
+                                            <rect key="frame" x="243" y="6" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -484,26 +494,26 @@
         <!--Settings-->
         <scene sceneID="Tok-dW-wd8">
             <objects>
-                <tableViewController id="rTo-PP-YuB" customClass="SettingsController" customModule="n_back_project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rTo-PP-YuB" customClass="SettingsController" customModule="muffin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1po-eE-Ygs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="custom" id="KbL-ik-hz4" customClass="CustomModeCell" customModule="n_back_project" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="custom" id="KbL-ik-hz4" customClass="CustomModeCell" customModule="muffin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KbL-ik-hz4" id="dan-Kf-dfC">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9W7-tw-03Z">
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9W7-tw-03Z">
                                             <rect key="frame" x="255" y="6" width="51" height="31"/>
                                             <connections>
                                                 <action selector="switchChanged:" destination="KbL-ik-hz4" eventType="valueChanged" id="Kxv-oh-Zth"/>
                                             </connections>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable Custom Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsy-4c-QIZ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Custom Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsy-4c-QIZ">
                                             <rect key="frame" x="8" y="11" width="164" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -560,7 +570,7 @@
         <!--One History Controller-->
         <scene sceneID="HVO-yW-zL6">
             <objects>
-                <tableViewController id="G7M-7m-oJO" customClass="OneHistoryController" customModule="n_back_project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="G7M-7m-oJO" customClass="OneHistoryController" customModule="muffin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="kY0-7b-LZU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -660,13 +670,13 @@
         <!--History Controller-->
         <scene sceneID="FhV-x5-eds">
             <objects>
-                <tableViewController id="TcJ-hf-dLB" customClass="HistoryController" customModule="n_back_project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="TcJ-hf-dLB" customClass="HistoryController" customModule="muffin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" id="lqm-e5-v3R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="65" id="2Mx-iB-ycJ" customClass="SingleGameHistoryCell" customModule="n_back_project" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="65" id="2Mx-iB-ycJ" customClass="SingleGameHistoryCell" customModule="muffin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Mx-iB-ycJ" id="LbH-sv-frB">
@@ -729,7 +739,7 @@
         <!--Option Controller-->
         <scene sceneID="B0n-TY-S5k">
             <objects>
-                <tableViewController id="bEP-uj-AwE" customClass="OptionController" customModule="n_back_project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bEP-uj-AwE" customClass="OptionController" customModule="muffin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="r17-bl-tej">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
