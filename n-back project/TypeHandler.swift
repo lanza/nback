@@ -47,7 +47,7 @@ class TypeHandler: NSObject {
         case .Numbers:
                 elementsToChooseFrom = lettersList
         }
-        for (var i = 0; i <= self.numberOfTurns; i++) {
+        for i in 0...numberOfTurns {
             let index = Int(arc4random_uniform(UInt32(elementsToChooseFrom.count - 1)))
             let randomElement = elementsToChooseFrom[index]
             sequence.append(randomElement)
