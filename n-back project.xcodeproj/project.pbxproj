@@ -10,7 +10,6 @@
 		D80979AD1B755CCC0038C832 /* HistoricalDatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80979AC1B755CCC0038C832 /* HistoricalDatesController.swift */; };
 		D80A881C1B61EECC00489469 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A881B1B61EECC00489469 /* GameController.swift */; };
 		D80E537D1C2A1E0D00FEE81F /* NBackBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E537C1C2A1E0D00FEE81F /* NBackBrain.swift */; };
-		D80E53811C2A222E00FEE81F /* TimerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E53801C2A222E00FEE81F /* TimerBrain.swift */; };
 		D81FF77E1C2BA875000311CE /* TypeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81FF77D1C2BA875000311CE /* TypeHandler.swift */; };
 		D83802841B720E6F007AED26 /* settingsConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D83802831B720E6F007AED26 /* settingsConfig.plist */; };
 		D83965A51B743B1900F4D3D8 /* NewGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83965A41B743B1900F4D3D8 /* NewGameController.swift */; };
@@ -39,7 +38,6 @@
 		D80979AC1B755CCC0038C832 /* HistoricalDatesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricalDatesController.swift; sourceTree = "<group>"; };
 		D80A881B1B61EECC00489469 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameController.swift; path = ../GameController.swift; sourceTree = "<group>"; };
 		D80E537C1C2A1E0D00FEE81F /* NBackBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBackBrain.swift; sourceTree = "<group>"; };
-		D80E53801C2A222E00FEE81F /* TimerBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerBrain.swift; path = ../TimerBrain.swift; sourceTree = "<group>"; };
 		D81FF77D1C2BA875000311CE /* TypeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeHandler.swift; sourceTree = "<group>"; };
 		D83802831B720E6F007AED26 /* settingsConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settingsConfig.plist; sourceTree = "<group>"; };
 		D83965A41B743B1900F4D3D8 /* NewGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameController.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 		D81FF77C1C2A4E35000311CE /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				D80E53801C2A222E00FEE81F /* TimerBrain.swift */,
 				D81FF77D1C2BA875000311CE /* TypeHandler.swift */,
 				D80E537C1C2A1E0D00FEE81F /* NBackBrain.swift */,
 			);
@@ -213,12 +210,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Nathan Lanza";
 				TargetAttributes = {
 					D84E782B1B61E200003A719F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 72MNHNDUNH;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -271,7 +269,6 @@
 				D83965A51B743B1900F4D3D8 /* NewGameController.swift in Sources */,
 				D89F035B1C29404F00492A24 /* SingleGameHistoryCell.swift in Sources */,
 				D84E78301B61E200003A719F /* AppDelegate.swift in Sources */,
-				D80E53811C2A222E00FEE81F /* TimerBrain.swift in Sources */,
 				D8FE3BDC1B748EC900BF26EB /* CustomModeCell.swift in Sources */,
 				D872A4581B71E241002BA647 /* SettingsController.swift in Sources */,
 				D80979AD1B755CCC0038C832 /* HistoricalDatesController.swift in Sources */,
@@ -396,13 +393,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "n-back project/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBack;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanlanza.n-back-project";
 				PRODUCT_NAME = "n-back project";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -411,12 +412,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nathan Lanza (8T47LZTNDY)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "n-back project/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBack;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanlanza.n-back-project";
 				PRODUCT_NAME = "n-back project";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

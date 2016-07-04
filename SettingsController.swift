@@ -2,27 +2,27 @@ import UIKit
 
 class SettingsController: UITableViewController {
     
-    var defaults = NSUserDefaults.standardUserDefaults()
+    var defaults = UserDefaults.standard()
     
     var rootArray: [[String: AnyObject]] {
-        let configPlistURL = NSBundle.mainBundle().URLForResource("settingsConfig", withExtension: "plist")
-        return NSArray(contentsOfURL: configPlistURL!) as! [[String: AnyObject]]
+        let configPlistURL = Bundle.main().urlForResource("settingsConfig", withExtension: "plist")
+        return NSArray(contentsOf: configPlistURL!) as! [[String: AnyObject]]
     }
     
     var selectable: Bool {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        return (defaults.valueForKey("customMode") as! Bool)
+        let defaults = UserDefaults.standard()
+        return (defaults.value(forKey: "customMode") as! Bool)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         } else {
@@ -30,7 +30,7 @@ class SettingsController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return "HI"
         } else {
@@ -38,49 +38,49 @@ class SettingsController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("custom", forIndexPath: indexPath) as! CustomModeCell
+        if (indexPath as NSIndexPath).section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "custom", for: indexPath) as! CustomModeCell
             cell.settingsController = self
             
-            cell.customModeSwitch.on = self.selectable
+            cell.customModeSwitch.isOn = self.selectable
             
             return cell
         } else {
             
-            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.reuseIdentifier, forIndexPath: indexPath)
-            let row = rootArray[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reuseIdentifier, for: indexPath)
+            let row = rootArray[(indexPath as NSIndexPath).row]
             
             let label = row["label"] as! String
             cell.textLabel!.text = label
             
             let key = row["key"] as! String
-            if let currentValue = defaults.valueForKey(key) {
+            if let currentValue = defaults.value(forKey: key) {
                 cell.detailTextLabel!.text = String(currentValue)
             }
             
             if !selectable {
-                cell.backgroundColor = UIColor.lightGrayColor()
-                cell.textLabel?.textColor = UIColor.grayColor()
+                cell.backgroundColor = UIColor.lightGray()
+                cell.textLabel?.textColor = UIColor.gray()
             } else {
-                cell.backgroundColor = UIColor.whiteColor()
-                cell.textLabel?.textColor = UIColor.blackColor()
+                cell.backgroundColor = UIColor.white()
+                cell.textLabel?.textColor = UIColor.black()
             }
             
             return cell
         }
     }
     
-    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return selectable
     }
     
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         let ovc = segue.destinationViewController as! OptionController
-        let row = tableView.indexPathForCell(sender as! UITableViewCell)?.row
+        let row = (tableView.indexPath(for: sender as! UITableViewCell) as NSIndexPath?)?.row
         ovc.rowInformation = rootArray[row!]
     }
     

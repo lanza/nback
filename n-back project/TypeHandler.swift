@@ -1,53 +1,52 @@
-//
-//  TypeHandler.swift
-//  n-back project
-//
-//  Created by Nathan Lanza on 12/23/15.
-//  Copyright © 2015 Nathan Lanza. All rights reserved.
-//
-
 import UIKit
 
 enum BackType: Int {
-    case Squares = 1
-    case Numbers = 2
+    case squares = 1
+    case numbers = 2
 }
 
 let squaresList = ["1","2","3","4","5","6","7","8","9"]
 let lettersList = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
+protocol BackTypeProtocol {
+    associatedtype Element
+    var elements: [Element] { get }
+}
 
+struct Squares: BackTypeProtocol {
+    let elements = [1,2,3,4,5,6,7,8,9]
+}
 
-class TypeHandler: NSObject {
+struct Letters: BackTypeProtocol {
+    let elements = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+}
+
+//TODO: Implement protocol?
+
+class TypeHandler {
     
-    var nbackLevel: Int?
-    var backType: BackType?
-    var numberOfTurns: Int?
+    var nbackLevel: Int
+    var backType: BackType
+    var numberOfTurns: Int
     
-    convenience init(nbackLevel: Int, backType: BackType, numberOfTurns: Int) {
-        self.init()
+    init(nbackLevel: Int, backType: BackType, numberOfTurns: Int) {
         self.nbackLevel = nbackLevel
         self.backType = backType
         self.numberOfTurns = numberOfTurns
     }
-    
-    override init() {
-        super.init()
-    }
-    
     
     func generateSequence() -> [String] {
         
         var sequence = [String]()
         var elementsToChooseFrom = [String]()
         
-        switch self.backType! {
-        case .Squares:
+        switch backType {
+        case .squares:
                 elementsToChooseFrom = squaresList
-        case .Numbers:
+        case .numbers:
                 elementsToChooseFrom = lettersList
         }
-        for i in 0...numberOfTurns {
+        for _ in 0..<numberOfTurns {
             let index = Int(arc4random_uniform(UInt32(elementsToChooseFrom.count - 1)))
             let randomElement = elementsToChooseFrom[index]
             sequence.append(randomElement)
@@ -55,16 +54,18 @@ class TypeHandler: NSObject {
         return sequence
     }
     
-    func compareElements(sequence: [String], userAnswers: [Bool]) -> (Int, Int, Int) {
-        
+    func compareElements(_ sequence: [String], userAnswers: [Bool]) -> (Int, Int, Int) {
+        print(sequence)
+        print(userAnswers)
+
         var correctAnswers = [Bool]()
         var totalMatches = 0
         
-        for (var i = nbackLevel!; i < sequence.count; i++) {
-            let turns = (latestTurn: sequence[i], nTurnsBack: sequence[i - nbackLevel!])
+        for i in nbackLevel ..< sequence.count {
+            let turns = (latestTurn: sequence[i], nTurnsBack: sequence[i - nbackLevel])
             let doTheyMatch = (turns.latestTurn == turns.nTurnsBack)
             correctAnswers.append(doTheyMatch)
-            if doTheyMatch { totalMatches++ }
+            if doTheyMatch { totalMatches += 1 }
         }
         
         var correct = 0
@@ -75,23 +76,23 @@ class TypeHandler: NSObject {
         var truePositive = 0
         
 
-        for (var i = 0; i < correctAnswers.count; i++) {
+        for i in 0..<correctAnswers.count {
             let answers = (correct: correctAnswers[i], user: userAnswers[i])
             
             switch answers {
             case (true,true):
-                truePositive++
+                truePositive += 1
             case (false,true):
-                falsePositive++
+                falsePositive += 1
             case (true,false):
-                falseNegative++
+                falseNegative += 1
             case (false,false):
-                trueNegative++
+                trueNegative += 1
             }
-            
-            correct = truePositive
-            incorrect = falsePositive
         }
+        
+        correct = truePositive
+        incorrect = falsePositive
         
         return (correct, incorrect, totalMatches)
     }

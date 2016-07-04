@@ -1,215 +1,182 @@
-        //
-        //  NBackBrain.swift
-        //  n-back project
-        //
-        //  Created by Nathan Lanza on 12/22/15.
-        //  Copyright © 2015 Nathan Lanza. All rights reserved.
-        //
+import UIKit
+import AVFoundation
+import CoreData
+
+
+class NBackBrain {
+    var defaults: UserDefaults!
+    
+    var nbackLevel: Int
+    var numberOfTurns: Int
+    var secondsBetweenTurns: Double
+    var blueSquareDuration: Double
+    var numbers: [String]
+    //here lies new stuff
+    var backTypes: [BackType]
+    //here lies new stuff
+    
+    init() {
+        defaults = UserDefaults.standard()
         
-        import UIKit
-        import AVFoundation
-        import CoreData
+        numbers = defaults.array(forKey: Constants.numbers) as! [String]
+        nbackLevel = defaults.integer(forKey: Constants.nbackLevelKey)
+        numberOfTurns = defaults.integer(forKey: Constants.numberOfTurnsKey)
+        secondsBetweenTurns = defaults.double(forKey: Constants.secondsBetweenTurnsKey)
+        blueSquareDuration = defaults.double(forKey: Constants.blueSquareDurationKey)
         
+        //here lies new stuff
+        backTypes = (defaults.array(forKey: Constants.backTypesKey) as! [Int]).map { BackType(rawValue: $0)! }
+    }
+    
+    //Game Objects
+    var notificationCenter: NotificationCenter!
+    var utterance: AVSpeechUtterance!
+    var speechSynthesizer: AVSpeechSynthesizer!
+    var timer: Timer!
+    
+    //Gameplay variables
+    var currentTurn = 0
+    var numberOrder = [String]();       var squareOrder = [String]()
+    var numbersMatched: Int!;           var squaresMatched: Int!
+    var numbersCorrect: Int!;           var squaresCorrect: Int!
+    var numbersIncorrect: Int!;         var squaresIncorrect: Int!
+    var numberHandler: TypeHandler!;    var squareHandler: TypeHandler!
+    
+    func startGame() {
+        notificationCenter = NotificationCenter.default()
         
-        class NBackBrain: NSObject {
-            
-            var defaults: NSUserDefaults!
-            
-            var nbackLevel: Int!
-            var numberOfTurns: Int!
-            var secondsBetweenTurns: Double!
-            var blueSquareDuration: Double!
-            var numbers: [String]!
-            //here lies new stuff
-            var backTypes: [BackType]!
-            //here lies new stuff
-            
-            override init() {
-                super.init()
-                self.defaults = NSUserDefaults.standardUserDefaults()
+        utterance = AVSpeechUtterance()
+        speechSynthesizer = AVSpeechSynthesizer()
+        
+        timer = Timer.scheduledTimer(timeInterval: secondsBetweenTurns, target: self, selector: #selector(NBackBrain.timerFire(_:)), userInfo: nil, repeats: true)
+        
+        for backType in backTypes {
+            switch backType {
+            case .squares:
+                userAnswersSquare = [Bool]()
                 
-                self.numbers = defaults.valueForKey("numbers") as! [String]
-                self.nbackLevel = defaults.valueForKey(Constants.nbackLevelKey) as! Int
-                self.numberOfTurns = defaults.valueForKey(Constants.numberOfTurnsKey) as! Int
-                self.secondsBetweenTurns = defaults.valueForKey(Constants.secondsBetweenTurnsKey) as! Double
-                self.blueSquareDuration = defaults.valueForKey(Constants.blueSquareDurationKey) as! Double
-                
-                //here lies new stuff
-                let tempBackTypes = defaults.valueForKey(Constants.backTypesKey) as! [Int]
-                self.backTypes = [BackType]()
-                for value in tempBackTypes {
-                    switch value {
-                    case 1:
-                        self.backTypes.append(.Squares)
-                    case 2:
-                        self.backTypes.append(.Numbers)
-                    default:
-                        assertionFailure()
-                    }
+                for _ in nbackLevel..<numberOfTurns {
+                    userAnswersSquare.append(false)
                 }
                 
-                //here lies new stuff
-            }
-            
-            //Game Objects
-            var notificationCenter: NSNotificationCenter!
-            var utterance: AVSpeechUtterance!
-            var speechSynthesizer: AVSpeechSynthesizer!
-            var timer: NSTimer!
-            
-            //Gameplay variables
-            
-            
-            
-            var currentTurn = 0
-            var numberOrder: [String] = [];       var squareOrder: [String] = []
-            var numbersMatched: Int?;             var squaresMatched: Int?
-            var numbersCorrect: Int?;             var squaresCorrect: Int?
-            var numbersIncorrect: Int?;           var squaresIncorrect: Int?
-            var numberHandler: TypeHandler?;      var squareHandler: TypeHandler?
-            
-            func startGame() {
-                self.notificationCenter = NSNotificationCenter.defaultCenter()
+                squareHandler = TypeHandler(nbackLevel: nbackLevel, backType: .squares, numberOfTurns: numberOfTurns)
+                squareOrder = squareHandler.generateSequence()
+            case .numbers:
+                userAnswersNumber = [Bool]()
                 
-                self.utterance = AVSpeechUtterance()
-                self.speechSynthesizer = AVSpeechSynthesizer()
-                
-                self.timer = NSTimer.scheduledTimerWithTimeInterval(self.secondsBetweenTurns, target: self, selector: Selector("timerFire:"), userInfo: nil, repeats: true)
-                
-                for backType in backTypes {
-                    switch backType {
-                    case .Squares:
-                        self.userAnswersSquare = [Bool]()
-                        
-                        for _ in nbackLevel...numberOfTurns {
-                            self.userAnswersSquare?.append(false)
-                        }
-                        
-                        self.squareHandler = TypeHandler(nbackLevel: self.nbackLevel, backType: .Squares, numberOfTurns: self.numberOfTurns)
-                        self.squareOrder = squareHandler!.generateSequence()
-                    case .Numbers:
-                        self.userAnswersNumber = [Bool]()
-                        
-                        for _ in nbackLevel...numberOfTurns {
-                            self.userAnswersNumber?.append(false)
-                        }
-                        
-                        self.numberHandler = TypeHandler(nbackLevel: self.nbackLevel, backType: .Numbers, numberOfTurns: self.numberOfTurns)
-                        self.numberOrder = numberHandler!.generateSequence()
-                    }
-                }
-            }
-            
-            func timerFire(sender: NSTimer) {
-                if currentTurn + 1 <= numberOfTurns {
-                    newTurn()
-                } else {
-                    sender.invalidate()
-                    
-                    for backType in self.backTypes {
-                        switch backType {
-                        case .Squares:
-                            self.squaresCorrect = 0
-                            self.squaresIncorrect = 0
-                            self.squaresMatched = 0
-                            (self.squaresCorrect!, self.squaresIncorrect!, self.squaresMatched!) = squareHandler!.compareElements(self.squareOrder, userAnswers: self.userAnswersSquare!)
-                        case .Numbers:
-                            self.numbersCorrect = 0
-                            self.numbersIncorrect = 0
-                            self.numbersMatched = 0
-                            (self.numbersCorrect!, self.numbersIncorrect!, self.numbersMatched!) = numberHandler!.compareElements(self.squareOrder, userAnswers: self.userAnswersNumber!)
-                        }
-                        
-                    }
-                    
-                    saveGameResults()
-                }
-            }
-            
-            func newTurn() {
-                var userInfo = [String:AnyObject]()
-                let shouldMatchButtonsShow = (currentTurn + 1 > nbackLevel)
-                currentTurn++
-                
-                userInfo.updateValue(shouldMatchButtonsShow, forKey: "activateButton")
-                
-                for backType in backTypes {
-                    switch backType {
-                    case .Squares:
-                        let square = Int(squareOrder[currentTurn] as String)
-                        userInfo.updateValue(square!, forKey: "squareNumber")
-                        let duration = self.blueSquareDuration
-                        userInfo.updateValue(duration, forKey: "duration")
-                        
-                    case .Numbers:
-                        newNumber()
-                    }
+                for _ in nbackLevel..<numberOfTurns {
+                    userAnswersNumber.append(false)
                 }
                 
-                let notification = NSNotification(name: "newTurn", object: nil, userInfo: userInfo as [NSObject : AnyObject])
-                notificationCenter.postNotification(notification)
-            }
-            
-            func saveGameResults() {
-                let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-                let result = NSEntityDescription.insertNewObjectForEntityForName(Constants.gameResult, inManagedObjectContext: context) as! GameResult
-                
-                for backType in backTypes {
-                    switch backType {
-                    case .Squares:
-                        let squareResult = NSEntityDescription.insertNewObjectForEntityForName("BackTypeResult", inManagedObjectContext: context) as! BackTypeResult
-                        
-                        squareResult.correct = self.squaresCorrect!
-                        squareResult.incorrect = self.squaresIncorrect!
-                        squareResult.matches = self.squaresMatched!
-                        squareResult.backType = 1
-                        squareResult.game = result
-                        result.backTypes!.insert(squareResult)
-                    case .Numbers:
-                        let numberResult = NSEntityDescription.insertNewObjectForEntityForName("BackTypeResult", inManagedObjectContext: context) as! BackTypeResult
-                        
-                        numberResult.correct = self.numbersCorrect!
-                        numberResult.incorrect = self.numbersIncorrect!
-                        numberResult.matches = self.numbersMatched!
-                        numberResult.backType = 2
-                        numberResult.game = result
-                        result.backTypes!.insert(numberResult)
-                    }
-                }
-                result.setValue(numberOfTurns, forKey: Constants.numberOfTurnsKey)
-                result.setValue(secondsBetweenTurns, forKey: Constants.secondsBetweenTurnsKey)
-                result.setValue(nbackLevel, forKey: Constants.nbackLevelKey)
-                result.setValue(NSDate(), forKey: Constants.dateKey)
-                
-                //Here should be code to send the gameTypes to the history database.
-                
-                try! context.save()
-                
-                let defaults = NSUserDefaults.standardUserDefaults()
-                defaults.setInteger(result.totalCorrect, forKey: "lastGameTotalCorrect")
-                defaults.setInteger(result.outOf, forKey: "lastGameOutOf")
-                defaults.setInteger(numberOfTurns, forKey: "lastGameNumberOfTurns")
-                defaults.setInteger(nbackLevel, forKey: "lastGameNbackLevel")
-                
-                let notification = NSNotification(name: "gameOver", object: nil, userInfo: nil)
-                notificationCenter.postNotification(notification)
-            }
-            
-            func newNumber() {
-                
-                let toBeSpoken = numberOrder[currentTurn]
-                let utterance = AVSpeechUtterance(string: toBeSpoken)
-                speechSynthesizer.speakUtterance(utterance)
-                
-            }
-            
-            var userAnswersSquare: [Bool]?
-            var userAnswersNumber: [Bool]?
-            
-            func squareButtonPushed() {
-                self.userAnswersSquare![currentTurn - nbackLevel] = true
-            }
-            func numberButtonPushed() {
-                self.userAnswersNumber![currentTurn - nbackLevel] = true
+                numberHandler = TypeHandler(nbackLevel: nbackLevel, backType: .numbers, numberOfTurns: numberOfTurns)
+                numberOrder = numberHandler.generateSequence()
             }
         }
+    }
+    
+    @objc func timerFire(_ sender: Timer) {
+        if currentTurn < numberOfTurns {
+            newTurn()
+        } else {
+            sender.invalidate()
+            
+            for backType in backTypes {
+                switch backType {
+                case .squares:
+                    squaresCorrect = 0
+                    squaresIncorrect = 0
+                    squaresMatched = 0
+                    (squaresCorrect!, squaresIncorrect!, squaresMatched!) = squareHandler.compareElements(squareOrder, userAnswers: userAnswersSquare)
+                case .numbers:
+                    numbersCorrect = 0
+                    numbersIncorrect = 0
+                    numbersMatched = 0
+                    (numbersCorrect!, numbersIncorrect!, numbersMatched!) = numberHandler.compareElements(numberOrder, userAnswers: userAnswersNumber)
+                }
+            }
+            saveGameResults()
+        }
+    }
+    
+    func newTurn() {
+        currentTurn += 1
+        var userInfo = [String:Any]()
+        let shouldMatchButtonsShow = currentTurn > nbackLevel
+        userInfo[ "activateButton"] = shouldMatchButtonsShow
+        
+        for backType in backTypes {
+            switch backType {
+            case .squares:
+                let square = Int(squareOrder[currentTurn-1])!
+                userInfo["squareNumber"] = square
+            case .numbers:
+                newNumber()
+            }
+        }
+        let notification = Notification(name: "newTurn" as Notification.Name, object: nil, userInfo: userInfo)
+        notificationCenter.post(notification)
+    }
+    
+    func saveGameResults() {
+        let context = (UIApplication.shared().delegate as! AppDelegate).managedObjectContext
+        let result = NSEntityDescription.insertNewObject(forEntityName: Constants.gameResult, into: context) as! GameResult
+        
+        for backType in backTypes {
+            switch backType {
+            case .squares:
+                let squareResult = NSEntityDescription.insertNewObject(forEntityName: "BackTypeResult", into: context) as! BackTypeResult
+                
+                squareResult.correct = squaresCorrect
+                squareResult.incorrect = squaresIncorrect
+                squareResult.matches = squaresMatched
+                squareResult.backType = 1
+                squareResult.game = result
+                result.backTypes!.insert(squareResult)
+            case .numbers:
+                let numberResult = NSEntityDescription.insertNewObject(forEntityName: "BackTypeResult", into: context) as! BackTypeResult
+                
+                numberResult.correct = numbersCorrect
+                numberResult.incorrect = numbersIncorrect
+                numberResult.matches = numbersMatched
+                numberResult.backType = 2
+                numberResult.game = result
+                result.backTypes!.insert(numberResult)
+            }
+        }
+        result.setValue(numberOfTurns, forKey: Constants.numberOfTurnsKey)
+        result.setValue(secondsBetweenTurns, forKey: Constants.secondsBetweenTurnsKey)
+        result.setValue(nbackLevel, forKey: Constants.nbackLevelKey)
+        result.setValue(Date(), forKey: Constants.dateKey)
+        
+        //Here should be code to send the gameTypes to the history database.
+        
+        try! context.save()
+        
+        let defaults = UserDefaults.standard()
+        defaults.set(result.totalCorrect, forKey: "lastGameTotalCorrect")
+        defaults.set(result.outOf, forKey: "lastGameOutOf")
+        defaults.set(numberOfTurns, forKey: "lastGameNumberOfTurns")
+        defaults.set(nbackLevel, forKey: "lastGameNbackLevel")
+        
+        let notification = Notification(name: Notification.Name("gameOver"), object: nil, userInfo: nil)
+        notificationCenter.post(notification)
+    }
+    
+    func newNumber() {
+        
+        let toBeSpoken = numberOrder[currentTurn-1]
+        let utterance = AVSpeechUtterance(string: toBeSpoken)
+        speechSynthesizer.speak(utterance)
+        
+    }
+    
+    var userAnswersSquare: [Bool]!
+    var userAnswersNumber: [Bool]!
+    
+    func squareButtonPushed() {
+        userAnswersSquare![currentTurn - nbackLevel - 1] = true
+    }
+    func numberButtonPushed() {
+        userAnswersNumber![currentTurn - nbackLevel - 1] = true
+    }
+}

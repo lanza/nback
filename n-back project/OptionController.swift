@@ -1,11 +1,3 @@
-//
-//  OptionController.swift
-//  n-back project
-//
-//  Created by Nathan Lanza on 8/7/15.
-//  Copyright © 2015 Nathan Lanza. All rights reserved.
-//
-
 import UIKit
 
 class OptionController: UITableViewController {
@@ -16,18 +8,18 @@ class OptionController: UITableViewController {
     }
     var currentValue: Double {
         get {
-            let defaults = NSUserDefaults.standardUserDefaults()
-            return defaults.valueForKey(rowInformation["key"] as! String)! as! Double
+            let defaults = UserDefaults.standard()
+            return defaults.value(forKey: rowInformation["key"] as! String)! as! Double
         }
         set {
-            let defaults = NSUserDefaults.standardUserDefaults()
+            let defaults = UserDefaults.standard()
             
             let key = rowInformation["key"] as! String
             
             if (rowInformation["type"] as! String) == "int" {
-                defaults.setInteger(Int(newValue), forKey: key)
+                defaults.set(Int(newValue), forKey: key)
             } else if (rowInformation["type"] as! String) == "double" {
-                defaults.setDouble(Double(newValue), forKey: key)
+                defaults.set(Double(newValue), forKey: key)
             }
         }
     }
@@ -37,15 +29,15 @@ class OptionController: UITableViewController {
         navigationItem.title = rowInformation["label"] as! String?
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return values.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.reuseIdentifier)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reuseIdentifier)
         
         let type = rowInformation["type"] as! String
-        let value = values[indexPath.row]
+        let value = values[(indexPath as NSIndexPath).row]
         
         if type == "double" {
             cell?.textLabel?.text = String(value)
@@ -53,22 +45,22 @@ class OptionController: UITableViewController {
             cell?.textLabel?.text = String(Int(value))
         }
         
-        cell?.textLabel?.text = String(values[indexPath.row])
+        cell?.textLabel?.text = String(values[(indexPath as NSIndexPath).row])
         
-        if values[indexPath.row] != currentValue {
-            cell?.accessoryType = UITableViewCellAccessoryType.None
+        if values[(indexPath as NSIndexPath).row] != currentValue {
+            cell?.accessoryType = UITableViewCellAccessoryType.none
         } else {
-            cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+            cell?.accessoryType = UITableViewCellAccessoryType.checkmark
         }
         
         return cell!
     }
     
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
         
-        cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+        cell?.accessoryType = UITableViewCellAccessoryType.checkmark
         
         
         currentValue = Double((cell?.textLabel?.text)!)!

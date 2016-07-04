@@ -1,23 +1,23 @@
 import UIKit
 import CoreData
 
-var dateFormatter = NSDateFormatter()
+var dateFormatter = DateFormatter()
 
 class HistoryController: UITableViewController, NSFetchedResultsControllerDelegate {
 
-    var date: NSDate!
+    var date: Date!
     
     var context: NSManagedObjectContext {
-        return (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        return (UIApplication.shared().delegate as! AppDelegate).managedObjectContext
     }
 
     // MARK: - Life Cycle
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
-        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.dateStyle = DateFormatter.Style.shortStyle
+        dateFormatter.timeStyle = DateFormatter.Style.shortStyle
         
         try! fetchedResultsController.performFetch()
         tableView.reloadData()
@@ -25,32 +25,32 @@ class HistoryController: UITableViewController, NSFetchedResultsControllerDelega
     
     // MARK: - FetchedResultsController setup
     
-    var frc: NSFetchedResultsController!
+    var frc: NSFetchedResultsController<GameResult>!
     
     
-    var fetchedResultsController: NSFetchedResultsController {
+    var fetchedResultsController: NSFetchedResultsController<GameResult> {
         if frc != nil {
             return frc
         }
         
-        let fetchRequest = NSFetchRequest()
-        let entity = NSEntityDescription.entityForName("GameResult", inManagedObjectContext: self.context)
+        let fetchRequest = NSFetchRequest<GameResult>()
+        let entity = NSEntityDescription.entity(forEntityName: "GameResult", in: self.context)
         fetchRequest.entity = entity
         
-        let comps = NSDateComponents()
-        let calendar = NSCalendar.currentCalendar()
-        comps.day = calendar.component(.Day, fromDate: self.date)
-        comps.month = calendar.component(.Month, fromDate: self.date)
-        comps.year = calendar.component(.Year, fromDate: self.date)
+        var comps = DateComponents()
+        let calendar = Calendar.current()
+        comps.day = calendar.component(.day, from: self.date)
+        comps.month = calendar.component(.month, from: self.date)
+        comps.year = calendar.component(.year, from: self.date)
         
-        let beginningDate = calendar.dateFromComponents(comps)
-        let endingDate = beginningDate!.dateByAddingTimeInterval(60*60*24)
+        let beginningDate = calendar.date(from: comps)
+        let endingDate = beginningDate!.addingTimeInterval(60*60*24)
         
         
-        let predicate = NSPredicate(format: "(date >= %@) AND (date <= %@)", argumentArray: [beginningDate!,endingDate])
+        let predicate = Predicate(format: "(date >= %@) AND (date <= %@)", argumentArray: [beginningDate!,endingDate])
         fetchRequest.predicate = predicate
         fetchRequest.fetchBatchSize = 20
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        fetchRequest.sortDescriptors = [SortDescriptor(key: "date", ascending: true)]
         
         let afrc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context, sectionNameKeyPath: nil, cacheName: nil)
         afrc.delegate = self
@@ -72,16 +72,16 @@ class HistoryController: UITableViewController, NSFetchedResultsControllerDelega
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 0
     }
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedResultsController.sections![section].numberOfObjects
     }
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! SingleGameHistoryCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SingleGameHistoryCell
         
-        let result  = fetchedResultsController.objectAtIndexPath(indexPath) as! GameResult
+        let result  = fetchedResultsController.object(at: indexPath) 
         
         cell.dateLabel.text = result.dateString
         cell.scoreLabel.text = result.scoreString
@@ -97,11 +97,11 @@ class HistoryController: UITableViewController, NSFetchedResultsControllerDelega
     
     // MARK: - Navigation
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         let selectedCell = sender as! UITableViewCell
-        let indexPath = tableView.indexPathForCell(selectedCell)!
+        let indexPath = tableView.indexPath(for: selectedCell)!
         let ohc = segue.destinationViewController as! OneHistoryController
-        ohc.gameResult = fetchedResultsController.objectAtIndexPath(indexPath) as! GameResult
+        ohc.gameResult = fetchedResultsController.object(at: indexPath) 
     }
 
 }

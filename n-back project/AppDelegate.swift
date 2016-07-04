@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  n-back project
-//
-//  Created by Nathan Lanza on 7/23/15.
-//  Copyright © 2015 Nathan Lanza. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
@@ -14,51 +6,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let defaults = NSUserDefaults.standardUserDefaults()
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let defaults = UserDefaults.standard()
         
-        if defaults.valueForKey(Constants.nbackLevelKey) == nil {
-            defaults.setInteger(2, forKey: Constants.nbackLevelKey)
+        if defaults.value(forKey: Constants.nbackLevelKey) == nil {
+            defaults.set(2, forKey: Constants.nbackLevelKey)
         }
-        if defaults.valueForKey(Constants.numberOfTurnsKey) == nil {
-            defaults.setInteger(15, forKey: Constants.numberOfTurnsKey)
+        if defaults.value(forKey: Constants.numberOfTurnsKey) == nil {
+            defaults.set(15, forKey: Constants.numberOfTurnsKey)
         }
-        if defaults.valueForKey(Constants.secondsBetweenTurnsKey) == nil {
-            defaults.setDouble(3.0, forKey: Constants.secondsBetweenTurnsKey)
+        if defaults.value(forKey: Constants.secondsBetweenTurnsKey) == nil {
+            defaults.set(3.0, forKey: Constants.secondsBetweenTurnsKey)
         }
-        if defaults.valueForKey(Constants.blueSquareDurationKey) == nil {
-            defaults.setDouble(0.5, forKey: Constants.blueSquareDurationKey)
+        if defaults.value(forKey: Constants.blueSquareDurationKey) == nil {
+            defaults.set(0.5, forKey: Constants.blueSquareDurationKey)
         }
-        if defaults.valueForKey("numbers") == nil {
+        if defaults.value(forKey: "numbers") == nil {
             defaults.setValue(["one","two","three","four","five","seven","eight","nine"], forKey: "numbers")
         }
         defaults.setValue(nil, forKey: Constants.backTypesKey)
-        if defaults.valueForKey(Constants.backTypesKey) == nil {
+        if defaults.value(forKey: Constants.backTypesKey) == nil {
             defaults.setValue([1, 2], forKey: Constants.backTypesKey)
         }
         
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
@@ -66,27 +58,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data stack
 
-    lazy var applicationDocumentsDirectory: NSURL = {
+    lazy var applicationDocumentsDirectory: URL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.nathanlanza.n_back_project" in the application's documents Application Support directory.
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        let urls = FileManager.default().urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)
         return urls[urls.count-1]
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("data", withExtension: "momd")!
-        return NSManagedObjectModel(contentsOfURL: modelURL)!
+        let modelURL = Bundle.main().urlForResource("data", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOf: modelURL)!
     }()
 
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("data.sqlite")
+        let url = try! self.applicationDocumentsDirectory.appendingPathComponent("data.sqlite")
         let options = [NSMigratePersistentStoresAutomaticallyOption: true]
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options)
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: options)
         } catch {
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -106,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     lazy var managedObjectContext: NSManagedObjectContext = {
         let coordinator = self.persistentStoreCoordinator
-        var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
     }()

@@ -18,7 +18,7 @@ class GameResult: NSManagedObject {
         for backType in backTypes! {
             temporary += (Int(backType.incorrect!) + Int(backType.matches!))
         }
-        
+
         return temporary
     }
     
@@ -27,21 +27,22 @@ class GameResult: NSManagedObject {
     }
     
     var dateString: String {
-        let formatter = NSDateFormatter()
-        formatter.timeStyle = .NoStyle
-        formatter.dateStyle = .MediumStyle
-        let dateString = formatter.stringFromDate(self.date)
-        formatter.timeStyle = .MediumStyle
-        formatter.dateStyle = .NoStyle
-        let timeString = formatter.stringFromDate(self.date)
+        let formatter = DateFormatter()
+        formatter.timeStyle = .noStyle
+        formatter.dateStyle = .mediumStyle
+        let dateString = formatter.string(from: self.date as Date)
+        formatter.timeStyle = .mediumStyle
+        formatter.dateStyle = .noStyle
+        let timeString = formatter.string(from: self.date as Date)
         return "Played on: " + dateString + " at " + timeString
     }
     var backAndTurnsString: String {
-        return "\(self.nbackLevel)-back with \(self.numberOfTurns) turns"
+        return "\(self.nbackLevel!)-back with \(self.numberOfTurns) turns"
     }
 }
 
 struct Constants {
+    static let numbers = "numbers"
     static let gameResult = "GameResult"
     static let dateKey = "date"
     static let lettersCorrectKey = "lettersCorrect"

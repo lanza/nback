@@ -1,46 +1,35 @@
-//
-//  OneHistoryController.swift
-//  n-back project
-//
-//  Created by Nathan Lanza on 8/4/15.
-//  Copyright © 2015 Nathan Lanza. All rights reserved.
-//
-
-
-
 import UIKit
 
 class OneHistoryController: UITableViewController {
     var gameResult: GameResult!
     
-    override func viewDidLoad() {
-                
-        
-        for backType in gameResult.backTypes {
-            print(backType)
-            print(backType.correct)
-            print(backType.incorrect)
-            print(backType.backType)
-            print(backType.matches)
-        }
-    }
+//    override func viewDidLoad() {
+//        
+//        for backType in gameResult.backTypes {
+//            print(backType)
+//            print(backType.correct)
+//            print(backType.incorrect)
+//            print(backType.backType)
+//            print(backType.matches)
+//        }
+//    }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: Constants.reuseIdentifier)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.value2, reuseIdentifier: Constants.reuseIdentifier)
         
-        let configPlistURL = NSBundle.mainBundle().URLForResource("historyConfig", withExtension: "plist")
-        let configPlist = NSDictionary(contentsOfURL: configPlistURL!)!
+        let configPlistURL = Bundle.main().urlForResource("historyConfig", withExtension: "plist")
+        let configPlist = NSDictionary(contentsOf: configPlistURL!)!
         let sections = configPlist["sections"]! as! [AnyObject]
         
-        let section = sections[indexPath.section] as! [String:AnyObject]
+        let section = sections[(indexPath as NSIndexPath).section] as! [String:AnyObject]
         let rows = section["elements"]! as! [AnyObject]
-        let row = rows[indexPath.row] as! [String:String]
+        let row = rows[(indexPath as NSIndexPath).row] as! [String:String]
         let key = row["key"]!
         
-        if let theInt = gameResult.valueForKey(key)! as? Int {
+        if let theInt = gameResult.value(forKey: key)! as? Int {
             cell.detailTextLabel?.text = String(theInt)
-        } else if let theDate = gameResult.valueForKey(key)! as? NSDate {
-            cell.detailTextLabel?.text = dateFormatter.stringFromDate(theDate)
+        } else if let theDate = gameResult.value(forKey: key)! as? Date {
+            cell.detailTextLabel?.text = dateFormatter.string(from: theDate)
         }
         cell.textLabel?.text = row["label"]
         
