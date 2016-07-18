@@ -64,7 +64,7 @@ class NewGameController: UIViewController {
         let back = defaults.integer(forKey: Constants.nbackLevelKey)
         let turns = defaults.integer(forKey: Constants.numberOfTurnsKey)
         
-        backButton.setTitle("\(back)-back", for: UIControlState())        
+        backButton.setTitle("\(back)-back", for: UIControlState())
         turnsButton.setTitle("\(turns) turns", for: UIControlState())
     }
     
@@ -74,6 +74,9 @@ class NewGameController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        defaults.set(currentBack, forKey: Constants.nbackLevelKey)
+        defaults.set(currentTurns, forKey: Constants.numberOfTurnsKey)
+        
         let gc = segue.destinationViewController as! GameController
         gc.presentingNGC = self
     }
