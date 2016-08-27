@@ -34,6 +34,10 @@ class GameViewController: ViewController {
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError() }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        gameBrain.start()
+    }
 }
 
 

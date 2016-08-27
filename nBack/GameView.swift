@@ -28,9 +28,9 @@ class GameView: View {
     func numbersButtonTapped() { numbersButtonClosure() }
     
     func setupClosures(gameBrain: GameBrain?, quitGameClosure: (() -> ())?) {
-        self.colorsButtonClosure = gameBrain?.colorsButtonTapped
-        self.squaresButtonClosure = gameBrain?.squaresButtonTapped
-        self.numbersButtonClosure = gameBrain?.numbersButtonTapped
+        self.colorsButtonClosure = gameBrain?.playerStatesColorsMatched
+        self.squaresButtonClosure = gameBrain?.playerStatesSquaresMatched
+        self.numbersButtonClosure = gameBrain?.playerStatesNumbersMatched
         
         self.quitGameClosure = quitGameClosure
     }
