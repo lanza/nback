@@ -183,6 +183,8 @@ class GameBrain: HasContext {
             case (true,true): trueTrue += 1; return true
             }
         }
+        print(order)
+        print(zip(playerAnswers, correctAnswers))
         var result: BackTypeResult? = nil
         context.performAndWait {
             result = BackTypeResult(context: self.context)

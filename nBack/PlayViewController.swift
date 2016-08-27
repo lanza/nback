@@ -2,6 +2,7 @@ import UIKit
 
 class PlayViewController: ViewController, HasContext {
     
+    var lastGameResult: GameResult?
     var delegate: PlayViewControllerDelegate?
     
     override func loadView() {

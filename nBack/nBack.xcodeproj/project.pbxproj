@@ -262,9 +262,8 @@
 		B30DE9831D7135CD00138962 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B30DE9661D711F3D00138962 /* PlayViewController.swift */,
-				B30DE9841D7135FF00138962 /* GameViewController.swift */,
-				B30DE9681D711F6700138962 /* HistoryTableViewController.swift */,
+				B31F35A71D719BFF00BBC1D2 /* Play */,
+				B31F35A81D719C0300BBC1D2 /* History */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -293,6 +292,23 @@
 				B31F35931D7171DD00BBC1D2 /* SquareMatrix.swift */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		B31F35A71D719BFF00BBC1D2 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				B30DE9661D711F3D00138962 /* PlayViewController.swift */,
+				B30DE9841D7135FF00138962 /* GameViewController.swift */,
+			);
+			name = Play;
+			sourceTree = "<group>";
+		};
+		B31F35A81D719C0300BBC1D2 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				B30DE9681D711F6700138962 /* HistoryTableViewController.swift */,
+			);
+			name = History;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

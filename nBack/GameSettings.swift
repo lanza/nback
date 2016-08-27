@@ -15,7 +15,7 @@ struct GameSettings {
         set { defaults.set(newValue, forKey: Lets.timeBetweenTurnsKey) }
     }
     var types: [GameType] {
-        get { return (defaults.object(forKey: Lets.typesKey) as? Set<Int> ?? [0,1]).map { GameType.fromDefaults(value: $0) } }
+        get { return (defaults.object(forKey: Lets.typesKey) as? Set<Int> ?? [0,1,2]).map { GameType.fromDefaults(value: $0) } }
         set { defaults.set(newValue.map { $0.value }, forKey: Lets.typesKey) }
     }
     var level: Int {

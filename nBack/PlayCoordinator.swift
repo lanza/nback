@@ -29,10 +29,17 @@ extension PlayCoordinator: PlayViewControllerDelegate {
 }
 
 extension PlayCoordinator: CoordinatorDelegate { }
+extension PlayCoordinator: GameCoordinatorDelegate {
+    func gameCoordinatorDidFinish(_ coordinator: GameCoordinator, with result: GameResult) {
+        playViewController.lastGameResult = result
+    }
+    func gameCoordinatorDidCancel(_ coordinator: GameCoordinator) {
+        //
+    }
+}
 
 extension PlayCoordinator: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
 }
-
