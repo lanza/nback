@@ -6,11 +6,17 @@ struct Lets {
     static let historyl10n = NSLocalizedString("History", comment: "")
     
     static let matchButtonHeight = CGFloat(60)
+    
+    static let timeBetweenTurnsKey = "timeBetweenTurns"
+    static let squareHighlightTimeKey = "squareHighlightTime"
+    static let typesKey = "types"
+    static let levelKey = "level"
+    static let rowsKey = "rows"
+    static let columnsKey = "columns"
+    static let numberOfTurnsKey = "numberOfTurns"
 }
 
-struct GameValues {
-    static var squareHighlightTime = 0.5
-}
+
 
 extension Double {
     var nanoseconds: Double {

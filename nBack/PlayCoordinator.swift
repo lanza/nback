@@ -18,8 +18,8 @@ class PlayCoordinator: NSObject, NBCoordinator {
 
 extension PlayCoordinator: PlayViewControllerDelegate {    
     
-    func newGameTapped(for playViewController: PlayViewController, settings: GameSettings) {
-        let gameCoordinator = GameCoordinator(settings: settings)
+    func newGameTapped(for playViewController: PlayViewController) {
+        let gameCoordinator = GameCoordinator()
         gameCoordinator.delegate = self
         coordinators.append(gameCoordinator)
         gameCoordinator.start()

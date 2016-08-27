@@ -4,15 +4,11 @@ class GameCoordinator: NBCoordinator {
     
     weak var delegate: CoordinatorDelegate!
     
-    let gameViewController: GameViewController
+    let gameViewController = GameViewController()
     var coordinators = [NBCoordinator]()
     
-    init(settings: GameSettings) {
-        gameViewController = GameViewController(settings: settings)
-        gameViewController.delegate = self
-    }
     func start() {
-        //nothing to do yet?
+        gameViewController.delegate = self
     }
     
     

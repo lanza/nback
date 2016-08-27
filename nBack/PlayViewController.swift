@@ -22,19 +22,14 @@ class PlayViewController: ViewController, HasContext {
     }
     
     func newGameTapped() {
-        let settings = GameSettings(rows: 4, columns: 3, types: [.numbers, .squares])
-        delegate?.newGameTapped(for: self, settings: settings)
+        delegate?.newGameTapped(for: self)
     }
     
 }
 
 protocol PlayViewControllerDelegate {
-    func newGameTapped(for playViewController: PlayViewController, settings: GameSettings)
+    func newGameTapped(for playViewController: PlayViewController)
 }
 
 
-struct GameSettings {
-    var rows: Int
-    var columns: Int
-    var types: [GameType]
-}
+
