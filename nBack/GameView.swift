@@ -6,6 +6,7 @@ class GameView: View {
     var squareMatrix: SquareMatrix!
     
     var mainStackView: StackView!
+    var buttons: [Button]!
     var buttonStackView: StackView!
     var quitGameButton: Button!
     
@@ -45,7 +46,7 @@ class GameView: View {
     
     private func setupMatchButtons(types: [GameType]) {
         
-        var buttons = [Button]()
+        buttons = [Button]()
         
         for type in types {
             
@@ -61,6 +62,7 @@ class GameView: View {
             }
             
             let button = Button.matchButton(title: type.string, target: self, selector: selector)
+            button.isEnabled = false
             
             buttons.append(button)
         }
@@ -80,8 +82,6 @@ class GameView: View {
                 let squareView = SquareView()
                 columnViews.append(squareView)
                 elements.append(squareView)
-                
-                squareView.backgroundColor = .red
             }
             
             let rowStackView = StackView(arrangedSubviews: columnViews, axis: .horizontal, spacing: 1, distribution: .fillEqually)
@@ -114,5 +114,9 @@ class GameView: View {
         constraints.append(quitGameButton.rightAnchor.constraint(equalTo: layoutMarginsGuide.rightAnchor))
         
         NSLayoutConstraint.activate(constraints)
+    }
+    
+    func enableButtons() {
+        buttons.forEach { $0.isEnabled = true }
     }
 }

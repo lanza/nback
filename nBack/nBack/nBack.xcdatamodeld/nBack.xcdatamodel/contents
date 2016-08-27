@@ -9,13 +9,13 @@
     </entity>
     <entity name="GameResult" representedClassName=".GameResult" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
-        <attribute name="nBackLevel" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="numberOfTurns" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="secondsBetweenTurns" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nBackLevel" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="numberOfTurns" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="secondsBetweenTurns" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="backTypes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BackTypeResult" inverseName="game" inverseEntity="BackTypeResult" syncable="YES"/>
     </entity>
     <elements>
-        <element name="GameResult" positionX="-63" positionY="-18" width="128" height="120"/>
         <element name="BackTypeResult" positionX="-54" positionY="18" width="128" height="120"/>
+        <element name="GameResult" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

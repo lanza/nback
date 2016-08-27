@@ -3,17 +3,18 @@ import Foundation
 
 class GameViewController: ViewController {
     
-    weak var delegate: GameViewControllerDelegate?
+    weak var delegate: GameViewControllerDelegate!
     
-    var gameBrain: GameBrain
+    var gameBrain: GameBrain!
     var gameView: GameView
     
     override init() {
         
         self.gameView = GameView(rows: GameSettings.shared.rows, columns: GameSettings.shared.columns, types: GameSettings.shared.types)
-        self.gameBrain = GameBrain(squareMatrix: gameView.squareMatrix)
         
         super.init()
+        
+        self.gameBrain = GameBrain(squareMatrix: gameView.squareMatrix, delegate: self)
         
         setupGameViewClosures()
         gameView.frame = view.frame
@@ -41,7 +42,14 @@ class GameViewController: ViewController {
 }
 
 
-
+extension GameViewController: GameBrainDelegate {
+    func gameBrainDidFinish(with result: GameResult) {
+        delegate.gameDidFinish(for: self, with: result)
+    }
+    func enableButtons() {
+        gameView.enableButtons()
+    }
+}
 
 
 

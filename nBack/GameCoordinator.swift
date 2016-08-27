@@ -11,10 +11,10 @@ class GameCoordinator: NBCoordinator {
         gameViewController.delegate = self
     }
     
-    
 }
 
 extension GameCoordinator: GameViewControllerDelegate {
+    
     func gameDidCancel(for gameViewController: GameViewController) {
         gameViewController.presentingViewController?.dismiss(animated: true) {
         
@@ -22,6 +22,10 @@ extension GameCoordinator: GameViewControllerDelegate {
         delegate?.coordinatorIsDone(self)
     }
     func gameDidFinish(for gameViewController: GameViewController, with result: GameResult) {
-        //
+        gameViewController.presentingViewController?.dismiss(animated: true) {
+            
+        }
+        delegate?.coordinatorIsDone(self)
     }
+    
 }

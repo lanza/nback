@@ -16,7 +16,7 @@ class NBackBrain {
     //here lies new stuff
     
     init() {
-        defaults = UserDefaults.standard()
+        defaults = UserDefaults.standard
         
         numbers = defaults.array(forKey: Constants.numbers) as! [String]
         nbackLevel = defaults.integer(forKey: Constants.nbackLevelKey)
@@ -43,7 +43,7 @@ class NBackBrain {
     var numberHandler: TypeHandler!;    var squareHandler: TypeHandler!
     
     func startGame() {
-        notificationCenter = NotificationCenter.default()
+        notificationCenter = NotificationCenter.default
         
         utterance = AVSpeechUtterance()
         speechSynthesizer = AVSpeechSynthesizer()
