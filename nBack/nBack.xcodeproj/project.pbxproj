@@ -44,6 +44,7 @@
 		B31F35A01D7172AA00BBC1D2 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F359F1D7172AA00BBC1D2 /* CoordinatorDelegate.swift */; };
 		B31F35A21D71733100BBC1D2 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35A11D71733100BBC1D2 /* GameSettings.swift */; };
 		B31F35A61D717E7E00BBC1D2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35A51D717E7E00BBC1D2 /* Utilities.swift */; };
+		B31F35AA1D71A20900BBC1D2 /* FetchedResultsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35A91D71A20900BBC1D2 /* FetchedResultsDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		B31F359F1D7172AA00BBC1D2 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		B31F35A11D71733100BBC1D2 /* GameSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		B31F35A51D717E7E00BBC1D2 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		B31F35A91D71A20900BBC1D2 /* FetchedResultsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 		B30DE9831D7135CD00138962 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B31F35A91D71A20900BBC1D2 /* FetchedResultsDataProvider.swift */,
 				B31F35A71D719BFF00BBC1D2 /* Play */,
 				B31F35A81D719C0300BBC1D2 /* History */,
 			);
@@ -457,6 +460,7 @@
 				B30DE98B1D71371100138962 /* View.swift in Sources */,
 				B30DE9741D712BCD00138962 /* GameResult+CoreDataClass.swift in Sources */,
 				B30DE97D1D712CD700138962 /* ManagedObjectType.swift in Sources */,
+				B31F35AA1D71A20900BBC1D2 /* FetchedResultsDataProvider.swift in Sources */,
 				B30DE9911D71476B00138962 /* PlayCoordinator.swift in Sources */,
 				B30DE99F1D7156E800138962 /* GameType.swift in Sources */,
 				B30DE99B1D71555A00138962 /* Button.swift in Sources */,

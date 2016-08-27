@@ -21,6 +21,7 @@ extension PlayCoordinator: PlayViewControllerDelegate {
     func newGameTapped(for playViewController: PlayViewController) {
         let gameCoordinator = GameCoordinator()
         gameCoordinator.delegate = self
+        gameCoordinator.gameDelegate = self
         coordinators.append(gameCoordinator)
         gameCoordinator.start()
         print(coordinators)

@@ -7,6 +7,9 @@ struct Lets {
     
     static let matchButtonHeight = CGFloat(60)
     
+    static let cellIdentifier = "cell"
+    
+    //GameSettings
     static let timeBetweenTurnsKey = "timeBetweenTurns"
     static let squareHighlightTimeKey = "squareHighlightTime"
     static let typesKey = "types"
