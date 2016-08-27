@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11224.2" systemVersion="16A304a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BackTypeResult" representedClassName=".BackTypeResult" syncable="YES">
+        <attribute name="backType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="correct" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="incorrect" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="matches" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="game" maxCount="1" deletionRule="Nullify" destinationEntity="GameResult" inverseName="backTypes" inverseEntity="GameResult" syncable="YES"/>
+    </entity>
+    <entity name="GameResult" representedClassName=".GameResult" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <attribute name="nBackLevel" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="numberOfTurns" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="secondsBetweenTurns" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="backTypes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BackTypeResult" inverseName="game" inverseEntity="BackTypeResult" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GameResult" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="BackTypeResult" positionX="-54" positionY="18" width="128" height="120"/>
+    </elements>
+</model>

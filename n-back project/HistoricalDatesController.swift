@@ -2,12 +2,8 @@ import UIKit
 import CoreData
 
 class HistoricalDatesController: UITableViewController, NSFetchedResultsControllerDelegate {
-    func thing<T>(thing: T) -> T {
-        return thing
-    }
-    
+
     var context: NSManagedObjectContext {
-        
         return (UIApplication.shared().delegate as! AppDelegate).managedObjectContext
     }
     var _fetchedResultsController: NSFetchedResultsController<GameResult>!

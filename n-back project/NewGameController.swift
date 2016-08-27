@@ -2,7 +2,7 @@ import UIKit
 
 class NewGameController: UIViewController {
     
-    var defaults = UserDefaults.standard()
+    var defaults = UserDefaults.standard
     var brain: NBackBrain!
     
     @IBOutlet weak var lastPlayLabel: UILabel!
@@ -23,6 +23,7 @@ class NewGameController: UIViewController {
         turnsButton.setTitle("\(currentTurns) turns", for: UIControlState())
     }
     @IBAction func backButtonPushed() {
+
         if currentBack > 6 {
             currentBack = 1
         } else {
@@ -73,11 +74,11 @@ class NewGameController: UIViewController {
         defaults.set(currentTurns, forKey: Constants.numberOfTurnsKey)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         defaults.set(currentBack, forKey: Constants.nbackLevelKey)
         defaults.set(currentTurns, forKey: Constants.numberOfTurnsKey)
         
-        let gc = segue.destinationViewController as! GameController
+        let gc = segue.destination as! GameController
         gc.presentingNGC = self
     }
 }

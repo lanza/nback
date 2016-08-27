@@ -8,11 +8,11 @@ class OptionController: UITableViewController {
     }
     var currentValue: Double {
         get {
-            let defaults = UserDefaults.standard()
+            let defaults = UserDefaults.standard
             return defaults.value(forKey: rowInformation["key"] as! String)! as! Double
         }
         set {
-            let defaults = UserDefaults.standard()
+            let defaults = UserDefaults.standard
             
             let key = rowInformation["key"] as! String
             
