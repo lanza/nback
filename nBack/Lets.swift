@@ -4,6 +4,7 @@ import CoreGraphics
 struct Lets {
     static let playl10n = NSLocalizedString("Play", comment: "")
     static let historyl10n = NSLocalizedString("History", comment: "")
+    static let settingsl10n = NSLocalizedString("Settings", comment: "")
     
     static let matchButtonHeight = CGFloat(60)
     

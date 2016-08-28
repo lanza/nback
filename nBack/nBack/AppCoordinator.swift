@@ -30,7 +30,13 @@ class AppCoordinator: NSObject, NBCoordinator {
         let historyNav = NavigationController(viewController: historyCoordinator.daysTableViewController)
         coordinators.append(historyCoordinator)
         
-        return [playNav,historyNav]
+        let settingsCoordinator = SettingsCoordinator()
+        settingsCoordinator.start()
+        settingsCoordinator.delegate = self
+        let settingsNav = NavigationController(viewController: settingsCoordinator.settingsViewController)
+        coordinators.append(settingsCoordinator)
+        
+        return [playNav,historyNav,settingsNav]
     }
     
 }
