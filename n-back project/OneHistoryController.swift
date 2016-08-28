@@ -17,7 +17,7 @@ class OneHistoryController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.value2, reuseIdentifier: Constants.reuseIdentifier)
         
-        let configPlistURL = Bundle.main().urlForResource("historyConfig", withExtension: "plist")
+        let configPlistURL = Bundle.main.url(forResource: "historyConfig", withExtension: "plist")
         let configPlist = NSDictionary(contentsOf: configPlistURL!)!
         let sections = configPlist["sections"]! as! [AnyObject]
         

@@ -1,88 +1,31 @@
-import CoreData
+    import CoreData
 
-protocol DataProvider: class {
-    associatedtype Object
-    func object(at indexPath: IndexPath) -> Object
-    func numberOfItemsIn(section: Int) -> Int
-    func numberOfSections() -> Int
-}
-
-protocol DataProviderDelegate: class {
-    associatedtype Object
-    func dataProviderDidUpdate(updates: [DataProviderUpdate<Object>]?)
-}
-
-enum DataProviderUpdate<Object> {
-    case insert(IndexPath)
-    case update(IndexPath, Object)
-    case move(IndexPath, IndexPath)
-    case delete(IndexPath)
-}
 import UIKit
-class TableViewCell: UITableViewCell, ConfigurableCell {
-    func configure(for object: GameResult) {
-        textLabel?.text = "\(object.date)"
+
+class TableViewController: UITableViewController, DataProviderDelegate {
+    func dataProviderDidUpdate(updates: [DataProviderUpdate<GameResult>]?) {
+        //
     }
 }
-protocol ConfigurableCell {
-    associatedtype Object
-    func configure(for object: Object)
-}
-class TableViewDataSource<Source: DataProvider, Cell: TableViewCell>: NSObject, UITableViewDataSource where Cell: ConfigurableCell, Cell.Object == Source.Object {
+
+class HistoryByDateFetchedResultsDataProvider: FetchedResultsDataProvider<GameResult, TableViewController> {
     
-    required init(tableView: UITableView, dataProvider: Source) {
-        self.tableView = tableView
-        tableView.register(Cell.self, forCellReuseIdentifier: Lets.cellIdentifier)
-        self.dataProvider = dataProvider
-        super.init()
-        tableView.dataSource = self
-        tableView.reloadData()
-    }
-    var selectedObject: Source.Object? {
-        guard let indexPath = tableView.indexPathForSelectedRow else { return nil }
-        return dataProvider.object(at: indexPath)
+    var dateCountPairs = [(Date,Int)]()
+    
+    override init(fetchedResultsController: NSFetchedResultsController<GameResult>, delegate: TableViewController) {
+        super.init(fetchedResultsController: fetchedResultsController, delegate: delegate)
+        
+        generateDateCountPairs()
     }
     
-    func process(updates: [DataProviderUpdate<Source.Object>]?) {
-        guard let updates = updates else { return tableView.reloadData() }
-        tableView.beginUpdates()
-        for update in updates {
-            switch update {
-            case .insert(let indexPath):
-                tableView.insertRows(at: [indexPath], with: .automatic)
-            case .update(let indexPath, let object):
-                guard let cell = tableView.cellForRow(at: indexPath) as? Cell else { break }
-                cell.configure(for: object)
-            case .move(let indexPath, let newIndexPath):
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-            case .delete(let indexPath):
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-            }
-        }
-        tableView.endUpdates()
+    private func generateDateCountPairs() {
+        var dateCountDict = [Date:Int]()
+        fetchedResultsController.fetchedObjects?.forEach { dateCountDict[$0.date] = (dateCountDict[$0.date] ?? 0) + 1 }
+        dateCountPairs = dateCountDict.map { ($0,$1) }
     }
     
-    
-    // MARK: Private
-    
-    private let tableView: UITableView
-    private let dataProvider: Source
-    
-    // MARK: UITableViewDataSource
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return dataProvider.numberOfSections()
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataProvider.numberOfItemsIn(section: section)
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let object = dataProvider.object(at: indexPath)
-        let identifier = Lets.cellIdentifier
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? Cell else { fatalError() }
-        cell.configure(for: object)
-        return cell
+    override func object(at indexPath: IndexPath) -> GameResult {
+        fatalError()
     }
 }
 
@@ -94,6 +37,7 @@ class FetchedResultsDataProvider<Object: ManagedObject, Delegate: DataProviderDe
         super.init()
         fetchedResultsController.delegate = self
         try! fetchedResultsController.performFetch()
+        print(fetchedResultsController.sections, fetchedResultsController.sectionNameKeyPath)
     }
     
     func reconfigureFetchRequest(block: (NSFetchRequest<Object>) -> ()) {
@@ -119,17 +63,18 @@ class FetchedResultsDataProvider<Object: ManagedObject, Delegate: DataProviderDe
     
     // MARK: Private
     
-    private let fetchedResultsController: NSFetchedResultsController<Object>
+    let fetchedResultsController: NSFetchedResultsController<Object>
     private weak var delegate: Delegate!
     private var updates = [DataProviderUpdate<Object>]()
     
     // MARK: NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updates = []
+        updates.removeAll()
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
         switch type {
         case .insert:
             guard let indexPath = newIndexPath else { fatalError() }
@@ -146,6 +91,7 @@ class FetchedResultsDataProvider<Object: ManagedObject, Delegate: DataProviderDe
             guard let indexPath = indexPath else { fatalError() }
             updates.append(.delete(indexPath))
         }
+        
     }
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         delegate.dataProviderDidUpdate(updates: updates)

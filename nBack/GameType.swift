@@ -1,6 +1,6 @@
 import Foundation
 
-enum GameType {
+public enum GameType {
     case numbers
     case squares
     case colors
@@ -16,7 +16,7 @@ enum GameType {
         }
     }
     
-    static func fromDefaults(value: Int) -> GameType {
+    static func from(value: Int) -> GameType {
         switch value {
         case 0: return .numbers
         case 1: return .squares

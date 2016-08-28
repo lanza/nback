@@ -113,12 +113,12 @@ class NBackBrain {
                 newNumber()
             }
         }
-        let notification = Notification(name: "newTurn" as Notification.Name, object: nil, userInfo: userInfo)
+        let notification = Notification(name: Notification.Name("newTurn"), object: nil, userInfo: userInfo)
         notificationCenter.post(notification)
     }
     
     func saveGameResults() {
-        let context = (UIApplication.shared().delegate as! AppDelegate).managedObjectContext
+        let context = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         let result = NSEntityDescription.insertNewObject(forEntityName: Constants.gameResult, into: context) as! GameResult
         
         for backType in backTypes {
@@ -126,18 +126,18 @@ class NBackBrain {
             case .squares:
                 let squareResult = NSEntityDescription.insertNewObject(forEntityName: "BackTypeResult", into: context) as! BackTypeResult
                 
-                squareResult.correct = squaresCorrect
-                squareResult.incorrect = squaresIncorrect
-                squareResult.matches = squaresMatched
+                squareResult.correct = squaresCorrect as NSNumber
+                squareResult.incorrect = squaresIncorrect as NSNumber
+                squareResult.matches = squaresMatched as NSNumber
                 squareResult.backType = 1
                 squareResult.game = result
                 result.backTypes!.insert(squareResult)
             case .numbers:
                 let numberResult = NSEntityDescription.insertNewObject(forEntityName: "BackTypeResult", into: context) as! BackTypeResult
                 
-                numberResult.correct = numbersCorrect
-                numberResult.incorrect = numbersIncorrect
-                numberResult.matches = numbersMatched
+                numberResult.correct = numbersCorrect as NSNumber
+                numberResult.incorrect = numbersIncorrect as NSNumber
+                numberResult.matches = numbersMatched as NSNumber
                 numberResult.backType = 2
                 numberResult.game = result
                 result.backTypes!.insert(numberResult)
@@ -152,7 +152,7 @@ class NBackBrain {
         
         try! context.save()
         
-        let defaults = UserDefaults.standard()
+        let defaults = UserDefaults.standard
         defaults.set(result.totalCorrect, forKey: "lastGameTotalCorrect")
         defaults.set(result.outOf, forKey: "lastGameOutOf")
         defaults.set(numberOfTurns, forKey: "lastGameNumberOfTurns")

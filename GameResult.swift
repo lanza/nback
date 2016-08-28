@@ -27,14 +27,8 @@ class GameResult: NSManagedObject {
     }
     
     var dateString: String {
-        let formatter = DateFormatter()
-        formatter.timeStyle = .noStyle
-        formatter.dateStyle = .mediumStyle
-        let dateString = formatter.string(from: self.date as Date)
-        formatter.timeStyle = .mediumStyle
-        formatter.dateStyle = .noStyle
-        let timeString = formatter.string(from: self.date as Date)
-        return "Played on: " + dateString + " at " + timeString
+
+        return "hi"
     }
     var backAndTurnsString: String {
         return "\(self.nbackLevel!)-back with \(self.numberOfTurns) turns"

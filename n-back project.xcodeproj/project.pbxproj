@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B31F35C01D7284D300BBC1D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35BF1D7284D300BBC1D2 /* ViewController.swift */; };
+		B31F35D21D72A12B00BBC1D2 /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = B31F35D11D72A12B00BBC1D2 /* json.txt */; };
 		D80979AD1B755CCC0038C832 /* HistoricalDatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80979AC1B755CCC0038C832 /* HistoricalDatesController.swift */; };
 		D80A881C1B61EECC00489469 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A881B1B61EECC00489469 /* GameController.swift */; };
 		D80E537D1C2A1E0D00FEE81F /* NBackBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E537C1C2A1E0D00FEE81F /* NBackBrain.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B31F35BF1D7284D300BBC1D2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B31F35D11D72A12B00BBC1D2 /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.txt; sourceTree = "<group>"; };
 		D80979AC1B755CCC0038C832 /* HistoricalDatesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricalDatesController.swift; sourceTree = "<group>"; };
 		D80A881B1B61EECC00489469 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameController.swift; path = ../GameController.swift; sourceTree = "<group>"; };
 		D80E537C1C2A1E0D00FEE81F /* NBackBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBackBrain.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				D84E782F1B61E200003A719F /* AppDelegate.swift */,
 				D84E783B1B61E200003A719F /* LaunchScreen.storyboard */,
 				D84E78331B61E200003A719F /* Main.storyboard */,
+				B31F35BF1D7284D300BBC1D2 /* ViewController.swift */,
 			);
 			name = Stuff;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			children = (
 				D84E782E1B61E200003A719F /* nBack */,
 				D84E782D1B61E200003A719F /* Products */,
+				B31F35D11D72A12B00BBC1D2 /* json.txt */,
 				D89F03551C293E4400492A24 /* TODO.txt */,
 			);
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 				D83802841B720E6F007AED26 /* settingsConfig.plist in Resources */,
 				D89F03561C293E4400492A24 /* TODO.txt in Resources */,
 				D84E783D1B61E200003A719F /* LaunchScreen.storyboard in Resources */,
+				B31F35D21D72A12B00BBC1D2 /* json.txt in Resources */,
 				D84E783A1B61E200003A719F /* Assets.xcassets in Resources */,
 				D84E78351B61E200003A719F /* Main.storyboard in Resources */,
 			);
@@ -269,6 +276,7 @@
 				D83965A51B743B1900F4D3D8 /* NewGameController.swift in Sources */,
 				D89F035B1C29404F00492A24 /* SingleGameHistoryCell.swift in Sources */,
 				D84E78301B61E200003A719F /* AppDelegate.swift in Sources */,
+				B31F35C01D7284D300BBC1D2 /* ViewController.swift in Sources */,
 				D8FE3BDC1B748EC900BF26EB /* CustomModeCell.swift in Sources */,
 				D872A4581B71E241002BA647 /* SettingsController.swift in Sources */,
 				D80979AD1B755CCC0038C832 /* HistoricalDatesController.swift in Sources */,

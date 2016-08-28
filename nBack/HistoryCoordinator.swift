@@ -4,7 +4,7 @@ class HistoryCoordinator: NBCoordinator {
     
     weak var delegate: CoordinatorDelegate!
     
-    var historyTableViewController = HistoryTableViewController()
+    var historyTableViewController = DaysTableViewController()
     var coordinators = [NBCoordinator]()
     
     func start() {
@@ -16,8 +16,10 @@ class HistoryCoordinator: NBCoordinator {
     
 }
 
-extension HistoryCoordinator: HistoryTableViewControllerDelegate {
-    
+extension HistoryCoordinator: DaysTableViewControllerDelegate {
+    func daysTableViewController(_ daysTableViewController: DaysTableViewController, didSelectDay: Day) {
+        // do navigation
+    }
 }
 
 extension HistoryCoordinator: CoordinatorDelegate { }

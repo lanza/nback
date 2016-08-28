@@ -110,7 +110,7 @@ class GameBrain: HasContext {
     
     func start() {
         generateSequences()
-        timer = Timer.scheduledTimer(withTimeInterval: settings.timeBetweenTurns, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: settings.secondsBetweenTurns, repeats: true) { timer in
             if self.settings.types.contains(.numbers) {
                 self.speakNextNumber()
             }
@@ -141,25 +141,22 @@ class GameBrain: HasContext {
     
     func finish() {
         context.performAndWait {
+            
             let result = GameResult(context: self.context)
             result.initialize()
             for type in self.settings.types {
                 switch type {
-                case .squares: result.backTypes.insert(self.tally(order: self.squareOrder, playerAnswers: self.playerSquareAnswers, for: .squares))
-                case .numbers: result.backTypes.insert(self.tally(order: self.numberOrder, playerAnswers: self.playerNumberAnswers, for: .numbers))
-                case .colors: result.backTypes.insert(self.tally(order: self.colorOrder, playerAnswers: self.playerColorAnswers, for: .colors))
+                case .squares: result.types.insert(self.tally(order: self.squareOrder, playerAnswers: self.playerSquareAnswers, for: .squares))
+                case .numbers: result.types.insert(self.tally(order: self.numberOrder, playerAnswers: self.playerNumberAnswers, for: .numbers))
+                case .colors: result.types.insert(self.tally(order: self.colorOrder, playerAnswers: self.playerColorAnswers, for: .colors))
                 }
             }
-            do {
-                try self.context.save()
-            } catch {
-                Utilities.show(error: error)
-            }
+            self.context.save { Utilities.show(error: $0) }
             self.delegate.gameBrainDidFinish(with: result)
         }
     }
     
-    func tally<T: Equatable>(order: [T], playerAnswers: [Bool], for type: GameType) -> BackTypeResult {
+    func tally<T: Equatable>(order: [T], playerAnswers: [Bool], for type: GameType) -> TypeResult {
         var correctAnswers = [Bool]()
         
         for i in settings.level..<order.count {
@@ -170,10 +167,10 @@ class GameBrain: HasContext {
             }
         }
         
-        var falseFalse = 0
-        var falseTrue = 0
-        var trueFalse = 0
-        var trueTrue = 0
+        var falseFalse: Int16 = 0
+        var falseTrue: Int16 = 0
+        var trueFalse: Int16 = 0
+        var trueTrue: Int16 = 0
         
         var results = zip(playerAnswers, correctAnswers).map { player,correct -> Bool in
             switch (player,correct) {
@@ -183,21 +180,22 @@ class GameBrain: HasContext {
             case (true,true): trueTrue += 1; return true
             }
         }
-        print(order)
-        print(zip(playerAnswers, correctAnswers))
-        var result: BackTypeResult? = nil
-        context.performAndWait {
-            result = BackTypeResult(context: self.context)
-            result?.correct = Int16(falseFalse + trueTrue)
-            result?.incorrect = Int16(falseTrue + trueFalse)
-            result?.matches = Int16(falseTrue + trueTrue)
-            result?.backType = Int16(type.value)
-            do {
-                try self.context.save()
-            } catch {
-                Utilities.show(error: error)
-            }
-        }
+
+        var result: TypeResult? = nil
+        
+        result = TypeResult(context: self.context)
+        
+        result?.correct = falseFalse + trueTrue
+        result?.incorrect = falseTrue + trueFalse
+        result?.matches = falseTrue + trueTrue
+        result?.type = type
+        
+        result?.falseFalse = falseFalse
+        result?.falseTrue = falseTrue
+        result?.trueFalse = trueFalse
+        result?.trueTrue = trueTrue
+        
+        
         return result!
     }
 }

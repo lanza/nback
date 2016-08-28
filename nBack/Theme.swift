@@ -20,4 +20,14 @@ struct Theme: HasWindow {
             }
         }
     }
+    
+    enum Fonts {
+        case label
+        
+        var font: UIFont {
+            switch self {
+            case .label: return UIFont.systemFont(ofSize: 13)
+            }
+        }
+    }
 }

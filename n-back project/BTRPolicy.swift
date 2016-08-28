@@ -34,7 +34,7 @@ class BTRPolicy: NSEntityMigrationPolicy {
         squareBackType.setValue(dInstance, forKey: "game")
         numberBackType.setValue(dInstance, forKey: "game")
         
-        enum Error: ErrorProtocol {
+        enum Errored: Error {
             case one
         }
         

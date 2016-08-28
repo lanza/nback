@@ -10,13 +10,25 @@ struct Lets {
     static let cellIdentifier = "cell"
     
     //GameSettings
-    static let timeBetweenTurnsKey = "timeBetweenTurns"
+    static let secondsBetweenTurnsKey = "secondsBetweenTurns"
     static let squareHighlightTimeKey = "squareHighlightTime"
     static let typesKey = "types"
     static let levelKey = "level"
     static let rowsKey = "rows"
     static let columnsKey = "columns"
     static let numberOfTurnsKey = "numberOfTurns"
+    
+    static let cellLabelDateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "EEEE, MMM d, yyyy"
+        return df
+    }()
+    static let sectionIdentifierDateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "dd-MM-yyyy"
+        return df
+    }()
+    
 }
 
 

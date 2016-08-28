@@ -8,7 +8,7 @@ class HistoryController: UITableViewController, NSFetchedResultsControllerDelega
     var date: Date!
     
     var context: NSManagedObjectContext {
-        return (UIApplication.shared().delegate as! AppDelegate).managedObjectContext
+        return (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     }
 
     // MARK: - Life Cycle
@@ -16,8 +16,8 @@ class HistoryController: UITableViewController, NSFetchedResultsControllerDelega
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        dateFormatter.dateStyle = DateFormatter.Style.shortStyle
-        dateFormatter.timeStyle = DateFormatter.Style.shortStyle
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
         
         try! fetchedResultsController.performFetch()
         tableView.reloadData()
@@ -38,7 +38,7 @@ class HistoryController: UITableViewController, NSFetchedResultsControllerDelega
         fetchRequest.entity = entity
         
         var comps = DateComponents()
-        let calendar = Calendar.current()
+        let calendar = Calendar.current
         comps.day = calendar.component(.day, from: self.date)
         comps.month = calendar.component(.month, from: self.date)
         comps.year = calendar.component(.year, from: self.date)
@@ -47,10 +47,10 @@ class HistoryController: UITableViewController, NSFetchedResultsControllerDelega
         let endingDate = beginningDate!.addingTimeInterval(60*60*24)
         
         
-        let predicate = Predicate(format: "(date >= %@) AND (date <= %@)", argumentArray: [beginningDate!,endingDate])
+        let predicate = NSPredicate(format: "(date >= %@) AND (date <= %@)", argumentArray: [beginningDate!,endingDate])
         fetchRequest.predicate = predicate
         fetchRequest.fetchBatchSize = 20
-        fetchRequest.sortDescriptors = [SortDescriptor(key: "date", ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
         
         let afrc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context, sectionNameKeyPath: nil, cacheName: nil)
         afrc.delegate = self
@@ -97,10 +97,10 @@ class HistoryController: UITableViewController, NSFetchedResultsControllerDelega
     
     // MARK: - Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let selectedCell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for: selectedCell)!
-        let ohc = segue.destinationViewController as! OneHistoryController
+        let ohc = segue.destination as! OneHistoryController
         ohc.gameResult = fetchedResultsController.object(at: indexPath) 
     }
 

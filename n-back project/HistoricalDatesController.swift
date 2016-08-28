@@ -4,7 +4,7 @@ import CoreData
 class HistoricalDatesController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var context: NSManagedObjectContext {
-        return (UIApplication.shared().delegate as! AppDelegate).managedObjectContext
+        return (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     }
     var _fetchedResultsController: NSFetchedResultsController<GameResult>!
     var fetchedResultsController: NSFetchedResultsController<GameResult> {
@@ -16,7 +16,7 @@ class HistoricalDatesController: UITableViewController, NSFetchedResultsControll
         let entity = NSEntityDescription.entity(forEntityName: "GameResult", in: self.context)
         fetchRequest.entity = entity
         fetchRequest.fetchBatchSize = 20
-        fetchRequest.sortDescriptors = [SortDescriptor(key: "date", ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
         
         let afrc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         afrc.delegate = self
@@ -41,8 +41,8 @@ class HistoricalDatesController: UITableViewController, NSFetchedResultsControll
         try! fetchedResultsController.performFetch()
         
         for object in fetchedResultsController.fetchedObjects! {
-            dateFormatter.timeStyle = DateFormatter.Style.noStyle
-            dateFormatter.dateStyle = DateFormatter.Style.mediumStyle
+            dateFormatter.timeStyle = DateFormatter.Style.none
+            dateFormatter.dateStyle = DateFormatter.Style.medium
             let date = dateFormatter.string(from: object.date!)
             
             if let value = datesDictionary[date] {
@@ -68,8 +68,8 @@ class HistoricalDatesController: UITableViewController, NSFetchedResultsControll
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        dateFormatter.timeStyle = DateFormatter.Style.noStyle
-        dateFormatter.dateStyle = DateFormatter.Style.mediumStyle
+        dateFormatter.timeStyle = DateFormatter.Style.none
+        dateFormatter.dateStyle = DateFormatter.Style.medium
         
         try! self.fetchedResultsController.performFetch()
         
@@ -87,9 +87,9 @@ class HistoricalDatesController: UITableViewController, NSFetchedResultsControll
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let date = dateFormatter.date(from: (sender as! UITableViewCell).textLabel!.text!)
-        let hvc = segue.destinationViewController as! HistoryController
+        let hvc = segue.destination as! HistoryController
         
         hvc.date = date
         

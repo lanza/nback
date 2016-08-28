@@ -10,12 +10,12 @@ struct GameSettings {
         get { return defaults.object(forKey: Lets.squareHighlightTimeKey) as? Double ?? 0.5 }
         set { defaults.set(newValue, forKey: Lets.squareHighlightTimeKey) }
     }
-    var timeBetweenTurns: Double {
-        get { return defaults.object(forKey: Lets.timeBetweenTurnsKey) as? Double ?? 3.0 }
-        set { defaults.set(newValue, forKey: Lets.timeBetweenTurnsKey) }
+    var secondsBetweenTurns: Double {
+        get { return defaults.object(forKey: Lets.secondsBetweenTurnsKey) as? Double ?? 0.10 }
+        set { defaults.set(newValue, forKey: Lets.secondsBetweenTurnsKey) }
     }
     var types: [GameType] {
-        get { return (defaults.object(forKey: Lets.typesKey) as? Set<Int> ?? [0,1,2]).map { GameType.fromDefaults(value: $0) } }
+        get { return (defaults.object(forKey: Lets.typesKey) as? Set<Int> ?? [0,1,2]).map { GameType.from(value: $0) } }
         set { defaults.set(newValue.map { $0.value }, forKey: Lets.typesKey) }
     }
     var level: Int {
@@ -31,7 +31,7 @@ struct GameSettings {
         set { defaults.set(newValue, forKey: Lets.columnsKey) }
     }
     var numberOfTurns: Int {
-        get { return defaults.object(forKey: Lets.numberOfTurnsKey) as? Int ?? 15 }
+        get { return defaults.object(forKey: Lets.numberOfTurnsKey) as? Int ?? 3 }
         set { defaults.set(newValue, forKey: Lets.numberOfTurnsKey) }
     }
 }

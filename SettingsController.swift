@@ -2,15 +2,15 @@ import UIKit
 
 class SettingsController: UITableViewController {
     
-    var defaults = UserDefaults.standard()
+    var defaults = UserDefaults.standard
     
     var rootArray: [[String: AnyObject]] {
-        let configPlistURL = Bundle.main().urlForResource("settingsConfig", withExtension: "plist")
+        let configPlistURL = Bundle.main.url(forResource: "settingsConfig", withExtension: "plist")
         return NSArray(contentsOf: configPlistURL!) as! [[String: AnyObject]]
     }
     
     var selectable: Bool {
-        let defaults = UserDefaults.standard()
+        let defaults = UserDefaults.standard
         return (defaults.value(forKey: "customMode") as! Bool)
     }
     
@@ -57,15 +57,15 @@ class SettingsController: UITableViewController {
             
             let key = row["key"] as! String
             if let currentValue = defaults.value(forKey: key) {
-                cell.detailTextLabel!.text = String(currentValue)
+                cell.detailTextLabel!.text = String(describing: currentValue)
             }
             
             if !selectable {
-                cell.backgroundColor = UIColor.lightGray()
-                cell.textLabel?.textColor = UIColor.gray()
+                cell.backgroundColor = UIColor.lightGray
+                cell.textLabel?.textColor = UIColor.gray
             } else {
-                cell.backgroundColor = UIColor.white()
-                cell.textLabel?.textColor = UIColor.black()
+                cell.backgroundColor = UIColor.white
+                cell.textLabel?.textColor = UIColor.black
             }
             
             return cell
@@ -78,8 +78,8 @@ class SettingsController: UITableViewController {
     
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        let ovc = segue.destinationViewController as! OptionController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let ovc = segue.destination as! OptionController
         let row = (tableView.indexPath(for: sender as! UITableViewCell) as NSIndexPath?)?.row
         ovc.rowInformation = rootArray[row!]
     }
