@@ -23,6 +23,11 @@ struct Lets {
         df.dateFormat = "EEEE, MMM d, yyyy"
         return df
     }()
+    static let headerDateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "MMM yyyy"
+        return df
+    }()
     static let sectionIdentifierDateFormatter: DateFormatter = {
         let df = DateFormatter()
         df.dateFormat = "dd-MM-yyyy"

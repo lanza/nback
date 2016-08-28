@@ -1,39 +1,38 @@
-    import CoreData
-
+import CoreData
 import UIKit
 
-class TableViewController: UITableViewController, DataProviderDelegate {
-    func dataProviderDidUpdate(updates: [DataProviderUpdate<GameResult>]?) {
-        //
+//class HistoryByDateFetchedResultsDataProvider: FetchedResultsDataProvider<GameResult, TableViewController> {
+//    
+//    var dateCountPairs = [(Date,Int)]()
+//    
+//    override init(fetchedResultsController: NSFetchedResultsController<GameResult>, delegate: TableViewController) {
+//        super.init(fetchedResultsController: fetchedResultsController, delegate: delegate)
+//        
+//        generateDateCountPairs()
+//    }
+//    
+//    private func generateDateCountPairs() {
+//        var dateCountDict = [Date:Int]()
+//        fetchedResultsController.fetchedObjects?.forEach { dateCountDict[$0.date] = (dateCountDict[$0.date] ?? 0) + 1 }
+//        dateCountPairs = dateCountDict.map { ($0,$1) }
+//    }
+//    
+//    override func object(at indexPath: IndexPath) -> GameResult {
+//        fatalError()
+//    }
+//}
+
+class AnyDataProviderDelegate<Object: ManagedObject>: FetchedResultsDataProviderDelegate {
+    var dataProviderDidUpdate: (([DataProviderUpdate<Object>]?) -> ())?
+    func dataProviderDidUpdate(updates: [DataProviderUpdate<Object>]?) {
+        dataProviderDidUpdate?(updates)
     }
 }
 
-class HistoryByDateFetchedResultsDataProvider: FetchedResultsDataProvider<GameResult, TableViewController> {
+class FetchedResultsDataProvider<Object: ManagedObject>: NSObject, NSFetchedResultsControllerDelegate, DataProvider {
     
-    var dateCountPairs = [(Date,Int)]()
-    
-    override init(fetchedResultsController: NSFetchedResultsController<GameResult>, delegate: TableViewController) {
-        super.init(fetchedResultsController: fetchedResultsController, delegate: delegate)
-        
-        generateDateCountPairs()
-    }
-    
-    private func generateDateCountPairs() {
-        var dateCountDict = [Date:Int]()
-        fetchedResultsController.fetchedObjects?.forEach { dateCountDict[$0.date] = (dateCountDict[$0.date] ?? 0) + 1 }
-        dateCountPairs = dateCountDict.map { ($0,$1) }
-    }
-    
-    override func object(at indexPath: IndexPath) -> GameResult {
-        fatalError()
-    }
-}
-
-class FetchedResultsDataProvider<Object: ManagedObject, Delegate: DataProviderDelegate>: NSObject, NSFetchedResultsControllerDelegate, DataProvider where Object == Delegate.Object {
-    
-    init(fetchedResultsController: NSFetchedResultsController<Object>, delegate: Delegate) {
+    init(fetchedResultsController: NSFetchedResultsController<Object>) {
         self.fetchedResultsController = fetchedResultsController
-        self.delegate = delegate
         super.init()
         fetchedResultsController.delegate = self
         try! fetchedResultsController.performFetch()
@@ -64,13 +63,13 @@ class FetchedResultsDataProvider<Object: ManagedObject, Delegate: DataProviderDe
     // MARK: Private
     
     let fetchedResultsController: NSFetchedResultsController<Object>
-    private weak var delegate: Delegate!
+    weak var delegate: AnyDataProviderDelegate<Object>!
     private var updates = [DataProviderUpdate<Object>]()
     
     // MARK: NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updates.removeAll()
+        updates = []
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
@@ -94,6 +93,6 @@ class FetchedResultsDataProvider<Object: ManagedObject, Delegate: DataProviderDe
         
     }
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        delegate.dataProviderDidUpdate(updates: updates)
+        delegate?.dataProviderDidUpdate(updates: updates)
     }
 }

@@ -27,7 +27,7 @@ class AppCoordinator: NSObject, NBCoordinator {
         let historyCoordinator = HistoryCoordinator()
         historyCoordinator.start()
         historyCoordinator.delegate = self
-        let historyNav = NavigationController(viewController: historyCoordinator.historyTableViewController)
+        let historyNav = NavigationController(viewController: historyCoordinator.daysTableViewController)
         coordinators.append(historyCoordinator)
         
         return [playNav,historyNav]

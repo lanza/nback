@@ -1,25 +1,18 @@
 import UIKit
 
-class DaysByDateTableViewDataSource: TableViewDataSource<FetchedResultsDataProvider<Day, DaysTableViewController>, DaysTableViewCell> {
-    override func process(updates: [DataProviderUpdate<Day>]?) {
-        //
-    }
+class DaysTableViewDataSource: TableViewDataSource<FetchedResultsDataProvider<Day>, DaysTableViewCell> {
     
-    required init(tableView: UITableView, dataProvider: FetchedResultsDataProvider<Day, DaysTableViewController>) {
-        super.init(tableView: tableView, dataProvider: dataProvider)
-        
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        fatalError()
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let object = dataProvider.object(at: IndexPath(row: 0, section: 0))
+        return Lets.cellLabelDateFormatter.string(from: object.date)
     }
 }
 
-class TableViewDataSource<Source: DataProvider, Cell: TableViewCell>: NSObject, UITableViewDataSource where Cell: ConfigurableCell, Cell.Object == Source.Object {
+class DayTableViewDataSource: TableViewDataSource<DayDataProvider, DayTableViewCell> {
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "header"
-    }
+}
+
+class TableViewDataSource<Source: DataProvider, Cell: UITableViewCell>: NSObject, UITableViewDataSource where Cell: ConfigurableCell, Cell.Object == Source.Object {
     
     required init(tableView: UITableView, dataProvider: Source) {
         self.tableView = tableView
@@ -61,8 +54,8 @@ class TableViewDataSource<Source: DataProvider, Cell: TableViewCell>: NSObject, 
     
     // MARK: Private
     
-    private let tableView: UITableView
-    private let dataProvider: Source
+    let tableView: UITableView
+    let dataProvider: Source
     
     // MARK: UITableViewDataSource
     
@@ -74,8 +67,7 @@ class TableViewDataSource<Source: DataProvider, Cell: TableViewCell>: NSObject, 
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let object = dataProvider.object(at: indexPath)
-        let identifier = Lets.cellIdentifier
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? Cell else { fatalError() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Lets.cellIdentifier, for: indexPath) as? Cell else { fatalError() }
         cell.configure(for: object)
         return cell
     }

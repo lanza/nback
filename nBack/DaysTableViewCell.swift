@@ -1,7 +1,7 @@
 
 import UIKit
 
-class DaysTableViewCell: TableViewCell {
+class DaysTableViewCell: UITableViewCell {
     
     let dateLabel: Label
     let countLabel: Label
@@ -48,10 +48,12 @@ class DaysTableViewCell: TableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func configure(for object: Day) {
-        
+}
+
+extension DaysTableViewCell: ConfigurableCell {
+    func configure(for object: Day) {
         dateLabel.text = Lets.cellLabelDateFormatter.string(from: object.date)
+        countLabel.text = "\(object.results.count)"
     }
 }
 

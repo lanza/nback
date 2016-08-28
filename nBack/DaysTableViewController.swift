@@ -1,48 +1,35 @@
 import UIKit
 import CoreData
 
-class DaysTableViewController: UITableViewController, HasContext {
+class DaysTableViewController: TableViewController<FetchedResultsDataProvider<Day>,Day,DaysTableViewCell> {
     
-    var delegate: DaysTableViewControllerDelegate?
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupTableView()
-    }
-    
-    // MARK: Private
-    
-    typealias Source = FetchedResultsDataProvider<Day, DaysTableViewController>
-    var dataSource: TableViewDataSource<Source, DaysTableViewCell>!
-    
-    private func setupTableView() {
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 100
-        
+    override func setDataProvider() {        
         let request = Day.request
         request.returnsObjectsAsFaults = false
-        request.fetchBatchSize = 100
-        
-        let frc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "month", cacheName: "root")
-        let dataProvider = FetchedResultsDataProvider(fetchedResultsController: frc, delegate: self)
-        dataSource = TableViewDataSource(tableView: tableView, dataProvider: dataProvider)
+        request.fetchBatchSize = 20
+        let frc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "month", cacheName: nil)
+        dataProvider = FetchedResultsDataProvider<Day>(fetchedResultsController: frc)
+    }
+    override func setDataSource() {
+        dataSource = DaysTableViewDataSource(tableView: tableView, dataProvider: dataProvider)
     }
 
-
-}
-
-extension DaysTableViewController: DataProviderDelegate {
-    func dataProviderDidUpdate(updates: [DataProviderUpdate<Day>]?) {
-        dataSource.process(updates: updates)
+    override var dataSource: TableViewDataSource<FetchedResultsDataProvider<Day>, DaysTableViewCell>? {
+        didSet {
+            let dataProviderDelegate = AnyDataProviderDelegate<Day>()
+            dataProviderDelegate.dataProviderDidUpdate = dataSource?.process
+            dataProvider.delegate = dataProviderDelegate
+        }
+    }
+    var delegate: DaysTableViewControllerDelegate?
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let day = dataSource?.selectedObject else { fatalError() }
+        delegate?.daysTableViewController(self, didSelect: day)
     }
 }
 
 protocol DaysTableViewControllerDelegate {
-    func daysTableViewController(_ daysTableViewController: DaysTableViewController, didSelectDay: Day)
+    func daysTableViewController(_ daysTableViewController: DaysTableViewController, didSelect day: Day)
 }
+

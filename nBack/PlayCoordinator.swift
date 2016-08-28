@@ -24,7 +24,6 @@ extension PlayCoordinator: PlayViewControllerDelegate {
         gameCoordinator.gameDelegate = self
         coordinators.append(gameCoordinator)
         gameCoordinator.start()
-        print(coordinators)
         playViewController.present(gameCoordinator.gameViewController, animated: true)
     }
 }
