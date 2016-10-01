@@ -55,7 +55,6 @@ extension ManagedObjectType where Self: ManagedObject {
     public static func fetch(in context: NSManagedObjectContext, configurationBlock: ((NSFetchRequest<Self>) -> ()) = { _ in }) -> [Self] {
         let request = NSFetchRequest<Self>(entityName: Self.entityName)
         configurationBlock(request)
-        guard let result = try! context.fetch(request) as? [Self] else { fatalError("Fetched objects have wrong type.") }
-        return result
+        return try! context.fetch(request)
     }
 }

@@ -36,7 +36,14 @@ class FetchedResultsDataProvider<Object: ManagedObject>: NSObject, NSFetchedResu
         super.init()
         fetchedResultsController.delegate = self
         try! fetchedResultsController.performFetch()
-        print(fetchedResultsController.sections, fetchedResultsController.sectionNameKeyPath)
+        
+        let sections = fetchedResultsController.sections!
+        for section in sections {
+            print("new section")
+            for item in section.objects as! [Day] {
+                print(item.year, item.month, item.day)
+            }
+        }
     }
     
     func reconfigureFetchRequest(block: (NSFetchRequest<Object>) -> ()) {

@@ -1,11 +1,21 @@
 import Foundation
 import Swift
 
-struct Utilities {
-    static func random(max: Int) -> Int {
+public struct Utilities {
+    public static func random(max: Int) -> Int {
         return Int(arc4random_uniform(UInt32(max) + 1))
     }
-    static func show(error: Error) {
+    public static func random(range: CountableRange<Int>) -> Int {
+        let max = range.upperBound - 1 - range.lowerBound
+        let random = Int(arc4random_uniform(UInt32(max) + 1))
+        return random + range.lowerBound
+    }
+    public static func random(range: CountableClosedRange<Int>) -> Int {
+        let max = range.upperBound - range.lowerBound
+        let random = Int(arc4random_uniform(UInt32(max) + 1))
+        return random + range.lowerBound
+    }
+    public static func show(error: Error) {
         print("====================ERROR================")
         print(error)
     }
@@ -26,7 +36,7 @@ extension Sequence {
         return findFirstOccurence { !block($0) } == nil
     }
     
-    func asyncForEachWithCompletion(completion: (() -> ()), block: ((Iterator.Element), () ->()) -> ()) {
+    func asyncForEachWithCompletion(completion: @escaping (() -> ()), block: ((Iterator.Element), () ->()) -> ()) {
         let group = DispatchGroup()
         let innerCompletion = { group.leave() }
         for x in self {

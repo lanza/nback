@@ -23,5 +23,5 @@ extension SettingsCoordinator: ViewControllerDelegate {
 }
 
 class SettingsViewController: ViewController {
-    var delegate: ViewControllerDelegate?
+    var delegate: ViewControllerDelegate?   
 }

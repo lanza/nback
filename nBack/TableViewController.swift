@@ -2,7 +2,7 @@ import UIKit
 import CoreData
 
 class TableViewController<Source: DataProvider, Object: ManagedObject, Cell: UITableViewCell>: UITableViewController, HasContext
-where Cell: ConfigurableCell, Cell.Object == Object, Object == Source.Object {
+    where Cell: ConfigurableCell, Cell.Object == Object, Object == Source.Object {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -14,19 +14,17 @@ where Cell: ConfigurableCell, Cell.Object == Object, Object == Source.Object {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setDataProvider()
+        setDataSource()
     }
     
     var dataSource: TableViewDataSource<Source, Cell>?
     var dataProvider: Source!
     
-    private func setupTableView() {
+    func setupTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 100
-        
-        setDataProvider()
-        setDataSource()
+        tableView.estimatedRowHeight = 125
     }
-    
     func setDataProvider() { fatalError() }
     func setDataSource() { dataSource = TableViewDataSource(tableView: tableView, dataProvider: dataProvider) }
 }

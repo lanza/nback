@@ -24,19 +24,20 @@ class AppCoordinator: NSObject, NBCoordinator {
         let playNav = NavigationController(viewController: playCoordinator.playViewController)
         coordinators.append(playCoordinator)
         
-        let historyCoordinator = HistoryCoordinator()
-        historyCoordinator.start()
-        historyCoordinator.delegate = self
-        let historyNav = NavigationController(viewController: historyCoordinator.daysTableViewController)
-        coordinators.append(historyCoordinator)
+        let daysCoordinator = DaysCoordinator()
+        daysCoordinator.start()
+        daysCoordinator.delegate = self
+        let historyNav = NavigationController(viewController: daysCoordinator.daysTableViewController)
+        coordinators.append(daysCoordinator)
         
-        let settingsCoordinator = SettingsCoordinator()
-        settingsCoordinator.start()
-        settingsCoordinator.delegate = self
-        let settingsNav = NavigationController(viewController: settingsCoordinator.settingsViewController)
-        coordinators.append(settingsCoordinator)
+        //NYI
+//        let settingsCoordinator = SettingsCoordinator()
+//        settingsCoordinator.start()
+//        settingsCoordinator.delegate = self
+//        let settingsNav = NavigationController(viewController: settingsCoordinator.settingsViewController)
+//        coordinators.append(settingsCoordinator)
         
-        return [playNav,historyNav,settingsNav]
+        return [playNav,historyNav]
     }
     
 }

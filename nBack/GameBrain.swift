@@ -10,10 +10,6 @@ func ==(lhs: MatrixIndex, rhs: MatrixIndex) -> Bool {
     return (lhs.row == rhs.row && lhs.column == rhs.column)
 }
 
-func ==(lhs: (Int,Int), rhs: (Int,Int)) -> Bool {
-    return true
-}
-
 enum Color {
     case yellow
     case green
@@ -54,6 +50,7 @@ enum Color {
 
 class GameBrain: HasContext {
     
+    var speechSynthesizer: SpeechSynthesizer
     var delegate: GameBrainDelegate
     
     var timer: Timer?
@@ -61,28 +58,36 @@ class GameBrain: HasContext {
     var settings: GameSettings { return GameSettings.shared }
     
     init(squareMatrix: SquareMatrix, delegate: GameBrainDelegate) {
+        self.speechSynthesizer = SpeechSynthesizer()
         self.squareMatrix = squareMatrix
         self.delegate = delegate
     }
+    
+    func quit() {
+        timer?.invalidate()
+    }
+    
+    var sequenceLength: Int { return settings.numberOfTurns + settings.level }
     
     func generateSequences() {
         for type in settings.types {
             switch type {
             case .squares:
-                squareOrder = (1...settings.numberOfTurns).map { _ in MatrixIndex(row: Utilities.random(max: settings.rows - 1), column: Utilities.random(max: settings.columns - 1)) }
-                playerSquareAnswers = [Bool](repeating: false, count: settings.numberOfTurns - settings.level)
+                squareOrder = (1...sequenceLength).map { _ in MatrixIndex(row: Utilities.random(range: 0..<settings.rows), column: Utilities.random(range: 0..<settings.columns)) }
+                playerSquareAnswers = [Bool](repeating: false, count: sequenceLength - settings.level)
             case .numbers:
-                numberOrder = (1...settings.numberOfTurns).map { _ in Utilities.random(max: 8) + 1 }
-                playerNumberAnswers = [Bool](repeating: false, count: settings.numberOfTurns - settings.level)
+                numberOrder = (1...sequenceLength).map { _ in Utilities.random(range: 1...9) }
+                playerNumberAnswers = [Bool](repeating: false, count: sequenceLength - settings.level)
             case .colors:
-                colorOrder = (1...settings.numberOfTurns).map { _ in Utilities.random(max: 7) }.map { Color.from(value: $0).color }
-                playerColorAnswers = [Bool](repeating: false, count: settings.numberOfTurns - settings.level)
+                colorOrder = (1...sequenceLength).map { _ in Utilities.random(range: 0...7) }.map { Color.from(value: $0).color }
+                playerColorAnswers = [Bool](repeating: false, count: sequenceLength - settings.level)
             }
         }
     }
     
     func speakNextNumber() {
-        
+        let numberToSay = numberOrder[turnCount]
+        speechSynthesizer.speak(number: numberToSay)
     }
     
     func highlightAndColorNextSquare() {
@@ -103,7 +108,6 @@ class GameBrain: HasContext {
         squareMatrix.color(row: index.row, column: index.column, color: color)
     }
     
-    
     func playerStatesNumbersMatched() { playerNumberAnswers![turnCount - 1] = true }
     func playerStatesSquaresMatched() { playerSquareAnswers![turnCount - 1] = true }
     func playerStatesColorsMatched() { playerColorAnswers![turnCount - 1] = true }
@@ -111,6 +115,13 @@ class GameBrain: HasContext {
     func start() {
         generateSequences()
         timer = Timer.scheduledTimer(withTimeInterval: settings.secondsBetweenTurns, repeats: true) { timer in
+            
+            guard self.turnCount < self.sequenceLength else {
+                timer.invalidate()
+                self.finish()
+                return
+            }
+            
             if self.settings.types.contains(.numbers) {
                 self.speakNextNumber()
             }
@@ -121,11 +132,6 @@ class GameBrain: HasContext {
                 self.delegate.enableButtons()
             }
             self.turnCount += 1
-            if self.turnCount == self.settings.numberOfTurns {
-                timer.invalidate()
-                self.finish()
-                return
-            }
         }
     }
     
@@ -141,7 +147,6 @@ class GameBrain: HasContext {
     
     func finish() {
         context.performAndWait {
-            
             let result = GameResult(context: self.context)
             result.initialize()
             for type in self.settings.types {
@@ -152,6 +157,12 @@ class GameBrain: HasContext {
                 }
             }
             self.context.save { Utilities.show(error: $0) }
+            
+            let defaults = UserDefaults.standard
+            
+            defaults.set(Lets.scoreString(for: result), forKey: Lets.lastScoreString)
+            defaults.set(Lets.resultString(for: result), forKey: Lets.lastResultString)
+            
             self.delegate.gameBrainDidFinish(with: result)
         }
     }
@@ -160,11 +171,7 @@ class GameBrain: HasContext {
         var correctAnswers = [Bool]()
         
         for i in settings.level..<order.count {
-            if order[i] == order[i-2] {
-                correctAnswers.append(true)
-            } else {
-                correctAnswers.append(false)
-            }
+            correctAnswers.append(order[i] == order[i-2])
         }
         
         var falseFalse: Int16 = 0
@@ -181,22 +188,19 @@ class GameBrain: HasContext {
             }
         }
 
-        var result: TypeResult? = nil
+        let result = TypeResult(context: self.context)
         
-        result = TypeResult(context: self.context)
+        result.correct = falseFalse + trueTrue
+        result.incorrect = falseTrue + trueFalse
+        result.matches = falseTrue + trueTrue
+        result.type = type
         
-        result?.correct = falseFalse + trueTrue
-        result?.incorrect = falseTrue + trueFalse
-        result?.matches = falseTrue + trueTrue
-        result?.type = type
+        result.falseFalse = falseFalse
+        result.falseTrue = falseTrue
+        result.trueFalse = trueFalse
+        result.trueTrue = trueTrue
         
-        result?.falseFalse = falseFalse
-        result?.falseTrue = falseTrue
-        result?.trueFalse = trueFalse
-        result?.trueTrue = trueTrue
-        
-        
-        return result!
+        return result
     }
 }
 

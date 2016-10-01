@@ -9,9 +9,9 @@ class PlayCoordinator: NSObject, NBCoordinator {
     
     func start() {
         playViewController.delegate = self
-        playViewController.title = Lets.playl10n
+        playViewController.title = "nBack"
         playViewController.tabBarItem.title = Lets.playl10n
-        playViewController.tabBarItem.image = nil
+        playViewController.tabBarItem.image = #imageLiteral(resourceName: "play")
     }
     
 }

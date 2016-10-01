@@ -7,12 +7,9 @@ public enum GameType {
     
     var string: String {
         switch self {
-        case .numbers:
-            return NSLocalizedString("Numbers", comment: "")
-        case .squares:
-            return NSLocalizedString("Squares", comment: "")
-        case .colors:
-            return NSLocalizedString("Colors", comment: "")
+        case .numbers: return Lets.numbersl10n
+        case .squares: return Lets.squaresl10n
+        case .colors:  return Lets.colorsl10n
         }
     }
     

@@ -50,6 +50,8 @@ class DaysTableViewCell: UITableViewCell {
     }
 }
 
+
+
 extension DaysTableViewCell: ConfigurableCell {
     func configure(for object: Day) {
         dateLabel.text = Lets.cellLabelDateFormatter.string(from: object.date)
@@ -58,13 +60,4 @@ extension DaysTableViewCell: ConfigurableCell {
 }
 
 
-class Label: UILabel {
-    init() {
-        super.init(frame: CGRect())
-        font = Theme.Fonts.label.font
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
+

@@ -6,7 +6,7 @@ public final class ManagedObjectObserver {
         case update
     }
     
-    public init?(object: ManagedObjectType, changeHandler: ((ChangeType) -> ()) ) {
+    public init?(object: ManagedObjectType, changeHandler: @escaping ((ChangeType) -> ()) ) {
         guard let moc = object.managedObjectContext else { return nil }
         objectHasBeenDeleted = !(type(of: object).defaultPredicate.evaluate(with: object))
         token = moc.addObjectsDidChangeNotificationObserver { [unowned self] note in
@@ -82,7 +82,7 @@ public struct ObjectsDidChangeNotification {
 
 
 extension NSManagedObjectContext {
-    public func addObjectsDidChangeNotificationObserver(handler: ((ObjectsDidChangeNotification) -> ()) ) -> NSObjectProtocol {
+    public func addObjectsDidChangeNotificationObserver(handler: @escaping ((ObjectsDidChangeNotification) -> ()) ) -> NSObjectProtocol {
         return NotificationCenter.default.addObserver(forName: .NSManagedObjectContextObjectsDidChange, object: self, queue: nil) { note in
             let wrappedNote = ObjectsDidChangeNotification(note: note)
             handler(wrappedNote)

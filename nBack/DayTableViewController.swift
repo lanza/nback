@@ -19,14 +19,30 @@ class DayDataProvider: DataProvider {
     }
 }
 
+
+
 class DayTableViewController: TableViewController<DayDataProvider, GameResult, DayTableViewCell> {
 
     var day: Day!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = Lets.cellLabelDateFormatter.string(from: day.date)
+    }
     
     override func setDataProvider() {
         dataProvider = DayDataProvider(day: day)
     }
     
+    override func setupTableView() {
+        
+        // not sure why this doens't work
+        
+//        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.estimatedRowHeight = 300
+        
+        
+    }
     
     var delegate: DayTableViewControllerDelegate!
 }

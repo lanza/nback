@@ -3,8 +3,8 @@ import UIKit
 class DaysTableViewDataSource: TableViewDataSource<FetchedResultsDataProvider<Day>, DaysTableViewCell> {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let object = dataProvider.object(at: IndexPath(row: 0, section: 0))
-        return Lets.cellLabelDateFormatter.string(from: object.date)
+        let object = dataProvider.object(at: IndexPath(row: 0, section: section))
+        return Lets.headerDateFormatter.string(from: object.date)
     }
 }
 

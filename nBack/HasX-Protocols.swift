@@ -12,7 +12,7 @@ extension HasWindow {
 }
 
 
-protocol HasContext {}
+public protocol HasContext {}
 extension HasContext {
-    var context: NSManagedObjectContext { return CoreData.shared.context }
+    public var context: NSManagedObjectContext { return CoreData.shared.context }
 }

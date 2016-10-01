@@ -1,7 +1,7 @@
 import CoreData
 
 extension NSManagedObjectContext {
-    func save(errorHandler: ((Error) -> ())?) {
+    public func save(errorHandler: ((Error) -> ())?) {
         do {
             try save()
         } catch {

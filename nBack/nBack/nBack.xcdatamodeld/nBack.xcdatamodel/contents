@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11224.2" systemVersion="16A304a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Day" representedClassName=".Day" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="day" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="month" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sectionIdentifier" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
         <attribute name="year" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="results" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GameResult" inverseName="dayPlayed" inverseEntity="GameResult" syncable="YES"/>
     </entity>
     <entity name="GameResult" representedClassName=".GameResult" syncable="YES">
+        <attribute name="columns" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
         <attribute name="level" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="numberOfTurns" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rows" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="secondsBetweenTurns" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="squareHighlightTime" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="dayPlayed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="results" inverseEntity="Day" syncable="YES"/>
         <relationship name="types" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TypeResult" inverseName="game" inverseEntity="TypeResult" syncable="YES"/>
     </entity>
@@ -27,8 +31,8 @@
         <relationship name="game" maxCount="1" deletionRule="Nullify" destinationEntity="GameResult" inverseName="types" inverseEntity="GameResult" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Day" positionX="-63" positionY="45" width="128" height="120"/>
-        <element name="GameResult" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Day" positionX="-63" positionY="45" width="128" height="135"/>
+        <element name="GameResult" positionX="-63" positionY="-18" width="128" height="180"/>
         <element name="TypeResult" positionX="-54" positionY="18" width="128" height="180"/>
     </elements>
 </model>

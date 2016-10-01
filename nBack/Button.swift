@@ -9,7 +9,7 @@ class Button: UIButton {
         button.addTarget(target, action: selector, for: .touchUpInside)
         
         button.backgroundColor = Theme.Colors.matchButtonBackground.color
-        
+        button.titleLabel?.font = Theme.Fonts.playPlay.font
         return button
     }
     

@@ -7,9 +7,7 @@ class NavigationController: UINavigationController {
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError() }
-    //override init(navigationBarClass: AnyClass?, toolbarClass: AnyClass?) { fatalError() }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        print(nibNameOrNil, nibBundleOrNil)
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 }

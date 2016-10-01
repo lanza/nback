@@ -13,11 +13,15 @@ class GameView: View {
     init(rows: Int, columns: Int, types: [GameType]) {
         super.init(frame: CGRect())
         
-        setupSquares(rows: rows, columns: columns)
+        layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        
+        if GameSettings.shared.types.contains(.squares) {
+            setupSquares(rows: rows, columns: columns)
+        } else if GameSettings.shared.types.contains(.colors) {
+            setupSquares(rows: 1, columns: 1)
+        }
         setupMatchButtons(types: types)
         setupQuitButton()
-        
-        setupConstraints()
     }
     required init?(coder aDecoder: NSCoder) {fatalError()}
     
@@ -73,6 +77,9 @@ class GameView: View {
     
     private func setupSquares(rows: Int, columns: Int) {
         
+        self.rows = rows
+        self.columns = columns
+        
         var elements = [SquareView]()
         var rowStackViews = [StackView]()
         
@@ -92,25 +99,41 @@ class GameView: View {
         squareMatrix = SquareMatrix(rows: rows, columns: columns, elements: elements)
     }
     
+    var rows = 0
+    var columns = 0
+    
+    override func layoutSubviews() {
+        setupConstraints()
+    }
+    
     private func setupConstraints() {
         
         var constraints = [NSLayoutConstraint]()
         
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
-        constraints.append(mainStackView.centerYAnchor.constraint(equalTo: centerYAnchor))
+        constraints.append(mainStackView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -24))
         constraints.append(mainStackView.widthAnchor.constraint(equalTo: mainStackView.heightAnchor, multiplier: CGFloat(squareMatrix.columns) / CGFloat(squareMatrix.rows)))
-        constraints.append(mainStackView.leftAnchor.constraint(equalTo: layoutMarginsGuide.leftAnchor))
-        constraints.append(mainStackView.rightAnchor.constraint(equalTo: layoutMarginsGuide.rightAnchor))
-        //constrain so that the height is less than necessary
+        constraints.append(mainStackView.centerXAnchor.constraint(equalTo: centerXAnchor))
+        
+
+        let boardWidth = frame.width - 40
+        let boardHeight = frame.height - (8 + 16 + 8 + 8) - quitGameButton.frame.height - buttonStackView.frame.height
+        
+        if boardHeight/boardWidth < CGFloat(rows)/CGFloat(columns) {
+            constraints.append(mainStackView.heightAnchor.constraint(equalToConstant: boardHeight))
+        } else {
+            constraints.append(mainStackView.leftAnchor.constraint(equalTo: layoutMarginsGuide.leftAnchor))
+            constraints.append(mainStackView.rightAnchor.constraint(equalTo: layoutMarginsGuide.rightAnchor))
+        }
         
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
-        constraints.append(buttonStackView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor))
+        constraints.append(buttonStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16))
         constraints.append(buttonStackView.leftAnchor.constraint(equalTo: layoutMarginsGuide.leftAnchor))
         constraints.append(buttonStackView.rightAnchor.constraint(equalTo: layoutMarginsGuide.rightAnchor))
         constraints.append(buttonStackView.heightAnchor.constraint(equalToConstant: Lets.matchButtonHeight))
         
         quitGameButton.translatesAutoresizingMaskIntoConstraints = false
-        constraints.append(quitGameButton.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor))
+        constraints.append(quitGameButton.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor, constant: 8))
         constraints.append(quitGameButton.rightAnchor.constraint(equalTo: layoutMarginsGuide.rightAnchor))
         
         NSLayoutConstraint.activate(constraints)

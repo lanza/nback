@@ -2,8 +2,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
-    
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -15,6 +13,5 @@ class ViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
-        
     }
 }

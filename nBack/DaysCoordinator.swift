@@ -1,6 +1,6 @@
 import UIKit
 
-class HistoryCoordinator: NBCoordinator {
+class DaysCoordinator: NBCoordinator {
     
     weak var delegate: CoordinatorDelegate!
     
@@ -10,12 +10,12 @@ class HistoryCoordinator: NBCoordinator {
     func start() {
         daysTableViewController.delegate = self
         daysTableViewController.title = Lets.historyl10n
-        daysTableViewController.tabBarItem.title = Lets.historyl10n
-        daysTableViewController.tabBarItem.image = nil
+        daysTableViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 0)
+        daysTableViewController.tabBarItem.title = Lets.historyl10n        
     }
 }
 
-extension HistoryCoordinator: DaysTableViewControllerDelegate {
+extension DaysCoordinator: DaysTableViewControllerDelegate {
     func daysTableViewController(_ daysTableViewController: DaysTableViewController, didSelect day: Day) {
         let dayCoordinator = DayCoordinator()
         dayCoordinator.dayTableViewController.day = day
@@ -26,4 +26,4 @@ extension HistoryCoordinator: DaysTableViewControllerDelegate {
     }
 }
 
-extension HistoryCoordinator: CoordinatorDelegate { }
+extension DaysCoordinator: CoordinatorDelegate { }

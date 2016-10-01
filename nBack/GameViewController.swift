@@ -6,19 +6,19 @@ class GameViewController: ViewController {
     weak var delegate: GameViewControllerDelegate!
     
     var gameBrain: GameBrain!
-    var gameView: GameView
+    var gameView: GameView { return view as! GameView }
+    
+    override func loadView() {
+        view = GameView(rows: GameSettings.shared.rows, columns: GameSettings.shared.columns, types: GameSettings.shared.types)
+    }
+    
+    override var prefersStatusBarHidden: Bool { return true }
     
     override init() {
-        
-        self.gameView = GameView(rows: GameSettings.shared.rows, columns: GameSettings.shared.columns, types: GameSettings.shared.types)
-        
         super.init()
         
         self.gameBrain = GameBrain(squareMatrix: gameView.squareMatrix, delegate: self)
-        
         setupGameViewClosures()
-        gameView.frame = view.frame
-        view.addSubview(gameView)
     }
     
     func setupGameViewClosures() {
@@ -26,6 +26,7 @@ class GameViewController: ViewController {
     }
     
     func gameDidCancel() {
+        gameBrain.quit()
         gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
         delegate?.gameDidCancel(for: self)
     }
@@ -50,8 +51,6 @@ extension GameViewController: GameBrainDelegate {
         gameView.enableButtons()
     }
 }
-
-
 
 
 protocol GameViewControllerDelegate: class {
