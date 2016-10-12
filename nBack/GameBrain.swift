@@ -108,9 +108,9 @@ class GameBrain: HasContext {
         squareMatrix.color(row: index.row, column: index.column, color: color)
     }
     
-    func playerStatesNumbersMatched() { playerNumberAnswers![turnCount - 1] = true }
-    func playerStatesSquaresMatched() { playerSquareAnswers![turnCount - 1] = true }
-    func playerStatesColorsMatched() { playerColorAnswers![turnCount - 1] = true }
+    func playerStatesNumbersMatched() { playerNumberAnswers![turnCount - 1 - settings.level] = true }
+    func playerStatesSquaresMatched() { playerSquareAnswers![turnCount - 1 - settings.level] = true }
+    func playerStatesColorsMatched() { playerColorAnswers![turnCount - 1 - settings.level] = true }
     
     func start() {
         generateSequences()
@@ -128,7 +128,7 @@ class GameBrain: HasContext {
             if self.settings.types.contains(.squares) || self.settings.types.contains(.colors) {
                 self.highlightAndColorNextSquare()
             }
-            if self.turnCount == self.settings.level {
+            if self.turnCount >= self.settings.level {
                 self.delegate.enableButtons()
             }
             self.turnCount += 1
@@ -150,11 +150,16 @@ class GameBrain: HasContext {
             let result = GameResult(context: self.context)
             result.initialize()
             for type in self.settings.types {
+                var tally: TypeResult
                 switch type {
-                case .squares: result.types.insert(self.tally(order: self.squareOrder, playerAnswers: self.playerSquareAnswers, for: .squares))
-                case .numbers: result.types.insert(self.tally(order: self.numberOrder, playerAnswers: self.playerNumberAnswers, for: .numbers))
-                case .colors: result.types.insert(self.tally(order: self.colorOrder, playerAnswers: self.playerColorAnswers, for: .colors))
+                case .squares:
+                    tally = self.tally(order: self.squareOrder, playerAnswers: self.playerSquareAnswers, for: .squares)
+                case .numbers:
+                    tally = self.tally(order: self.numberOrder, playerAnswers: self.playerNumberAnswers, for: .numbers)
+                case .colors:
+                    tally = self.tally(order: self.colorOrder, playerAnswers: self.playerColorAnswers, for: .colors)
                 }
+                result.types.insert(tally)
             }
             self.context.save { Utilities.show(error: $0) }
             
@@ -171,7 +176,7 @@ class GameBrain: HasContext {
         var correctAnswers = [Bool]()
         
         for i in settings.level..<order.count {
-            correctAnswers.append(order[i] == order[i-2])
+            correctAnswers.append(order[i] == order[i-settings.level])
         }
         
         var falseFalse: Int16 = 0
