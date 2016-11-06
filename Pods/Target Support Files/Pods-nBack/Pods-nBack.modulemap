@@ -1,0 +1,6 @@
+framework module Pods_nBack {
+  umbrella header "Pods-nBack-umbrella.h"
+
+  export *
+  module * { export * }
+}

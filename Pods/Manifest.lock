@@ -1,0 +1,23 @@
+PODS:
+  - CoordinatorKit (0.0.2)
+  - RxCocoa (3.0.0):
+    - RxSwift (~> 3.0)
+  - RxSwift (3.0.0)
+
+DEPENDENCIES:
+  - CoordinatorKit (from `~/Documents/CoordinatorKit`)
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
+
+EXTERNAL SOURCES:
+  CoordinatorKit:
+    :path: "~/Documents/CoordinatorKit"
+
+SPEC CHECKSUMS:
+  CoordinatorKit: f7dc06e3760bbd709c7a22bb3cb8378594f3dc60
+  RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
+  RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
+
+PODFILE CHECKSUM: 84f262d79eaf5c758e45989b5024e25c5b58d568
+
+COCOAPODS: 1.1.1
