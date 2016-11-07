@@ -13,6 +13,10 @@ public class GameResult: ManagedObject {
     @NSManaged public var dayPlayed: Day?
     @NSManaged public var types: Set<TypeResult>
     
+    var totalCorrect: Int { return Int(types.map { return $0.correct }.reduce(0) { $0 + $1 }) }
+    var totalIncorrect: Int { return Int(types.map { $0.incorrect }.reduce(0) { $0 + $1 }) }
+    var percentage: String { return String(Double(totalCorrect) / (Double(totalCorrect + totalIncorrect))) }
+    
     public func initialize() {
         guard let context = managedObjectContext else { fatalError() }
         date = Date()

@@ -54,7 +54,7 @@ class DaysTableViewCell: UITableViewCell {
 
 
 extension DaysTableViewCell: ConfigurableCell {
-    func configure(for object: Day) {
+    func configure(for object: Day, indexPath: IndexPath) {
         dateLabel.text = Lets.cellLabelDateFormatter.string(from: object.date)
         countLabel.text = "\(object.results.count)"
     }

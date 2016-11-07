@@ -11,24 +11,25 @@ struct Lets {
     
     //MARK: - Score Strings
     static func resultString(for result: GameResult) -> String {
-        var typeCountString: String
-        
-        switch result.types.count {
-        case 1: typeCountString = "Single"
-        case 2: typeCountString = "Dual"
-        case 3: typeCountString = "Tri"
-        default: fatalError()
-        }
-
-        let parenthesisString = "(" + result.types.sorted { $0.type.string < $1.type.string }.map { $0.type.string }.joined(separator: ", ") + ")"
+        let typeCountString = Lets.gameTypeCountString(for: result)
+        let parenthesisString = Lets.gameTypeListString(for: result)
         let countBackString = "\(result.level)-back with \(result.numberOfTurns) turns."
         return typeCountString + " " + parenthesisString + " " + countBackString
     }
+    static func gameTypeCountString(for result: GameResult) -> String {
+        switch result.types.count {
+        case 1: return "Single"
+        case 2: return "Dual"
+        case 3: return "Tri"
+        default: fatalError()
+        }
+    }
+    static func gameTypeListString(for result: GameResult) -> String {
+        return "(" + result.types.sorted { $0.type.string < $1.type.string }.map { $0.type.string }.joined(separator: ", ") + ")"
+    }
     
     static func scoreString(for result: GameResult) -> String {
-        let totalCorrect = result.types.map { return $0.correct }.reduce(0) { $0 + $1 }
-        let totalIncorrect = result.types.map { return $0.incorrect }.reduce(0) { $0 + $1 }
-        return "\(totalCorrect) correct and \(totalIncorrect) incorrect."
+        return "\(result.totalCorrect) correct and \(result.totalIncorrect) incorrect."
     }
     
     

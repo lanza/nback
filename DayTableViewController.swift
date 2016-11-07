@@ -21,13 +21,15 @@ class DayDataProvider: DataProvider {
 
 
 
-class DayTableViewController: TableViewController<DayDataProvider, GameResult, DayTableViewCell> {
+class DayTableViewController: TableViewController<DayDataProvider, GameResult, GameResultCell> {
 
     var day: Day!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Lets.cellLabelDateFormatter.string(from: day.date)
+        let nib = UINib(nibName: "GameResultCell", bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: "cell")
     }
     
     override func setDataProvider() {
@@ -35,10 +37,8 @@ class DayTableViewController: TableViewController<DayDataProvider, GameResult, D
     }
     
     override func setupTableView() {
-        // not sure why this doens't work
-        
-//        tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.estimatedRowHeight = 300
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 300
     }
 }
 

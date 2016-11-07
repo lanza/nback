@@ -1,5 +1,5 @@
 PODS:
-  - CoordinatorKit (0.0.2)
+  - CoordinatorKit (0.0.4)
   - RxCocoa (3.0.0):
     - RxSwift (~> 3.0)
   - RxSwift (3.0.0)
@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
     :path: "~/Documents/CoordinatorKit"
 
 SPEC CHECKSUMS:
-  CoordinatorKit: f7dc06e3760bbd709c7a22bb3cb8378594f3dc60
+  CoordinatorKit: 9329d20b4bc418bf07067ec015f8198f9fab4aca
   RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
 

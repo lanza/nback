@@ -7,14 +7,13 @@ class GameCoordinator: Coordinator {
     
     override func loadViewController() {
         viewController = GameViewController()
-        gameViewController.gameDidFinish = { [unowned self] result in
+        gameViewController.gameDidFinish = { result in
             self.gameDidFinish(result)
-            self.dismiss(animated: true)
         }
         gameViewController.gameDidCancelClosure = { [unowned self] _ in
-            self.dismiss(animated: true)
+            self.gameDidFinish(nil)
         }
     }
     
-    var gameDidFinish: ((GameResult) -> ())!
+    var gameDidFinish: ((GameResult?) -> ())!
 }

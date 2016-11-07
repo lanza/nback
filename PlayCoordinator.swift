@@ -22,12 +22,14 @@ class PlayCoordinator: Coordinator {
         let gameCoordinator = GameCoordinator()
         gameCoordinator.start()
         gameCoordinator.gameDidFinish = { [unowned self] result in
-            self.gameDidFinish(with: result)
+            if let result = result {
+                self.gameDidFinish(with: result)
+            }
+            self.dismiss(animated: true)
         }
         gameCoordinator.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel Game", style: .done, target: nil, action: nil)
-        gameCoordinator.navigationItem.rightBarButtonItem!.rx.tap.subscribe(onNext: { [unowned self] in
+        gameCoordinator.navigationItem.rightBarButtonItem!.rx.tap.subscribe(onNext: { 
             gameCoordinator.gameViewController.gameDidCancel()
-            self.dismiss(animated: true)
         }).addDisposableTo(self.db)
         let navCoordinator = NavigationCoordinator(rootCoordinator: gameCoordinator)
         navCoordinator.start()
