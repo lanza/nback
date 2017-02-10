@@ -20,7 +20,6 @@ class PlayCoordinator: Coordinator {
     
     func startNewGame() {
         let gameCoordinator = GameCoordinator()
-        gameCoordinator.start()
         gameCoordinator.gameDidFinish = { [unowned self] result in
             if let result = result {
                 self.gameDidFinish(with: result)
@@ -32,7 +31,6 @@ class PlayCoordinator: Coordinator {
             gameCoordinator.gameViewController.gameDidCancel()
         }).addDisposableTo(self.db)
         let navCoordinator = NavigationCoordinator(rootCoordinator: gameCoordinator)
-        navCoordinator.start()
         self.present(navCoordinator, animated: true)
     }
     

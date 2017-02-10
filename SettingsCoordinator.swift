@@ -4,9 +4,8 @@ import CoordinatorKit
 class SettingsCoordinator: Coordinator {
     
     var settingsViewController: SettingsViewController { return viewController as! SettingsViewController }
-    
-    override func start() {
-        super.start()
+  
+  override func loadViewController() {
         viewController = SettingsViewController()
         
         settingsViewController.title = Lets.settingsl10n

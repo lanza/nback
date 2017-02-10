@@ -16,7 +16,6 @@ class DaysCoordinator: Coordinator {
         daysTableViewController.didSelectDay = { day in
             let dayCoordinator = DayCoordinator()
             dayCoordinator.day = day
-            dayCoordinator.start()
             self.show(dayCoordinator, sender: self)
         }
     }
