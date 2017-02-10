@@ -17,7 +17,7 @@ class GameView: View {
         
         if GameSettings.types.contains(.squares) {
             setupSquares(rows: rows, columns: columns)
-        } else if GameSettings.types.contains(.colors) {
+        } else {
             setupSquares(rows: 1, columns: 1)
         }
         setupMatchButtons(types: types)
