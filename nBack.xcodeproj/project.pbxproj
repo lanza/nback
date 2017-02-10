@@ -62,7 +62,6 @@
 		B38599DE1D97236F00227994 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38599DD1D97236F00227994 /* SpeechSynthesizer.swift */; };
 		B3BCBBC61DCE73F80081534C /* DaysTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BCBBC51DCE73F80081534C /* DaysTableViewCell.xib */; };
 		B3CDCFB01D72D9DD0018F4D3 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CDCFAF1D72D9DD0018F4D3 /* SettingsCoordinator.swift */; };
-		B3DA50901E4D57D500D1C167 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3DA508F1E4D57D500D1C167 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,10 +158,10 @@
 		B30DE9271D711B4300138962 = {
 			isa = PBXGroup;
 			children = (
+				B3DA506E1E4D53A800D1C167 /* Source */,
 				9B1CA5E73CFDCB5F53752AB2 /* Frameworks */,
 				B30DE9641D711DBB00138962 /* Other */,
 				407173FC2C868827649DDC22 /* Pods */,
-				B3DA506E1E4D53A800D1C167 /* Source */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,10 +179,10 @@
 		B30DE9651D711DC000138962 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				B318A9DA1D72BA3F0051DC01 /* History */,
-				B318A9DB1D72BA460051DC01 /* Play */,
 				B30DE9351D711B4300138962 /* AppCoordinator.swift */,
-				B3CDCFAF1D72D9DD0018F4D3 /* SettingsCoordinator.swift */,
+				B318A9DB1D72BA460051DC01 /* Play */,
+				B318A9DA1D72BA3F0051DC01 /* History */,
+				B3DA50911E4D5BA100D1C167 /* Settings */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -246,9 +245,9 @@
 		B30DE9831D7135CD00138962 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B318A9DC1D72BA660051DC01 /* TableViewController.swift */,
 				B31F35A81D719C0300BBC1D2 /* History */,
 				B31F35A71D719BFF00BBC1D2 /* Play */,
-				B318A9DC1D72BA660051DC01 /* TableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -348,6 +347,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		B3DA50911E4D5BA100D1C167 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B3CDCFAF1D72D9DD0018F4D3 /* SettingsCoordinator.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -378,7 +385,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Nathan Lanza";
 				TargetAttributes = {
 					B30DE92F1D711B4300138962 = {
@@ -388,7 +395,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B30DE92B1D711B4300138962 /* Build configuration list for PBXProject "nback" */;
+			buildConfigurationList = B30DE92B1D711B4300138962 /* Build configuration list for PBXProject "nBack" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -413,7 +420,6 @@
 			files = (
 				B3BCBBC61DCE73F80081534C /* DaysTableViewCell.xib in Resources */,
 				B36B82C81DD10A76005ADCA7 /* GameResultCell.xib in Resources */,
-				B3DA50901E4D57D500D1C167 /* Info.plist in Resources */,
 				B310E0581DD1083D00089E98 /* HeaderView.xib in Resources */,
 				B30DE9411D711B4300138962 /* LaunchScreen.storyboard in Resources */,
 				B30DE93E1D711B4300138962 /* Assets.xcassets in Resources */,
@@ -674,7 +680,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B30DE92B1D711B4300138962 /* Build configuration list for PBXProject "nback" */ = {
+		B30DE92B1D711B4300138962 /* Build configuration list for PBXProject "nBack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B30DE9591D711B4300138962 /* Debug */,

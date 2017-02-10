@@ -1,54 +1,63 @@
 import UIKit
 import Foundation
 
-class GameViewController: ViewController {
+protocol GameViewControllerDelegate: class {
+  func gameDidFinish(with result: GameResult)
+  func gameDidCancel()
+}
 
-    var gameBrain: GameBrain!
-    var gameView: GameView { return view as! GameView }
+class GameViewController: ViewController {
+  
+  weak var delegate: GameViewControllerDelegate!
+  
+  var gameBrain: GameBrain!
+  var gameView: GameView { return view as! GameView }
+  
+  override func loadView() {
+    view = GameView(rows: GameSettings.shared.rows, columns: GameSettings.shared.columns, types: GameSettings.shared.types)
+  }
+  
+  override init() {
+    super.init()
     
-    override func loadView() {
-        view = GameView(rows: GameSettings.shared.rows, columns: GameSettings.shared.columns, types: GameSettings.shared.types)
-    }
+    self.gameBrain = GameBrain(squareMatrix: gameView.squareMatrix, delegate: self)
+    setupGameViewClosures()
+  }
+  
+  func setupGameViewClosures() {
+    gameView.setupClosures(gameBrain: gameBrain, quitGameClosure: gameDidCancel)
+  }
+  
+  func gameDidCancel() {
+    gameBrain.quit()
+    gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
     
-    override init() {
-        super.init()
-        
-        
-        self.gameBrain = GameBrain(squareMatrix: gameView.squareMatrix, delegate: self)
-        setupGameViewClosures()
-    }
+    delegate.gameDidCancel()
+  }
+  var gameDidCancelClosure: (() -> ())!
+  
+  func gameDidFinish(with gameResult: GameResult) {
+    gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
     
-    func setupGameViewClosures() {
-        gameView.setupClosures(gameBrain: gameBrain, quitGameClosure: gameDidCancel)
-    }
-    
-    func gameDidCancel() {
-        gameBrain.quit()
-        gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
-        gameDidCancelClosure()
-    }
-    var gameDidCancelClosure: (() -> ())!
-    func gameDidFinish(with gameResult: GameResult) {
-        gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
-        gameDidFinish(gameResult)
-    }
-    var gameDidFinish: ((GameResult) -> ())!
-    
-    required init?(coder aDecoder: NSCoder) { fatalError() }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        gameBrain.start()
-    }
+    delegate.gameDidFinish(with: gameResult)
+  }
+  required init?(coder aDecoder: NSCoder) { fatalError() }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    gameBrain.start()
+  }
 }
 
 
+
+
 extension GameViewController: GameBrainDelegate {
-    func gameBrainDidFinish(with result: GameResult) {
-        gameDidFinish(result)
-    }
-    func enableButtons() {
-        gameView.enableButtons()
-    }
+  func gameBrainDidFinish(with result: GameResult) {
+    gameDidFinish(with: result)
+  }
+  func enableButtons() {
+    gameView.enableButtons()
+  }
 }
 
 

@@ -6,5 +6,12 @@ target 'nBack' do
 
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa', '~> 3.0'
+  pod 'RxDataSources'
+  pod 'RealmSwift'
+  pod 'RxRealm'
+
+  pod 'DZNEmptyDataSet'
+  pod 'BonMot'
+  pod 'Eureka', '~> 2.0.0-beta.1'
 
 end

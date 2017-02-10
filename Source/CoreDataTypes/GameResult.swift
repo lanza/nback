@@ -54,3 +54,9 @@ extension GameResult {
         types = Set<TypeResult>()
     }
 }
+
+import RealmSwift
+
+class GameResultRealm: Object {
+  
+}
