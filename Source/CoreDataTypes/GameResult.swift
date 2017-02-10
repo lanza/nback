@@ -17,20 +17,6 @@ public class GameResult: ManagedObject {
   var totalIncorrect: Int { return Int(types.map { $0.incorrect }.reduce(0) { $0 + $1 }) }
   var percentage: String { return String(Double(totalCorrect) / (Double(totalCorrect + totalIncorrect))) }
   
-  public func initialize() {
-    guard let context = managedObjectContext else { fatalError() }
-    date = Date()
-    
-    dayPlayed = Day.findOrCreateDay(in: context, for: date)
-    level = Int16(GameSettings.level)
-    numberOfTurns = Int16(GameSettings.numberOfTurns)
-    secondsBetweenTurns = GameSettings.secondsBetweenTurns
-    rows = Int16(GameSettings.rows)
-    columns = Int16(GameSettings.columns)
-    squareHighlightTime = GameSettings.squareHighlightTime
-    types = Set<TypeResult>()
-  }
-  
 }
 
 extension GameResult: ManagedObjectType {
