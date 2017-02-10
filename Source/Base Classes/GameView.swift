@@ -10,14 +10,14 @@ class GameView: View {
     var buttonStackView: StackView!
     var quitGameButton: Button!
     
-    init(rows: Int, columns: Int, types: [GameType]) {
+    init(rows: Int, columns: Int, types: [NBackType]) {
         super.init(frame: CGRect())
         
         layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         
-        if GameSettings.shared.types.contains(.squares) {
+        if GameSettings.types.contains(.squares) {
             setupSquares(rows: rows, columns: columns)
-        } else if GameSettings.shared.types.contains(.colors) {
+        } else if GameSettings.types.contains(.colors) {
             setupSquares(rows: 1, columns: 1)
         }
         setupMatchButtons(types: types)
@@ -57,7 +57,7 @@ class GameView: View {
         addSubview(quitGameButton)
     }
     
-    private func setupMatchButtons(types: [GameType]) {
+    private func setupMatchButtons(types: [NBackType]) {
         
         buttons = [Button]()
         

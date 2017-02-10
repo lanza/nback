@@ -13,8 +13,8 @@ struct GameSettings {
     get { return defaults[.secondsBetweenTurns] }
     set { defaults[.secondsBetweenTurns] = newValue }
   }
-  static var types: [GameType] {
-    get { return defaults[.types].map { GameType.from(value: $0) } }
+  static var types: [NBackType] {
+    get { return defaults[.types].map { NBackType.from(value: $0) } }
     set { defaults[.types] = newValue.map { $0.value } }
   }
   static var level: Int {
@@ -43,4 +43,9 @@ extension DefaultsKeys {
   static let rows = DefaultsKey<Int>(Lets.rowsKey)
   static let columns = DefaultsKey<Int>(Lets.columnsKey)
   static let numberOfTurns = DefaultsKey<Int>(Lets.numberOfTurnsKey)
+}
+
+extension DefaultsKeys {
+  static let lastScoreString = DefaultsKey<String>(Lets.lastScoreStringKey)
+  static let lastResultString = DefaultsKey<String>(Lets.lastResultStringKey)
 }

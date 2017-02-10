@@ -1,6 +1,6 @@
 import Foundation
 
-public enum GameType: Int {
+public enum NBackType: Int {
     case numbers = 1
     case squares = 0
     case colors = 2
@@ -13,8 +13,8 @@ public enum GameType: Int {
         }
     }
     
-    static func from(value: Int) -> GameType {
-        return GameType(rawValue: value)!
+    static func from(value: Int) -> NBackType {
+        return NBackType(rawValue: value)!
     }
     
     var value: Int {

@@ -17,9 +17,9 @@ class GameResultCell: UITableViewCell {
 }
 
 extension GameResultCell: ConfigurableCell {
-    func configure(for object: GameResult, indexPath: IndexPath) {
+    func configure(for object: GameResultRealm, indexPath: IndexPath) {
         gameNumber.text = String(indexPath.row + 1)
-        levelLabel.text = Lets.gameTypeCountString(for: object) + " \(object.level)-back " + Lets.gameTypeListString(for: object)
+        levelLabel.text = Lets.nBackTypeCountString(for: object) + " \(object.level)-back " + Lets.nBackTypeListString(for: object)
         turnsLabel.text = String(object.numberOfTurns)
         correctLabel.text = String(object.totalCorrect)
         incorrectLabel.text = String(object.totalIncorrect)

@@ -4,7 +4,7 @@ import RxSwift
 import RxCocoa
 
 protocol GameViewControllerDelegate: class {
-  func gameDidFinish(with result: GameResult)
+  func gameDidFinish(with result: GameResultRealm)
   func gameDidCancel()
 }
 
@@ -16,7 +16,7 @@ class GameViewController: ViewController {
   var gameView: GameView { return view as! GameView }
   
   override func loadView() {
-    view = GameView(rows: GameSettings.shared.rows, columns: GameSettings.shared.columns, types: GameSettings.shared.types)
+    view = GameView(rows: GameSettings.rows, columns: GameSettings.columns, types: GameSettings.types)
   }
   
   override init() {
@@ -40,7 +40,7 @@ class GameViewController: ViewController {
     delegate.gameDidCancel()
   }
   
-  func gameDidFinish(with gameResult: GameResult) {
+  func gameDidFinish(with gameResult: GameResultRealm) {
     gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
     
     delegate.gameDidFinish(with: gameResult)
@@ -55,7 +55,7 @@ class GameViewController: ViewController {
 }
 
 extension GameViewController: GameBrainDelegate {
-  func gameBrainDidFinish(with result: GameResult) {
+  func gameBrainDidFinish(with result: GameResultRealm) {
     gameDidFinish(with: result)
   }
   func enableButtons() {

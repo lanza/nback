@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Reuse
 
 class PlayView: UIView {
   init() {
@@ -14,11 +15,11 @@ protocol PlayViewControllerDelegate: class {
   func newGameTapped()
 }
 
-class PlayViewController: ViewController, HasContext {
+class PlayViewController: ViewController {
   
   weak var delegate: PlayViewControllerDelegate!
   
-  var lastGameResult: GameResult?
+  var lastGameResult: GameResultRealm?
   
   var lastGameLabel: Label!
   
@@ -39,9 +40,10 @@ class PlayViewController: ViewController, HasContext {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     let defaults = UserDefaults.standard
-    if let lastScoreString = defaults.value(forKey: Lets.lastScoreString) as? String, let lastResultString = defaults.value(forKey: Lets.lastResultString) as? String {
-      lastGameLabel.text = "Last Game \n" + lastResultString + "\n" + lastScoreString
-    }
+    
+    let lastScoreString = defaults[.lastScoreString]
+    let lastResultString = defaults[.lastResultString]
+    lastGameLabel.text = "Last Game \n" + lastResultString + "\n" + lastScoreString
   }
   override func loadView() {
     view = View()
@@ -70,7 +72,7 @@ class PlayViewController: ViewController, HasContext {
     turnsButton = UIButton.button(title: Lets.turnsString, target: self, selector: #selector(turnsButtonTapped), font: Theme.Fonts.playLabels)
     let levelAndTurnsStackView = StackView(arrangedSubviews: [levelButton, turnsButton], axis: .horizontal, spacing: 8, distribution: .fillEqually)
     
-    let squaresIsOn = GameSettings.shared.types.contains(.squares)
+    let squaresIsOn = GameSettings.types.contains(.squares)
     rowsButton = UIButton.button(title: Lets.rowsString, target: self, selector: #selector(rowsButtonTapped), font: Theme.Fonts.playLabels)
     rowsButton.isEnabled = squaresIsOn
     columnsButton = UIButton.button(title: Lets.columnsString, target: self, selector: #selector(columnsButtonTapped), font: Theme.Fonts.playLabels)
@@ -113,23 +115,23 @@ class PlayViewController: ViewController, HasContext {
   }
   
   func secondsBetweenTurnsButtonTapped() {
-    if GameSettings.shared.secondsBetweenTurns == Lets.secondsBetweenTurns.max {
-      GameSettings.shared.secondsBetweenTurns = Lets.secondsBetweenTurns.min
+    if GameSettings.secondsBetweenTurns == Lets.secondsBetweenTurns.max {
+      GameSettings.secondsBetweenTurns = Lets.secondsBetweenTurns.min
     } else {
-      GameSettings.shared.secondsBetweenTurns += Lets.secondsBetweenTurns.increment
+      GameSettings.secondsBetweenTurns += Lets.secondsBetweenTurns.increment
     }
     secondsBetweenTurnsButton.set(title: Lets.secondsBetweenTurnsString)
   }
-  func typeButtonTapped(type: GameType, button: UIButton) {
-    var types = GameSettings.shared.types
+  func typeButtonTapped(type: NBackType, button: UIButton) {
+    var types = GameSettings.types
     if let index = types.index(of: type) {
       types.remove(at: index)
-      GameSettings.shared.types = types
+      GameSettings.types = types
     } else {
       types.append(type)
-      GameSettings.shared.types = types
+      GameSettings.types = types
     }
-    if GameSettings.shared.types.count == 0 {
+    if GameSettings.types.count == 0 {
       playGameButton.isEnabled = false
     } else {
       playGameButton.isEnabled = true
@@ -142,7 +144,7 @@ class PlayViewController: ViewController, HasContext {
   func squareButtonTapped() {
     typeButtonTapped(type: .squares, button: squareButton)
     squareButton.set(title: Lets.squaresString)
-    let isOn = GameSettings.shared.types.contains(.squares)
+    let isOn = GameSettings.types.contains(.squares)
     rowsButton.isEnabled = isOn
     columnsButton.isEnabled = isOn
   }
@@ -152,36 +154,36 @@ class PlayViewController: ViewController, HasContext {
   }
   
   func levelButtonTapped() {
-    if GameSettings.shared.level == Lets.levels.max {
-      GameSettings.shared.level = Lets.levels.min
+    if GameSettings.level == Lets.levels.max {
+      GameSettings.level = Lets.levels.min
     } else {
-      GameSettings.shared.level += Lets.levels.increment
+      GameSettings.level += Lets.levels.increment
     }
     levelButton.set(title: Lets.levelString)
   }
   func turnsButtonTapped() {
-    if GameSettings.shared.numberOfTurns == Lets.turns.max {
-      GameSettings.shared.numberOfTurns = Lets.turns.min
+    if GameSettings.numberOfTurns == Lets.turns.max {
+      GameSettings.numberOfTurns = Lets.turns.min
     } else {
-      GameSettings.shared.numberOfTurns += Lets.turns.increment
+      GameSettings.numberOfTurns += Lets.turns.increment
     }
     turnsButton.set(title: Lets.turnsString)
   }
   
   func rowsButtonTapped() {
-    if GameSettings.shared.rows == Lets.rows.max {
-      GameSettings.shared.rows = Lets.rows.min
+    if GameSettings.rows == Lets.rows.max {
+      GameSettings.rows = Lets.rows.min
     } else {
-      GameSettings.shared.rows += Lets.rows.increment
+      GameSettings.rows += Lets.rows.increment
     }
     rowsButton.set(title: Lets.rowsString)
   }
   
   func columnsButtonTapped() {
-    if GameSettings.shared.columns == Lets.columns.max {
-      GameSettings.shared.columns = Lets.columns.min
+    if GameSettings.columns == Lets.columns.max {
+      GameSettings.columns = Lets.columns.min
     } else {
-      GameSettings.shared.columns += Lets.columns.increment
+      GameSettings.columns += Lets.columns.increment
     }
     columnsButton.set(title: Lets.columnsString)
   }

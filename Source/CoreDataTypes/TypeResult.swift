@@ -13,8 +13,8 @@ public class TypeResult: ManagedObject {
     @NSManaged private var ttype: Int16
     @NSManaged public var game: GameResult
     
-    public var type: GameType {
-        get { return GameType.from(value: Int(ttype)) }
+    public var type: NBackType {
+        get { return NBackType.from(value: Int(ttype)) }
         set { ttype = Int16(newValue.value) }
     }
 }

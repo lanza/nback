@@ -55,9 +55,25 @@ extension GameResult {
     }
 }
 
+
+
 import RealmSwift
 
 class GameResultRealm: Object {
+  
+  static func new(columns: Int, rows: Int, level: Int, numberOfTurns: Int, secondsBetweenTurns:Double, squareHighlightTime: Double) -> GameResultRealm {
+    
+    let r = GameResultRealm()
+    
+    r.columns = columns
+    r.rows = rows
+    r.level = level
+    r.numberOfTurns = numberOfTurns
+    r.secondsBetweenTurns = secondsBetweenTurns
+    r.squareHighlightTime = squareHighlightTime
+    
+    return r
+  }
   
   dynamic var columns = 0
   dynamic var rows = 0
@@ -66,14 +82,39 @@ class GameResultRealm: Object {
   
   dynamic var level = 0
   dynamic var numberOfTurns = 0
-  dynamic var secondsBetweenTurns = 0
-  dynamic var squareHighlightTime = 0
+  dynamic var secondsBetweenTurns: Double = 0
+  dynamic var squareHighlightTime: Double = 0
   
   let types = LinkingObjects(fromType: TypeResultRealm.self, property: "game")
+  
+  var totalCorrect: Int { return Int(types.map { return $0.correct }.reduce(0) { $0 + $1 }) }
+  var totalIncorrect: Int { return Int(types.map { $0.incorrect }.reduce(0) { $0 + $1 }) }
+  var percentage: String { return String(Double(totalCorrect) / (Double(totalCorrect + totalIncorrect))) }
 }
 
 class TypeResultRealm: Object {
   
+  static func new(correct: Int, incorrect: Int, matches: Int, falseFalse: Int, falseTrue: Int, trueFalse: Int, trueTrue: Int, nBackType: NBackType, game: GameResultRealm) -> TypeResultRealm {
+    
+    let t = TypeResultRealm()
+   
+    t.correct = correct
+    t.incorrect = incorrect
+    
+    t.matches = matches
+    
+    t.falseFalse = falseFalse
+    t.falseTrue = falseTrue
+    t.trueFalse = trueFalse
+    t.trueTrue = trueTrue
+    
+    t.nBackType = nBackType
+    
+    t.game = game
+   
+    return t
+  }
+
   dynamic var correct = 0
   dynamic var incorrect = 0
   
@@ -86,12 +127,13 @@ class TypeResultRealm: Object {
   
   dynamic var nBackTypeInt = 0
  
-  var nBackType: NBackType { return NBackType(rawValue: nBackTypeInt)! }
-  
-  enum NBackType: Int {
-    case squares = 0
-    case numbers = 1
-    case colors = 2
+  var nBackType: NBackType {
+    get {
+      return NBackType(rawValue: nBackTypeInt)!
+    }
+    set {
+      nBackTypeInt = newValue.rawValue
+    }
   }
   
   dynamic var game: GameResultRealm?

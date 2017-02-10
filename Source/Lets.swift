@@ -10,13 +10,13 @@ struct SettingsValues<Type> {
 struct Lets {
     
     //MARK: - Score Strings
-    static func resultString(for result: GameResult) -> String {
-        let typeCountString = Lets.gameTypeCountString(for: result)
-        let parenthesisString = Lets.gameTypeListString(for: result)
+    static func resultString(for result: GameResultRealm) -> String {
+        let typeCountString = Lets.nBackTypeCountString(for: result)
+        let parenthesisString = Lets.nBackTypeListString(for: result)
         let countBackString = "\(result.level)-back with \(result.numberOfTurns) turns."
         return typeCountString + " " + parenthesisString + " " + countBackString
     }
-    static func gameTypeCountString(for result: GameResult) -> String {
+    static func nBackTypeCountString(for result: GameResultRealm) -> String {
         switch result.types.count {
         case 1: return "Single"
         case 2: return "Dual"
@@ -24,11 +24,11 @@ struct Lets {
         default: fatalError()
         }
     }
-    static func gameTypeListString(for result: GameResult) -> String {
-        return "(" + result.types.sorted { $0.type.string < $1.type.string }.map { $0.type.string }.joined(separator: ", ") + ")"
+    static func nBackTypeListString(for result: GameResultRealm) -> String {
+        return "(" + result.types.sorted { $0.nBackType.string < $1.nBackType.string }.map { $0.nBackType.string }.joined(separator: ", ") + ")"
     }
     
-    static func scoreString(for result: GameResult) -> String {
+    static func scoreString(for result: GameResultRealm) -> String {
         return "\(result.totalCorrect) correct and \(result.totalIncorrect) incorrect."
     }
     
@@ -45,7 +45,7 @@ struct Lets {
     static let historyl10n = NSLocalizedString("History", comment: "")
     static let settingsl10n = NSLocalizedString("Settings", comment: "")
     
-    //GameTypes Strings
+    //nBack Type Strings
     static let numbersl10n = NSLocalizedString("Numbers", comment: "")
     static let squaresl10n = NSLocalizedString("Squares", comment: "")
     static let colorsl10n = NSLocalizedString("Colors", comment: "")
@@ -56,33 +56,33 @@ struct Lets {
     
     //MARK: - PlayVC Strings
     static var secondsBetweenTurnsString: String {
-        return NSLocalizedString("\(GameSettings.shared.secondsBetweenTurns) seconds between turns", comment: "")
+        return NSLocalizedString("\(GameSettings.secondsBetweenTurns) seconds between turns", comment: "")
     }
     static var levelString: String {
-        return NSLocalizedString("\(GameSettings.shared.level)-back", comment: "")
+        return NSLocalizedString("\(GameSettings.level)-back", comment: "")
     }
     static var turnsString: String {
-        return NSLocalizedString("\(GameSettings.shared.numberOfTurns) turns", comment: "")
+        return NSLocalizedString("\(GameSettings.numberOfTurns) turns", comment: "")
     }
     static var rowsString: String {
-        return NSLocalizedString("\(GameSettings.shared.rows) rows", comment: "")
+        return NSLocalizedString("\(GameSettings.rows) rows", comment: "")
     }
     static var columnsString: String {
-        return NSLocalizedString("\(GameSettings.shared.columns) columns", comment: "")
+        return NSLocalizedString("\(GameSettings.columns) columns", comment: "")
     }
     static var numbersString: String {
-        return NSLocalizedString("\(Lets.numbersl10n) \(GameSettings.shared.types.contains(.numbers) ? "On" : "Off")", comment: "")
+        return NSLocalizedString("\(Lets.numbersl10n) \(GameSettings.types.contains(.numbers) ? "On" : "Off")", comment: "")
     }
     static var squaresString: String {
-        return NSLocalizedString("\(Lets.squaresl10n) \(GameSettings.shared.types.contains(.squares) ? "On" : "Off")", comment: "")
+        return NSLocalizedString("\(Lets.squaresl10n) \(GameSettings.types.contains(.squares) ? "On" : "Off")", comment: "")
     }
     static var colorsString: String {
-        return NSLocalizedString("\(Lets.colorsl10n) \(GameSettings.shared.types.contains(.colors) ? "On" : "Off")", comment: "")
+        return NSLocalizedString("\(Lets.colorsl10n) \(GameSettings.types.contains(.colors) ? "On" : "Off")", comment: "")
     }
     
     //MARK: - Other UserDefaults keys
-    static var lastScoreString = "lastScoreString"
-    static var lastResultString = "lastResultString"
+    static var lastScoreStringKey = "lastScoreString"
+    static var lastResultStringKey = "lastResultString"
     
     //GameSettings
     static let secondsBetweenTurnsKey = "secondsBetweenTurns"

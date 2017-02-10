@@ -33,7 +33,7 @@ extension PlayCoordinator: GameCoordinatorDelegate {
   func gameDidCancel() {
     self.dismiss(animated: true)
   }
-  func gameDidFinish(with result: GameResult) {
+  func gameDidFinish(with result: GameResultRealm) {
     playViewController.lastGameResult = result
     self.dismiss(animated: true)
   }

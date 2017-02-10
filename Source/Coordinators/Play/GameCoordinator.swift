@@ -2,7 +2,7 @@ import UIKit
 import CoordinatorKit
 
 protocol GameCoordinatorDelegate: class {
-  func gameDidFinish(with result: GameResult)
+  func gameDidFinish(with result: GameResultRealm)
   func gameDidCancel()
 }
 
@@ -20,7 +20,7 @@ class GameCoordinator: Coordinator {
 }
 
 extension GameCoordinator: GameViewControllerDelegate {
-  func gameDidFinish(with result: GameResult) {
+  func gameDidFinish(with result: GameResultRealm) {
     delegate.gameDidFinish(with: result)
   }
   func gameDidCancel() {
