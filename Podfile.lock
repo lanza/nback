@@ -1,23 +1,28 @@
 PODS:
-  - CoordinatorKit (0.0.4)
-  - RxCocoa (3.0.0):
-    - RxSwift (~> 3.0)
-  - RxSwift (3.0.0)
+  - CoordinatorKit (0.0.6)
+  - Reuse (0.0.1)
+  - RxCocoa (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxSwift (3.2.0)
 
 DEPENDENCIES:
-  - CoordinatorKit (from `~/Documents/CoordinatorKit`)
+  - CoordinatorKit (from `~/Projects/CoordinatorKit`)
+  - Reuse (from `~/Projects/Reuse`)
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
 
 EXTERNAL SOURCES:
   CoordinatorKit:
-    :path: "~/Documents/CoordinatorKit"
+    :path: "~/Projects/CoordinatorKit"
+  Reuse:
+    :path: "~/Projects/Reuse"
 
 SPEC CHECKSUMS:
-  CoordinatorKit: 9329d20b4bc418bf07067ec015f8198f9fab4aca
-  RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
-  RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
+  CoordinatorKit: 0e20cf34086abc40594ed8667a244fe50b831a2b
+  Reuse: 4f1784926ff12cb369ad0967228401a6b5f1c75f
+  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
+  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
 
-PODFILE CHECKSUM: 84f262d79eaf5c758e45989b5024e25c5b58d568
+PODFILE CHECKSUM: 31336c51b329ba0aa9ff36908609fefd74e6d91e
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
