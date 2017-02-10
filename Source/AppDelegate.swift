@@ -1,5 +1,27 @@
 import UIKit
 
+import CoreData
+class Initializer {
+  
+  static let defaults = UserDefaults.standard
+  
+  static func run() {
+    if defaults[.hasDoneSetup] == nil {
+      GameSettings.setDefaults()
+      defaults[.lastScoreString] = "Welcome to nBack"
+      defaults[.lastResultString] = ""
+      
+      defaults[.hasDoneSetup] = true
+    }
+    
+    if defaults[.hasConvertedFromCoreData] == nil {
+      
+      
+      
+      defaults[.hasConvertedFromCoreData] = true
+    }
+  }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,8 +31,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var appCoordinator = AppCoordinator()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
     AppDelegate.main = self
+    
+    let context = CoreData.shared.context
+    let results = GameResult.fetch(in: context)
+   
+    
+    
+    
+    
+    
+    
+    
+    fatalError()
+    Initializer.run()
+    
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootCoordinator = appCoordinator
     window?.makeKeyAndVisible()

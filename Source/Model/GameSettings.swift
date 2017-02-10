@@ -3,6 +3,16 @@ import Reuse
 
 struct GameSettings {
   
+  static func setDefaults() {
+    squareHighlightTime = 1
+    secondsBetweenTurns = 3
+    types = [.squares,.numbers]
+    level = 2
+    rows = 3
+    columns = 3
+    numberOfTurns = 15
+  }
+  
   static private var defaults = UserDefaults.standard
   
   static var squareHighlightTime: Double {
@@ -48,4 +58,9 @@ extension DefaultsKeys {
 extension DefaultsKeys {
   static let lastScoreString = DefaultsKey<String>(Lets.lastScoreStringKey)
   static let lastResultString = DefaultsKey<String>(Lets.lastResultStringKey)
+}
+
+extension DefaultsKeys {
+  static let hasDoneSetup = DefaultsKey<Bool?>(Lets.hasDoneSetupKey)
+  static let hasConvertedFromCoreData = DefaultsKey<Bool?>(Lets.hasConvertedFromCoreDataKey)
 }

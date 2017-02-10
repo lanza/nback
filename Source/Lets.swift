@@ -8,6 +8,9 @@ struct SettingsValues<Type> {
 }
 
 struct Lets {
+  
+  static let hasDoneSetupKey = "hasDoneSetup"
+  static let hasConvertedFromCoreDataKey = "hasConvertedFromCoreData"
     
     //MARK: - Score Strings
     static func resultString(for result: GameResultRealm) -> String {
