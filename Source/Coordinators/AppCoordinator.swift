@@ -5,6 +5,8 @@ import CoordinatorKit
 class AppCoordinator: TabBarCoordinator {
   
   override func viewControllerDidLoad() {
+    super.viewControllerDidLoad()
+    
         Theme.setupAppearances()
         setCoordinators(createTabs(), animated: false)
     }

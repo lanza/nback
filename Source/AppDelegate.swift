@@ -24,9 +24,6 @@ class Initializer {
   static func convertData() {
     
     let gameResults =  GameResult.fetch(in: CoreData.shared.context)
-    let typeResults = TypeResult.fetch(in: CoreData.shared.context)
-    
-    let r = try! Realm()
     
     for result in gameResults {
       let gameResultRealm = GameResultRealm.new(columns: Int(result.columns), rows: Int(result.rows), level: Int(result.level), numberOfTurns: Int(result.numberOfTurns), secondsBetweenTurns: result.secondsBetweenTurns, squareHighlightTime: result.squareHighlightTime)
