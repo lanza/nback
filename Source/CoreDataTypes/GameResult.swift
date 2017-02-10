@@ -22,12 +22,12 @@ public class GameResult: ManagedObject {
         date = Date()
         
         dayPlayed = Day.findOrCreateDay(in: context, for: date)
-        level = Int16(GameSettings.shared.level)
-        numberOfTurns = Int16(GameSettings.shared.numberOfTurns)
-        secondsBetweenTurns = GameSettings.shared.secondsBetweenTurns
-        rows = Int16(GameSettings.shared.rows)
-        columns = Int16(GameSettings.shared.columns)
-        squareHighlightTime = GameSettings.shared.squareHighlightTime
+        level = Int16(GameSettings.level)
+        numberOfTurns = Int16(GameSettings.numberOfTurns)
+        secondsBetweenTurns = GameSettings.secondsBetweenTurns
+        rows = Int16(GameSettings.rows)
+        columns = Int16(GameSettings.columns)
+        squareHighlightTime = GameSettings.squareHighlightTime
         types = Set<TypeResult>()
     }
     
@@ -48,9 +48,9 @@ extension GameResult {
         guard let context = managedObjectContext else { fatalError() }
         self.date = date
         dayPlayed = Day.findOrCreateDay(in: context, for: date)
-        level = Int16(GameSettings.shared.level)
-        numberOfTurns = Int16(GameSettings.shared.numberOfTurns)
-        secondsBetweenTurns = GameSettings.shared.secondsBetweenTurns
+        level = Int16(GameSettings.level)
+        numberOfTurns = Int16(GameSettings.numberOfTurns)
+        secondsBetweenTurns = GameSettings.secondsBetweenTurns
         types = Set<TypeResult>()
     }
 }
@@ -59,4 +59,49 @@ import RealmSwift
 
 class GameResultRealm: Object {
   
+  dynamic var columns = 0
+  dynamic var rows = 0
+  
+  dynamic var date = Date()
+  
+  dynamic var level = 0
+  dynamic var numberOfTurns = 0
+  dynamic var secondsBetweenTurns = 0
+  dynamic var squareHighlightTime = 0
+  
+  let types = LinkingObjects(fromType: TypeResultRealm.self, property: "game")
 }
+
+class TypeResultRealm: Object {
+  
+  dynamic var correct = 0
+  dynamic var incorrect = 0
+  
+  dynamic var matches = 0
+  
+  dynamic var falseFalse = 0
+  dynamic var falseTrue = 0
+  dynamic var trueFalse = 0
+  dynamic var trueTrue = 0
+  
+  dynamic var nBackTypeInt = 0
+ 
+  var nBackType: NBackType { return NBackType(rawValue: nBackTypeInt)! }
+  
+  enum NBackType: Int {
+    case squares = 0
+    case numbers = 1
+    case colors = 2
+  }
+  
+  dynamic var game: GameResultRealm?
+}
+
+
+
+
+
+
+
+
+

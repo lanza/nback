@@ -24,3 +24,8 @@ class SquareMatrix {
         }
     }
 }
+
+struct MatrixIndex: Equatable {
+  var row: Int
+  var column: Int
+}

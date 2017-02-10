@@ -1,37 +1,46 @@
 import Foundation
+import Reuse
 
 struct GameSettings {
-    static var shared: GameSettings = {
-        return GameSettings()
-    }()
+  
+  static private var defaults = UserDefaults.standard
+  
+  static var squareHighlightTime: Double {
+    get { return defaults[.squareHighlightTime] }
+    set { defaults[.squareHighlightTime] = newValue }
+  }
+  static var secondsBetweenTurns: Double {
+    get { return defaults[.secondsBetweenTurns] }
+    set { defaults[.secondsBetweenTurns] = newValue }
+  }
+  static var types: [GameType] {
+    get { return defaults[.types].map { GameType.from(value: $0) } }
+    set { defaults[.types] = newValue.map { $0.value } }
+  }
+  static var level: Int {
+    get { return defaults[.level] }
+    set { defaults[.level] = newValue }
+  }
+  static var rows: Int {
+    get { return defaults[.rows] }
+    set { defaults[.rows] = newValue }
+  }
+  static var columns: Int {
+    get { return defaults[.columns] }
+    set { defaults[.columns] = newValue }
+  }
+  static var numberOfTurns: Int {
+    get { return defaults[.numberOfTurns] }
+    set { defaults[.numberOfTurns] = newValue }
+  }
+}
 
-    private var defaults = UserDefaults.standard
-    var squareHighlightTime: Double {
-        get { return defaults.object(forKey: Lets.squareHighlightTimeKey) as? Double ?? 1 }
-        set { defaults.set(newValue, forKey: Lets.squareHighlightTimeKey) }
-    }
-    var secondsBetweenTurns: Double {
-        get { return defaults.object(forKey: Lets.secondsBetweenTurnsKey) as? Double ?? 3 }
-        set { defaults.set(newValue, forKey: Lets.secondsBetweenTurnsKey) }
-    }
-    var types: [GameType] {
-        get { return (defaults.object(forKey: Lets.typesKey) as? [Int] ?? [0,1,2]).map { GameType.from(value: $0) } }
-        set { defaults.set(newValue.map { $0.value }, forKey: Lets.typesKey) }
-    }
-    var level: Int {
-        get { return defaults.object(forKey: Lets.levelKey) as? Int ?? 2 }
-        set { defaults.set(newValue, forKey: Lets.levelKey) }
-    }
-    var rows: Int {
-        get { return defaults.object(forKey: Lets.rowsKey) as? Int ?? 3 }
-        set { defaults.set(newValue, forKey: Lets.rowsKey) }
-    }
-    var columns: Int {
-        get { return defaults.object(forKey: Lets.columnsKey) as? Int ?? 3 }
-        set { defaults.set(newValue, forKey: Lets.columnsKey) }
-    }
-    var numberOfTurns: Int {
-        get { return defaults.object(forKey: Lets.numberOfTurnsKey) as? Int ?? 15 }
-        set { defaults.set(newValue, forKey: Lets.numberOfTurnsKey) }
-    }
+extension DefaultsKeys {
+  static let squareHighlightTime = DefaultsKey<Double>(Lets.squareHighlightTimeKey)
+  static let secondsBetweenTurns = DefaultsKey<Double>(Lets.secondsBetweenTurnsKey)
+  static let types = DefaultsKey<[Int]>(Lets.typesKey)
+  static let level = DefaultsKey<Int>(Lets.levelKey)
+  static let rows = DefaultsKey<Int>(Lets.rowsKey)
+  static let columns = DefaultsKey<Int>(Lets.columnsKey)
+  static let numberOfTurns = DefaultsKey<Int>(Lets.numberOfTurnsKey)
 }
