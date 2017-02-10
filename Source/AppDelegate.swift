@@ -17,15 +17,14 @@ class Initializer {
     
     if defaults[.hasConvertedFromCoreData] == nil {
       
-     
+      
       let l = Test()
       l.testEntries()
       
-      convertData()
+//      convertData()
       
       //defaults[.hasConvertedFromCoreData] = true
       
-      fatalError()
       
     }
   }
@@ -38,19 +37,13 @@ class Initializer {
     
     let r = try! Realm()
     
-        try! r.write {
-    
-          for result in gameResults {
-            let gameResultRealm = GameResultRealm.new(columns: Int(result.columns), rows: Int(result.rows), level: Int(result.level), numberOfTurns: Int(result.numberOfTurns), secondsBetweenTurns: result.secondsBetweenTurns, squareHighlightTime: result.squareHighlightTime)
-            r.add(gameResultRealm)
-    
-            for typeResult in result.types {
-              let t = TypeResultRealm.new(correct: Int(typeResult.correct), incorrect: Int(typeResult.incorrect), matches: Int(typeResult.matches), falseFalse: Int(typeResult.falseFalse), falseTrue: Int(typeResult.falseTrue), trueFalse: Int(typeResult.trueFalse), trueTrue: Int(typeResult.trueTrue), nBackType: typeResult.type, game: gameResultRealm)
-    
-              r.add(t)
-            }
-          }
-        }
+    for result in gameResults {
+      let gameResultRealm = GameResultRealm.new(columns: Int(result.columns), rows: Int(result.rows), level: Int(result.level), numberOfTurns: Int(result.numberOfTurns), secondsBetweenTurns: result.secondsBetweenTurns, squareHighlightTime: result.squareHighlightTime)
+      
+      for typeResult in result.types {
+        _ = TypeResultRealm.new(correct: Int(typeResult.correct), incorrect: Int(typeResult.incorrect), matches: Int(typeResult.matches), falseFalse: Int(typeResult.falseFalse), falseTrue: Int(typeResult.falseTrue), trueFalse: Int(typeResult.trueFalse), trueTrue: Int(typeResult.trueTrue), nBackType: typeResult.type, game: gameResultRealm)
+      }
+    }
     
     let gameResultRealms = r.objects(GameResultRealm.self)
     let typeResultRealms = r.objects(TypeResultRealm.self)
@@ -63,9 +56,25 @@ class Initializer {
     
     print(grr,gr,trr,tr)
     
-        assert(gameResultRealms.count == gameResults.count)
-        assert(typeResultRealms.count == typeResults.count)
+    assert(gameResultRealms.count == gameResults.count)
+    assert(typeResultRealms.count == typeResults.count)
+   
+    let cd = NSPersistentContainer(name: "nBack")
+    cd.loadPersistentStores { (desc, error) in
+      try! FileManager.default.removeItem(at: desc.url!)
+    }
     
+    
+    let gameResults2 = GameResult.fetch(in: context)
+    let typeResults2 = TypeResult.fetch(in: context)
+    
+    let gr2 = gameResults2.count
+    let tr2 = typeResults2.count
+    
+    print(grr,gr2,trr,tr2)
+    
+    assert(gameResults.count == 0)
+    assert(typeResults.count == 0)
   }
 }
 
@@ -73,7 +82,7 @@ class Test {
   let context = CoreData.shared.context
   var date = Date(timeInterval: -1000, since: Date())
   func testEntries() {
-    for _ in 1...10000 {
+    for _ in 1...10 {
       _ = generateFakeResult()
     }
   }
