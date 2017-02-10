@@ -16,24 +16,15 @@ class Initializer {
     }
     
     if defaults[.hasConvertedFromCoreData] == nil {
-      
-      
-      let l = Test()
-      l.testEntries()
-      
-//      convertData()
-      
-      //defaults[.hasConvertedFromCoreData] = true
-      
-      
+      convertData()
+      defaults[.hasConvertedFromCoreData] = true
     }
   }
   
   static func convertData() {
     
-    let context = CoreData.shared.context
-    let gameResults = GameResult.fetch(in: context)
-    let typeResults = TypeResult.fetch(in: context)
+    let gameResults =  GameResult.fetch(in: CoreData.shared.context)
+    let typeResults = TypeResult.fetch(in: CoreData.shared.context)
     
     let r = try! Realm()
     
@@ -45,77 +36,13 @@ class Initializer {
       }
     }
     
-    let gameResultRealms = r.objects(GameResultRealm.self)
-    let typeResultRealms = r.objects(TypeResultRealm.self)
-    
-    let grr = gameResultRealms.count
-    let gr = gameResults.count
-    
-    let trr = typeResultRealms.count
-    let tr = typeResults.count
-    
-    print(grr,gr,trr,tr)
-    
-    assert(gameResultRealms.count == gameResults.count)
-    assert(typeResultRealms.count == typeResults.count)
-   
     let cd = NSPersistentContainer(name: "nBack")
     cd.loadPersistentStores { (desc, error) in
       try! FileManager.default.removeItem(at: desc.url!)
     }
-    
-    
-    let gameResults2 = GameResult.fetch(in: context)
-    let typeResults2 = TypeResult.fetch(in: context)
-    
-    let gr2 = gameResults2.count
-    let tr2 = typeResults2.count
-    
-    print(grr,gr2,trr,tr2)
-    
-    assert(gameResults.count == 0)
-    assert(typeResults.count == 0)
   }
 }
 
-class Test {
-  let context = CoreData.shared.context
-  var date = Date(timeInterval: -1000, since: Date())
-  func testEntries() {
-    for _ in 1...10 {
-      _ = generateFakeResult()
-    }
-  }
-  
-  func generateFakeResult() -> GameResult {
-    var result: GameResult! = nil
-    context.performAndWait {
-      result = GameResult(context: self.context)
-      result.initialize(with: Date(timeInterval: Double(Utilities.random(max: 100000000) - 50000000), since: Date()))
-      for type in [.squares, .numbers, .colors] as [NBackType] {
-        result.types.insert(self.generateFakeType(type))
-      }
-      self.context.save { Utilities.show(error: $0) }
-    }
-    return result
-  }
-  
-  func generateFakeType(_ type: NBackType) -> TypeResult {
-    let result = TypeResult(context: context)
-    
-    result.correct = Int16(Utilities.random(max: 10))
-    result.incorrect = Int16(Utilities.random(max: 10))
-    result.matches = Int16(Utilities.random(max: 10))
-    result.type = type
-    
-    result.falseFalse = Int16(Utilities.random(max: 10))
-    result.falseTrue = Int16(Utilities.random(max: 10))
-    result.trueFalse = Int16(Utilities.random(max: 10))
-    result.trueTrue = Int16(Utilities.random(max: 10))
-    
-    return result
-  }
-}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

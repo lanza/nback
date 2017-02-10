@@ -1,6 +1,6 @@
 import UIKit
 
-struct Theme: HasWindow {
+struct Theme {
     static func setupAppearances() {
 
         let navBarAppearance = UINavigationBar.appearance()

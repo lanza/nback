@@ -1,5 +1,4 @@
 import UIKit
-import CoreData
 
 protocol DaysTableViewControllerDelegate: class {
   func didSelectDay(_ day: Day)
