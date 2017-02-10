@@ -291,8 +291,8 @@
 		B31F35A71D719BFF00BBC1D2 /* Play */ = {
 			isa = PBXGroup;
 			children = (
-				B30DE9841D7135FF00138962 /* GameViewController.swift */,
 				B30DE9661D711F3D00138962 /* PlayViewController.swift */,
+				B30DE9841D7135FF00138962 /* GameViewController.swift */,
 			);
 			path = Play;
 			sourceTree = "<group>";

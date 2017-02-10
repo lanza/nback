@@ -1,5 +1,7 @@
 import UIKit
 import Foundation
+import RxSwift
+import RxCocoa
 
 protocol GameViewControllerDelegate: class {
   func gameDidFinish(with result: GameResult)
@@ -22,6 +24,9 @@ class GameViewController: ViewController {
     
     self.gameBrain = GameBrain(squareMatrix: gameView.squareMatrix, delegate: self)
     setupGameViewClosures()
+    
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel Game", style: .done, target: nil, action: nil)
+    navigationItem.rightBarButtonItem?.rx.tap.subscribe(onNext: gameDidCancel).addDisposableTo(db)
   }
   
   func setupGameViewClosures() {
@@ -34,7 +39,6 @@ class GameViewController: ViewController {
     
     delegate.gameDidCancel()
   }
-  var gameDidCancelClosure: (() -> ())!
   
   func gameDidFinish(with gameResult: GameResult) {
     gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
@@ -46,10 +50,9 @@ class GameViewController: ViewController {
   override func viewDidAppear(_ animated: Bool) {
     gameBrain.start()
   }
+  
+  let db = DisposeBag()
 }
-
-
-
 
 extension GameViewController: GameBrainDelegate {
   func gameBrainDidFinish(with result: GameResult) {
