@@ -9,6 +9,7 @@ class PlayCoordinator: Coordinator {
   
   override func loadViewController() {
     viewController = PlayViewController()
+    playViewController.delegate = self
     
     playViewController.title = "nBack"
     playViewController.tabBarItem.title = Lets.playl10n

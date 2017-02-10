@@ -255,8 +255,8 @@
 		B318A9DA1D72BA3F0051DC01 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				B3642C261D72B8180068506D /* DayCoordinator.swift */,
 				B30DE9941D714EEA00138962 /* DaysCoordinator.swift */,
+				B3642C261D72B8180068506D /* DayCoordinator.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -300,8 +300,8 @@
 		B31F35A81D719C0300BBC1D2 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				B3642C281D72B8C70068506D /* DayTableViewController.swift */,
 				B30DE9681D711F6700138962 /* DaysTableViewController.swift */,
+				B3642C281D72B8C70068506D /* DayTableViewController.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";

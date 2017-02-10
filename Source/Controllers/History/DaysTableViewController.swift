@@ -1,7 +1,12 @@
 import UIKit
 import CoreData
 
+protocol DaysTableViewControllerDelegate: class {
+  func didSelectDay(_ day: Day)
+}
+
 class DaysTableViewController: TableViewController<FetchedResultsDataProvider<Day>,Day,DaysTableViewCell> {
+  weak var delegate: DaysTableViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +34,9 @@ class DaysTableViewController: TableViewController<FetchedResultsDataProvider<Da
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let day = dataSource?.selectedObject else { fatalError() }
-        didSelectDay(day)
+      delegate.didSelectDay(day)
     }
-    var didSelectDay: ((Day) -> ())!
-    
+  
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = Theme.Colors.background
     }
