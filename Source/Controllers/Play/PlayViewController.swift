@@ -81,6 +81,7 @@ class PlayViewController: ViewController {
     
     playGameButton = UIButton.button(title: Lets.playl10n, target: self, selector: nil, font: Theme.Fonts.playLabels)
     playGameButton.rx.tap.subscribe(onNext: delegate.newGameTapped).addDisposableTo(db)
+    
     playGameButton.backgroundColor = Theme.Colors.playButtonBackground
     playGameButton.setTitleColor(Theme.Colors.playButtonFont, for: UIControlState())
     playGameButton.layer.cornerRadius = 5

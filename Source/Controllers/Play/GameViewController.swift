@@ -40,11 +40,6 @@ class GameViewController: ViewController {
     delegate.gameDidCancel()
   }
   
-  func gameDidFinish(with gameResult: GameResultRealm) {
-    gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
-    
-    delegate.gameDidFinish(with: gameResult)
-  }
   required init?(coder aDecoder: NSCoder) { fatalError() }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -56,7 +51,8 @@ class GameViewController: ViewController {
 
 extension GameViewController: GameBrainDelegate {
   func gameBrainDidFinish(with result: GameResultRealm) {
-    gameDidFinish(with: result)
+    gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
+    delegate.gameDidFinish(with: result)
   }
   func enableButtons() {
     gameView.enableButtons()

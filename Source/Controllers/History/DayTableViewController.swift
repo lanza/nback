@@ -7,7 +7,7 @@ class DayTableViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Lets.cellLabelDateFormatter.string(from: day.date)
-        let nib = UINib(nibName: "GameResultCell", bundle: Bundle.main)
+        _ = UINib(nibName: "GameResultCell", bundle: Bundle.main)
     }
 }
 

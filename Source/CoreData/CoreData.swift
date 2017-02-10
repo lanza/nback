@@ -1,14 +1,14 @@
 import CoreData
 
-class CoreData {
+public class CoreData {
     
-    static var shared: CoreData = {
+    public static var shared: CoreData = {
         return CoreData()
     }()
     
     private init() { }
     
-    var context: NSManagedObjectContext {
+    public var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     

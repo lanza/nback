@@ -118,12 +118,11 @@ class GameBrain {
       case .colors:
         tally(order: self.colorOrder, playerAnswers: self.playerColorAnswers, for: .colors, result: result)
       }
-      
+    }
       let defaults = UserDefaults.standard
       defaults[.lastScoreString] = Lets.scoreString(for: result)
       defaults[.lastResultString] = Lets.resultString(for: result)
       self.delegate.gameBrainDidFinish(with: result)
-    }
   }
   
   func tally<T: Equatable>(order: [T], playerAnswers: [Bool], for type: NBackType, result: GameResultRealm) {
