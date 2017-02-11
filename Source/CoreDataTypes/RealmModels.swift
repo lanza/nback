@@ -39,7 +39,10 @@ class GameResultRealm: Object {
   var percentage: String { return String(Double(totalCorrect) / (Double(totalCorrect + totalIncorrect))) }
    
    func add(typeResult: TypeResultRealm) {
-      typeResult.game = self
+      let r = try! Realm()
+      try! r.write {
+         typeResult.game = self
+      }
    }
 }
 
