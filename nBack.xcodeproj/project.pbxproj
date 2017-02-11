@@ -51,6 +51,7 @@
 		B38599DC1D9720CF00227994 /* DayTableViewCellLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38599DB1D9720CF00227994 /* DayTableViewCellLabel.swift */; };
 		B38599DE1D97236F00227994 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38599DD1D97236F00227994 /* SpeechSynthesizer.swift */; };
 		B39C1DE01E4FB43F005B87E5 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C1DDF1E4FB43F005B87E5 /* Score.swift */; };
+		B39C1DE21E4FBAF5005B87E5 /* SequenceGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C1DE11E4FBAF5005B87E5 /* SequenceGenerator.swift */; };
 		B3BCBBC61DCE73F80081534C /* DaysTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BCBBC51DCE73F80081534C /* DaysTableViewCell.xib */; };
 		B3CDCFB01D72D9DD0018F4D3 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CDCFAF1D72D9DD0018F4D3 /* SettingsCoordinator.swift */; };
 		B3DA50931E4D72D700D1C167 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA50921E4D72D700D1C167 /* Color.swift */; };
@@ -103,6 +104,7 @@
 		B38599DB1D9720CF00227994 /* DayTableViewCellLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTableViewCellLabel.swift; sourceTree = "<group>"; };
 		B38599DD1D97236F00227994 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		B39C1DDF1E4FB43F005B87E5 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		B39C1DE11E4FBAF5005B87E5 /* SequenceGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceGenerator.swift; sourceTree = "<group>"; };
 		B3BCBBC51DCE73F80081534C /* DaysTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaysTableViewCell.xib; sourceTree = "<group>"; };
 		B3CDCFAF1D72D9DD0018F4D3 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		B3DA508E1E4D578B00D1C167 /* nBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +257,7 @@
 			children = (
 				B3DA50921E4D72D700D1C167 /* Color.swift */,
 				B31F35991D71727800BBC1D2 /* GameBrain.swift */,
+				B39C1DE11E4FBAF5005B87E5 /* SequenceGenerator.swift */,
 				B39C1DDF1E4FB43F005B87E5 /* Score.swift */,
 				B31F35A11D71733100BBC1D2 /* GameSettings.swift */,
 				B38599DD1D97236F00227994 /* SpeechSynthesizer.swift */,
@@ -455,6 +458,7 @@
 				B3642C291D72B8C70068506D /* DayTableViewController.swift in Sources */,
 				B30DE9671D711F3D00138962 /* PlayViewController.swift in Sources */,
 				B30DE96F1D71281C00138962 /* Theme.swift in Sources */,
+				B39C1DE21E4FBAF5005B87E5 /* SequenceGenerator.swift in Sources */,
 				B30DE9761D712BCD00138962 /* TypeResult.swift in Sources */,
 				B30DE93C1D711B4300138962 /* nBack.xcdatamodeld in Sources */,
 				B30DE98B1D71371100138962 /* View.swift in Sources */,

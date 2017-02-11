@@ -1,80 +1,16 @@
 import Foundation
 import UIKit
 
-struct SequenceGenerator {
-   
-}
-
 class GameBrain {
+   
+   init(delegate: GameBrainDelegate) {
+      self.delegate = delegate
+   }
    
    unowned var delegate: GameBrainDelegate
    
    var timer: Timer?
-   var squareMatrix: SquareMatrix
-   
-   init(squareMatrix: SquareMatrix, delegate: GameBrainDelegate) {
-      self.squareMatrix = squareMatrix
-      self.delegate = delegate
-   }
-   
-   func quit() {
-      timer?.invalidate()
-   }
-   
-   var sequenceLength: Int { return GameSettings.numberOfTurns + GameSettings.level }
-   func generateSequences() {
-      if GameSettings.types.contains(.squares) {
-         generatedSquareOrder = generateSquareSequence()
-         playerSquareAnswers = createArrayOfFalses()
-      }
-      if GameSettings.types.contains(.numbers) {
-         generatedNumberOrder = generateNumberSequence()
-         playerNumberAnswers = createArrayOfFalses()
-      }
-      if GameSettings.types.contains(.colors) {
-         generatedColorOrder = generateColorSequence()
-         playerColorAnswers = createArrayOfFalses()
-      }
-   }
-   func createArrayOfFalses() -> [Bool] {
-      return Array<Bool>(repeating: false, count: GameSettings.numberOfTurns)
-   }
-   func generateSquareSequence() -> [MatrixIndex] {
-      return (1...sequenceLength).map { _ in MatrixIndex(row: Utilities.random(range: 0..<GameSettings.rows), column: Utilities.random(range: 0..<GameSettings.columns)) }
-   }
-   func generateNumberSequence() -> [Int] {
-      return (1...sequenceLength).map { _ in Utilities.random(range: 1...9) }
-   }
-   func generateColorSequence() -> [UIColor] {
-      return (1...sequenceLength).map { _ in Utilities.random(range: 0...7) }.map { Color.from(value: $0).color }
-   }
-   
-   func speakNextNumber() {
-      let numberToSay = generatedNumberOrder[turnCount]
-      SpeechSynthesizer.speak(number: numberToSay)
-   }
-   
-   func highlightAndColorNextSquare() {
-      var index: MatrixIndex
-      var color: UIColor
-      switch (generatedSquareOrder, generatedColorOrder) {
-      case (nil,nil): return
-      case (let squareOrder, nil):
-         index = squareOrder![turnCount]
-         color = Theme.Colors.highlightedSquare
-      case (nil, let colorOrder):
-         index = MatrixIndex(row: 0, column: 0)
-         color = colorOrder![turnCount]
-      case (let squareOrder, let colorOrder):
-         index = squareOrder![turnCount]
-         color = colorOrder![turnCount]
-      }
-      squareMatrix.color(row: index.row, column: index.column, color: color)
-   }
-   
-   func playerStatesNumbersMatched() { playerNumberAnswers![turnCount - 1 - GameSettings.level] = true }
-   func playerStatesSquaresMatched() { playerSquareAnswers![turnCount - 1 - GameSettings.level] = true }
-   func playerStatesColorsMatched() { playerColorAnswers![turnCount - 1 - GameSettings.level] = true }
+   let sequenceLength = GameSettings.numberOfTurns + GameSettings.level
    
    func start() {
       generateSequences()
@@ -98,6 +34,52 @@ class GameBrain {
          self.turnCount += 1
       }
    }
+   
+   func generateSequences() {
+      let sequenceGenerator = SequenceGenerator()
+      
+      if GameSettings.types.contains(.squares) {
+         generatedSquareOrder = sequenceGenerator.generateSquareSequence()
+         playerSquareAnswers = sequenceGenerator.createArrayOfFalses()
+      }
+      if GameSettings.types.contains(.numbers) {
+         generatedNumberOrder = sequenceGenerator.generateNumberSequence()
+         playerNumberAnswers = sequenceGenerator.createArrayOfFalses()
+      }
+      if GameSettings.types.contains(.colors) {
+         generatedColorOrder = sequenceGenerator.generateColorSequence()
+         playerColorAnswers = sequenceGenerator.createArrayOfFalses()
+      }
+   }
+   
+   func speakNextNumber() {
+      let numberToSay = generatedNumberOrder[turnCount]
+      SpeechSynthesizer.speak(number: numberToSay)
+   }
+   
+   func highlightAndColorNextSquare() {
+      var index: MatrixIndex
+      var color: UIColor
+      switch (generatedSquareOrder, generatedColorOrder) {
+      case (nil,nil): return
+      case (let squareOrder, nil):
+         index = squareOrder![turnCount]
+         color = Theme.Colors.highlightedSquare
+      case (nil, let colorOrder):
+         index = MatrixIndex(row: 0, column: 0)
+         color = colorOrder![turnCount]
+      case (let squareOrder, let colorOrder):
+         index = squareOrder![turnCount]
+         color = colorOrder![turnCount]
+      }
+      delegate.colorGameView(row: index.row, column: index.column, color: color)
+   }
+   
+   func playerStatesNumbersMatched() { playerNumberAnswers![turnCount - 1 - GameSettings.level] = true }
+   func playerStatesSquaresMatched() { playerSquareAnswers![turnCount - 1 - GameSettings.level] = true }
+   func playerStatesColorsMatched() { playerColorAnswers![turnCount - 1 - GameSettings.level] = true }
+   
+
    
    var turnCount = 0
    
@@ -154,9 +136,13 @@ class GameBrain {
       return correctAnswers
    }
    
+   func quit() {
+      timer?.invalidate()
+   }
 }
 
 protocol GameBrainDelegate: class {
    func gameBrainDidFinish(with result: GameResultRealm)
    func enableButtons()
+   func colorGameView(row: Int, column: Int, color: UIColor)
 }
