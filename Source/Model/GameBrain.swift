@@ -75,11 +75,18 @@ class GameBrain {
       delegate.colorGameView(row: index.row, column: index.column, color: color)
    }
    
-   func playerStatesNumbersMatched() { playerNumberAnswers![turnCount - 1 - GameSettings.level] = true }
-   func playerStatesSquaresMatched() { playerSquareAnswers![turnCount - 1 - GameSettings.level] = true }
-   func playerStatesColorsMatched() { playerColorAnswers![turnCount - 1 - GameSettings.level] = true }
+   func playerStatesMatch(for type: NBackType) {
+      switch type {
+      case .squares:
+         playerSquareAnswers![turnCount - 1 - GameSettings.level] = true
+      case .numbers:
+         playerNumberAnswers![turnCount - 1 - GameSettings.level] = true
+      case .colors:
+         playerColorAnswers![turnCount - 1 - GameSettings.level] = true
+      }
+   }
    
-
+   
    
    var turnCount = 0
    

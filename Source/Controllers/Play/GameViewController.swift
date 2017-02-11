@@ -16,7 +16,7 @@ class GameViewController: ViewController {
    var gameView: GameView { return view as! GameView }
    
    override func loadView() {
-      view = GameView(rows: GameSettings.rows, columns: GameSettings.columns, types: GameSettings.types, delegate: self)
+      view = GameView(delegate: self)
    }
    
    override init() {
@@ -57,6 +57,9 @@ extension GameViewController: GameBrainDelegate {
 }
 
 extension GameViewController: GameViewDelegate {
+   func buttonWasTapped(type: NBackType) {
+      gameBrain.playerStatesMatch(for: type)
+   }
    
 }
 
