@@ -35,7 +35,8 @@ class GameView: View {
    func color(row: Int, column: Int, color: UIColor) {
       let square = squareMatrix[row,column]
       square.backgroundColor = color
-      let deadline: DispatchTime = .now() + (GameSettings.squareHighlightTime - 0.05).nanoseconds
+      let squareHighlightTime = ((GameSettings.secondsBetweenTurns - GameSettings.squareHighlightTime) < 0.5) ? (GameSettings.secondsBetweenTurns - 0.1) : GameSettings.squareHighlightTime
+      let deadline: DispatchTime = .now() + squareHighlightTime.nanoseconds
       DispatchQueue.main.asyncAfter(deadline: deadline) {
          square.backgroundColor = Theme.Colors.normalSquare
       }
