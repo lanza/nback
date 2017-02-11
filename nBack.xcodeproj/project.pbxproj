@@ -88,7 +88,7 @@
 		B310E0571DD1083D00089E98 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		B310E0591DD1089500089E98 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		B31F35931D7171DD00BBC1D2 /* SquareMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareMatrix.swift; sourceTree = "<group>"; };
-		B31F35951D71720400BBC1D2 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		B31F35951D71720400BBC1D2 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameView.swift; path = "../Base Classes/GameView.swift"; sourceTree = "<group>"; };
 		B31F35991D71727800BBC1D2 /* GameBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GameBrain.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B31F35A11D71733100BBC1D2 /* GameSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		B31F35A51D717E7E00BBC1D2 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -198,7 +198,6 @@
 			children = (
 				B30DE99A1D71555A00138962 /* Button.swift */,
 				B38599DB1D9720CF00227994 /* DayTableViewCellLabel.swift */,
-				B31F35951D71720400BBC1D2 /* GameView.swift */,
 				B38599D41D96125F00227994 /* Label.swift */,
 				B30DE9921D714C8A00138962 /* NavigationController.swift */,
 				B30DE9861D71364B00138962 /* StackView.swift */,
@@ -212,6 +211,7 @@
 		B30DE9821D7135C100138962 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B31F35951D71720400BBC1D2 /* GameView.swift */,
 				B31F35B41D722A0A00BBC1D2 /* ConfigurableCell.swift */,
 				B31F35BD1D72449B00BBC1D2 /* DaysTableViewCell.swift */,
 				B3BCBBC51DCE73F80081534C /* DaysTableViewCell.xib */,

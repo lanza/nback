@@ -32,6 +32,15 @@ class GameView: View {
    }
    required init?(coder aDecoder: NSCoder) {fatalError()}
    
+   func color(row: Int, column: Int, color: UIColor) {
+      let square = squareMatrix[row,column]
+      square.backgroundColor = color
+      let deadline: DispatchTime = .now() + (GameSettings.squareHighlightTime - 0.05).nanoseconds
+      DispatchQueue.main.asyncAfter(deadline: deadline) {
+         square.backgroundColor = Theme.Colors.normalSquare
+      }
+   }
+   
    private func setupMatchButtons() {
       
       buttons = [Button]()

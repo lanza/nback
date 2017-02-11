@@ -2,6 +2,7 @@ import UIKit
 import Foundation
 import RxSwift
 import RxCocoa
+import Reuse
 
 protocol GameViewControllerDelegate: class {
    func gameDidFinish(with result: GameResultRealm)
@@ -24,7 +25,7 @@ class GameViewController: ViewController {
       
       gameBrain = GameBrain(delegate: self)
       
-      navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel Game", style: .done, target: nil, action: nil)
+      navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel Game", style: .done)
       navigationItem.rightBarButtonItem?.rx.tap.subscribe(onNext: gameDidCancel).addDisposableTo(db)
    }
    
@@ -51,7 +52,7 @@ extension GameViewController: GameBrainDelegate {
       gameView.enableButtons()
    }
    func colorGameView(row: Int, column: Int, color: UIColor) {
-      gameView.squareMatrix.color(row: row, column: column, color: color)
+      gameView.color(row: row, column: column, color: color)
       
    }
 }
