@@ -129,7 +129,7 @@ class PlayViewController: ViewController {
       types.remove(at: index)
       GameSettings.types = types
     } else {
-      types.append(type)
+      types.insert(type)
       GameSettings.types = types
     }
     if GameSettings.types.count == 0 {

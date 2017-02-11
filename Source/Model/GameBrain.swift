@@ -1,9 +1,13 @@
 import Foundation
 import UIKit
 
+struct SequenceGenerator {
+   
+}
+
 class GameBrain {
    
-   var delegate: GameBrainDelegate
+   unowned var delegate: GameBrainDelegate
    
    var timer: Timer?
    var squareMatrix: SquareMatrix
@@ -44,8 +48,6 @@ class GameBrain {
    func generateColorSequence() -> [UIColor] {
       return (1...sequenceLength).map { _ in Utilities.random(range: 0...7) }.map { Color.from(value: $0).color }
    }
-   
-   
    
    func speakNextNumber() {
       let numberToSay = generatedNumberOrder[turnCount]
@@ -154,7 +156,7 @@ class GameBrain {
    
 }
 
-protocol GameBrainDelegate {
+protocol GameBrainDelegate: class {
    func gameBrainDidFinish(with result: GameResultRealm)
    func enableButtons()
 }

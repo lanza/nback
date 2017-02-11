@@ -10,7 +10,7 @@ class GameView: View {
     var buttonStackView: StackView!
     var quitGameButton: Button!
     
-    init(rows: Int, columns: Int, types: [NBackType]) {
+    init(rows: Int, columns: Int, types: Set<NBackType>) {
         super.init(frame: CGRect())
         
         layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
@@ -57,7 +57,7 @@ class GameView: View {
         addSubview(quitGameButton)
     }
     
-    private func setupMatchButtons(types: [NBackType]) {
+    private func setupMatchButtons(types: Set<NBackType>) {
         
         buttons = [Button]()
         
