@@ -1,16 +1,23 @@
 import UIKit
-import CoreGraphics
+import Reuse
+import RxSwift
+import RxCocoa
+
+protocol GameViewDelegate: class {
+   
+}
 
 class GameView: View {
+   
+   unowned var delegate: GameViewDelegate
     
     var squareMatrix: SquareMatrix!
     
     var mainStackView: StackView!
     var buttons: [Button]!
     var buttonStackView: StackView!
-    var quitGameButton: Button!
-    
-    init(rows: Int, columns: Int, types: Set<NBackType>) {
+   
+   init(rows: Int, columns: Int, types: Set<NBackType>, delegate: GameViewDelegate) {
         super.init(frame: CGRect())
         
         layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
@@ -21,62 +28,26 @@ class GameView: View {
             setupSquares(rows: 1, columns: 1)
         }
         setupMatchButtons(types: types)
-        setupQuitButton()
     }
     required init?(coder aDecoder: NSCoder) {fatalError()}
-    
-    var colorsButtonClosure: (() -> ())!
-    func colorsButtonTapped(_ button: UIButton) {
-        button.isEnabled = false
-        colorsButtonClosure()
-    }
-    var squaresButtonClosure: (() -> ())!
-    func squaresButtonTapped(_ button: UIButton) {
-        button.isEnabled = false
-        squaresButtonClosure()
-    }
-    var numbersButtonClosure: (() -> ())!
-    func numbersButtonTapped(_ button: UIButton) {
-        button.isEnabled = false
-        numbersButtonClosure()
-    }
-    
-    func setupClosures(gameBrain: GameBrain?, quitGameClosure: (() -> ())?) {
-        self.colorsButtonClosure = gameBrain?.playerStatesColorsMatched
-        self.squaresButtonClosure = gameBrain?.playerStatesSquaresMatched
-        self.numbersButtonClosure = gameBrain?.playerStatesNumbersMatched
-        
-        self.quitGameClosure = quitGameClosure
-    }
-    
-    var quitGameClosure: (() -> ())!
-    func quitGameTapped() { quitGameClosure() }
-    
-    private func setupQuitButton() {
-        quitGameButton = Button.quitGameButton(target: self, selector: #selector(quitGameTapped))
-        addSubview(quitGameButton)
-    }
-    
+   
     private func setupMatchButtons(types: Set<NBackType>) {
-        
+      
         buttons = [Button]()
         
         for type in types {
-            
-            var selector: Selector
-            
+            let button = Button.matchButton(title: type.string)
+         
             switch type {
             case .colors:
-                selector = #selector(colorsButtonTapped(_:))
+               button.rx.tap.subscribe(onNext: {}).addDisposableTo(db)
             case .numbers:
-                selector = #selector(numbersButtonTapped(_:))
+               button.rx.tap.subscribe(onNext: {}).addDisposableTo(db)
             case .squares:
-                selector = #selector(squaresButtonTapped(_:))
+               button.rx.tap.subscribe(onNext: {}).addDisposableTo(db)
             }
-            
-            let button = Button.matchButton(title: type.string, target: self, selector: selector)
+         
             button.isEnabled = false
-            
             buttons.append(button)
         }
         
@@ -126,7 +97,7 @@ class GameView: View {
         
 
         let boardWidth = frame.width - 40
-        let boardHeight = frame.height - (8 + 16 + 8 + 8) - quitGameButton.frame.height - buttonStackView.frame.height
+        let boardHeight = frame.height - (8 + 16 + 8 + 8) - buttonStackView.frame.height
         
         if boardHeight/boardWidth < CGFloat(rows)/CGFloat(columns) {
             constraints.append(mainStackView.heightAnchor.constraint(equalToConstant: boardHeight))
@@ -141,14 +112,12 @@ class GameView: View {
         constraints.append(buttonStackView.rightAnchor.constraint(equalTo: layoutMarginsGuide.rightAnchor))
         constraints.append(buttonStackView.heightAnchor.constraint(equalToConstant: Lets.matchButtonHeight))
         
-        quitGameButton.translatesAutoresizingMaskIntoConstraints = false
-        constraints.append(quitGameButton.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor, constant: 8))
-        constraints.append(quitGameButton.rightAnchor.constraint(equalTo: layoutMarginsGuide.rightAnchor))
-        
         NSLayoutConstraint.activate(constraints)
     }
     
     func enableButtons() {
         buttons.forEach { $0.isEnabled = true }
     }
+   
+   let db = DisposeBag()
 }

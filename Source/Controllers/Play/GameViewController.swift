@@ -16,27 +16,21 @@ class GameViewController: ViewController {
    var gameView: GameView { return view as! GameView }
    
    override func loadView() {
-      view = GameView(rows: GameSettings.rows, columns: GameSettings.columns, types: GameSettings.types)
+      view = GameView(rows: GameSettings.rows, columns: GameSettings.columns, types: GameSettings.types, delegate: self)
    }
    
    override init() {
       super.init()
       
       gameBrain = GameBrain(delegate: self)
-      setupGameViewClosures()
       
       navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel Game", style: .done, target: nil, action: nil)
       navigationItem.rightBarButtonItem?.rx.tap.subscribe(onNext: gameDidCancel).addDisposableTo(db)
    }
    
-   func setupGameViewClosures() {
-      gameView.setupClosures(gameBrain: gameBrain, quitGameClosure: gameDidCancel)
-   }
    
    func gameDidCancel() {
       gameBrain.quit()
-      gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
-      
       delegate.gameDidCancel()
    }
    
@@ -51,7 +45,6 @@ class GameViewController: ViewController {
 
 extension GameViewController: GameBrainDelegate {
    func gameBrainDidFinish(with result: GameResultRealm) {
-      gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
       delegate.gameDidFinish(with: result)
    }
    func enableButtons() {
@@ -63,6 +56,9 @@ extension GameViewController: GameBrainDelegate {
    }
 }
 
+extension GameViewController: GameViewDelegate {
+   
+}
 
 
 

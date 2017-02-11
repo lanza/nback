@@ -1,13 +1,11 @@
 import UIKit
 
 class Button: UIButton {
-    static func matchButton(title: String, target: Any?, selector: Selector) -> Button {
+    static func matchButton(title: String) -> Button {
         
         let button = Button(type: .system)
         
         button.setTitle(title, for: UIControlState())
-        button.addTarget(target, action: selector, for: .touchUpInside)
-        
         button.backgroundColor = Theme.Colors.matchButtonBackground
         button.setTitleColor(Theme.Colors.matchButtonFont, for: UIControlState())
         button.titleLabel?.font = Theme.Fonts.matchButtons
