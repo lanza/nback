@@ -23,8 +23,8 @@ struct GameSettings {
     get { return defaults[.secondsBetweenTurns] }
     set { defaults[.secondsBetweenTurns] = newValue }
   }
-  static var types: [NBackType] {
-    get { return defaults[.types].map { NBackType.from(value: $0) } }
+  static var types: Set<NBackType> {
+    get { return Set(defaults[.types].map { NBackType.from(value: $0) }) }
     set { defaults[.types] = newValue.map { $0.value } }
   }
   static var level: Int {

@@ -50,22 +50,12 @@
 		B38599D51D96125F00227994 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38599D41D96125F00227994 /* Label.swift */; };
 		B38599DC1D9720CF00227994 /* DayTableViewCellLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38599DB1D9720CF00227994 /* DayTableViewCellLabel.swift */; };
 		B38599DE1D97236F00227994 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38599DD1D97236F00227994 /* SpeechSynthesizer.swift */; };
+		B39C1DE01E4FB43F005B87E5 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C1DDF1E4FB43F005B87E5 /* Score.swift */; };
 		B3BCBBC61DCE73F80081534C /* DaysTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BCBBC51DCE73F80081534C /* DaysTableViewCell.xib */; };
 		B3CDCFB01D72D9DD0018F4D3 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CDCFAF1D72D9DD0018F4D3 /* SettingsCoordinator.swift */; };
 		B3DA50931E4D72D700D1C167 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA50921E4D72D700D1C167 /* Color.swift */; };
-		B3DA509B1E4D849200D1C167 /* nBackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA509A1E4D849200D1C167 /* nBackTests.swift */; };
 		B3DA50A51E4DA04400D1C167 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA50A41E4DA04400D1C167 /* RealmModels.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B3DA509D1E4D849200D1C167 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B30DE9281D711B4300138962 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B30DE92F1D711B4300138962;
-			remoteInfo = nBack;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		141711A1BB21E02BD0A37F69 /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,12 +102,12 @@
 		B38599D41D96125F00227994 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		B38599DB1D9720CF00227994 /* DayTableViewCellLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTableViewCellLabel.swift; sourceTree = "<group>"; };
 		B38599DD1D97236F00227994 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
+		B39C1DDF1E4FB43F005B87E5 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		B3BCBBC51DCE73F80081534C /* DaysTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaysTableViewCell.xib; sourceTree = "<group>"; };
 		B3CDCFAF1D72D9DD0018F4D3 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		B3DA508E1E4D578B00D1C167 /* nBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DA508F1E4D57D500D1C167 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3DA50921E4D72D700D1C167 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		B3DA50981E4D849200D1C167 /* nBackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nBackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DA509A1E4D849200D1C167 /* nBackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nBackTests.swift; sourceTree = "<group>"; };
 		B3DA509C1E4D849200D1C167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3DA50A41E4DA04400D1C167 /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmModels.swift; path = CoreDataTypes/RealmModels.swift; sourceTree = "<group>"; };
@@ -130,13 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9877FFADA09A19B3827D6E70 /* Pods_nBack.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B3DA50951E4D849200D1C167 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,13 +151,13 @@
 				9B1CA5E73CFDCB5F53752AB2 /* Frameworks */,
 				B30DE9641D711DBB00138962 /* Other */,
 				407173FC2C868827649DDC22 /* Pods */,
-				B3DA50981E4D849200D1C167 /* nBackTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
 		B30DE9641D711DBB00138962 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B30DE9781D712BD000138962 /* CoreData */,
 				B30DE93D1D711B4300138962 /* Assets.xcassets */,
 				B3DA508F1E4D57D500D1C167 /* Info.plist */,
 				B30DE93F1D711B4300138962 /* LaunchScreen.storyboard */,
@@ -205,7 +188,7 @@
 				B30DE93A1D711B4300138962 /* nBack.xcdatamodeld */,
 			);
 			name = CoreData;
-			path = CoreDataTypes;
+			path = ../Source/CoreDataTypes;
 			sourceTree = "<group>";
 		};
 		B30DE9801D71358900138962 /* Base Classes */ = {
@@ -272,6 +255,7 @@
 			children = (
 				B3DA50921E4D72D700D1C167 /* Color.swift */,
 				B31F35991D71727800BBC1D2 /* GameBrain.swift */,
+				B39C1DDF1E4FB43F005B87E5 /* Score.swift */,
 				B31F35A11D71733100BBC1D2 /* GameSettings.swift */,
 				B38599DD1D97236F00227994 /* SpeechSynthesizer.swift */,
 			);
@@ -311,7 +295,6 @@
 				B30DE9831D7135CD00138962 /* Controllers */,
 				B30DE9651D711DC000138962 /* Coordinators */,
 				B3DA50A41E4DA04400D1C167 /* RealmModels.swift */,
-				B30DE9781D712BD000138962 /* CoreData */,
 				B31F359B1D71728600BBC1D2 /* Model */,
 				B31F359E1D71729700BBC1D2 /* ViewModel */,
 				B30DE9821D7135C100138962 /* Views */,
@@ -363,24 +346,6 @@
 			productReference = B3DA508E1E4D578B00D1C167 /* nBack.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B3DA50971E4D849200D1C167 /* nBackTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B3DA509F1E4D849200D1C167 /* Build configuration list for PBXNativeTarget "nBackTests" */;
-			buildPhases = (
-				B3DA50941E4D849200D1C167 /* Sources */,
-				B3DA50951E4D849200D1C167 /* Frameworks */,
-				B3DA50961E4D849200D1C167 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B3DA509E1E4D849200D1C167 /* PBXTargetDependency */,
-			);
-			name = nBackTests;
-			productName = nBackTests;
-			productReference = B3DA50981E4D849200D1C167 /* nBackTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -395,12 +360,6 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 72MNHNDUNH;
 						ProvisioningStyle = Automatic;
-					};
-					B3DA50971E4D849200D1C167 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 72MNHNDUNH;
-						ProvisioningStyle = Automatic;
-						TestTargetID = B30DE92F1D711B4300138962;
 					};
 				};
 			};
@@ -418,7 +377,6 @@
 			projectRoot = "";
 			targets = (
 				B30DE92F1D711B4300138962 /* nBack */,
-				B3DA50971E4D849200D1C167 /* nBackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -433,13 +391,6 @@
 				B310E0581DD1083D00089E98 /* HeaderView.xib in Resources */,
 				B30DE9411D711B4300138962 /* LaunchScreen.storyboard in Resources */,
 				B30DE93E1D711B4300138962 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B3DA50961E4D849200D1C167 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +477,7 @@
 				B30DE9951D714EEA00138962 /* DaysCoordinator.swift in Sources */,
 				B38599DE1D97236F00227994 /* SpeechSynthesizer.swift in Sources */,
 				B30DE9851D7135FF00138962 /* GameViewController.swift in Sources */,
+				B39C1DE01E4FB43F005B87E5 /* Score.swift in Sources */,
 				B30DE9871D71364B00138962 /* StackView.swift in Sources */,
 				B31F35A61D717E7E00BBC1D2 /* Utilities.swift in Sources */,
 				B31F35A21D71733100BBC1D2 /* GameSettings.swift in Sources */,
@@ -542,23 +494,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3DA50941E4D849200D1C167 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B3DA509B1E4D849200D1C167 /* nBackTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B3DA509E1E4D849200D1C167 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B30DE92F1D711B4300138962 /* nBack */;
-			targetProxy = B3DA509D1E4D849200D1C167 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B30DE93F1D711B4300138962 /* LaunchScreen.storyboard */ = {
@@ -702,36 +638,6 @@
 			};
 			name = Release;
 		};
-		B3DA50A01E4D849200D1C167 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 72MNHNDUNH;
-				INFOPLIST_FILE = nBackTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBackTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nBack.app/nBack";
-			};
-			name = Debug;
-		};
-		B3DA50A11E4D849200D1C167 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 72MNHNDUNH;
-				INFOPLIST_FILE = nBackTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBackTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nBack.app/nBack";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -749,15 +655,6 @@
 			buildConfigurations = (
 				B30DE95C1D711B4300138962 /* Debug */,
 				B30DE95D1D711B4300138962 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B3DA509F1E4D849200D1C167 /* Build configuration list for PBXNativeTarget "nBackTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B3DA50A01E4D849200D1C167 /* Debug */,
-				B3DA50A11E4D849200D1C167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

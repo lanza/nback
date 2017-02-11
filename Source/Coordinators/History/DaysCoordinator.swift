@@ -25,4 +25,3 @@ extension DaysCoordinator: DaysTableViewControllerDelegate {
     self.show(dayCoordinator, sender: self)
   }
 }
-

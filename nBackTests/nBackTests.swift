@@ -45,7 +45,7 @@ class DataGeneratorCoreData {
       for type in [.squares, .numbers, .colors] as [NBackType] {
         result.types.insert(self.generateFakeType(type))
       }
-      self.context.save { Utilities.show(error: $0) }
+      try! self.context.save()
     }
     return result
   }

@@ -37,11 +37,15 @@ class GameResultRealm: Object {
   var totalCorrect: Int { return Int(types.map { return $0.correct }.reduce(0) { $0 + $1 }) }
   var totalIncorrect: Int { return Int(types.map { $0.incorrect }.reduce(0) { $0 + $1 }) }
   var percentage: String { return String(Double(totalCorrect) / (Double(totalCorrect + totalIncorrect))) }
+   
+   func add(typeResult: TypeResultRealm) {
+      typeResult.game = self
+   }
 }
 
 class TypeResultRealm: Object {
   
-  static func new(correct: Int, incorrect: Int, matches: Int, falseFalse: Int, falseTrue: Int, trueFalse: Int, trueTrue: Int, nBackType: NBackType, game: GameResultRealm) -> TypeResultRealm {
+   static func new(score: Score, nBackType: NBackType) -> TypeResultRealm {
     
     let realm = try! Realm()
     
@@ -49,19 +53,17 @@ class TypeResultRealm: Object {
     
     try! realm.write {
       
-      t.correct = correct
-      t.incorrect = incorrect
+      t.correct = score.correct
+      t.incorrect = score.incorrect
       
-      t.matches = matches
+      t.matches = score.matches
       
-      t.falseFalse = falseFalse
-      t.falseTrue = falseTrue
-      t.trueFalse = trueFalse
-      t.trueTrue = trueTrue
+      t.falseFalse = score.falseFalse
+      t.falseTrue = score.falseTrue
+      t.trueFalse = score.trueFalse
+      t.trueTrue = score.trueTrue
       
       t.nBackType = nBackType
-      
-      t.game = game
       
       realm.add(t)
     }

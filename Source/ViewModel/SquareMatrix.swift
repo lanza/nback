@@ -1,31 +1,35 @@
 import UIKit
 
 class SquareMatrix {
-    var rows: Int
-    var columns: Int
-    private var elements: [SquareView]
-    
-    init(rows: Int, columns: Int, elements: [SquareView]) {
-        self.rows = rows
-        self.columns = columns
-        self.elements = elements
-    }
-    
-    subscript (row: Int, column: Int) -> SquareView {
-        return elements[row * columns + column]
-    }
-    
-    func color(row: Int, column: Int, color: UIColor) {
-        let square = self[row,column]
-        square.backgroundColor = color
-        let deadline: DispatchTime = DispatchTime.now() + GameSettings.squareHighlightTime.nanoseconds
-        DispatchQueue.main.asyncAfter(deadline: deadline) {
-            square.backgroundColor = Theme.Colors.normalSquare
-        }
-    }
+   var rows: Int
+   var columns: Int
+   private var elements: [SquareView]
+   
+   init(rows: Int, columns: Int, elements: [SquareView]) {
+      self.rows = rows
+      self.columns = columns
+      self.elements = elements
+   }
+   
+   subscript (row: Int, column: Int) -> SquareView {
+      return elements[row * columns + column]
+   }
+   
+   func color(row: Int, column: Int, color: UIColor) {
+      let square = self[row,column]
+      square.backgroundColor = color
+      let deadline: DispatchTime = DispatchTime.now() + GameSettings.squareHighlightTime.nanoseconds
+      DispatchQueue.main.asyncAfter(deadline: deadline) {
+         square.backgroundColor = Theme.Colors.normalSquare
+      }
+   }
 }
 
 struct MatrixIndex: Equatable {
-  var row: Int
-  var column: Int
+   var row: Int
+   var column: Int
+   
+   static func ==(lhs: MatrixIndex, rhs: MatrixIndex) -> Bool {
+      return (lhs.row == rhs.row && lhs.column == rhs.column)
+   }
 }
