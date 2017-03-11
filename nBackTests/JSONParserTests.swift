@@ -14,7 +14,9 @@ class JSONParserTests: XCTestCase {
     }
    
     func test_JSONParser_parsesJSON() {
-        JSONParser.parse()
+        let url = Bundle.main.url(forResource: "oldData", withExtension: "json")
+        let data = try! Data(contentsOf: url!)
+        JSONParser.parse(json: data)
     }
     
 }

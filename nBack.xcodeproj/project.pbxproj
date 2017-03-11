@@ -47,6 +47,7 @@
 		B31F35C21D728E8100BBC1D2 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35C11D728E8100BBC1D2 /* Day.swift */; };
 		B32D43871E73BA4E00DAE063 /* JSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D43861E73BA4E00DAE063 /* JSONParserTests.swift */; };
 		B32D438F1E73BACB00DAE063 /* Pods_nBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32D438E1E73BACB00DAE063 /* Pods_nBack.framework */; };
+		B32D43911E73CEBF00DAE063 /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D43901E73CEBE00DAE063 /* Initializer.swift */; };
 		B3557EA21E738B590017D6F3 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35B41D722A0A00BBC1D2 /* ConfigurableCell.swift */; };
 		B3557EA31E738B590017D6F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE97E1D71358000138962 /* ViewController.swift */; };
 		B3557EA41E738B590017D6F3 /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE9791D712BE200138962 /* ManagedObject.swift */; };
@@ -170,6 +171,7 @@
 		B32D43861E73BA4E00DAE063 /* JSONParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParserTests.swift; sourceTree = "<group>"; };
 		B32D43881E73BA4E00DAE063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B32D438E1E73BACB00DAE063 /* Pods_nBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_nBack.framework; path = "../../Library/Developer/Xcode/DerivedData/nBack-eamnmamszdaivubppsmtvszgebwf/Build/Products/Debug-iphonesimulator/Pods_nBack.framework"; sourceTree = "<group>"; };
+		B32D43901E73CEBE00DAE063 /* Initializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initializer.swift; sourceTree = "<group>"; };
 		B33504411E73903D002EBC7D /* nBack.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = nBack.plist; path = nBack/nBack.plist; sourceTree = SOURCE_ROOT; };
 		B33504421E73903D002EBC7D /* nBackInternal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = nBackInternal.plist; path = nBack/nBackInternal.plist; sourceTree = SOURCE_ROOT; };
 		B3557EDB1E738B590017D6F3 /* nBackInternal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBackInternal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -404,6 +406,7 @@
 				B30DE99E1D7156E800138962 /* GameType.swift */,
 				B30DE96C1D71280000138962 /* Lets.swift */,
 				B31F35A51D717E7E00BBC1D2 /* Utilities.swift */,
+				B32D43901E73CEBE00DAE063 /* Initializer.swift */,
 				B3557EDD1E738BB30017D6F3 /* JSONParser.swift */,
 			);
 			path = Source;
@@ -789,6 +792,7 @@
 				B30DE9341D711B4300138962 /* AppDelegate.swift in Sources */,
 				B30DE9951D714EEA00138962 /* DaysCoordinator.swift in Sources */,
 				B38599DE1D97236F00227994 /* SpeechSynthesizer.swift in Sources */,
+				B32D43911E73CEBF00DAE063 /* Initializer.swift in Sources */,
 				B30DE9851D7135FF00138962 /* GameViewController.swift in Sources */,
 				B39C1DE01E4FB43F005B87E5 /* Score.swift in Sources */,
 				B30DE9871D71364B00138962 /* StackView.swift in Sources */,
