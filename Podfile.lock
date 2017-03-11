@@ -21,21 +21,21 @@ PODS:
 
 DEPENDENCIES:
   - BonMot
-  - CoordinatorKit (from `~/Projects/CoordinatorKit`)
+  - CoordinatorKit (from `~/Documents/CoordinatorKit`)
   - DZNEmptyDataSet
   - Eureka (~> 2.0.0-beta.1)
   - RealmSwift
-  - Reuse (from `~/Projects/Reuse`)
-  - RxCocoa (~> 3.0)
+  - Reuse (from `~/Documents/Reuse`)
+  - RxCocoa (~> 3.2)
   - RxDataSources
   - RxRealm
-  - RxSwift (~> 3.0)
+  - RxSwift (~> 3.2)
 
 EXTERNAL SOURCES:
   CoordinatorKit:
-    :path: "~/Projects/CoordinatorKit"
+    :path: "~/Documents/CoordinatorKit"
   Reuse:
-    :path: "~/Projects/Reuse"
+    :path: "~/Documents/Reuse"
 
 SPEC CHECKSUMS:
   BonMot: 0ff9144987e0d89e777f334f72e41cb3599cc7ea
@@ -50,6 +50,6 @@ SPEC CHECKSUMS:
   RxRealm: c80d17d42fc362f4d8af4ac62de360b014be5c3f
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
 
-PODFILE CHECKSUM: 35c84607778463023bb343978a226fc285ba5fe7
+PODFILE CHECKSUM: 91ea2971f9f8622e8605dbd3f33da0fc7615d866
 
 COCOAPODS: 1.2.0

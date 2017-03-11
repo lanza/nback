@@ -1,11 +1,19 @@
+# vim : set ft=ruby :
+
 target 'nBack' do
   use_frameworks!
 
-  pod 'CoordinatorKit', :path => '~/Projects/CoordinatorKit'
-  pod 'Reuse', :path => '~/Projects/Reuse'
+  
+  if `whoami`[0...-1] == 'lanza'
+    pod 'CoordinatorKit', :path => '~/Documents/CoordinatorKit'
+    pod 'Reuse', :path => '~/Documents/Reuse'
+  else 
+    pod 'CoordinatorKit', :git => 'https://github.com/nathanlanza/CoordinatorKit'
+    pod 'Reuse', :git=> 'https://github.com/nathanlanza/Reuse'
+  end
 
-  pod 'RxSwift',    '~> 3.0'
-  pod 'RxCocoa', '~> 3.0'
+  pod 'RxSwift', '~> 3.2'
+  pod 'RxCocoa', '~> 3.2'
   pod 'RxDataSources'
   pod 'RealmSwift'
   pod 'RxRealm'

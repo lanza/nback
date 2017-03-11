@@ -1,0 +1,20 @@
+language: objective-c
+osx_image: xcode8.2
+
+env:
+  global:
+  matrix:
+    - DESTINATION="platform=iOS Simulator,OS=10.2,id=63A0BA5F-3911-496F-BF2E-512830B4AD7F"
+
+before_install:
+  - gem update
+  - gem install xcpretty -N || true
+  - brew update; brew update; brew upgrade
+  - brew install swiftlint || true
+  - brew install xctool || true
+  - pod repo update
+  - set -o pipefail
+script: 
+  - xcodebuild -workspace nWorkout.xcworkspace -scheme nWorkout -destination "$DESTINATION" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO build test | xcpretty -c
+    # - xctool -workspace nWorkout.xcworkspace -scheme nWorkout -sdk iphonesimulator -arch i386 run-tests
+    #- xctool -workspace nWorkout.xcworkspace -scheme nWorkout -sdk iphonesimulator -arch i386 run-tests -parallelize
