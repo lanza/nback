@@ -160,8 +160,9 @@
 		B31F35B41D722A0A00BBC1D2 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		B31F35BD1D72449B00BBC1D2 /* DaysTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysTableViewCell.swift; sourceTree = "<group>"; };
 		B31F35C11D728E8100BBC1D2 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		B33504411E73903D002EBC7D /* nBack.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = nBack.plist; path = nBack/nBack.plist; sourceTree = SOURCE_ROOT; };
+		B33504421E73903D002EBC7D /* nBackInternal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = nBackInternal.plist; path = nBack/nBackInternal.plist; sourceTree = SOURCE_ROOT; };
 		B3557EDB1E738B590017D6F3 /* nBackInternal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBackInternal.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3557EDC1E738B5A0017D6F3 /* nBackInternal.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = nBackInternal.plist; path = /Users/lanza/Documents/nBack/nBackInternal.plist; sourceTree = "<absolute>"; };
 		B3557EDD1E738BB30017D6F3 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONParser.swift; path = ../nBack/JSONParser.swift; sourceTree = "<group>"; };
 		B3557EE41E738C650017D6F3 /* nBackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nBackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3557EE61E738C650017D6F3 /* nBackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nBackTests.swift; sourceTree = "<group>"; };
@@ -179,7 +180,6 @@
 		B3CDCFAF1D72D9DD0018F4D3 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		B3D46A341E738B2B00955823 /* oldData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = oldData.json; path = ../../nBack/oldData.json; sourceTree = "<group>"; };
 		B3DA508E1E4D578B00D1C167 /* nBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3DA508F1E4D57D500D1C167 /* nBack.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = nBack.plist; sourceTree = "<group>"; };
 		B3DA50921E4D72D700D1C167 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B3DA50A41E4DA04400D1C167 /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmModels.swift; path = CoreDataTypes/RealmModels.swift; sourceTree = "<group>"; };
 		F0B8FE191D685A5A92CA62CE /* Pods_nBack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nBack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,10 +241,10 @@
 			children = (
 				B30DE9781D712BD000138962 /* CoreData */,
 				B30DE93D1D711B4300138962 /* Assets.xcassets */,
-				B3DA508F1E4D57D500D1C167 /* nBack.plist */,
-				B3557EDC1E738B5A0017D6F3 /* nBackInternal.plist */,
 				B30DE93F1D711B4300138962 /* LaunchScreen.storyboard */,
 				B3D46A341E738B2B00955823 /* oldData.json */,
+				B33504411E73903D002EBC7D /* nBack.plist */,
+				B33504421E73903D002EBC7D /* nBackInternal.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -428,6 +428,7 @@
 				B30DE92E1D711B4300138962 /* Resources */,
 				226C682567C5EB39996C4FCA /* [CP] Embed Pods Frameworks */,
 				9F157E67E6DCB1AC6338BD85 /* [CP] Copy Pods Resources */,
+				B335043F1E738DE7002EBC7D /* Increment Build Number */,
 			);
 			buildRules = (
 			);
@@ -448,6 +449,7 @@
 				B3557ECF1E738B590017D6F3 /* Resources */,
 				B3557ED61E738B590017D6F3 /* [CP] Embed Pods Frameworks */,
 				B3557ED71E738B590017D6F3 /* [CP] Copy Pods Resources */,
+				B33504401E738DF7002EBC7D /* Increment Build Number */,
 			);
 			buildRules = (
 			);
@@ -603,6 +605,34 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBack/Pods-nBack-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B335043F1E738DE7002EBC7D /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ $USER == 'lanza' ]]; then\n    /Users/lanza/bin/incrementXcodeBuild\nfi";
+		};
+		B33504401E738DF7002EBC7D /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ $USER == 'lanza' ]]; then\n    /Users/lanza/bin/incrementXcodeBuild\nfi";
 		};
 		B3557EA01E738B590017D6F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -886,7 +916,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72MNHNDUNH;
-				INFOPLIST_FILE = "$(SRCROOT)/Other/nBack.plist";
+				INFOPLIST_FILE = nBack/nBack.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBack;
@@ -902,7 +932,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72MNHNDUNH;
-				INFOPLIST_FILE = "$(SRCROOT)/Other/nBack.plist";
+				INFOPLIST_FILE = nBack/nBack.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBack;
@@ -918,7 +948,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72MNHNDUNH;
-				INFOPLIST_FILE = "$(SRCROOT)/nBackInternal.plist";
+				INFOPLIST_FILE = nBack/nBackInternal.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBack;
@@ -934,7 +964,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72MNHNDUNH;
-				INFOPLIST_FILE = "$(SRCROOT)/nBackInternal.plist";
+				INFOPLIST_FILE = nBack/nBackInternal.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBack;
@@ -1011,6 +1041,7 @@
 				B3557EED1E738C650017D6F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
