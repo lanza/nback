@@ -95,6 +95,7 @@
 		B3557ED51E738B590017D6F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30DE93D1D711B4300138962 /* Assets.xcassets */; };
 		B3557EDE1E738BB30017D6F3 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3557EDD1E738BB30017D6F3 /* JSONParser.swift */; };
 		B3557EDF1E738BB30017D6F3 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3557EDD1E738BB30017D6F3 /* JSONParser.swift */; };
+		B3557EE71E738C650017D6F3 /* nBackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3557EE61E738C650017D6F3 /* nBackTests.swift */; };
 		B3642C271D72B8180068506D /* DayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3642C261D72B8180068506D /* DayCoordinator.swift */; };
 		B3642C291D72B8C70068506D /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3642C281D72B8C70068506D /* DayTableViewController.swift */; };
 		B36B82C81DD10A76005ADCA7 /* GameResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36B82C71DD10A76005ADCA7 /* GameResultCell.xib */; };
@@ -110,6 +111,16 @@
 		B3DA50931E4D72D700D1C167 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA50921E4D72D700D1C167 /* Color.swift */; };
 		B3DA50A51E4DA04400D1C167 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA50A41E4DA04400D1C167 /* RealmModels.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3557EE91E738C650017D6F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B30DE9281D711B4300138962 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B30DE92F1D711B4300138962;
+			remoteInfo = nBack;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		141711A1BB21E02BD0A37F69 /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +163,9 @@
 		B3557EDB1E738B590017D6F3 /* nBackInternal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBackInternal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3557EDC1E738B5A0017D6F3 /* nBackInternal.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = nBackInternal.plist; path = /Users/lanza/Documents/nBack/nBackInternal.plist; sourceTree = "<absolute>"; };
 		B3557EDD1E738BB30017D6F3 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONParser.swift; path = ../nBack/JSONParser.swift; sourceTree = "<group>"; };
+		B3557EE41E738C650017D6F3 /* nBackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nBackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3557EE61E738C650017D6F3 /* nBackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nBackTests.swift; sourceTree = "<group>"; };
+		B3557EE81E738C650017D6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3642C261D72B8180068506D /* DayCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCoordinator.swift; sourceTree = "<group>"; };
 		B3642C281D72B8C70068506D /* DayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTableViewController.swift; sourceTree = "<group>"; };
 		B36B82C71DD10A76005ADCA7 /* GameResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameResultCell.xib; sourceTree = "<group>"; };
@@ -188,33 +202,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3557EE11E738C650017D6F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		407173FC2C868827649DDC22 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				F0B8FE191D685A5A92CA62CE /* Pods_nBack.framework */,
 				141711A1BB21E02BD0A37F69 /* Pods-nBack.debug.xcconfig */,
 				584111AD840CC72453CF06C1 /* Pods-nBack.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9B1CA5E73CFDCB5F53752AB2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F0B8FE191D685A5A92CA62CE /* Pods_nBack.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B30DE9271D711B4300138962 = {
 			isa = PBXGroup;
 			children = (
 				B3DA506E1E4D53A800D1C167 /* Source */,
-				9B1CA5E73CFDCB5F53752AB2 /* Frameworks */,
+				B3557EE51E738C650017D6F3 /* nBackTests */,
 				B30DE9641D711DBB00138962 /* Other */,
 				407173FC2C868827649DDC22 /* Pods */,
+				B3557EEE1E738C8D0017D6F3 /* Products */,
+				B3DA508E1E4D578B00D1C167 /* nBack.app */,
+				B3557EDB1E738B590017D6F3 /* nBackInternal.app */,
+				B3557EE41E738C650017D6F3 /* nBackTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,8 +244,6 @@
 				B3DA508F1E4D57D500D1C167 /* nBack.plist */,
 				B3557EDC1E738B5A0017D6F3 /* nBackInternal.plist */,
 				B30DE93F1D711B4300138962 /* LaunchScreen.storyboard */,
-				B3DA508E1E4D578B00D1C167 /* nBack.app */,
-				B3557EDB1E738B590017D6F3 /* nBackInternal.app */,
 				B3D46A341E738B2B00955823 /* oldData.json */,
 			);
 			path = Other;
@@ -356,6 +372,22 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		B3557EE51E738C650017D6F3 /* nBackTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3557EE61E738C650017D6F3 /* nBackTests.swift */,
+				B3557EE81E738C650017D6F3 /* Info.plist */,
+			);
+			path = nBackTests;
+			sourceTree = "<group>";
+		};
+		B3557EEE1E738C8D0017D6F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B3DA506E1E4D53A800D1C167 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +458,24 @@
 			productReference = B3557EDB1E738B590017D6F3 /* nBackInternal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B3557EE31E738C650017D6F3 /* nBackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3557EEB1E738C650017D6F3 /* Build configuration list for PBXNativeTarget "nBackTests" */;
+			buildPhases = (
+				B3557EE01E738C650017D6F3 /* Sources */,
+				B3557EE11E738C650017D6F3 /* Frameworks */,
+				B3557EE21E738C650017D6F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3557EEA1E738C650017D6F3 /* PBXTargetDependency */,
+			);
+			name = nBackTests;
+			productName = nBackTests;
+			productReference = B3557EE41E738C650017D6F3 /* nBackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -444,6 +494,12 @@
 					B3557E9F1E738B590017D6F3 = {
 						DevelopmentTeam = 72MNHNDUNH;
 					};
+					B3557EE31E738C650017D6F3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 72MNHNDUNH;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B30DE92F1D711B4300138962;
+					};
 				};
 			};
 			buildConfigurationList = B30DE92B1D711B4300138962 /* Build configuration list for PBXProject "nBack" */;
@@ -461,6 +517,7 @@
 			targets = (
 				B30DE92F1D711B4300138962 /* nBack */,
 				B3557E9F1E738B590017D6F3 /* nBackInternal */,
+				B3557EE31E738C650017D6F3 /* nBackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -489,6 +546,13 @@
 				B3557ED31E738B590017D6F3 /* HeaderView.xib in Resources */,
 				B3557ED41E738B590017D6F3 /* LaunchScreen.storyboard in Resources */,
 				B3557ED51E738B590017D6F3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3557EE21E738C650017D6F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,7 +754,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3557EE01E738C650017D6F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3557EE71E738C650017D6F3 /* nBackTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3557EEA1E738C650017D6F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B30DE92F1D711B4300138962 /* nBack */;
+			targetProxy = B3557EE91E738C650017D6F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B30DE93F1D711B4300138962 /* LaunchScreen.storyboard */ = {
@@ -864,6 +944,36 @@
 			};
 			name = Release;
 		};
+		B3557EEC1E738C650017D6F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 72MNHNDUNH;
+				INFOPLIST_FILE = nBackTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nBack.app/nBack";
+			};
+			name = Debug;
+		};
+		B3557EED1E738C650017D6F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 72MNHNDUNH;
+				INFOPLIST_FILE = nBackTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nBack.app/nBack";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -893,6 +1003,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B3557EEB1E738C650017D6F3 /* Build configuration list for PBXNativeTarget "nBackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3557EEC1E738C650017D6F3 /* Debug */,
+				B3557EED1E738C650017D6F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
