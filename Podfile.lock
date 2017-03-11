@@ -18,6 +18,7 @@ PODS:
     - RealmSwift (~> 2.2)
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - BonMot
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - RxDataSources
   - RxRealm
   - RxSwift (~> 3.2)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   CoordinatorKit:
@@ -39,7 +41,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BonMot: 0ff9144987e0d89e777f334f72e41cb3599cc7ea
-  CoordinatorKit: 0e20cf34086abc40594ed8667a244fe50b831a2b
+  CoordinatorKit: 61a35f35ef51b90c782b7f061dbf3f7c3f871218
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
@@ -49,7 +51,8 @@ SPEC CHECKSUMS:
   RxDataSources: 1de77880bf5b7fcee42102adcd5a5d65e5b81541
   RxRealm: c80d17d42fc362f4d8af4ac62de360b014be5c3f
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 91ea2971f9f8622e8605dbd3f33da0fc7615d866
+PODFILE CHECKSUM: f93c7e9e22f9b3e92a7215bbb03759dfa9599d63
 
 COCOAPODS: 1.2.0

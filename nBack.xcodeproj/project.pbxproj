@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9877FFADA09A19B3827D6E70 /* Pods_nBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8FE191D685A5A92CA62CE /* Pods_nBack.framework */; };
+		2EDD413890EE836238207269 /* Pods_nBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9B78840983E11AC3AF5335 /* Pods_nBack.framework */; };
+		8E814C82CBA7C2AEE5999234 /* Pods_nBackInternal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F0562F85487FC503F30559 /* Pods_nBackInternal.framework */; };
+		AD9E8CE8871120EC5E147D17 /* Pods_nBackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D95BFB6749B9978DDC0658F /* Pods_nBackTests.framework */; };
 		B30DE9341D711B4300138962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE9331D711B4300138962 /* AppDelegate.swift */; };
 		B30DE9361D711B4300138962 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE9351D711B4300138962 /* AppCoordinator.swift */; };
 		B30DE93C1D711B4300138962 /* nBack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B30DE93A1D711B4300138962 /* nBack.xcdatamodeld */; };
@@ -43,6 +45,8 @@
 		B31F35B51D722A0A00BBC1D2 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35B41D722A0A00BBC1D2 /* ConfigurableCell.swift */; };
 		B31F35BE1D72449B00BBC1D2 /* DaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35BD1D72449B00BBC1D2 /* DaysTableViewCell.swift */; };
 		B31F35C21D728E8100BBC1D2 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35C11D728E8100BBC1D2 /* Day.swift */; };
+		B32D43871E73BA4E00DAE063 /* JSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D43861E73BA4E00DAE063 /* JSONParserTests.swift */; };
+		B32D438F1E73BACB00DAE063 /* Pods_nBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32D438E1E73BACB00DAE063 /* Pods_nBack.framework */; };
 		B3557EA21E738B590017D6F3 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35B41D722A0A00BBC1D2 /* ConfigurableCell.swift */; };
 		B3557EA31E738B590017D6F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE97E1D71358000138962 /* ViewController.swift */; };
 		B3557EA41E738B590017D6F3 /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE9791D712BE200138962 /* ManagedObject.swift */; };
@@ -86,7 +90,6 @@
 		B3557ECA1E738B590017D6F3 /* DaysTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE9681D711F6700138962 /* DaysTableViewController.swift */; };
 		B3557ECB1E738B590017D6F3 /* GameResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B82C91DD10C31005ADCA7 /* GameResultCell.swift */; };
 		B3557ECC1E738B590017D6F3 /* DaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35BD1D72449B00BBC1D2 /* DaysTableViewCell.swift */; };
-		B3557ECE1E738B590017D6F3 /* Pods_nBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8FE191D685A5A92CA62CE /* Pods_nBack.framework */; };
 		B3557ED01E738B590017D6F3 /* DaysTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BCBBC51DCE73F80081534C /* DaysTableViewCell.xib */; };
 		B3557ED11E738B590017D6F3 /* oldData.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D46A341E738B2B00955823 /* oldData.json */; };
 		B3557ED21E738B590017D6F3 /* GameResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36B82C71DD10A76005ADCA7 /* GameResultCell.xib */; };
@@ -95,7 +98,6 @@
 		B3557ED51E738B590017D6F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30DE93D1D711B4300138962 /* Assets.xcassets */; };
 		B3557EDE1E738BB30017D6F3 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3557EDD1E738BB30017D6F3 /* JSONParser.swift */; };
 		B3557EDF1E738BB30017D6F3 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3557EDD1E738BB30017D6F3 /* JSONParser.swift */; };
-		B3557EE71E738C650017D6F3 /* nBackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3557EE61E738C650017D6F3 /* nBackTests.swift */; };
 		B3642C271D72B8180068506D /* DayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3642C261D72B8180068506D /* DayCoordinator.swift */; };
 		B3642C291D72B8C70068506D /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3642C281D72B8C70068506D /* DayTableViewController.swift */; };
 		B36B82C81DD10A76005ADCA7 /* GameResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36B82C71DD10A76005ADCA7 /* GameResultCell.xib */; };
@@ -113,7 +115,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B3557EE91E738C650017D6F3 /* PBXContainerItemProxy */ = {
+		B32D43891E73BA4E00DAE063 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B30DE9281D711B4300138962 /* Project object */;
 			proxyType = 1;
@@ -123,8 +125,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		141711A1BB21E02BD0A37F69 /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
-		584111AD840CC72453CF06C1 /* Pods-nBack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.release.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.release.xcconfig"; sourceTree = "<group>"; };
+		2A9B78840983E11AC3AF5335 /* Pods_nBack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nBack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D95BFB6749B9978DDC0658F /* Pods_nBackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nBackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51F0562F85487FC503F30559 /* Pods_nBackInternal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nBackInternal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65FB3B6749FF6B9DB1D7E2D3 /* Pods-nBack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.release.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.release.xcconfig"; sourceTree = "<group>"; };
+		988295258D16644877249ED8 /* Pods-nBackInternal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBackInternal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBackInternal/Pods-nBackInternal.debug.xcconfig"; sourceTree = "<group>"; };
+		A9DF32FC234AAEDE5E398AC0 /* Pods-nBackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBackTests/Pods-nBackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B30DE9331D711B4300138962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B30DE9351D711B4300138962 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B30DE93B1D711B4300138962 /* nBack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nBack.xcdatamodel; sourceTree = "<group>"; };
@@ -160,13 +166,14 @@
 		B31F35B41D722A0A00BBC1D2 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		B31F35BD1D72449B00BBC1D2 /* DaysTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysTableViewCell.swift; sourceTree = "<group>"; };
 		B31F35C11D728E8100BBC1D2 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		B32D43841E73BA4E00DAE063 /* nBackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nBackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32D43861E73BA4E00DAE063 /* JSONParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParserTests.swift; sourceTree = "<group>"; };
+		B32D43881E73BA4E00DAE063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32D438E1E73BACB00DAE063 /* Pods_nBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_nBack.framework; path = "../../Library/Developer/Xcode/DerivedData/nBack-eamnmamszdaivubppsmtvszgebwf/Build/Products/Debug-iphonesimulator/Pods_nBack.framework"; sourceTree = "<group>"; };
 		B33504411E73903D002EBC7D /* nBack.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = nBack.plist; path = nBack/nBack.plist; sourceTree = SOURCE_ROOT; };
 		B33504421E73903D002EBC7D /* nBackInternal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = nBackInternal.plist; path = nBack/nBackInternal.plist; sourceTree = SOURCE_ROOT; };
 		B3557EDB1E738B590017D6F3 /* nBackInternal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBackInternal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3557EDD1E738BB30017D6F3 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONParser.swift; path = ../nBack/JSONParser.swift; sourceTree = "<group>"; };
-		B3557EE41E738C650017D6F3 /* nBackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nBackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3557EE61E738C650017D6F3 /* nBackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nBackTests.swift; sourceTree = "<group>"; };
-		B3557EE81E738C650017D6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3642C261D72B8180068506D /* DayCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCoordinator.swift; sourceTree = "<group>"; };
 		B3642C281D72B8C70068506D /* DayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTableViewController.swift; sourceTree = "<group>"; };
 		B36B82C71DD10A76005ADCA7 /* GameResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameResultCell.xib; sourceTree = "<group>"; };
@@ -182,7 +189,9 @@
 		B3DA508E1E4D578B00D1C167 /* nBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DA50921E4D72D700D1C167 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B3DA50A41E4DA04400D1C167 /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmModels.swift; path = CoreDataTypes/RealmModels.swift; sourceTree = "<group>"; };
-		F0B8FE191D685A5A92CA62CE /* Pods_nBack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nBack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59F8055C5B0D6D712E01082 /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
+		D00D67081C67F80204669A0A /* Pods-nBackInternal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBackInternal.release.xcconfig"; path = "Pods/Target Support Files/Pods-nBackInternal/Pods-nBackInternal.release.xcconfig"; sourceTree = "<group>"; };
+		ED695B281597ABDB21181F31 /* Pods-nBackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-nBackTests/Pods-nBackTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +199,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9877FFADA09A19B3827D6E70 /* Pods_nBack.framework in Frameworks */,
+				2EDD413890EE836238207269 /* Pods_nBack.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32D43811E73BA4E00DAE063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32D438F1E73BACB00DAE063 /* Pods_nBack.framework in Frameworks */,
+				AD9E8CE8871120EC5E147D17 /* Pods_nBackTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,41 +216,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3557ECE1E738B590017D6F3 /* Pods_nBack.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B3557EE11E738C650017D6F3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				8E814C82CBA7C2AEE5999234 /* Pods_nBackInternal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		407173FC2C868827649DDC22 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F0B8FE191D685A5A92CA62CE /* Pods_nBack.framework */,
-				141711A1BB21E02BD0A37F69 /* Pods-nBack.debug.xcconfig */,
-				584111AD840CC72453CF06C1 /* Pods-nBack.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		B30DE9271D711B4300138962 = {
 			isa = PBXGroup;
 			children = (
 				B3DA506E1E4D53A800D1C167 /* Source */,
-				B3557EE51E738C650017D6F3 /* nBackTests */,
 				B30DE9641D711DBB00138962 /* Other */,
-				407173FC2C868827649DDC22 /* Pods */,
-				B3557EEE1E738C8D0017D6F3 /* Products */,
-				B3DA508E1E4D578B00D1C167 /* nBack.app */,
-				B3557EDB1E738B590017D6F3 /* nBackInternal.app */,
-				B3557EE41E738C650017D6F3 /* nBackTests.xctest */,
+				B32D43851E73BA4E00DAE063 /* nBackTests */,
+				B32D437F1E73BA3A00DAE063 /* Products */,
+				C1BFA5D2DC19FDD6886C2473 /* Pods */,
+				FED8C69B86B1739E9CD96AA8 /* Frameworks */,
+				B32D43841E73BA4E00DAE063 /* nBackTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -372,20 +372,22 @@
 			path = History;
 			sourceTree = "<group>";
 		};
-		B3557EE51E738C650017D6F3 /* nBackTests */ = {
+		B32D437F1E73BA3A00DAE063 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B3557EE61E738C650017D6F3 /* nBackTests.swift */,
-				B3557EE81E738C650017D6F3 /* Info.plist */,
-			);
-			path = nBackTests;
-			sourceTree = "<group>";
-		};
-		B3557EEE1E738C8D0017D6F3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
+				B3DA508E1E4D578B00D1C167 /* nBack.app */,
+				B3557EDB1E738B590017D6F3 /* nBackInternal.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B32D43851E73BA4E00DAE063 /* nBackTests */ = {
+			isa = PBXGroup;
+			children = (
+				B32D43861E73BA4E00DAE063 /* JSONParserTests.swift */,
+				B32D43881E73BA4E00DAE063 /* Info.plist */,
+			);
+			path = nBackTests;
 			sourceTree = "<group>";
 		};
 		B3DA506E1E4D53A800D1C167 /* Source */ = {
@@ -415,6 +417,30 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		C1BFA5D2DC19FDD6886C2473 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B59F8055C5B0D6D712E01082 /* Pods-nBack.debug.xcconfig */,
+				65FB3B6749FF6B9DB1D7E2D3 /* Pods-nBack.release.xcconfig */,
+				988295258D16644877249ED8 /* Pods-nBackInternal.debug.xcconfig */,
+				D00D67081C67F80204669A0A /* Pods-nBackInternal.release.xcconfig */,
+				A9DF32FC234AAEDE5E398AC0 /* Pods-nBackTests.debug.xcconfig */,
+				ED695B281597ABDB21181F31 /* Pods-nBackTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FED8C69B86B1739E9CD96AA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B32D438E1E73BACB00DAE063 /* Pods_nBack.framework */,
+				2A9B78840983E11AC3AF5335 /* Pods_nBack.framework */,
+				51F0562F85487FC503F30559 /* Pods_nBackInternal.framework */,
+				2D95BFB6749B9978DDC0658F /* Pods_nBackTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,13 +448,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B30DE95B1D711B4300138962 /* Build configuration list for PBXNativeTarget "nBack" */;
 			buildPhases = (
-				670888C8D748C9146F753DC1 /* [CP] Check Pods Manifest.lock */,
+				031C5326CC1012A11A1C659C /* [CP] Check Pods Manifest.lock */,
 				B30DE92C1D711B4300138962 /* Sources */,
 				B30DE92D1D711B4300138962 /* Frameworks */,
 				B30DE92E1D711B4300138962 /* Resources */,
-				226C682567C5EB39996C4FCA /* [CP] Embed Pods Frameworks */,
-				9F157E67E6DCB1AC6338BD85 /* [CP] Copy Pods Resources */,
 				B335043F1E738DE7002EBC7D /* Increment Build Number */,
+				88B2A346FBC0B43CC8EF1405 /* [CP] Embed Pods Frameworks */,
+				7052DECD07853CCC61139D65 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -439,17 +465,38 @@
 			productReference = B3DA508E1E4D578B00D1C167 /* nBack.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B32D43831E73BA4E00DAE063 /* nBackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32D438B1E73BA4E00DAE063 /* Build configuration list for PBXNativeTarget "nBackTests" */;
+			buildPhases = (
+				530231FA7C6FE7854EE79CCD /* [CP] Check Pods Manifest.lock */,
+				B32D43801E73BA4E00DAE063 /* Sources */,
+				B32D43811E73BA4E00DAE063 /* Frameworks */,
+				B32D43821E73BA4E00DAE063 /* Resources */,
+				3E5BEE74FEA733705EA75B0C /* [CP] Embed Pods Frameworks */,
+				DE6A2847B95C97D254DA17BC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B32D438A1E73BA4E00DAE063 /* PBXTargetDependency */,
+			);
+			name = nBackTests;
+			productName = nBackTests;
+			productReference = B32D43841E73BA4E00DAE063 /* nBackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B3557E9F1E738B590017D6F3 /* nBackInternal */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3557ED81E738B590017D6F3 /* Build configuration list for PBXNativeTarget "nBackInternal" */;
 			buildPhases = (
-				B3557EA01E738B590017D6F3 /* [CP] Check Pods Manifest.lock */,
+				4952E851103C4E3073D3B6A1 /* [CP] Check Pods Manifest.lock */,
 				B3557EA11E738B590017D6F3 /* Sources */,
 				B3557ECD1E738B590017D6F3 /* Frameworks */,
 				B3557ECF1E738B590017D6F3 /* Resources */,
-				B3557ED61E738B590017D6F3 /* [CP] Embed Pods Frameworks */,
-				B3557ED71E738B590017D6F3 /* [CP] Copy Pods Resources */,
 				B33504401E738DF7002EBC7D /* Increment Build Number */,
+				38001264B1493CDB8C3A0ECC /* [CP] Embed Pods Frameworks */,
+				CC241C0D4548E89E1CC491AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -459,24 +506,6 @@
 			productName = nBack;
 			productReference = B3557EDB1E738B590017D6F3 /* nBackInternal.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B3557EE31E738C650017D6F3 /* nBackTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B3557EEB1E738C650017D6F3 /* Build configuration list for PBXNativeTarget "nBackTests" */;
-			buildPhases = (
-				B3557EE01E738C650017D6F3 /* Sources */,
-				B3557EE11E738C650017D6F3 /* Frameworks */,
-				B3557EE21E738C650017D6F3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B3557EEA1E738C650017D6F3 /* PBXTargetDependency */,
-			);
-			name = nBackTests;
-			productName = nBackTests;
-			productReference = B3557EE41E738C650017D6F3 /* nBackTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -493,14 +522,14 @@
 						DevelopmentTeam = 72MNHNDUNH;
 						ProvisioningStyle = Automatic;
 					};
-					B3557E9F1E738B590017D6F3 = {
-						DevelopmentTeam = 72MNHNDUNH;
-					};
-					B3557EE31E738C650017D6F3 = {
+					B32D43831E73BA4E00DAE063 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 72MNHNDUNH;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B30DE92F1D711B4300138962;
+					};
+					B3557E9F1E738B590017D6F3 = {
+						DevelopmentTeam = 72MNHNDUNH;
 					};
 				};
 			};
@@ -519,7 +548,7 @@
 			targets = (
 				B30DE92F1D711B4300138962 /* nBack */,
 				B3557E9F1E738B590017D6F3 /* nBackInternal */,
-				B3557EE31E738C650017D6F3 /* nBackTests */,
+				B32D43831E73BA4E00DAE063 /* nBackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -538,6 +567,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B32D43821E73BA4E00DAE063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3557ECF1E738B590017D6F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -551,32 +587,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3557EE21E738C650017D6F3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		226C682567C5EB39996C4FCA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBack/Pods-nBack-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		670888C8D748C9146F753DC1 /* [CP] Check Pods Manifest.lock */ = {
+		031C5326CC1012A11A1C659C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -591,7 +605,67 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9F157E67E6DCB1AC6338BD85 /* [CP] Copy Pods Resources */ = {
+		38001264B1493CDB8C3A0ECC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBackInternal/Pods-nBackInternal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E5BEE74FEA733705EA75B0C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBackTests/Pods-nBackTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4952E851103C4E3073D3B6A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		530231FA7C6FE7854EE79CCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7052DECD07853CCC61139D65 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -604,6 +678,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBack/Pods-nBack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88B2A346FBC0B43CC8EF1405 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBack/Pods-nBack-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B335043F1E738DE7002EBC7D /* Increment Build Number */ = {
@@ -634,37 +723,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ $USER == 'lanza' ]]; then\n    /Users/lanza/bin/incrementXcodeBuild\nfi";
 		};
-		B3557EA01E738B590017D6F3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B3557ED61E738B590017D6F3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBack/Pods-nBack-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B3557ED71E738B590017D6F3 /* [CP] Copy Pods Resources */ = {
+		CC241C0D4548E89E1CC491AD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -676,7 +735,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBack/Pods-nBack-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBackInternal/Pods-nBackInternal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE6A2847B95C97D254DA17BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBackTests/Pods-nBackTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -733,6 +807,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B32D43801E73BA4E00DAE063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32D43871E73BA4E00DAE063 /* JSONParserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3557EA11E738B590017D6F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -784,21 +866,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3557EE01E738C650017D6F3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B3557EE71E738C650017D6F3 /* nBackTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B3557EEA1E738C650017D6F3 /* PBXTargetDependency */ = {
+		B32D438A1E73BA4E00DAE063 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B30DE92F1D711B4300138962 /* nBack */;
-			targetProxy = B3557EE91E738C650017D6F3 /* PBXContainerItemProxy */;
+			targetProxy = B32D43891E73BA4E00DAE063 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -912,7 +986,7 @@
 		};
 		B30DE95C1D711B4300138962 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 141711A1BB21E02BD0A37F69 /* Pods-nBack.debug.xcconfig */;
+			baseConfigurationReference = B59F8055C5B0D6D712E01082 /* Pods-nBack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72MNHNDUNH;
@@ -923,12 +997,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		B30DE95D1D711B4300138962 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 584111AD840CC72453CF06C1 /* Pods-nBack.release.xcconfig */;
+			baseConfigurationReference = 65FB3B6749FF6B9DB1D7E2D3 /* Pods-nBack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72MNHNDUNH;
@@ -939,12 +1014,45 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		B32D438C1E73BA4E00DAE063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9DF32FC234AAEDE5E398AC0 /* Pods-nBackTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 72MNHNDUNH;
+				INFOPLIST_FILE = nBackTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nBack.app/nBack";
+			};
+			name = Debug;
+		};
+		B32D438D1E73BA4E00DAE063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED695B281597ABDB21181F31 /* Pods-nBackTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 72MNHNDUNH;
+				INFOPLIST_FILE = nBackTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nBack.app/nBack";
 			};
 			name = Release;
 		};
 		B3557ED91E738B590017D6F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 141711A1BB21E02BD0A37F69 /* Pods-nBack.debug.xcconfig */;
+			baseConfigurationReference = 988295258D16644877249ED8 /* Pods-nBackInternal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72MNHNDUNH;
@@ -960,7 +1068,7 @@
 		};
 		B3557EDA1E738B590017D6F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 584111AD840CC72453CF06C1 /* Pods-nBack.release.xcconfig */;
+			baseConfigurationReference = D00D67081C67F80204669A0A /* Pods-nBackInternal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72MNHNDUNH;
@@ -971,36 +1079,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		B3557EEC1E738C650017D6F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 72MNHNDUNH;
-				INFOPLIST_FILE = nBackTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBackTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nBack.app/nBack";
-			};
-			name = Debug;
-		};
-		B3557EED1E738C650017D6F3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 72MNHNDUNH;
-				INFOPLIST_FILE = nBackTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBackTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nBack.app/nBack";
 			};
 			name = Release;
 		};
@@ -1025,20 +1103,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B32D438B1E73BA4E00DAE063 /* Build configuration list for PBXNativeTarget "nBackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32D438C1E73BA4E00DAE063 /* Debug */,
+				B32D438D1E73BA4E00DAE063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B3557ED81E738B590017D6F3 /* Build configuration list for PBXNativeTarget "nBackInternal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3557ED91E738B590017D6F3 /* Debug */,
 				B3557EDA1E738B590017D6F3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B3557EEB1E738C650017D6F3 /* Build configuration list for PBXNativeTarget "nBackTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B3557EEC1E738C650017D6F3 /* Debug */,
-				B3557EED1E738C650017D6F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
