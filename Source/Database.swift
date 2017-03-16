@@ -1,4 +1,5 @@
 import RealmSwift
+import RxDataSources
 
 struct MonthInfo {
     let year: Int
@@ -11,7 +12,12 @@ struct MonthInfo {
     }
 }
 
-struct DayInfo: Equatable {
+struct DayInfo: IdentifiableType, Hashable {
+    
+    var identity: Int {
+        return day
+    }
+    
     let day: Int
     var results: [GameResultRealm] = []
     init(day: Int) {
@@ -21,10 +27,15 @@ struct DayInfo: Equatable {
     static func ==(lhs: DayInfo, rhs: DayInfo) -> Bool {
         return lhs.day == rhs.day
     }
+    
+    var hashValue: Int { return day }
 }
 
 
-struct YearMonth: Hashable {
+struct YearMonth: IdentifiableType, Hashable {
+    var identity: Int {
+        return hashValue
+    }
     let year: Int
     let month: Int
     var hashValue: Int {
@@ -36,7 +47,7 @@ struct YearMonth: Hashable {
 }
 
 class Database {
-    static var monthInfos: [YearMonth:MonthInfo] {
+    static var monthInfos: [MonthInfo] {
         do {
             let realm = try Realm()
             let results = realm.objects(GameResultRealm.self).sorted { $0.0.date > $0.1.date }
@@ -72,10 +83,10 @@ class Database {
                 monthInfo.dayInfoDict[day] = dayInfo
                 monthInfos[yearMonth] = monthInfo
             }
-            return monthInfos
+            return Array(monthInfos.values)
         } catch {
             print(error)
-            return [:]
+            return []
         }
     }
 }
