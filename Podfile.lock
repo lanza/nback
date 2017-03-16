@@ -1,24 +1,26 @@
 PODS:
-  - BonMot (4.1.1)
+  - BonMot (4.2)
   - CoordinatorKit (0.0.6)
   - DZNEmptyDataSet (1.8.1)
-  - Eureka (2.0.0-beta.1)
-  - Realm (2.4.2):
-    - Realm/Headers (= 2.4.2)
-  - Realm/Headers (2.4.2)
-  - RealmSwift (2.4.2):
-    - Realm (= 2.4.2)
-  - Reuse (0.0.1)
-  - RxCocoa (3.2.0):
-    - RxSwift (~> 3.1)
-  - RxDataSources (1.0.2):
+  - Eureka (2.0.1)
+  - Realm (2.4.4):
+    - Realm/Headers (= 2.4.4)
+  - Realm/Headers (2.4.4)
+  - RealmSwift (2.4.4):
+    - Realm (= 2.4.4)
+  - Reuse (0.0.1):
+    - SwiftyUserDefaults
+  - RxCocoa (3.3.1):
+    - RxSwift (~> 3.3)
+  - RxDataSources (1.0.3):
     - RxCocoa (~> 3.0)
     - RxSwift (~> 3.0)
-  - RxRealm (0.5.1):
-    - RealmSwift (~> 2.2)
+  - RxRealm (0.5.2):
+    - RealmSwift (~> 2.4)
     - RxSwift (~> 3.1)
-  - RxSwift (3.2.0)
+  - RxSwift (3.3.1)
   - SwiftyJSON (3.1.4)
+  - SwiftyUserDefaults (3.0.0)
 
 DEPENDENCIES:
   - BonMot
@@ -40,18 +42,19 @@ EXTERNAL SOURCES:
     :path: "~/Documents/Reuse"
 
 SPEC CHECKSUMS:
-  BonMot: 0ff9144987e0d89e777f334f72e41cb3599cc7ea
+  BonMot: 9dbd59135974d2fa591a2084b3489bdc0e15e8f8
   CoordinatorKit: 61a35f35ef51b90c782b7f061dbf3f7c3f871218
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
-  Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
-  RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
-  Reuse: 4f1784926ff12cb369ad0967228401a6b5f1c75f
-  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
-  RxDataSources: 1de77880bf5b7fcee42102adcd5a5d65e5b81541
-  RxRealm: c80d17d42fc362f4d8af4ac62de360b014be5c3f
-  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  Eureka: ae837bb1dfae0c07bc1bda7aeef87876eeb537c2
+  Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
+  RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
+  Reuse: cdc2a0bb0940776143ef7e7bc251672cf524c199
+  RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
+  RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
+  RxRealm: df024f04e64c3a9723dab63a6ec8621b3db6473f
+  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
 
 PODFILE CHECKSUM: f93c7e9e22f9b3e92a7215bbb03759dfa9599d63
 
