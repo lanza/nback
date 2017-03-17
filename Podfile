@@ -25,6 +25,8 @@ def podsForTarget(target)
     pod 'BonMot'
     pod 'Eureka', '~> 2.0.0-beta.1'
 
+    pod 'Hero'
+
   end
 end
 
