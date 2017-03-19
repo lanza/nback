@@ -2,7 +2,7 @@ import Quick
 import Nimble
 @testable import nBack
 
-class CoreDataDataGeneratorTests: QuickSpec {
+class CoreDataDataGeneratorSpec: QuickSpec {
     override func spec() {
         
         var gen: CoreDataDataGenerator!

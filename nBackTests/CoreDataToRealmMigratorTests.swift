@@ -4,11 +4,22 @@ import Nimble
 
 class CoreDataToRealmMigratorSpec: QuickSpec {
     override func spec() {
-        beforeSuite { 
+        
+        var gen: CoreDataDataGenerator!
+        
+        beforeEach {
+            gen = CoreDataDataGenerator()
         }
-        describe("fetchAllCoreDataGameResults should turn an array of GameResults ") { 
-            let results = CoreDataToRealmMigrator.fetchAllCoreDataResults()
-            expect(results.count).to(beGreaterThan(5))
+        
+        describe("fetchAllCoreDataGameResults") {
+            it("should return the right amount of game results") {
+                gen.generateFakeData(count: 10)
+                let results = CoreDataToRealmMigrator.fetchAllCoreDataGameResults()
+                expect(results.count).to(beGreaterThan(5))
+            }
+            afterEach {
+                gen.deleteAllData()
+            }
         }
     }
 }
