@@ -3,6 +3,7 @@ import RxSwift
 import RxCocoa
 import Reuse
 import SwiftyUserDefaults
+import Hero
 
 class PlayView: UIView {
   init() {
@@ -46,8 +47,12 @@ class PlayViewController: ViewController {
     let lastResultString = defaults[.lastResultString]
     lastGameLabel.text = "Last Game \n" + lastResultString + "\n" + lastScoreString
   }
+    
+    
   override func loadView() {
     view = View()
+    
+    
     
     lastGameLabel = Label()
     lastGameLabel.numberOfLines = 0
@@ -86,6 +91,7 @@ class PlayViewController: ViewController {
     playGameButton.backgroundColor = Theme.Colors.playButtonBackground
     playGameButton.setTitleColor(Theme.Colors.playButtonFont, for: UIControlState())
     playGameButton.layer.cornerRadius = 5
+    
     let playGameButtonStackView = StackView(arrangedSubviews: [playGameButton], axis: .horizontal, spacing: 0, distribution: .fillEqually)
     
     var views: [UIView]
@@ -112,6 +118,15 @@ class PlayViewController: ViewController {
     constraints.append(stackView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor))
     constraints.append(stackView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor))
     
+    let heroViews = [secondsBetweenTurnsButton!, squareButton!, numberButton!, colorButton!, levelButton!, turnsButton!, rowsButton!, columnsButton!]
+    for (i, view) in heroViews.enumerated() {
+        view.heroID = "square" + String(i)
+        view.heroModifiers = [.duration(0.7)]
+    }
+    
+    playGameButton.heroID = "play"
+    playGameButton.heroModifiers = [.duration(0.7)]
+   
     NSLayoutConstraint.activate(constraints)
     view.setNeedsLayout()
   }

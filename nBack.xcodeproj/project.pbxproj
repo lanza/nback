@@ -45,6 +45,11 @@
 		B31F35B51D722A0A00BBC1D2 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35B41D722A0A00BBC1D2 /* ConfigurableCell.swift */; };
 		B31F35BE1D72449B00BBC1D2 /* DaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35BD1D72449B00BBC1D2 /* DaysTableViewCell.swift */; };
 		B31F35C21D728E8100BBC1D2 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35C11D728E8100BBC1D2 /* Day.swift */; };
+		B31F40811E7E778E00FDEA08 /* NSManagedObjectContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F40801E7E778E00FDEA08 /* NSManagedObjectContext+Extension.swift */; };
+		B31F40831E7E77F100FDEA08 /* CoreDataDataGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F40821E7E77F100FDEA08 /* CoreDataDataGeneratorTests.swift */; };
+		B31F40851E7E782800FDEA08 /* CoreDataDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F40841E7E782800FDEA08 /* CoreDataDataGenerator.swift */; };
+		B31F40871E7E7F4000FDEA08 /* TestableCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F40861E7E7F4000FDEA08 /* TestableCoreData.swift */; };
+		B31F40891E7E845D00FDEA08 /* CoreDataToRealmMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F40881E7E845D00FDEA08 /* CoreDataToRealmMigrator.swift */; };
 		B32D43871E73BA4E00DAE063 /* JSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D43861E73BA4E00DAE063 /* JSONParserTests.swift */; };
 		B32D43911E73CEBF00DAE063 /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D43901E73CEBE00DAE063 /* Initializer.swift */; };
 		B345609A1E7A4E5B005C9EE6 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34560991E7A4E5B005C9EE6 /* Database.swift */; };
@@ -112,6 +117,7 @@
 		B3BCBBC61DCE73F80081534C /* DaysTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BCBBC51DCE73F80081534C /* DaysTableViewCell.xib */; };
 		B3CDCFB01D72D9DD0018F4D3 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CDCFAF1D72D9DD0018F4D3 /* SettingsCoordinator.swift */; };
 		B3D46A351E738B2B00955823 /* oldData.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D46A341E738B2B00955823 /* oldData.json */; };
+		B3D49F531E7E675E005CCBE5 /* CoreDataToRealmMigratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D49F521E7E675E005CCBE5 /* CoreDataToRealmMigratorTests.swift */; };
 		B3DA50931E4D72D700D1C167 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA50921E4D72D700D1C167 /* Color.swift */; };
 		B3DA50A51E4DA04400D1C167 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA50A41E4DA04400D1C167 /* RealmModels.swift */; };
 /* End PBXBuildFile section */
@@ -167,6 +173,11 @@
 		B31F35B41D722A0A00BBC1D2 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		B31F35BD1D72449B00BBC1D2 /* DaysTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysTableViewCell.swift; sourceTree = "<group>"; };
 		B31F35C11D728E8100BBC1D2 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		B31F40801E7E778E00FDEA08 /* NSManagedObjectContext+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extension.swift"; sourceTree = "<group>"; };
+		B31F40821E7E77F100FDEA08 /* CoreDataDataGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDataGeneratorTests.swift; sourceTree = "<group>"; };
+		B31F40841E7E782800FDEA08 /* CoreDataDataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDataGenerator.swift; sourceTree = "<group>"; };
+		B31F40861E7E7F4000FDEA08 /* TestableCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableCoreData.swift; sourceTree = "<group>"; };
+		B31F40881E7E845D00FDEA08 /* CoreDataToRealmMigrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataToRealmMigrator.swift; sourceTree = "<group>"; };
 		B32D43861E73BA4E00DAE063 /* JSONParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParserTests.swift; sourceTree = "<group>"; };
 		B32D43881E73BA4E00DAE063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B32D43901E73CEBE00DAE063 /* Initializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initializer.swift; sourceTree = "<group>"; };
@@ -189,6 +200,7 @@
 		B3BCBBC51DCE73F80081534C /* DaysTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaysTableViewCell.xib; sourceTree = "<group>"; };
 		B3CDCFAF1D72D9DD0018F4D3 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		B3D46A341E738B2B00955823 /* oldData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = oldData.json; path = ../../nBack/oldData.json; sourceTree = "<group>"; };
+		B3D49F521E7E675E005CCBE5 /* CoreDataToRealmMigratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataToRealmMigratorTests.swift; sourceTree = "<group>"; };
 		B3DA50921E4D72D700D1C167 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B3DA50A41E4DA04400D1C167 /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmModels.swift; path = CoreDataTypes/RealmModels.swift; sourceTree = "<group>"; };
 		CD8A90DB9ECBFD8A22B435B1 /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
@@ -295,6 +307,7 @@
 				B30DE9721D712BCD00138962 /* TypeResult.swift */,
 				B30DE96A1D7127EF00138962 /* CoreData.swift */,
 				B30DE93A1D711B4300138962 /* nBack.xcdatamodeld */,
+				B31F40801E7E778E00FDEA08 /* NSManagedObjectContext+Extension.swift */,
 			);
 			name = CoreData;
 			path = ../Source/CoreDataTypes;
@@ -402,7 +415,11 @@
 			isa = PBXGroup;
 			children = (
 				B32D43861E73BA4E00DAE063 /* JSONParserTests.swift */,
+				B31F40841E7E782800FDEA08 /* CoreDataDataGenerator.swift */,
+				B31F40821E7E77F100FDEA08 /* CoreDataDataGeneratorTests.swift */,
+				B3D49F521E7E675E005CCBE5 /* CoreDataToRealmMigratorTests.swift */,
 				B32D43881E73BA4E00DAE063 /* Info.plist */,
+				B31F40861E7E7F4000FDEA08 /* TestableCoreData.swift */,
 			);
 			path = nBackTests;
 			sourceTree = "<group>";
@@ -423,6 +440,7 @@
 				B30DE96C1D71280000138962 /* Lets.swift */,
 				B31F35A51D717E7E00BBC1D2 /* Utilities.swift */,
 				B32D43901E73CEBE00DAE063 /* Initializer.swift */,
+				B31F40881E7E845D00FDEA08 /* CoreDataToRealmMigrator.swift */,
 				B3557EDD1E738BB30017D6F3 /* JSONParser.swift */,
 			);
 			path = Source;
@@ -769,6 +787,7 @@
 				B31F35C21D728E8100BBC1D2 /* Day.swift in Sources */,
 				B3DA50931E4D72D700D1C167 /* Color.swift in Sources */,
 				B38599DC1D9720CF00227994 /* DayTableViewCellLabel.swift in Sources */,
+				B31F40811E7E778E00FDEA08 /* NSManagedObjectContext+Extension.swift in Sources */,
 				B3557EDE1E738BB30017D6F3 /* JSONParser.swift in Sources */,
 				B30DE9911D71476B00138962 /* PlayCoordinator.swift in Sources */,
 				B3CDCFB01D72D9DD0018F4D3 /* SettingsCoordinator.swift in Sources */,
@@ -808,7 +827,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31F40891E7E845D00FDEA08 /* CoreDataToRealmMigrator.swift in Sources */,
+				B3D49F531E7E675E005CCBE5 /* CoreDataToRealmMigratorTests.swift in Sources */,
+				B31F40871E7E7F4000FDEA08 /* TestableCoreData.swift in Sources */,
 				B32D43871E73BA4E00DAE063 /* JSONParserTests.swift in Sources */,
+				B31F40851E7E782800FDEA08 /* CoreDataDataGenerator.swift in Sources */,
+				B31F40831E7E77F100FDEA08 /* CoreDataDataGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

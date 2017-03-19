@@ -1,35 +1,80 @@
-//
-//  CoreDataDataGeneratorTests.swift
-//  nBack
-//
-//  Created by Nathan Lanza on 3/19/17.
-//  Copyright © 2017 Nathan Lanza. All rights reserved.
-//
-
-import XCTest
+import Quick
+import Nimble
+@testable import nBack
 
 class CoreDataDataGeneratorTests: QuickSpec {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    override func spec() {
+        
+        var gen: CoreDataDataGenerator!
+        
+        beforeEach {
+            gen = CoreDataDataGenerator()
         }
+        
+        describe("generateFakeData") {
+            it("should generate the right amount of fake data") {
+                gen.generateFakeData(count: 10)
+                let results = gen.fetchAllGameResults()
+                let typeResults = gen.fetchAllTypeResults()
+                
+                expect(results.count).to(equal(10))
+                expect(typeResults.count).to(equal(30))
+            }
+            afterEach {
+                gen.deleteAllData()
+            }
+        }
+        
+        describe("generateFakeGameResultWithThreeTypeResults") {
+            
+            var result: GameResult?
+            
+            beforeEach {
+                result = gen.generateFakeGameResultWithThreeTypeResults()
+            }
+            
+            it("should return a GameResult in CoreData") {
+                let fetchedResults = gen.fetchAllGameResults()
+                
+                expect(fetchedResults).to(contain(result!))
+            }
+            
+            it("should have three type results") {
+                expect(result?.types.count).to(equal(3))
+            }
+            
+            afterEach {
+                gen.deleteAllData()
+            }
+        }
+        describe("fetchAllGameResults") {
+            beforeEach {
+                _ = gen.generateFakeGameResultWithThreeTypeResults()
+                _ = gen.generateFakeGameResultWithThreeTypeResults()
+            }
+            
+            it("should have two results after creating two results") {
+                let results = gen.fetchAllGameResults()
+                
+                expect(results.count).to(equal(2))
+            }
+            
+            afterEach {
+                gen.deleteAllData()
+            }
+        }
+        describe("deleteAllData") {
+            print("describe delete all data")
+            it("should leave the database with 0 entries") {
+                gen.deleteAllData()
+                let results = gen.fetchAllGameResults()
+                expect(results.count).to(equal(0))
+            }
+        }
+        
     }
+
+    
     
 }
+

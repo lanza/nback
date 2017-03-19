@@ -1,9 +1,16 @@
-//
-//  TestableCoreData.swift
-//  nBack
-//
-//  Created by Nathan Lanza on 3/19/17.
-//  Copyright © 2017 Nathan Lanza. All rights reserved.
-//
+import CoreData
 
-import Foundation
+class TestableCoreData {
+    
+    public var context: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "nBack")
+        container.loadPersistentStores { (storeDescription, error) in
+            if let error = error as NSError? { fatalError("Unresolved error \(error), \(error.userInfo)") }
+        }
+        return container
+    }()
+}

@@ -2,6 +2,7 @@ import UIKit
 import CoordinatorKit
 import RxSwift
 import RxCocoa
+import Hero
 
 class PlayCoordinator: Coordinator {
   
@@ -24,6 +25,7 @@ extension PlayCoordinator: PlayViewControllerDelegate {
     let gameCoordinator = GameCoordinator()
     gameCoordinator.delegate = self
     let navCoordinator = NavigationCoordinator(rootCoordinator: gameCoordinator)
+    navCoordinator.navigationController.isHeroEnabled = true
     
     self.present(navCoordinator, animated: true)
   }
