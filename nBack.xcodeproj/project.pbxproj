@@ -139,7 +139,7 @@
 		42952F1EFB03EF4007E5C112 /* Pods-nBackInternal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBackInternal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBackInternal/Pods-nBackInternal.debug.xcconfig"; sourceTree = "<group>"; };
 		5145ADA8D6F87422A5E3E6E5 /* Pods_nBackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nBackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		525B1B4768DD5B7D9F73215C /* Pods-nBackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBackTests/Pods-nBackTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B30DE9331D711B4300138962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B30DE9331D711B4300138962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		B30DE9351D711B4300138962 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B30DE93B1D711B4300138962 /* nBack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nBack.xcdatamodel; sourceTree = "<group>"; };
 		B30DE93D1D711B4300138962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		B30DE9941D714EEA00138962 /* DaysCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysCoordinator.swift; sourceTree = "<group>"; };
 		B30DE9981D7151F000138962 /* GameCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
 		B30DE99A1D71555A00138962 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		B30DE99E1D7156E800138962 /* GameType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		B30DE99E1D7156E800138962 /* GameType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameType.swift; path = ../GameType.swift; sourceTree = "<group>"; };
 		B310E0571DD1083D00089E98 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		B310E0591DD1089500089E98 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		B31F35931D7171DD00BBC1D2 /* SquareMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareMatrix.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		B3D46A341E738B2B00955823 /* oldData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = oldData.json; path = ../../nBack/oldData.json; sourceTree = "<group>"; };
 		B3D49F521E7E675E005CCBE5 /* CoreDataToRealmMigratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataToRealmMigratorTests.swift; sourceTree = "<group>"; };
 		B3DA50921E4D72D700D1C167 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		B3DA50A41E4DA04400D1C167 /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmModels.swift; path = CoreDataTypes/RealmModels.swift; sourceTree = "<group>"; };
+		B3DA50A41E4DA04400D1C167 /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmModels.swift; path = ../CoreDataTypes/RealmModels.swift; sourceTree = "<group>"; };
 		CD8A90DB9ECBFD8A22B435B1 /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
 		D19ED8A57F9C31AA8A3BF972 /* Pods_nBackInternal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nBackInternal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDD4F94E3D51EA5A27D66D2 /* Pods-nBackInternal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBackInternal.release.xcconfig"; path = "Pods/Target Support Files/Pods-nBackInternal/Pods-nBackInternal.release.xcconfig"; sourceTree = "<group>"; };
@@ -279,7 +279,6 @@
 		B30DE9641D711DBB00138962 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				B30DE9781D712BD000138962 /* CoreData */,
 				B30DE93D1D711B4300138962 /* Assets.xcassets */,
 				B30DE93F1D711B4300138962 /* LaunchScreen.storyboard */,
 				B3D46A341E738B2B00955823 /* oldData.json */,
@@ -292,6 +291,7 @@
 		B30DE9651D711DC000138962 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				B30DE9331D711B4300138962 /* AppDelegate.swift */,
 				B30DE9351D711B4300138962 /* AppCoordinator.swift */,
 				B318A9DB1D72BA460051DC01 /* Play */,
 				B318A9DA1D72BA3F0051DC01 /* History */,
@@ -312,7 +312,7 @@
 				B31F40801E7E778E00FDEA08 /* NSManagedObjectContext+Extension.swift */,
 			);
 			name = CoreData;
-			path = ../Source/CoreDataTypes;
+			path = CoreDataTypes;
 			sourceTree = "<group>";
 		};
 		B30DE9801D71358900138962 /* Base Classes */ = {
@@ -377,12 +377,14 @@
 		B31F359B1D71728600BBC1D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B3DA50A41E4DA04400D1C167 /* RealmModels.swift */,
 				B3DA50921E4D72D700D1C167 /* Color.swift */,
 				B31F35991D71727800BBC1D2 /* GameBrain.swift */,
 				B39C1DE11E4FBAF5005B87E5 /* SequenceGenerator.swift */,
 				B39C1DDF1E4FB43F005B87E5 /* Score.swift */,
 				B31F35A11D71733100BBC1D2 /* GameSettings.swift */,
 				B38599DD1D97236F00227994 /* SpeechSynthesizer.swift */,
+				B30DE99E1D7156E800138962 /* GameType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -429,22 +431,20 @@
 		B3DA506E1E4D53A800D1C167 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B31F35A51D717E7E00BBC1D2 /* Utilities.swift */,
+				B30DE96C1D71280000138962 /* Lets.swift */,
+				B32D43901E73CEBE00DAE063 /* Initializer.swift */,
+				B31F40881E7E845D00FDEA08 /* CoreDataToRealmMigrator.swift */,
+				B3557EDD1E738BB30017D6F3 /* JSONParser.swift */,
+				B31F408C1E7E856200FDEA08 /* TODO */,
 				B30DE9801D71358900138962 /* Base Classes */,
 				B30DE9831D7135CD00138962 /* Controllers */,
 				B30DE9651D711DC000138962 /* Coordinators */,
-				B3DA50A41E4DA04400D1C167 /* RealmModels.swift */,
 				B34560991E7A4E5B005C9EE6 /* Database.swift */,
 				B31F359B1D71728600BBC1D2 /* Model */,
 				B31F359E1D71729700BBC1D2 /* ViewModel */,
 				B30DE9821D7135C100138962 /* Views */,
-				B30DE9331D711B4300138962 /* AppDelegate.swift */,
-				B30DE99E1D7156E800138962 /* GameType.swift */,
-				B30DE96C1D71280000138962 /* Lets.swift */,
-				B31F35A51D717E7E00BBC1D2 /* Utilities.swift */,
-				B32D43901E73CEBE00DAE063 /* Initializer.swift */,
-				B31F40881E7E845D00FDEA08 /* CoreDataToRealmMigrator.swift */,
-				B31F408C1E7E856200FDEA08 /* TODO */,
-				B3557EDD1E738BB30017D6F3 /* JSONParser.swift */,
+				B30DE9781D712BD000138962 /* CoreData */,
 			);
 			path = Source;
 			sourceTree = "<group>";

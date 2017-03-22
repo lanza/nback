@@ -10,6 +10,9 @@ class CoreDataDataGeneratorSpec: QuickSpec {
         beforeEach {
             gen = CoreDataDataGenerator()
         }
+        afterEach {
+            gen.deleteAllData()
+        }
         
         describe("generateFakeData") {
             it("should generate the right amount of fake data") {
@@ -19,9 +22,6 @@ class CoreDataDataGeneratorSpec: QuickSpec {
                 
                 expect(results.count).to(equal(10))
                 expect(typeResults.count).to(equal(30))
-            }
-            afterEach {
-                gen.deleteAllData()
             }
         }
         
@@ -42,10 +42,6 @@ class CoreDataDataGeneratorSpec: QuickSpec {
             it("should have three type results") {
                 expect(result?.types.count).to(equal(3))
             }
-            
-            afterEach {
-                gen.deleteAllData()
-            }
         }
         describe("fetchAllGameResults") {
             beforeEach {
@@ -58,17 +54,22 @@ class CoreDataDataGeneratorSpec: QuickSpec {
                 
                 expect(results.count).to(equal(2))
             }
-            
-            afterEach {
-                gen.deleteAllData()
-            }
         }
         describe("deleteAllData") {
-            print("describe delete all data")
             it("should leave the database with 0 entries") {
+                gen.generateFakeData(count: 20)
                 gen.deleteAllData()
                 let results = gen.fetchAllGameResults()
                 expect(results.count).to(equal(0))
+            }
+        }
+        describe("generateFakeTypeResult") {
+            it("should generate a type result whose results are feasible") {
+                let tr = gen.generateFakeTypeResult(.colors)
+                
+                expect(tr.correct).to(equal(tr.falseFalse + tr.trueTrue))
+                expect(tr.incorrect).to(equal(tr.falseTrue + tr.trueFalse))
+                expect(tr.matches).to(equal(tr.trueTrue + tr.falseTrue))
             }
         }
         

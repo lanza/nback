@@ -69,15 +69,16 @@ class CoreDataDataGenerator {
     func generateFakeTypeResult(_ type: NBackType) -> TypeResult {
         let result = TypeResult(context: context)
         
-        result.correct = Int16(Utilities.random(max: 10))
-        result.incorrect = Int16(Utilities.random(max: 10))
-        result.matches = Int16(Utilities.random(max: 10))
         result.type = type
         
         result.falseFalse = Int16(Utilities.random(max: 10))
         result.falseTrue = Int16(Utilities.random(max: 10))
         result.trueFalse = Int16(Utilities.random(max: 10))
         result.trueTrue = Int16(Utilities.random(max: 10))
+        
+        result.correct = result.falseFalse + result.trueTrue
+        result.incorrect = result.falseTrue + result.trueFalse
+        result.matches = result.trueTrue + result.falseTrue
         
         return result
     }
