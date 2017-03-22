@@ -10,6 +10,9 @@ class CoreDataToRealmMigratorSpec: QuickSpec {
         beforeEach {
             gen = CoreDataDataGenerator()
         }
+        afterEach {
+            gen.deleteAllData()
+        }
         
         describe("fetchAllCoreDataGameResults") {
             it("should return the right amount of game results") {
@@ -29,13 +32,17 @@ class CoreDataToRealmMigratorSpec: QuickSpec {
                 let r = CoreDataToRealmMigrator.convertTypeResult(cd)
                 
                 self.compareTypeResults(cd: cd, r: r)
-                
             }
         }
         describe("convertTypeResults") {
             
-            let cdGr = gen.generateFakeGameResultWithThreeTypeResults()
-            let rs = CoreDataToRealmMigrator.convertTypeResults(for: cdGr)
+            var cdGr: GameResult!
+            var rs: [TypeResultRealm]!
+            
+            beforeEach {
+                cdGr = gen.generateFakeGameResultWithThreeTypeResults()
+                rs = CoreDataToRealmMigrator.convertTypeResults(for: cdGr)
+            }
             
             it("yield the right amount of typeResults") {
                 expect(rs.count).to(equal(cdGr.types.count))
@@ -71,8 +78,14 @@ class CoreDataToRealmMigratorSpec: QuickSpec {
         }
        
         describe("convertGameResult") {
-            let cd = gen.generateFakeGameResultWithThreeTypeResults()
-            let r = CoreDataToRealmMigrator.convertGameResult(cd)
+            
+            var cd: GameResult!
+            var r: GameResultRealm!
+            
+            beforeEach {
+                cd = gen.generateFakeGameResultWithThreeTypeResults()
+                r = CoreDataToRealmMigrator.convertGameResult(cd)
+            }
             
             it("should return a matching result") {
                 
@@ -80,23 +93,19 @@ class CoreDataToRealmMigratorSpec: QuickSpec {
                 
                 expect(Int(cd.columns)).to(equal(r.columns))
                 expect(Int(cd.rows)).to(equal(r.rows))
-                
+
                 expect(Int(cd.level)).to(equal(r.level))
                 expect(Int(cd.numberOfTurns)).to(equal(r.numberOfTurns))
                 expect(cd.secondsBetweenTurns).to(equal(r.secondsBetweenTurns))
                 expect(cd.squareHighlightTime).to(equal(r.squareHighlightTime))
-                
-                expect(cd.types.count).to(equal(r.types.count))
-                
-                expect(cd.percentage).to(equal(r.percentage))
-                expect(cd.totalCorrect).to(equal(r.totalCorrect))
-                expect(cd.totalIncorrect).to(equal(r.totalIncorrect))
             }
-           
-            
-            
         }
         
+        //test 
+        //  linkTypeResults
+        //  processGameResult
+        //  convertData
+        //  deleteDataBase 
     }
 }
 

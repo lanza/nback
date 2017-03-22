@@ -1,5 +1,6 @@
 import CoreData
 import Foundation
+import RealmSwift
 
 final class CoreDataToRealmMigrator {
     static func fetchAllCoreDataGameResults() -> [GameResult] {
@@ -14,12 +15,19 @@ final class CoreDataToRealmMigrator {
     
     static func processGameResult(_ gameResult: GameResult) {
         let gameResultRealm = convertGameResult(gameResult)
-        let typeResultRealms = convertTypeResults(for: gameResult)
-        typeResultRealms.forEach(gameResultRealm.add)
+        linkTypeResults(from: gameResult, to: gameResultRealm)
+    }
+    
+    static func linkTypeResults(from coreData: GameResult, to realm: GameResultRealm) {
+        let typeResultRealms = convertTypeResults(for: coreData)
+        typeResultRealms.forEach(realm.add)
     }
     
     static func convertGameResult(_ result: GameResult) -> GameResultRealm {
-            let gameResultRealm = GameResultRealm.new(columns: Int(result.columns), rows: Int(result.rows), level: Int(result.level), numberOfTurns: Int(result.numberOfTurns), secondsBetweenTurns: result.secondsBetweenTurns, squareHighlightTime: result.squareHighlightTime)
+        let gameResultRealm = GameResultRealm.new(columns: Int(result.columns), rows: Int(result.rows), level: Int(result.level), numberOfTurns: Int(result.numberOfTurns), secondsBetweenTurns: result.secondsBetweenTurns, squareHighlightTime: result.squareHighlightTime)
+        try! Realm().write {
+            gameResultRealm.date = result.date
+        }
         return gameResultRealm
     }
     static func convertTypeResults(for gameResult: GameResult) -> [TypeResultRealm] {
@@ -31,7 +39,7 @@ final class CoreDataToRealmMigrator {
         let typeResultRealm = TypeResultRealm.new(score: score, nBackType: typeResult.type)
         return typeResultRealm
     }
-   
+    
     static func deleteDatabase() {
         let cd = NSPersistentContainer(name: "nBack")
         cd.loadPersistentStores { (desc, error) in
