@@ -34,6 +34,7 @@
 		B30DE9991D7151F000138962 /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE9981D7151F000138962 /* GameCoordinator.swift */; };
 		B30DE99B1D71555A00138962 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE99A1D71555A00138962 /* Button.swift */; };
 		B30DE99F1D7156E800138962 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE99E1D7156E800138962 /* GameType.swift */; };
+		B30FB3BB1E84856A00A7962F /* TestMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30FB3BA1E84856A00A7962F /* TestMigration.swift */; };
 		B310E0581DD1083D00089E98 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B310E0571DD1083D00089E98 /* HeaderView.xib */; };
 		B310E05A1DD1089500089E98 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310E0591DD1089500089E98 /* HeaderView.swift */; };
 		B31F35941D7171DD00BBC1D2 /* SquareMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F35931D7171DD00BBC1D2 /* SquareMatrix.swift */; };
@@ -163,6 +164,7 @@
 		B30DE9981D7151F000138962 /* GameCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
 		B30DE99A1D71555A00138962 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		B30DE99E1D7156E800138962 /* GameType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameType.swift; path = ../GameType.swift; sourceTree = "<group>"; };
+		B30FB3BA1E84856A00A7962F /* TestMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMigration.swift; sourceTree = "<group>"; };
 		B310E0571DD1083D00089E98 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		B310E0591DD1089500089E98 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		B31F35931D7171DD00BBC1D2 /* SquareMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareMatrix.swift; sourceTree = "<group>"; };
@@ -418,8 +420,9 @@
 		B32D43851E73BA4E00DAE063 /* nBackTests */ = {
 			isa = PBXGroup;
 			children = (
-				B32D43861E73BA4E00DAE063 /* JSONParserTests.swift */,
 				B31F40841E7E782800FDEA08 /* CoreDataDataGenerator.swift */,
+				B32D43861E73BA4E00DAE063 /* JSONParserTests.swift */,
+				B30FB3BA1E84856A00A7962F /* TestMigration.swift */,
 				B31F40821E7E77F100FDEA08 /* CoreDataDataGeneratorSpec.swift */,
 				B3D49F521E7E675E005CCBE5 /* CoreDataToRealmMigratorTests.swift */,
 				B32D43881E73BA4E00DAE063 /* Info.plist */,
@@ -833,6 +836,7 @@
 			files = (
 				B3D49F531E7E675E005CCBE5 /* CoreDataToRealmMigratorTests.swift in Sources */,
 				B31F40871E7E7F4000FDEA08 /* TestableCoreData.swift in Sources */,
+				B30FB3BB1E84856A00A7962F /* TestMigration.swift in Sources */,
 				B32D43871E73BA4E00DAE063 /* JSONParserTests.swift in Sources */,
 				B31F40851E7E782800FDEA08 /* CoreDataDataGenerator.swift in Sources */,
 				B31F40831E7E77F100FDEA08 /* CoreDataDataGeneratorSpec.swift in Sources */,

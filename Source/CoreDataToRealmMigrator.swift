@@ -10,7 +10,7 @@ final class CoreDataToRealmMigrator {
     static func convertData() {
         let gameResults = fetchAllCoreDataGameResults()
         gameResults.forEach(processGameResult)
-        deleteDatabase()
+        deleteCoreDataDatabase()
     }
     
     static func processGameResult(_ gameResult: GameResult) {
@@ -40,11 +40,24 @@ final class CoreDataToRealmMigrator {
         return typeResultRealm
     }
     
-    static func deleteDatabase() {
-        let cd = NSPersistentContainer(name: "nBack")
-        cd.loadPersistentStores { (desc, error) in
-            try! FileManager.default.removeItem(at: desc.url!)
+    static func deleteCoreDataDatabase() {
+        
+        do {
+            let filesToDelete = try getCoreDataFiles()
+            try filesToDelete.forEach {
+                if $0.pathExtension == "sqlite" {
+                    try FileManager.default.removeItem(at: $0)
+                }
+            }
+        } catch {
+            fatalError(String(describing: error))
         }
+    }
+    
+    static func getCoreDataFiles() throws -> [URL] {
+        let fm = FileManager.default
+        guard let url = fm.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else { fatalError() }
+        return try fm.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: [])
     }
     
 }

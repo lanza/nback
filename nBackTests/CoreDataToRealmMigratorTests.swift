@@ -1,5 +1,7 @@
 import Quick
 import Nimble
+import RealmSwift
+import CoreData
 @testable import nBack
 
 class CoreDataToRealmMigratorSpec: QuickSpec {
@@ -9,9 +11,11 @@ class CoreDataToRealmMigratorSpec: QuickSpec {
         
         beforeEach {
             gen = CoreDataDataGenerator()
+            Realm.Configuration.defaultConfiguration.inMemoryIdentifier = "Test"
         }
         afterEach {
             gen.deleteAllData()
+            gen.deleteRealmItems() 
         }
         
         describe("fetchAllCoreDataGameResults") {
@@ -76,7 +80,7 @@ class CoreDataToRealmMigratorSpec: QuickSpec {
                 self.compareTypeResults(cd: cds[cdNumbers], r: rs[rNumbers])
             }
         }
-       
+        
         describe("convertGameResult") {
             
             var cd: GameResult!
@@ -93,7 +97,7 @@ class CoreDataToRealmMigratorSpec: QuickSpec {
                 
                 expect(Int(cd.columns)).to(equal(r.columns))
                 expect(Int(cd.rows)).to(equal(r.rows))
-
+                
                 expect(Int(cd.level)).to(equal(r.level))
                 expect(Int(cd.numberOfTurns)).to(equal(r.numberOfTurns))
                 expect(cd.secondsBetweenTurns).to(equal(r.secondsBetweenTurns))
@@ -101,11 +105,103 @@ class CoreDataToRealmMigratorSpec: QuickSpec {
             }
         }
         
-        //test 
-        //  linkTypeResults
-        //  processGameResult
-        //  convertData
-        //  deleteDataBase 
+        describe("linkTypeResults") {
+            var grcd: GameResult!
+            var grr: GameResultRealm!
+            
+            beforeEach {
+                grcd = gen.generateFakeGameResultWithThreeTypeResults()
+                grr = CoreDataToRealmMigrator.convertGameResult(grcd)
+            }
+            
+            it("should connect the TypeResults from the GameResult to the GameResultRealm") {
+                CoreDataToRealmMigrator.linkTypeResults(from: grcd, to: grr)
+                
+                var count = 0
+                grr.types.forEach { _ in count += 1 }
+                let cdCount = grcd.types.count
+                
+                expect(cdCount).to(equal(count))
+            }
+        }
+        
+        describe("getCoreDataFiles") {
+            beforeEach {
+                gen.generateFakeData(count: 10)
+            }
+            
+            it("should return the three core data files") {
+                let files = try! CoreDataToRealmMigrator.getCoreDataFiles()
+                
+                let last = files.map { $0.lastPathComponent }
+                expect(last.count).to(equal(3))
+                
+                let extensions = files.map { $0.pathExtension }
+                
+                let containsSQLite = extensions.contains("sqlite")
+                let containsSQLiteshm = extensions.contains("sqlite-shm")
+                let containsSQLitewal = extensions.contains("sqlite-wal")
+                
+                expect(last.count).to(equal(3))
+                expect(containsSQLite).to(equal(true))
+                expect(containsSQLiteshm).to(equal(true))
+                expect(containsSQLitewal).to(equal(true))
+            }
+        }
+        
+        
+        describe("processGameResult") {
+            var cd: GameResult!
+            beforeEach {
+                cd = gen.generateFakeGameResultWithThreeTypeResults()
+            }
+            
+            it("should convert a CD type to a Realm type") {
+                CoreDataToRealmMigrator.processGameResult(cd)
+                
+                let rs = try! Realm().objects(GameResultRealm.self)
+                
+                expect(rs.count).to(equal(1))
+            }
+        }
+        
+//        describe("convertData") {
+//            beforeEach {
+//                gen.generateFakeData(count: 10)
+//            }
+//            
+//            it("should convert the 10 CD types to 10 R types and delete teh 10 CD") {
+//                let cds = CoreDataToRealmMigrator.fetchAllCoreDataGameResults()
+//                expect(cds.count).to(equal(10))
+//                
+//                CoreDataToRealmMigrator.convertData()
+//                
+//                let fm = FileManager.default
+//                let url = fm.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+//                let urls = try! fm.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: [])
+//                
+//                expect(urls.count).to(equal(0))
+//                
+//                let realms = try! Realm().objects(GameResultRealm.self)
+//                expect(realms.count).to(equal(10))
+//            }
+//        }
+//        describe("deleteDatabase") {
+//            beforeEach {
+//                gen.generateFakeData(count: 10)
+//            }
+//            it("should remove the CoreData database") {
+//                
+//                CoreDataToRealmMigrator.deleteCoreDataDatabase()
+//                
+//                let fm = FileManager.default
+//                let url = fm.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+//                
+//                let contents = try! fm.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: [])
+//                
+//                expect(contents.count).to(equal(0))
+//            }
+//        }
     }
 }
 

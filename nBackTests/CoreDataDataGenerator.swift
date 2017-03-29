@@ -1,6 +1,8 @@
 import Foundation
 import CoreData
 import nBack
+import RealmSwift
+@testable import nBack
 
 
 class CoreDataDataGenerator {
@@ -46,12 +48,12 @@ class CoreDataDataGenerator {
         deleteGameResults()
     }
     
-    func deleteContainer() {
-        let cd = NSPersistentContainer(name: "nBack")
-        cd.loadPersistentStores { (desc, error) in
-            try! FileManager.default.removeItem(at: desc.url!)
-        }
-    }
+//    func deleteContainer() {
+//        let cd = NSPersistentContainer(name: "nBack")
+//        cd.loadPersistentStores { (desc, error) in
+//            try! FileManager.default.removeItem(at: desc.url!)
+//        }
+//    }
     
     func generateFakeGameResultWithThreeTypeResults() -> GameResult {
         var result: GameResult! = nil
@@ -59,7 +61,8 @@ class CoreDataDataGenerator {
             result = GameResult(context: self.context)
             result.initialize(with: Date(timeInterval: Double(Utilities.random(max: 100000000) - 50000000), since: Date()))
             for type in [.squares, .numbers, .colors] as [NBackType] {
-                result.types.insert(self.generateFakeTypeResult(type))
+                let fake = self.generateFakeTypeResult(type)
+                result.types.insert(fake)
             }
             self.context.save { Utilities.show(error: $0) }
         }
@@ -81,5 +84,21 @@ class CoreDataDataGenerator {
         result.matches = result.trueTrue + result.falseTrue
         
         return result
+    }
+    
+    func deleteRealmItems() {
+        let r = try! Realm()
+        let types = r.objects(TypeResultRealm.self)
+        try! r.write {
+            for type in types {
+                r.delete(type)
+            }
+        }
+        let items = r.objects(GameResultRealm.self)
+        try! r.write {
+            for item in items {
+                r.delete(item)
+            }
+        }
     }
 }

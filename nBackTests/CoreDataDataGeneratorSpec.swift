@@ -55,14 +55,6 @@ class CoreDataDataGeneratorSpec: QuickSpec {
                 expect(results.count).to(equal(2))
             }
         }
-        describe("deleteAllData") {
-            it("should leave the database with 0 entries") {
-                gen.generateFakeData(count: 20)
-                gen.deleteAllData()
-                let results = gen.fetchAllGameResults()
-                expect(results.count).to(equal(0))
-            }
-        }
         describe("generateFakeTypeResult") {
             it("should generate a type result whose results are feasible") {
                 let tr = gen.generateFakeTypeResult(.colors)
@@ -70,6 +62,14 @@ class CoreDataDataGeneratorSpec: QuickSpec {
                 expect(tr.correct).to(equal(tr.falseFalse + tr.trueTrue))
                 expect(tr.incorrect).to(equal(tr.falseTrue + tr.trueFalse))
                 expect(tr.matches).to(equal(tr.trueTrue + tr.falseTrue))
+            }
+        }
+        describe("deleteAllData") {
+            it("should leave the database with 0 entries") {
+                gen.generateFakeData(count: 20)
+                gen.deleteAllData()
+                let results = gen.fetchAllGameResults()
+                expect(results.count).to(equal(0))
             }
         }
         
