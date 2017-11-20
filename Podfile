@@ -1,22 +1,21 @@
-# vim : set ft=ruby :
-#
+# vim: set ft=ruby :
 
 target 'nBack' do
   use_frameworks!
 
   pod 'SwiftyJSON'
 
-  pod 'RxSwift', '~> 3.2'
-  pod 'RxCocoa', '~> 3.2'
-  pod 'RxDataSources'
-  pod 'RealmSwift'
-  pod 'RxRealm'
+  pod 'RxSwift', ' 3.5.0'
+  pod 'RxCocoa', '3.5.0'
+  pod 'RxDataSources', '1.0.3'
+  pod 'RealmSwift', '2.7.0'
+  pod 'RxRealm', '0.6.0'
 
   pod 'DZNEmptyDataSet'
-  pod 'BonMot'
-  pod 'Eureka', '~> 2.0.0-beta.1'
+  pod 'BonMot', '4.1'
+  pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka', :branch => 'feature/Xcode9-Swift3_2'
 
-  pod 'Hero'
+  pod 'Hero', '0.3.6'
 
   target 'nBackTests' do
     inherit! :search_paths
@@ -25,7 +24,7 @@ target 'nBack' do
   end
 
 
-  if `whoami`[0...-1] == 'lanza'
+  if `whoami`[0...-1] == 'alanza'
     pod 'CoordinatorKit', :path => '~/Documents/CoordinatorKit'
     pod 'Reuse', :path => '~/Documents/Reuse'
   else 
