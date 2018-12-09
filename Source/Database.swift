@@ -1,5 +1,4 @@
 import RealmSwift
-import RxDataSources
 
 struct MonthInfo {
     let year: Int
@@ -12,7 +11,7 @@ struct MonthInfo {
     }
 }
 
-struct DayInfo: IdentifiableType, Hashable {
+struct DayInfo: Hashable {
     
     var identity: Int {
         return day
@@ -32,7 +31,7 @@ struct DayInfo: IdentifiableType, Hashable {
 }
 
 
-struct YearMonth: IdentifiableType, Hashable {
+struct YearMonth:  Hashable {
     var identity: Int {
         return hashValue
     }

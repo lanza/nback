@@ -1,8 +1,5 @@
 PODS:
-  - BonMot (4.1)
   - CoordinatorKit (0.0.6)
-  - DZNEmptyDataSet (1.8.1)
-  - Eureka (3.0.0)
   - Hero (0.3.6)
   - Nimble (6.0.1)
   - Quick (1.1.0)
@@ -15,73 +12,49 @@ PODS:
     - SwiftyUserDefaults
   - RxCocoa (3.5.0):
     - RxSwift (~> 3.4)
-  - RxDataSources (1.0.3):
-    - RxCocoa (~> 3.0)
-    - RxSwift (~> 3.0)
-  - RxRealm (0.6.0):
-    - RealmSwift (~> 2.5)
-    - RxSwift (~> 3.2)
   - RxSwift (3.5.0)
   - SwiftyJSON (3.1.4)
-  - SwiftyUserDefaults (3.0.0)
+  - SwiftyUserDefaults (3.0.1)
 
 DEPENDENCIES:
-  - BonMot (= 4.1)
-  - CoordinatorKit (from `https://github.com/nathanlanza/CoordinatorKit`)
-  - DZNEmptyDataSet
-  - Eureka (from `https://github.com/xmartlabs/Eureka`, branch `feature/Xcode9-Swift3_2`)
+  - CoordinatorKit (from `https://github.com/lanza/CoordinatorKit`)
   - Hero (= 0.3.6)
   - Nimble
   - Quick
   - RealmSwift (= 2.7.0)
-  - Reuse (from `https://github.com/nathanlanza/Reuse`)
+  - Reuse (from `https://github.com/lanza/Reuse`)
   - RxCocoa (= 3.5.0)
-  - RxDataSources (= 1.0.3)
-  - RxRealm (= 0.6.0)
   - RxSwift (= 3.5.0)
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - BonMot
-    - DZNEmptyDataSet
     - Hero
     - Nimble
     - Quick
     - Realm
     - RealmSwift
     - RxCocoa
-    - RxDataSources
-    - RxRealm
     - RxSwift
     - SwiftyJSON
     - SwiftyUserDefaults
 
 EXTERNAL SOURCES:
   CoordinatorKit:
-    :git: https://github.com/nathanlanza/CoordinatorKit
-  Eureka:
-    :branch: feature/Xcode9-Swift3_2
-    :git: https://github.com/xmartlabs/Eureka
+    :git: https://github.com/lanza/CoordinatorKit
   Reuse:
-    :git: https://github.com/nathanlanza/Reuse
+    :git: https://github.com/lanza/Reuse
 
 CHECKOUT OPTIONS:
   CoordinatorKit:
     :commit: e4ddd10915db5420cde7e00d2c03895f803fa88b
-    :git: https://github.com/nathanlanza/CoordinatorKit
-  Eureka:
-    :commit: 05acfb04c24a480f1868e671d19b39e0f22fc265
-    :git: https://github.com/xmartlabs/Eureka
+    :git: https://github.com/lanza/CoordinatorKit
   Reuse:
     :commit: 202a44151a50386733f81caebf5c0d8d50c39d5e
-    :git: https://github.com/nathanlanza/Reuse
+    :git: https://github.com/lanza/Reuse
 
 SPEC CHECKSUMS:
-  BonMot: 4fa97f5ce7fe03071df35d36426d5712b8a170ee
   CoordinatorKit: 61a35f35ef51b90c782b7f061dbf3f7c3f871218
-  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  Eureka: 5b9418d7bfdc21ca977d69d124a6409f3e9af2c7
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
@@ -89,12 +62,10 @@ SPEC CHECKSUMS:
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   Reuse: cdc2a0bb0940776143ef7e7bc251672cf524c199
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
-  RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
-  RxRealm: 323de579b50b5e0f4a3e087d5925021f976ffaf1
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
+  SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
 
-PODFILE CHECKSUM: 41da721cbc7e27d5163e339e321766b6448d86a1
+PODFILE CHECKSUM: 394b7dd2e762d64d4f1561f1c441771a4c690231
 
 COCOAPODS: 1.5.3
