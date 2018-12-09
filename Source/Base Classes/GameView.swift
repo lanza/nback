@@ -1,7 +1,6 @@
 import UIKit
 import Reuse
-import RxSwift
-import RxCocoa
+
 
 protocol GameViewDelegate: class {
    func buttonWasTapped(type: NBackType)
@@ -41,6 +40,11 @@ class GameView: View {
          square.backgroundColor = Theme.Colors.normalSquare
       }
    }
+    
+    func didTap(button: Button) {
+        button.isEnabled = true
+        self.delegate.buttonWasTapped(type: button.nBackType!)
+    }
    
    private func setupMatchButtons() {
       
@@ -49,10 +53,8 @@ class GameView: View {
       for type in GameSettings.types {
          let button = Button.matchButton(title: type.string)
          button.isEnabled = false
-         button.rx.tap.subscribe(onNext: {
-            button.isEnabled = true
-            self.delegate.buttonWasTapped(type: type)
-         }).addDisposableTo(db)
+        button.nBackType = type
+        button.addTarget(self, action: #selector(didTap(button:)), for: UIControlEvents.touchUpInside)
          buttons.append(button)
       }
       
@@ -124,5 +126,4 @@ class GameView: View {
       buttons.forEach { $0.isEnabled = true }
    }
    
-   let db = DisposeBag()
 }

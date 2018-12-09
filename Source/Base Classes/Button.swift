@@ -1,6 +1,9 @@
 import UIKit
 
 class Button: UIButton {
+    
+    var nBackType: NBackType? = nil
+    
     static func matchButton(title: String) -> Button {
         
         let button = Button(type: .system)

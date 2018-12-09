@@ -1,7 +1,5 @@
 import UIKit
 import CoordinatorKit
-import RxSwift
-import RxCocoa
 import Hero
 
 class PlayCoordinator: Coordinator {
@@ -16,8 +14,7 @@ class PlayCoordinator: Coordinator {
     playViewController.tabBarItem.title = Lets.playl10n
     playViewController.tabBarItem.image = #imageLiteral(resourceName: "play")
   }
-  
-  let db = DisposeBag()
+
 }
 
 extension PlayCoordinator: PlayViewControllerDelegate {
