@@ -1,16 +1,10 @@
 PODS:
-  - CoordinatorKit (0.0.6)
-  - Reuse (0.0.1):
-    - SwiftyUserDefaults
-  - SwiftyUserDefaults (3.0.1)
+  - CoordinatorKit (0.1.0)
+  - Reuse (0.1.0)
 
 DEPENDENCIES:
   - CoordinatorKit (from `https://github.com/lanza/CoordinatorKit`)
   - Reuse (from `https://github.com/lanza/Reuse`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - SwiftyUserDefaults
 
 EXTERNAL SOURCES:
   CoordinatorKit:
@@ -20,16 +14,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CoordinatorKit:
-    :commit: e4ddd10915db5420cde7e00d2c03895f803fa88b
+    :commit: 7b82901671c0fdea10a76a2df12ab93185dac4dc
     :git: https://github.com/lanza/CoordinatorKit
   Reuse:
-    :commit: 202a44151a50386733f81caebf5c0d8d50c39d5e
+    :commit: 7827c2814bbf20e72c75ab49c2377aa546027008
     :git: https://github.com/lanza/Reuse
 
 SPEC CHECKSUMS:
-  CoordinatorKit: 61a35f35ef51b90c782b7f061dbf3f7c3f871218
-  Reuse: cdc2a0bb0940776143ef7e7bc251672cf524c199
-  SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
+  CoordinatorKit: 0b3de7d723ff4a83bbbdd848509be60179728220
+  Reuse: 16ea48cd318d588117000f8d00884840d26e44cc
 
 PODFILE CHECKSUM: 42063a5329521e74258bf4525a6a9905b231fd91
 

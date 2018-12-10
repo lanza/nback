@@ -30,7 +30,7 @@ class GameViewController: ViewController {
     gameView.setupClosures(gameBrain: gameBrain, quitGameClosure: gameDidCancel)
   }
   
-  func gameDidCancel() {
+  @objc func gameDidCancel() {
     gameBrain.quit()
     gameView.setupClosures(gameBrain: nil, quitGameClosure: nil)
     

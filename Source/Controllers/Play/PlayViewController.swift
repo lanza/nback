@@ -42,7 +42,7 @@ class PlayViewController: ViewController, HasContext {
     }
   }
     
-    func playGameButtonTapped(button: UIButton) {
+  @objc func playGameButtonTapped(button: UIButton) {
         delegate.newGameTapped()
     }
   override func loadView() {
