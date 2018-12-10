@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9877FFADA09A19B3827D6E70 /* Pods_nBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8FE191D685A5A92CA62CE /* Pods_nBack.framework */; };
+		B309B71521BDE49D0083D957 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B309B71421BDE49D0083D957 /* Color.swift */; };
 		B30DE9341D711B4300138962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE9331D711B4300138962 /* AppDelegate.swift */; };
 		B30DE9361D711B4300138962 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DE9351D711B4300138962 /* AppCoordinator.swift */; };
 		B30DE93C1D711B4300138962 /* nBack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B30DE93A1D711B4300138962 /* nBack.xcdatamodeld */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		141711A1BB21E02BD0A37F69 /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
 		584111AD840CC72453CF06C1 /* Pods-nBack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.release.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.release.xcconfig"; sourceTree = "<group>"; };
+		B309B71421BDE49D0083D957 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B30DE9331D711B4300138962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B30DE9351D711B4300138962 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B30DE93B1D711B4300138962 /* nBack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nBack.xcdatamodel; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				B31F35991D71727800BBC1D2 /* GameBrain.swift */,
 				B31F35A11D71733100BBC1D2 /* GameSettings.swift */,
 				B38599DD1D97236F00227994 /* SpeechSynthesizer.swift */,
+				B309B71421BDE49D0083D957 /* Color.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 					B30DE92F1D711B4300138962 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 72MNHNDUNH;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -436,21 +440,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-nBack/Pods-nBack-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CoordinatorKit/CoordinatorKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Reuse/Reuse.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoordinatorKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reuse.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +522,7 @@
 				B31F35941D7171DD00BBC1D2 /* SquareMatrix.swift in Sources */,
 				B30DE96B1D7127EF00138962 /* CoreData.swift in Sources */,
 				B3642C271D72B8180068506D /* DayCoordinator.swift in Sources */,
+				B309B71521BDE49D0083D957 /* Color.swift in Sources */,
 				B30DE9891D71370A00138962 /* SquareView.swift in Sources */,
 				B30DE9691D711F6700138962 /* DaysTableViewController.swift in Sources */,
 				B31F35B71D722A2700BBC1D2 /* TableViewDataSource.swift in Sources */,
@@ -657,7 +654,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -674,7 +672,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

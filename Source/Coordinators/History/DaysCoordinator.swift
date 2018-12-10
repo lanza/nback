@@ -1,7 +1,5 @@
 import UIKit
 import CoordinatorKit
-import RxCocoa
-import RxSwift
 
 class DaysCoordinator: Coordinator {
   

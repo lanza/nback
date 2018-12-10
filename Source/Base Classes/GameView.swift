@@ -26,17 +26,17 @@ class GameView: View {
     required init?(coder aDecoder: NSCoder) {fatalError()}
     
     var colorsButtonClosure: (() -> ())!
-    func colorsButtonTapped(_ button: UIButton) {
+    @objc func colorsButtonTapped(_ button: UIButton) {
         button.isEnabled = false
         colorsButtonClosure()
     }
     var squaresButtonClosure: (() -> ())!
-    func squaresButtonTapped(_ button: UIButton) {
+    @objc func squaresButtonTapped(_ button: UIButton) {
         button.isEnabled = false
         squaresButtonClosure()
     }
     var numbersButtonClosure: (() -> ())!
-    func numbersButtonTapped(_ button: UIButton) {
+    @objc func numbersButtonTapped(_ button: UIButton) {
         button.isEnabled = false
         numbersButtonClosure()
     }
@@ -50,7 +50,7 @@ class GameView: View {
     }
     
     var quitGameClosure: (() -> ())!
-    func quitGameTapped() { quitGameClosure() }
+    @objc func quitGameTapped() { quitGameClosure() }
     
     private func setupQuitButton() {
         quitGameButton = Button.quitGameButton(target: self, selector: #selector(quitGameTapped))

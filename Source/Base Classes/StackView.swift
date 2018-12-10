@@ -1,7 +1,7 @@
 import UIKit
 
 class StackView: UIStackView {
-    init(arrangedSubviews: [UIView], axis: UILayoutConstraintAxis, spacing: CGFloat, distribution: UIStackViewDistribution) {
+    init(arrangedSubviews: [UIView], axis: NSLayoutConstraint.Axis, spacing: CGFloat, distribution: UIStackView.Distribution) {
         self.init(arrangedSubviews: arrangedSubviews)
         self.axis = axis
         self.spacing = spacing

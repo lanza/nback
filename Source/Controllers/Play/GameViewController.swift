@@ -1,7 +1,5 @@
 import UIKit
 import Foundation
-import RxSwift
-import RxCocoa
 
 protocol GameViewControllerDelegate: class {
   func gameDidFinish(with result: GameResult)
@@ -18,15 +16,14 @@ class GameViewController: ViewController {
   override func loadView() {
     view = GameView(rows: GameSettings.shared.rows, columns: GameSettings.shared.columns, types: GameSettings.shared.types)
   }
-  
+    
   override init() {
     super.init()
     
     self.gameBrain = GameBrain(squareMatrix: gameView.squareMatrix, delegate: self)
     setupGameViewClosures()
     
-    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel Game", style: .done, target: nil, action: nil)
-    navigationItem.rightBarButtonItem?.rx.tap.subscribe(onNext: gameDidCancel).addDisposableTo(db)
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel Game", style: .done, target: self, action: #selector(gameDidCancel))
   }
   
   func setupGameViewClosures() {
@@ -50,8 +47,6 @@ class GameViewController: ViewController {
   override func viewDidAppear(_ animated: Bool) {
     gameBrain.start()
   }
-  
-  let db = DisposeBag()
 }
 
 extension GameViewController: GameBrainDelegate {

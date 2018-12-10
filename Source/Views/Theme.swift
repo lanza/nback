@@ -5,9 +5,9 @@ struct Theme: HasWindow {
 
         let navBarAppearance = UINavigationBar.appearance()
         navBarAppearance.tintColor = Colors.tint
-        navBarAppearance.titleTextAttributes = [
-            NSForegroundColorAttributeName: Colors.tint
-        ]
+        navBarAppearance.titleTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([
+            NSAttributedString.Key.foregroundColor.rawValue: Colors.tint
+        ])
         navBarAppearance.barStyle = .black
         navBarAppearance.barTintColor = Colors.foreground
         
@@ -59,4 +59,10 @@ struct Theme: HasWindow {
         static let playPlay = UIFont.systemFont(ofSize: 28)
         static let lastGameLabel = UIFont.systemFont(ofSize: 18)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

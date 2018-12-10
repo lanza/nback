@@ -5,11 +5,11 @@ class Button: UIButton {
         
         let button = Button(type: .system)
         
-        button.setTitle(title, for: UIControlState())
+        button.setTitle(title, for: UIControl.State())
         button.addTarget(target, action: selector, for: .touchUpInside)
         
         button.backgroundColor = Theme.Colors.matchButtonBackground
-        button.setTitleColor(Theme.Colors.matchButtonFont, for: UIControlState())
+        button.setTitleColor(Theme.Colors.matchButtonFont, for: UIControl.State())
         button.titleLabel?.font = Theme.Fonts.matchButtons
         return button
     }
@@ -17,7 +17,7 @@ class Button: UIButton {
     static func quitGameButton(target: Any?, selector: Selector) -> Button {
         let button = Button(type: .system)
         
-        button.setTitle("Quit Game", for: UIControlState())
+        button.setTitle("Quit Game", for: UIControl.State())
         button.addTarget(target, action: selector, for: .touchUpInside)
         
         return button
@@ -32,7 +32,7 @@ extension UIButton {
         }
         button.titleLabel?.font = font
         button.backgroundColor = Theme.Colors.settingsButtonsBackground
-        button.setTitleColor(Theme.Colors.settingsFont, for: UIControlState())
+        button.setTitleColor(Theme.Colors.settingsFont, for: UIControl.State())
         button.layer.cornerRadius = 5
         return button
     }

@@ -1,6 +1,4 @@
 import UIKit
-import RxSwift
-import RxCocoa
 
 class PlayView: UIView {
   init() {
@@ -43,6 +41,10 @@ class PlayViewController: ViewController, HasContext {
       lastGameLabel.text = "Last Game \n" + lastResultString + "\n" + lastScoreString
     }
   }
+    
+    func playGameButtonTapped(button: UIButton) {
+        delegate.newGameTapped()
+    }
   override func loadView() {
     view = View()
     
@@ -78,9 +80,9 @@ class PlayViewController: ViewController, HasContext {
     let rowsAndColumnsStackView = StackView(arrangedSubviews: [rowsButton,columnsButton], axis: .horizontal, spacing: 8, distribution: .fillEqually)
     
     playGameButton = UIButton.button(title: Lets.playl10n, target: self, selector: nil, font: Theme.Fonts.playLabels)
-    playGameButton.rx.tap.subscribe(onNext: delegate.newGameTapped).addDisposableTo(db)
+    playGameButton.addTarget(self, action: #selector(playGameButtonTapped(button:)), for: UIControl.Event.touchUpInside)
     playGameButton.backgroundColor = Theme.Colors.playButtonBackground
-    playGameButton.setTitleColor(Theme.Colors.playButtonFont, for: UIControlState())
+    playGameButton.setTitleColor(Theme.Colors.playButtonFont, for: UIControl.State())
     playGameButton.layer.cornerRadius = 5
     let playGameButtonStackView = StackView(arrangedSubviews: [playGameButton], axis: .horizontal, spacing: 0, distribution: .fillEqually)
     
@@ -101,7 +103,7 @@ class PlayViewController: ViewController, HasContext {
     var constraints = [NSLayoutConstraint]()
     
     let centerConstraint = stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-    centerConstraint.priority = 100
+    centerConstraint.priority = UILayoutPriority(rawValue: 100)
     constraints.append(centerConstraint)
     constraints.append(stackView.topAnchor.constraint(greaterThanOrEqualTo: topLayoutGuide.bottomAnchor, constant: 16))
     constraints.append(stackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomLayoutGuide.topAnchor, constant: -16))
@@ -112,7 +114,7 @@ class PlayViewController: ViewController, HasContext {
     view.setNeedsLayout()
   }
   
-  func secondsBetweenTurnsButtonTapped() {
+  @objc func secondsBetweenTurnsButtonTapped() {
     if GameSettings.shared.secondsBetweenTurns == Lets.secondsBetweenTurns.max {
       GameSettings.shared.secondsBetweenTurns = Lets.secondsBetweenTurns.min
     } else {
@@ -135,23 +137,23 @@ class PlayViewController: ViewController, HasContext {
       playGameButton.isEnabled = true
     }
   }
-  func numberButtonTapped() {
+  @objc func numberButtonTapped() {
     typeButtonTapped(type: .numbers, button: numberButton)
     numberButton.set(title: Lets.numbersString)
   }
-  func squareButtonTapped() {
+  @objc func squareButtonTapped() {
     typeButtonTapped(type: .squares, button: squareButton)
     squareButton.set(title: Lets.squaresString)
     let isOn = GameSettings.shared.types.contains(.squares)
     rowsButton.isEnabled = isOn
     columnsButton.isEnabled = isOn
   }
-  func colorButtonTapped() {
+  @objc func colorButtonTapped() {
     typeButtonTapped(type: .colors, button: colorButton)
     colorButton.set(title: Lets.colorsString)
   }
   
-  func levelButtonTapped() {
+  @objc func levelButtonTapped() {
     if GameSettings.shared.level == Lets.levels.max {
       GameSettings.shared.level = Lets.levels.min
     } else {
@@ -159,7 +161,7 @@ class PlayViewController: ViewController, HasContext {
     }
     levelButton.set(title: Lets.levelString)
   }
-  func turnsButtonTapped() {
+  @objc func turnsButtonTapped() {
     if GameSettings.shared.numberOfTurns == Lets.turns.max {
       GameSettings.shared.numberOfTurns = Lets.turns.min
     } else {
@@ -168,7 +170,7 @@ class PlayViewController: ViewController, HasContext {
     turnsButton.set(title: Lets.turnsString)
   }
   
-  func rowsButtonTapped() {
+  @objc func rowsButtonTapped() {
     if GameSettings.shared.rows == Lets.rows.max {
       GameSettings.shared.rows = Lets.rows.min
     } else {
@@ -177,7 +179,7 @@ class PlayViewController: ViewController, HasContext {
     rowsButton.set(title: Lets.rowsString)
   }
   
-  func columnsButtonTapped() {
+  @objc func columnsButtonTapped() {
     if GameSettings.shared.columns == Lets.columns.max {
       GameSettings.shared.columns = Lets.columns.min
     } else {
@@ -185,8 +187,6 @@ class PlayViewController: ViewController, HasContext {
     }
     columnsButton.set(title: Lets.columnsString)
   }
-  
-  let db = DisposeBag()
 }
 
 

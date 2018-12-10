@@ -23,7 +23,7 @@ public class Day: ManagedObject {
         }
     }
     var si = "sectionIdentifier"
-    var sectionIdentifier: String? {
+    @objc var sectionIdentifier: String? {
         self.willAccessValue(forKey: si)
         var tmp = self.primitiveValue(forKey: si) as? String
         self.didAccessValue(forKey: si)

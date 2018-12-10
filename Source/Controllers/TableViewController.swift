@@ -22,7 +22,7 @@ class TableViewController<Source: DataProvider, Object: ManagedObject, Cell: UIT
     var dataProvider: Source!
     
     func setupTableView() {
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 125
     }
     func setDataProvider() { fatalError() }

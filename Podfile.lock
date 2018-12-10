@@ -1,31 +1,15 @@
 PODS:
   - CoordinatorKit (0.0.6)
-  - Realm (2.7.0):
-    - Realm/Headers (= 2.7.0)
-  - Realm/Headers (2.7.0)
-  - RealmSwift (2.7.0):
-    - Realm (= 2.7.0)
   - Reuse (0.0.1):
     - SwiftyUserDefaults
-  - RxCocoa (3.5.0):
-    - RxSwift (~> 3.4)
-  - RxSwift (3.5.0)
   - SwiftyUserDefaults (3.0.1)
 
 DEPENDENCIES:
   - CoordinatorKit (from `https://github.com/lanza/CoordinatorKit`)
-  - RealmSwift (= 2.7.0)
   - Reuse (from `https://github.com/lanza/Reuse`)
-  - RxCocoa (~> 3.5.0)
-  - RxSwift (~> 3.5.0)
-  - SwiftyUserDefaults
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Realm
-    - RealmSwift
-    - RxCocoa
-    - RxSwift
     - SwiftyUserDefaults
 
 EXTERNAL SOURCES:
@@ -44,13 +28,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CoordinatorKit: 61a35f35ef51b90c782b7f061dbf3f7c3f871218
-  Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
-  RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   Reuse: cdc2a0bb0940776143ef7e7bc251672cf524c199
-  RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
-  RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
 
-PODFILE CHECKSUM: 6744f55d93b3deb8b41d6520faeb3e078da6f5ae
+PODFILE CHECKSUM: 42063a5329521e74258bf4525a6a9905b231fd91
 
 COCOAPODS: 1.5.3

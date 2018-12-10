@@ -1,4 +1,3 @@
-
 import UIKit
 
 class DaysTableViewCell: UITableViewCell {
@@ -20,7 +19,7 @@ class DaysTableViewCell: UITableViewCell {
         contentView.addSubview(stackView)
         setupConstraints()
     }
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         dateLabel = Label()
         countLabel = Label()
         countLabel.textAlignment = .right

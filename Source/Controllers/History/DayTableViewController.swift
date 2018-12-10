@@ -37,7 +37,7 @@ class DayTableViewController: TableViewController<DayDataProvider, GameResult, G
     }
     
     override func setupTableView() {
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 300
     }
 }
