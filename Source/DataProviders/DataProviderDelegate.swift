@@ -1,6 +1,6 @@
 import Foundation
 
-protocol FetchedResultsDataProviderDelegate: class {
+protocol FetchedResultsDataProviderDelegate: AnyObject {
     associatedtype Object
     func dataProviderDidUpdate(updates: [DataProviderUpdate<Object>]?)
 }

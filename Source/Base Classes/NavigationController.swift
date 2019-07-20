@@ -5,8 +5,8 @@ class NavigationController: UINavigationController {
         super.init(rootViewController: viewController)
         tabBarItem = viewController.tabBarItem
     }
-    
-    required init?(coder aDecoder: NSCoder) { fatalError() }
+
+    required init?(coder _: NSCoder) { fatalError() }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }

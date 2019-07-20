@@ -1,5 +1,3 @@
 import CoreData
 
-public class ManagedObject: NSManagedObject {
-    
-}
+public class ManagedObject: NSManagedObject {}

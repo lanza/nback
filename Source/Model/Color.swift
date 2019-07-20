@@ -9,7 +9,7 @@ enum Color {
     case red
     case brown
     case blue
-    
+
     static func from(value: Int) -> Color {
         switch value {
         case 0: return .yellow
@@ -23,7 +23,7 @@ enum Color {
         default: fatalError()
         }
     }
-    
+
     var color: UIColor {
         switch self {
         case .yellow: return UIColor.yellow

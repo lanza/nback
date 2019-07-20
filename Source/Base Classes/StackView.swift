@@ -7,11 +7,12 @@ class StackView: UIStackView {
         self.spacing = spacing
         self.distribution = distribution
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    required init(coder: NSCoder) {
+
+    required init(coder _: NSCoder) {
         fatalError(#function + " not implemented.")
     }
 }

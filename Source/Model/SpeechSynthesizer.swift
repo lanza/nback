@@ -1,5 +1,5 @@
-import Foundation
 import AVFoundation
+import Foundation
 
 class SpeechSynthesizer {
     private var synth = AVSpeechSynthesizer()

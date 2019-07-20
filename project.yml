@@ -1,0 +1,32 @@
+name: nBack
+options:
+  bundleIdPrefix: io.lanza
+targets:
+  nBack:
+    type: application
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources: [Source]
+    settings:
+      configs:
+        debug:
+          CUSTOM_BUILD_SETTING: my_debug_value
+        release:
+          CUSTOM_BUILD_SETTING: my_release_value
+    dependencies:
+      - target: CoordinatorKit
+        #- framework: Vendor/CoordinatorKit.framework
+      - target: Reuse
+        #- framework: Vendor/Reuse.framework
+      # - sdk: Contacts.framework
+      # - sdk: libc++.tbd
+  CoordinatorKit:
+    type: framework
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources: [CoordinatorKit]
+  Reuse:
+    type: framework
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources: [Reuse]

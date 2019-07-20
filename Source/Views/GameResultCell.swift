@@ -1,16 +1,15 @@
 import UIKit
 
 class GameResultCell: UITableViewCell {
-
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
-    @IBOutlet weak var gameNumber: UILabel!
-    @IBOutlet weak var levelLabel: UILabel!
-    @IBOutlet weak var turnsLabel: UILabel!
-    @IBOutlet weak var correctLabel: UILabel!
-    @IBOutlet weak var incorrectLabel: UILabel!
+    @IBOutlet var gameNumber: UILabel!
+    @IBOutlet var levelLabel: UILabel!
+    @IBOutlet var turnsLabel: UILabel!
+    @IBOutlet var correctLabel: UILabel!
+    @IBOutlet var incorrectLabel: UILabel!
 }
 
 extension GameResultCell: ConfigurableCell {
