@@ -94,6 +94,8 @@ class FetchedResultsDataProvider<Object: ManagedObject>: NSObject, NSFetchedResu
         case .delete:
             guard let indexPath = indexPath else { fatalError() }
             updates.append(.delete(indexPath))
+        @unknown default:
+            fatalError("Fix this")
         }
     }
 

@@ -105,8 +105,8 @@ class PlayViewController: ViewController, HasContext {
         let centerConstraint = stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         centerConstraint.priority = UILayoutPriority(rawValue: 100)
         constraints.append(centerConstraint)
-        constraints.append(stackView.topAnchor.constraint(greaterThanOrEqualTo: topLayoutGuide.bottomAnchor, constant: 16))
-        constraints.append(stackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomLayoutGuide.topAnchor, constant: -16))
+        constraints.append(stackView.topAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 16))
+        constraints.append(stackView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16))
         constraints.append(stackView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor))
         constraints.append(stackView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor))
 

@@ -17,7 +17,7 @@ public final class ManagedObjectObserver {
     }
 
     deinit {
-        NotificationCenter.default.removeObserver(token)
+        NotificationCenter.default.removeObserver(token!)
     }
 
     // MARK: Private
