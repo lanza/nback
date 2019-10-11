@@ -22,84 +22,104 @@ import UIKit
 //    }
 // }
 
-class AnyDataProviderDelegate<Object: ManagedObject>: FetchedResultsDataProviderDelegate {
-    var dataProviderDidUpdate: (([DataProviderUpdate<Object>]?) -> Void)?
-    func dataProviderDidUpdate(updates: [DataProviderUpdate<Object>]?) {
-        dataProviderDidUpdate?(updates)
-    }
+class AnyDataProviderDelegate<Object: ManagedObject>: FetchedResultsDataProviderDelegate
+{
+  var dataProviderDidUpdate: (([DataProviderUpdate<Object>]?) -> Void)?
+
+  func dataProviderDidUpdate(updates: [DataProviderUpdate<Object>]?) {
+    dataProviderDidUpdate?(updates)
+  }
 }
 
-class FetchedResultsDataProvider<Object: ManagedObject>: NSObject, NSFetchedResultsControllerDelegate, DataProvider {
-    init(fetchedResultsController: NSFetchedResultsController<Object>) {
-        self.fetchedResultsController = fetchedResultsController
-        super.init()
-        fetchedResultsController.delegate = self
-        try! fetchedResultsController.performFetch()
+class FetchedResultsDataProvider<Object: ManagedObject>: NSObject,
+  NSFetchedResultsControllerDelegate, DataProvider
+{
+  init(fetchedResultsController: NSFetchedResultsController<Object>) {
+    self.fetchedResultsController = fetchedResultsController
+    super.init()
+    fetchedResultsController.delegate = self
+    try! fetchedResultsController.performFetch()
 
-        let sections = fetchedResultsController.sections!
-        for section in sections {
-            print("new section")
-            for item in section.objects as! [Day] {
-                print(item.year, item.month, item.day)
-            }
-        }
+    let sections = fetchedResultsController.sections!
+    for section in sections {
+      print("new section")
+      for item in section.objects as! [Day] {
+        print(item.year, item.month, item.day)
+      }
     }
+  }
 
-    func reconfigureFetchRequest(block: (NSFetchRequest<Object>) -> Void) {
-        NSFetchedResultsController<Object>.deleteCache(withName: fetchedResultsController.cacheName)
-        block(fetchedResultsController.fetchRequest)
-        do { try fetchedResultsController.performFetch() } catch { fatalError() }
-        delegate.dataProviderDidUpdate(updates: nil)
+  func reconfigureFetchRequest(block: (NSFetchRequest<Object>) -> Void) {
+    NSFetchedResultsController<Object>.deleteCache(
+      withName: fetchedResultsController.cacheName
+    )
+    block(fetchedResultsController.fetchRequest)
+    do { try fetchedResultsController.performFetch() }
+    catch { fatalError() }
+    delegate.dataProviderDidUpdate(updates: nil)
+  }
+
+  func object(at indexPath: IndexPath) -> Object {
+    return fetchedResultsController.object(at: indexPath)
+  }
+
+  func numberOfSections() -> Int {
+    guard let sections = fetchedResultsController.sections else { return 0 }
+    return sections.count
+  }
+
+  func numberOfItemsIn(section: Int) -> Int {
+    guard let section = fetchedResultsController.sections?[section] else {
+      return 0
     }
+    return section.numberOfObjects
+  }
 
-    func object(at indexPath: IndexPath) -> Object {
-        return fetchedResultsController.object(at: indexPath)
+  // MARK: Private
+
+  let fetchedResultsController: NSFetchedResultsController<Object>
+
+  weak var delegate: AnyDataProviderDelegate<Object>!
+  private var updates = [DataProviderUpdate<Object>]()
+
+  // MARK: NSFetchedResultsControllerDelegate
+
+  func controllerWillChangeContent(
+    _: NSFetchedResultsController<NSFetchRequestResult>
+  ) {
+    updates = []
+  }
+
+  func controller(
+    _: NSFetchedResultsController<NSFetchRequestResult>,
+    didChange _: Any,
+    at indexPath: IndexPath?,
+    for type: NSFetchedResultsChangeType,
+    newIndexPath: IndexPath?
+  ) {
+    switch type {
+    case .insert:
+      guard let indexPath = newIndexPath else { fatalError() }
+      updates.append(.insert(indexPath))
+    case .update:
+      guard let indexPath = indexPath else { fatalError() }
+      let object = self.object(at: indexPath)
+      updates.append(.update(indexPath, object))
+    case .move:
+      guard let indexPath = indexPath else { fatalError() }
+      guard let newIndexPath = newIndexPath else { fatalError() }
+      updates.append(.move(indexPath, newIndexPath))
+    case .delete:
+      guard let indexPath = indexPath else { fatalError() }
+      updates.append(.delete(indexPath))
+    @unknown default:
+      fatalError("Fix this")
     }
+  }
 
-    func numberOfSections() -> Int {
-        guard let sections = fetchedResultsController.sections else { return 0 }
-        return sections.count
-    }
-
-    func numberOfItemsIn(section: Int) -> Int {
-        guard let section = fetchedResultsController.sections?[section] else { return 0 }
-        return section.numberOfObjects
-    }
-
-    // MARK: Private
-
-    let fetchedResultsController: NSFetchedResultsController<Object>
-    weak var delegate: AnyDataProviderDelegate<Object>!
-    private var updates = [DataProviderUpdate<Object>]()
-
-    // MARK: NSFetchedResultsControllerDelegate
-
-    func controllerWillChangeContent(_: NSFetchedResultsController<NSFetchRequestResult>) {
-        updates = []
-    }
-
-    func controller(_: NSFetchedResultsController<NSFetchRequestResult>, didChange _: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        switch type {
-        case .insert:
-            guard let indexPath = newIndexPath else { fatalError() }
-            updates.append(.insert(indexPath))
-        case .update:
-            guard let indexPath = indexPath else { fatalError() }
-            let object = self.object(at: indexPath)
-            updates.append(.update(indexPath, object))
-        case .move:
-            guard let indexPath = indexPath else { fatalError() }
-            guard let newIndexPath = newIndexPath else { fatalError() }
-            updates.append(.move(indexPath, newIndexPath))
-        case .delete:
-            guard let indexPath = indexPath else { fatalError() }
-            updates.append(.delete(indexPath))
-        @unknown default:
-            fatalError("Fix this")
-        }
-    }
-
-    func controllerDidChangeContent(_: NSFetchedResultsController<NSFetchRequestResult>) {
-        delegate?.dataProviderDidUpdate(updates: updates)
-    }
+  func controllerDidChangeContent(
+    _: NSFetchedResultsController<NSFetchRequestResult>
+  ) {
+    delegate?.dataProviderDidUpdate(updates: updates)
+  }
 }

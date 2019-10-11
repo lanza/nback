@@ -1,18 +1,23 @@
 import UIKit
 
 class StackView: UIStackView {
-    init(arrangedSubviews: [UIView], axis: NSLayoutConstraint.Axis, spacing: CGFloat, distribution: UIStackView.Distribution) {
-        self.init(arrangedSubviews: arrangedSubviews)
-        self.axis = axis
-        self.spacing = spacing
-        self.distribution = distribution
-    }
+  init(
+    arrangedSubviews: [UIView],
+    axis: NSLayoutConstraint.Axis,
+    spacing: CGFloat,
+    distribution: UIStackView.Distribution
+  ) {
+    self.init(arrangedSubviews: arrangedSubviews)
+    self.axis = axis
+    self.spacing = spacing
+    self.distribution = distribution
+  }
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+  }
 
-    required init(coder _: NSCoder) {
-        fatalError(#function + " not implemented.")
-    }
+  required init(coder _: NSCoder) {
+    fatalError(#function + " not implemented.")
+  }
 }
