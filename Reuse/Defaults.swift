@@ -106,7 +106,7 @@ extension UserDefaults {
 
       /// Sets value for `key`
 
-      public let proxy: Proxy = self[key]
+      let proxy: Proxy = self[key]
       return proxy
     }
     set {
@@ -404,8 +404,7 @@ extension UserDefaults {
   {
     if let value = value {
       set(key, value.rawValue)
-    }
-    else {
+    } else {
       remove(key)
     }
   }
@@ -431,8 +430,7 @@ extension UserDefaults {
   public func archive<T>(_ key: DefaultsKey<T?>, _ value: T?) {
     if let value = value {
       set(key, NSKeyedArchiver.archivedData(withRootObject: value))
-    }
-    else {
+    } else {
       remove(key)
     }
   }
@@ -452,7 +450,7 @@ extension UserDefaults {
 
 // MARK: - Deprecations
 
-infix operator?=:AssignmentPrecedence
+infix operator ?=: AssignmentPrecedence
 
 /// If key doesn't exist, sets its value to `expr`
 /// - Deprecation: This will be removed in a future release.
@@ -460,7 +458,11 @@ infix operator?=:AssignmentPrecedence
 /// - Note: This isn't the same as `Defaults.registerDefaults`. This method saves the new value to disk, whereas `registerDefaults` only modifies the defaults in memory.
 /// - Note: If key already exists, the expression after ?= isn't evaluated
 
-@available(*, deprecated, message: "Please migrate to static keys and use this gist: https://gist.github.com/radex/68de9340b0da61d43e60")
+@available(
+  *, deprecated,
+  message:
+    "Please migrate to static keys and use this gist: https://gist.github.com/radex/68de9340b0da61d43e60"
+)
 public func ?= (proxy: UserDefaults.Proxy, expr: @autoclosure () -> Any) {
   if !proxy.defaults.hasKey(proxy.key) {
     proxy.defaults[proxy.key] = expr()

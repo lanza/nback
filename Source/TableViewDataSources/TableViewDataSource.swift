@@ -1,8 +1,8 @@
 import UIKit
 
 class DaysTableViewDataSource: TableViewDataSource<
-    FetchedResultsDataProvider<Day>, DaysTableViewCell
-  >
+  FetchedResultsDataProvider<Day>, DaysTableViewCell
+>
 {
   //  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
   //     let object = dataProvider.object(at: IndexPath(row: 0, section: section))
@@ -11,8 +11,8 @@ class DaysTableViewDataSource: TableViewDataSource<
 }
 
 class DayTableViewDataSource: TableViewDataSource<
-    DayDataProvider, GameResultCell
-  >
+  DayDataProvider, GameResultCell
+>
 {}
 
 class TableViewDataSource<Source: DataProvider, Cell: UITableViewCell>: NSObject,

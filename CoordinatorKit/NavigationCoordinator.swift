@@ -40,7 +40,7 @@ open class NavigationCoordinator: Coordinator {
 
   public func setCoordinators(_ coordinators: [Coordinator], animated: Bool) {
     for i in 1..<(coordinators.count) {
-      coordinators[i].parent = coordinators[i-1]
+      coordinators[i].parent = coordinators[i - 1]
     }
     if let first = coordinators.first {
       first.parent = self
@@ -53,8 +53,7 @@ open class NavigationCoordinator: Coordinator {
   public func pushCoordinator(_ coordinator: Coordinator, animated: Bool) {
     if let last = coordinators.last {
       coordinator.parent = last
-    }
-    else {
+    } else {
       coordinator.parent = self
     }
     coordinators.append(coordinator)
@@ -79,7 +78,9 @@ open class NavigationCoordinator: Coordinator {
   public func popToCoordinator(_ coordinator: Coordinator, animated: Bool)
     -> [Coordinator]?
   {
-    guard let index = coordinators.index(of: coordinator) else { return nil }
+    guard let index = coordinators.firstIndex(of: coordinator) else {
+      return nil
+    }
     let removed = Array(coordinators.suffix(from: index))
     coordinators = Array(coordinators.prefix(upTo: index))
     return removed

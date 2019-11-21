@@ -34,10 +34,10 @@ class GameBrain: HasContext {
     for type in settings.types {
       switch type {
       case .squares:
-        squareOrder = (1 ... sequenceLength).map { _ in
+        squareOrder = (1...sequenceLength).map { _ in
           MatrixIndex(
-            row: Utilities.random(range: 0 ..< settings.rows),
-            column: Utilities.random(range: 0 ..< settings.columns)
+            row: Utilities.random(range: 0..<settings.rows),
+            column: Utilities.random(range: 0..<settings.columns)
           )
         }
         playerSquareAnswers = [Bool](
@@ -45,16 +45,16 @@ class GameBrain: HasContext {
           count: sequenceLength - settings.level
         )
       case .numbers:
-        numberOrder = (1 ... sequenceLength).map { _ in
-          Utilities.random(range: 1 ... 9)
+        numberOrder = (1...sequenceLength).map { _ in
+          Utilities.random(range: 1...9)
         }
         playerNumberAnswers = [Bool](
           repeating: false,
           count: sequenceLength - settings.level
         )
       case .colors:
-        colorOrder = (1 ... sequenceLength).map { _ in
-          Utilities.random(range: 0 ... 7)
+        colorOrder = (1...sequenceLength).map { _ in
+          Utilities.random(range: 0...7)
         }.map { Color.from(value: $0).color }
         playerColorAnswers = [Bool](
           repeating: false,
@@ -115,9 +115,11 @@ class GameBrain: HasContext {
       if self.settings.types.contains(.numbers) {
         self.speakNextNumber()
       }
-      if self.settings.types.contains(.squares) || self.settings.types.contains(
-        .colors
-      ) {
+      if self.settings.types.contains(.squares)
+        || self.settings.types.contains(
+          .colors
+        )
+      {
         self.highlightAndColorNextSquare()
       }
       if self.turnCount >= self.settings.level {
@@ -186,7 +188,7 @@ class GameBrain: HasContext {
   ) -> TypeResult {
     var correctAnswers = [Bool]()
 
-    for i in settings.level ..< order.count {
+    for i in settings.level..<order.count {
       correctAnswers.append(order[i] == order[i - settings.level])
     }
 
@@ -198,16 +200,16 @@ class GameBrain: HasContext {
     _ = zip(playerAnswers, correctAnswers).map { player, correct -> Bool in
       switch (player, correct) {
       case (false, false):
-        falseFalse += 1;
+        falseFalse += 1
         return true
       case (false, true):
-        falseTrue += 1;
+        falseTrue += 1
         return false
       case (true, false):
-        trueFalse += 1;
+        trueFalse += 1
         return false
       case (true, true):
-        trueTrue += 1;
+        trueTrue += 1
         return true
       }
     }

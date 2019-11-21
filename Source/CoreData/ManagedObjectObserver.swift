@@ -50,8 +50,7 @@ public final class ManagedObjectObserver {
       let predicate = type(of: object).defaultPredicate
       if predicate.evaluate(with: object) {
         return .update
-      }
-      else if objectHasBeenDeleted == false {
+      } else if objectHasBeenDeleted == false {
         return .delete
       }
     }

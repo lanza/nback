@@ -70,7 +70,7 @@ extension Sequence where Iterator.Element: AnyObject {
 extension Array {
   func decompose() -> (Iterator.Element, [Iterator.Element])? {
     guard let x = first else { return nil }
-    return (x, Array(self[1 ..< count]))
+    return (x, Array(self[1..<count]))
   }
 
   func slices(size: Int) -> [[Iterator.Element]] {
@@ -79,7 +79,7 @@ extension Array {
       let a: Int = idx + size
       let b: Int = endIndex
       let end = Swift.min(a, b)
-      result.append(Array(self[idx ..< end]))
+      result.append(Array(self[idx..<end]))
     }
     return result
   }

@@ -16,8 +16,7 @@ class GameView: View {
 
     if GameSettings.shared.types.contains(.squares) {
       setupSquares(rows: rows, columns: columns)
-    }
-    else if GameSettings.shared.types.contains(.colors) {
+    } else if GameSettings.shared.types.contains(.colors) {
       setupSquares(rows: 1, columns: 1)
     }
     setupMatchButtons(types: types)
@@ -107,9 +106,9 @@ class GameView: View {
     var elements = [SquareView]()
     var rowStackViews = [StackView]()
 
-    for _ in 1 ... rows {
+    for _ in 1...rows {
       var columnViews = [SquareView]()
-      for _ in 1 ... columns {
+      for _ in 1...columns {
         let squareView = SquareView()
         columnViews.append(squareView)
         elements.append(squareView)
@@ -165,15 +164,15 @@ class GameView: View {
     )
 
     let boardWidth = frame.width - 40
-    let boardHeight = frame.height - (8 + 16 + 8 + 8) - quitGameButton.frame
+    let boardHeight = frame.height - (8 + 16 + 8 + 8)
+      - quitGameButton.frame
       .height - buttonStackView.frame.height
 
     if boardHeight / boardWidth < CGFloat(rows) / CGFloat(columns) {
       constraints.append(
         mainStackView.heightAnchor.constraint(equalToConstant: boardHeight)
       )
-    }
-    else {
+    } else {
       constraints.append(
         mainStackView.leftAnchor.constraint(
           equalTo: layoutMarginsGuide.leftAnchor

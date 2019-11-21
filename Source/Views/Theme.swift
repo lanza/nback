@@ -4,8 +4,8 @@ struct Theme: HasWindow {
   static func setupAppearances() {
     let navBarAppearance = UINavigationBar.appearance()
     navBarAppearance.tintColor = Colors.tint
-    navBarAppearance.titleTextAttributes
-      = convertToOptionalNSAttributedStringKeyDictionary(
+    navBarAppearance.titleTextAttributes =
+      convertToOptionalNSAttributedStringKeyDictionary(
         [
           NSAttributedString.Key.foregroundColor.rawValue: Colors.tint,
         ]

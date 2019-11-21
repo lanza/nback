@@ -18,7 +18,8 @@ class SquareMatrix {
   func color(row: Int, column: Int, color: UIColor) {
     let square = self[row, column]
     square.backgroundColor = color
-    let deadline: DispatchTime = DispatchTime.now() + GameSettings.shared
+    let deadline: DispatchTime = DispatchTime.now()
+      + GameSettings.shared
       .squareHighlightTime.nanoseconds
     DispatchQueue.main.asyncAfter(deadline: deadline) {
       square.backgroundColor = Theme.Colors.normalSquare

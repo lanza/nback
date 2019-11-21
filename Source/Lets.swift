@@ -13,8 +13,8 @@ enum Lets {
   static func resultString(for result: GameResult) -> String {
     let typeCountString = Lets.gameTypeCountString(for: result)
     let parenthesisString = Lets.gameTypeListString(for: result)
-    let countBackString
-      = "\(result.level)-back with \(result.numberOfTurns) turns."
+    let countBackString =
+      "\(result.level)-back with \(result.numberOfTurns) turns."
     return typeCountString + " " + parenthesisString + " " + countBackString
   }
 
@@ -28,9 +28,10 @@ enum Lets {
   }
 
   static func gameTypeListString(for result: GameResult) -> String {
-    return "(" + result.types.sorted { $0.type.string < $1.type.string }.map {
-      $0.type.string
-    }.joined(separator: ", ") + ")"
+    return "("
+      + result.types.sorted { $0.type.string < $1.type.string }.map {
+        $0.type.string
+      }.joined(separator: ", ") + ")"
   }
 
   static func scoreString(for result: GameResult) -> String {

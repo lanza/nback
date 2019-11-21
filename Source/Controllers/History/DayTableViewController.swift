@@ -23,8 +23,8 @@ class DayDataProvider: DataProvider {
 }
 
 class DayTableViewController: TableViewController<
-    DayDataProvider, GameResult, GameResultCell
-  >
+  DayDataProvider, GameResult, GameResultCell
+>
 {
   var day: Day!
 

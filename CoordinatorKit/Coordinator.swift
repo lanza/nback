@@ -76,8 +76,7 @@ open class Coordinator {
   public func show(_ coordinator: Coordinator, sender: Any?) {
     if let nc = navigationCoordinator {
       nc.pushCoordinator(coordinator, animated: true)
-    }
-    else {
+    } else {
       present(coordinator, animated: true)
     }
   }
@@ -158,6 +157,7 @@ open class Coordinator {
   public var navigationItem: UINavigationItem {
     return viewController.navigationItem
   }
+
   public var tabBarItem: UITabBarItem { return viewController.tabBarItem }
 
   // MARK: - Getting Other Related Coordinators
@@ -175,14 +175,12 @@ open class Coordinator {
   public var navigationCoordinator: NavigationCoordinator? {
     if let selfNav = self as? NavigationCoordinator {
       return selfNav
-    }
-    else {
+    } else {
       var p = parent
       while let par = p {
         if let parentNav = par as? NavigationCoordinator {
           return parentNav
-        }
-        else {
+        } else {
           p = par.parent
         }
       }
@@ -193,14 +191,12 @@ open class Coordinator {
   public var splitViewCoordinator: SplitViewCoordinator? {
     if let selfSVC = self as? SplitViewCoordinator {
       return selfSVC
-    }
-    else {
+    } else {
       var p = parent
       while let par = p {
         if let parentSVC = par as? SplitViewCoordinator {
           return parentSVC
-        }
-        else {
+        } else {
           p = par.parent
         }
       }

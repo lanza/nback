@@ -4,8 +4,7 @@ extension NSManagedObjectContext {
   public func save(errorHandler: ((Error) -> Void)?) {
     do {
       try save()
-    }
-    catch {
+    } catch {
       errorHandler?(error)
     }
   }

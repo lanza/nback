@@ -232,21 +232,19 @@ public class HamburgerController: UIViewController {
 
     if pgr.state == .began {
       originalLeftConstraintConstant = leftConstraint.constant
-    }
-    else if pgr.state == .changed {
+    } else if pgr.state == .changed {
       if leftConstraint.constant < view.frame.width - 80 {
         leftConstraint.constant = originalLeftConstraintConstant + translation.x
-        rightConstraint.constant = originalLeftConstraintConstant + translation
+        rightConstraint.constant = originalLeftConstraintConstant
+          + translation
           .x
       }
-    }
-    else if pgr.state == .ended {
+    } else if pgr.state == .ended {
       UIView.animate(withDuration: 0.3) {
         if velocity.x > 0 {
           self.leftConstraint.constant = self.view.frame.width - 80
           self.rightConstraint.constant = self.view.frame.width - 80
-        }
-        else {
+        } else {
           self.leftConstraint.constant = 0
           self.rightConstraint.constant = 0
         }

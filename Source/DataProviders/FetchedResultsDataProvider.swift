@@ -54,8 +54,7 @@ class FetchedResultsDataProvider<Object: ManagedObject>: NSObject,
       withName: fetchedResultsController.cacheName
     )
     block(fetchedResultsController.fetchRequest)
-    do { try fetchedResultsController.performFetch() }
-    catch { fatalError() }
+    do { try fetchedResultsController.performFetch() } catch { fatalError() }
     delegate.dataProviderDidUpdate(updates: nil)
   }
 

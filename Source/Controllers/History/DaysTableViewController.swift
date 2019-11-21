@@ -6,8 +6,8 @@ protocol DaysTableViewControllerDelegate: AnyObject {
 }
 
 class DaysTableViewController: TableViewController<
-    FetchedResultsDataProvider<Day>, Day, DaysTableViewCell
-  >
+  FetchedResultsDataProvider<Day>, Day, DaysTableViewCell
+>
 {
   weak var delegate: DaysTableViewControllerDelegate!
 
@@ -74,11 +74,12 @@ class DaysTableViewController: TableViewController<
   override func tableView(_: UITableView, viewForHeaderInSection section: Int)
     -> UIView?
   {
-    let header = Bundle.main.loadNibNamed(
-      "HeaderView",
-      owner: self,
-      options: nil
-    )![0] as! HeaderView
+    let header =
+      Bundle.main.loadNibNamed(
+        "HeaderView",
+        owner: self,
+        options: nil
+      )![0] as! HeaderView
     let object = dataProvider.object(at: IndexPath(row: 0, section: section))
     header.dateLabel.text = Lets.headerDateFormatter.string(from: object.date)
     return header

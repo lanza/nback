@@ -5,7 +5,7 @@ targets:
   nBack:
     type: application
     platform: iOS
-    deploymentTarget: "11.0"
+    deploymentTarget: "13.0"
     sources: [Source]
     settings:
       configs:
@@ -23,10 +23,10 @@ targets:
   CoordinatorKit:
     type: framework
     platform: iOS
-    deploymentTarget: "11.0"
+    deploymentTarget: "13.0"
     sources: [CoordinatorKit]
   Reuse:
     type: framework
     platform: iOS
-    deploymentTarget: "11.0"
+    deploymentTarget: "13.0"
     sources: [Reuse]

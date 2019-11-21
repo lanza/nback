@@ -7,6 +7,7 @@ open class TabBarCoordinator: Coordinator {
   public var tabBarController: UITabBarController {
     return viewController as! UITabBarController
   }
+
   private let tabBarControllerDelegateProxy = TabBarControllerDelegateProxy()
 
   open override func loadViewController() {
@@ -101,6 +102,7 @@ public protocol TabBarCoordinatorDelegate: class {
     _ tabBarCoordinator: TabBarCoordinator,
     didSelect coordinator: Coordinator
   )
+
   func tabBarCoordinator(
     _ tabBarCoordinator: TabBarCoordinator,
     shouldSelect coordinator: Coordinator
@@ -111,6 +113,7 @@ extension TabBarCoordinatorDelegate {
     _ tabBarCoordinator: TabBarCoordinator,
     didSelect coordinator: Coordinator
   ) {}
+
   public func tabBarCoordinator(
     _ tabBarCoordinator: TabBarCoordinator,
     shouldSelect coordinator: Coordinator

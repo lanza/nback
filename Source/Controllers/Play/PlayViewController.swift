@@ -39,7 +39,7 @@ class PlayViewController: ViewController, HasContext {
     if let lastScoreString = defaults.value(forKey: Lets.lastScoreString)
       as? String,
       let lastResultString = defaults.value(forKey: Lets.lastResultString)
-      as? String
+        as? String
     {
       lastGameLabel.text = "Last Game \n" + lastResultString + "\n"
         + lastScoreString
@@ -171,8 +171,7 @@ class PlayViewController: ViewController, HasContext {
         levelAndTurnsStackView, rowsAndColumnsStackView,
         playGameButtonStackView,
       ]
-    }
-    else {
+    } else {
       let typeButtonsStackView = StackView(
         arrangedSubviews: [squareButton, numberButton, colorButton],
         axis: .horizontal,
@@ -238,9 +237,9 @@ class PlayViewController: ViewController, HasContext {
   @objc func secondsBetweenTurnsButtonTapped() {
     if GameSettings.shared.secondsBetweenTurns == Lets.secondsBetweenTurns.max {
       GameSettings.shared.secondsBetweenTurns = Lets.secondsBetweenTurns.min
-    }
-    else {
-      GameSettings.shared.secondsBetweenTurns += Lets.secondsBetweenTurns
+    } else {
+      GameSettings.shared.secondsBetweenTurns +=
+        Lets.secondsBetweenTurns
         .increment
     }
     secondsBetweenTurnsButton.set(title: Lets.secondsBetweenTurnsString)
@@ -251,15 +250,13 @@ class PlayViewController: ViewController, HasContext {
     if let index = types.firstIndex(of: type) {
       types.remove(at: index)
       GameSettings.shared.types = types
-    }
-    else {
+    } else {
       types.append(type)
       GameSettings.shared.types = types
     }
     if GameSettings.shared.types.count == 0 {
       playGameButton.isEnabled = false
-    }
-    else {
+    } else {
       playGameButton.isEnabled = true
     }
   }
@@ -285,8 +282,7 @@ class PlayViewController: ViewController, HasContext {
   @objc func levelButtonTapped() {
     if GameSettings.shared.level == Lets.levels.max {
       GameSettings.shared.level = Lets.levels.min
-    }
-    else {
+    } else {
       GameSettings.shared.level += Lets.levels.increment
     }
     levelButton.set(title: Lets.levelString)
@@ -295,8 +291,7 @@ class PlayViewController: ViewController, HasContext {
   @objc func turnsButtonTapped() {
     if GameSettings.shared.numberOfTurns == Lets.turns.max {
       GameSettings.shared.numberOfTurns = Lets.turns.min
-    }
-    else {
+    } else {
       GameSettings.shared.numberOfTurns += Lets.turns.increment
     }
     turnsButton.set(title: Lets.turnsString)
@@ -305,8 +300,7 @@ class PlayViewController: ViewController, HasContext {
   @objc func rowsButtonTapped() {
     if GameSettings.shared.rows == Lets.rows.max {
       GameSettings.shared.rows = Lets.rows.min
-    }
-    else {
+    } else {
       GameSettings.shared.rows += Lets.rows.increment
     }
     rowsButton.set(title: Lets.rowsString)
@@ -315,8 +309,7 @@ class PlayViewController: ViewController, HasContext {
   @objc func columnsButtonTapped() {
     if GameSettings.shared.columns == Lets.columns.max {
       GameSettings.shared.columns = Lets.columns.min
-    }
-    else {
+    } else {
       GameSettings.shared.columns += Lets.columns.increment
     }
     columnsButton.set(title: Lets.columnsString)
