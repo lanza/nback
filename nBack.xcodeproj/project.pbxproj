@@ -67,6 +67,7 @@
 		AECC1A387F133096F20A9BA5 /* ManagedObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192B7CD1DBFD8A8FC2FEFAD /* ManagedObjectType.swift */; };
 		AF156A36D70EF8C61BE1FA63 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067364762F4B8AA34C932DD /* AppCoordinator.swift */; };
 		B1AA98E121E1326C4E60E7F5 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B487F8DEBF57364086F38D2 /* Then.swift */; };
+		B3279B312386781F008E967F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3279B302386781F008E967F /* Assets.xcassets */; };
 		B38B2C41104942850D19BCD2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9120707CE63C51A9A5E95AD /* NavigationController.swift */; };
 		BC8B98106EB4E0723B5D3EDF /* TypeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917DAE4642FA97BEDCEEF17C /* TypeResult.swift */; };
 		C050893609C0F735DC526457 /* UIWindow+CoordinatorKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45C2DCA21994B0E2C8E220 /* UIWindow+CoordinatorKit.swift */; };
@@ -178,6 +179,7 @@
 		ACB67086D7758D366D1B4B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7DFDD7679B162355B2E11D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B3279B2F2386771D008E967F /* nBack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nBack.entitlements; sourceTree = "<group>"; };
+		B3279B302386781F008E967F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Other/Assets.xcassets; sourceTree = "<group>"; };
 		B392009AC18E3D5030E09950 /* HasX-Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HasX-Protocols.swift"; sourceTree = "<group>"; };
 		B7377218EC72CBC3EE19C12F /* UIResponder+FirstResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+FirstResponder.swift"; sourceTree = "<group>"; };
 		B90FA544E7595DB55C523CF0 /* PlayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCoordinator.swift; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 		C7DAF8A0184C0233BF52C29D = {
 			isa = PBXGroup;
 			children = (
+				B3279B302386781F008E967F /* Assets.xcassets */,
 				B3279B2F2386771D008E967F /* nBack.entitlements */,
 				958E10F343BF6C34DB496803 /* CoordinatorKit */,
 				6D6A733ECD741F740BC5EC98 /* Reuse */,
@@ -564,6 +567,7 @@
 			files = (
 				7ADE4E264C9C5851C2B90428 /* DaysTableViewCell.xib in Resources */,
 				A1F28931FD71341BC72CC40F /* GameResultCell.xib in Resources */,
+				B3279B312386781F008E967F /* Assets.xcassets in Resources */,
 				A9F0C8A1B468878A91193568 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
