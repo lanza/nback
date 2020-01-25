@@ -183,22 +183,6 @@ open class Coordinator {
     return nil
   }
 
-  public var splitViewCoordinator: SplitViewCoordinator? {
-    if let selfSVC = self as? SplitViewCoordinator {
-      return selfSVC
-    } else {
-      var p = parent
-      while let par = p {
-        if let parentSVC = par as? SplitViewCoordinator {
-          return parentSVC
-        } else {
-          p = par.parent
-        }
-      }
-    }
-    return nil
-  }
-
   public var tabBarCoordinator: TabBarCoordinator? {
     fatalError("NYI")
   }
