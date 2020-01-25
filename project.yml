@@ -13,11 +13,3 @@ targets:
           CUSTOM_BUILD_SETTING: my_debug_value
         release:
           CUSTOM_BUILD_SETTING: my_release_value
-    dependencies:
-      - target: CoordinatorKit
-        #- framework: Vendor/CoordinatorKit.framework
-  CoordinatorKit:
-    type: framework
-    platform: iOS
-    deploymentTarget: "13.0"
-    sources: [CoordinatorKit]
