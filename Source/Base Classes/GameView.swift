@@ -1,7 +1,7 @@
 import CoreGraphics
 import UIKit
 
-class GameView: View {
+class GameView: BaseView {
   var squareMatrix: SquareMatrix!
 
   var mainStackView: StackView!

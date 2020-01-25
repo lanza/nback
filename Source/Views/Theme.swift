@@ -25,7 +25,7 @@ struct Theme: HasWindow {
     let tableViewCellAppearance = UITableViewCell.appearance()
     tableViewCellAppearance.backgroundColor = Colors.background
 
-    let viewAppearance = View.appearance()
+    let viewAppearance = BaseView.appearance()
     viewAppearance.backgroundColor = Colors.background
   }
 

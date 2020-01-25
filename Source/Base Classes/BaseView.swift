@@ -1,6 +1,6 @@
 import UIKit
 
-class View: UIView {
+class BaseView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
   }

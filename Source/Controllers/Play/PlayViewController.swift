@@ -51,7 +51,7 @@ class PlayViewController: ViewController, HasContext {
   }
 
   override func loadView() {
-    view = View()
+    view = BaseView()
 
     lastGameLabel = Label()
     lastGameLabel.numberOfLines = 0
