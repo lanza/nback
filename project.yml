@@ -16,17 +16,8 @@ targets:
     dependencies:
       - target: CoordinatorKit
         #- framework: Vendor/CoordinatorKit.framework
-      - target: Reuse
-        #- framework: Vendor/Reuse.framework
-      # - sdk: Contacts.framework
-      # - sdk: libc++.tbd
   CoordinatorKit:
     type: framework
     platform: iOS
     deploymentTarget: "13.0"
     sources: [CoordinatorKit]
-  Reuse:
-    type: framework
-    platform: iOS
-    deploymentTarget: "13.0"
-    sources: [Reuse]
