@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct GameView2: View {
-    var body: some View {
-        Text("Hi")
+  var body: some View {
+    VStack {
+      Text("HI")
+      VStack {
+        HStack {
+          Text("HI")
+          Text("HI")
+          Text("HI")
+        }
+        HStack {
+          Text("HI")
+          Text("HI")
+          Text("HI")
+        }
+        HStack {
+          Text("HI")
+          Text("HI")
+          Text("HI")
+        }
+      }
     }
+  }
 }
 
 struct GameView2_Previews: PreviewProvider {
-    static var previews: some View {
-        GameView2()
-    }
+  static var previews: some View {
+    GameView2()
+  }
 }
