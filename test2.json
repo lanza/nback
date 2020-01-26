@@ -1,0 +1,4541 @@
+[
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 12,
+            "incorrect": 0
+          }
+        ],
+        "level": 3,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 497651940.61444402
+      }
+    ],
+    "day": 8,
+    "month": 10,
+    "date": 497651940.61444402
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 13,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 497762723.14358097
+      }
+    ],
+    "day": 9,
+    "month": 10,
+    "date": 497762723.14358097
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499070258.04593998
+      }
+    ],
+    "day": 25,
+    "month": 10,
+    "date": 499070258.04593998
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 2,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499199258.75633299
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 2,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499199056.751329
+      }
+    ],
+    "day": 26,
+    "month": 10,
+    "date": 499199056.751329
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 1,
+            "trueTrue": 2,
+            "ttype": 2,
+            "correct": 14,
+            "falseTrue": 0,
+            "falseFalse": 12,
+            "incorrect": 1
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499377403.57797199
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 12,
+            "incorrect": 0
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 2,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 12,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499383642.70016402
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 13,
+            "falseTrue": 2,
+            "falseFalse": 11,
+            "incorrect": 2
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 12,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 1,
+            "trueTrue": 0,
+            "ttype": 2,
+            "correct": 13,
+            "falseTrue": 1,
+            "falseFalse": 13,
+            "incorrect": 2
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499380431.38496
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 2,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 13,
+            "incorrect": 1
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499380633.97200602
+      }
+    ],
+    "day": 28,
+    "month": 10,
+    "date": 499377403.57797199
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 1,
+            "trueTrue": 0,
+            "ttype": 2,
+            "correct": 14,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 1
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499409810.69712597
+      }
+    ],
+    "day": 29,
+    "month": 10,
+    "date": 499409810.69712597
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 12,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 2,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499724004.67207599
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 2,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499674217.79553902
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 1,
+            "trueTrue": 1,
+            "ttype": 2,
+            "correct": 14,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 1
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499724912.71286899
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 4,
+            "trueFalse": 1,
+            "trueTrue": 4,
+            "ttype": 2,
+            "correct": 14,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 1
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499723227.340819
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 2,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 12,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499723613.388978
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 1,
+            "trueTrue": 1,
+            "ttype": 2,
+            "correct": 13,
+            "falseTrue": 1,
+            "falseFalse": 12,
+            "incorrect": 2
+          },
+          {
+            "matches": 5,
+            "trueFalse": 0,
+            "trueTrue": 5,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 12,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 499718848.33924198
+      }
+    ],
+    "day": 1,
+    "month": 11,
+    "date": 499674217.79553902
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 2,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 500345844.08770299
+      }
+    ],
+    "day": 8,
+    "month": 11,
+    "date": 500345844.08770299
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 2,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 12,
+            "incorrect": 1
+          },
+          {
+            "matches": 5,
+            "trueFalse": 0,
+            "trueTrue": 5,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 2,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 500931436.81000102
+      }
+    ],
+    "day": 15,
+    "month": 11,
+    "date": 500931436.81000102
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 501102318.58429599
+      }
+    ],
+    "day": 17,
+    "month": 11,
+    "date": 501102318.58429599
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 5,
+            "trueFalse": 0,
+            "trueTrue": 5,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 502182786.02082998
+      },
+      {
+        "numberOfTurns": 35,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 1,
+            "correct": 34,
+            "falseTrue": 1,
+            "falseFalse": 31,
+            "incorrect": 1
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 33,
+            "falseTrue": 2,
+            "falseFalse": 32,
+            "incorrect": 2
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 502183684.42971998
+      }
+    ],
+    "day": 30,
+    "month": 11,
+    "date": 502182786.02082998
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 1,
+            "correct": 40,
+            "falseTrue": 0,
+            "falseFalse": 37,
+            "incorrect": 0
+          },
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 37,
+            "falseTrue": 3,
+            "falseFalse": 36,
+            "incorrect": 3
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 502524925.55733699
+      }
+    ],
+    "day": 4,
+    "month": 12,
+    "date": 502524925.55733699
+  },
+  {
+    "year": 2016,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 6,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 0,
+            "correct": 37,
+            "falseTrue": 3,
+            "falseFalse": 34,
+            "incorrect": 3
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 39,
+            "falseTrue": 1,
+            "falseFalse": 37,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 502663819.599962
+      }
+    ],
+    "day": 5,
+    "month": 12,
+    "date": 502663819.599962
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 6,
+            "trueFalse": 0,
+            "trueTrue": 4,
+            "ttype": 0,
+            "correct": 38,
+            "falseTrue": 2,
+            "falseFalse": 34,
+            "incorrect": 2
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 40,
+            "falseTrue": 0,
+            "falseFalse": 39,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 506463910.31782198
+      }
+    ],
+    "day": 18,
+    "month": 1,
+    "date": 506463910.31782198
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 7,
+            "trueFalse": 0,
+            "trueTrue": 6,
+            "ttype": 1,
+            "correct": 39,
+            "falseTrue": 1,
+            "falseFalse": 33,
+            "incorrect": 1
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 40,
+            "falseTrue": 0,
+            "falseFalse": 39,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 506926504.15127701
+      }
+    ],
+    "day": 23,
+    "month": 1,
+    "date": 506926504.15127701
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 7,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 0,
+            "correct": 36,
+            "falseTrue": 4,
+            "falseFalse": 33,
+            "incorrect": 4
+          },
+          {
+            "matches": 3,
+            "trueFalse": 1,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 38,
+            "falseTrue": 1,
+            "falseFalse": 36,
+            "incorrect": 2
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 506941507.84281403
+      }
+    ],
+    "day": 24,
+    "month": 1,
+    "date": 506941507.84281403
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 4,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 38,
+            "falseTrue": 2,
+            "falseFalse": 36,
+            "incorrect": 2
+          },
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 38,
+            "falseTrue": 2,
+            "falseFalse": 36,
+            "incorrect": 2
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 507114849.45168501
+      }
+    ],
+    "day": 26,
+    "month": 1,
+    "date": 507114849.45168501
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 5,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 36,
+            "falseTrue": 4,
+            "falseFalse": 35,
+            "incorrect": 4
+          },
+          {
+            "matches": 1,
+            "trueFalse": 1,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 38,
+            "falseTrue": 1,
+            "falseFalse": 38,
+            "incorrect": 2
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 507189604.59616899
+      }
+    ],
+    "day": 27,
+    "month": 1,
+    "date": 507189604.59616899
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 6,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 34,
+            "falseTrue": 6,
+            "falseFalse": 34,
+            "incorrect": 6
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 38,
+            "falseTrue": 2,
+            "falseFalse": 38,
+            "incorrect": 2
+          }
+        ],
+        "level": 6,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 510378924.42207497
+      }
+    ],
+    "day": 4,
+    "month": 3,
+    "date": 510378924.42207497
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 4,
+            "ttype": 0,
+            "correct": 40,
+            "falseTrue": 0,
+            "falseFalse": 36,
+            "incorrect": 0
+          },
+          {
+            "matches": 8,
+            "trueFalse": 0,
+            "trueTrue": 6,
+            "ttype": 1,
+            "correct": 38,
+            "falseTrue": 2,
+            "falseFalse": 32,
+            "incorrect": 2
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 512465326.02022499
+      }
+    ],
+    "day": 29,
+    "month": 3,
+    "date": 512465326.02022499
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 8,
+            "trueFalse": 0,
+            "trueTrue": 7,
+            "ttype": 0,
+            "correct": 39,
+            "falseTrue": 1,
+            "falseFalse": 32,
+            "incorrect": 1
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 39,
+            "falseTrue": 1,
+            "falseFalse": 38,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 527293368.97103602
+      }
+    ],
+    "day": 16,
+    "month": 9,
+    "date": 527293368.97103602
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 40,
+            "falseTrue": 0,
+            "falseFalse": 38,
+            "incorrect": 0
+          },
+          {
+            "matches": 8,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 34,
+            "falseTrue": 6,
+            "falseFalse": 32,
+            "incorrect": 6
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 528022323.40507299
+      }
+    ],
+    "day": 25,
+    "month": 9,
+    "date": 528022323.40507299
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 3,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 5,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 35,
+            "falseTrue": 5,
+            "falseFalse": 35,
+            "incorrect": 5
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 528251775.663634
+      },
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 37,
+            "falseTrue": 3,
+            "falseFalse": 37,
+            "incorrect": 3
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 528251940.676139
+      }
+    ],
+    "day": 27,
+    "month": 9,
+    "date": 528251775.663634
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 8,
+            "falseTrue": 2,
+            "falseFalse": 8,
+            "incorrect": 2
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 8,
+            "falseTrue": 2,
+            "falseFalse": 8,
+            "incorrect": 2
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 528630660.48281699
+      },
+      {
+        "numberOfTurns": 40,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 39,
+            "falseTrue": 1,
+            "falseFalse": 37,
+            "incorrect": 1
+          },
+          {
+            "matches": 5,
+            "trueFalse": 0,
+            "trueTrue": 5,
+            "ttype": 0,
+            "correct": 40,
+            "falseTrue": 0,
+            "falseFalse": 35,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 528630528.93501198
+      }
+    ],
+    "day": 2,
+    "month": 10,
+    "date": 528630528.93501198
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 528709562.47011101
+      }
+    ],
+    "day": 3,
+    "month": 10,
+    "date": 528709562.47011101
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 531375136.11079597
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 13,
+            "falseTrue": 2,
+            "falseFalse": 12,
+            "incorrect": 2
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 13,
+            "falseTrue": 2,
+            "falseFalse": 12,
+            "incorrect": 2
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 531374554.19704199
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 13,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 531374476.86570901
+      }
+    ],
+    "day": 2,
+    "month": 11,
+    "date": 531374476.86570901
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 3,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 532248837.44627202
+      }
+    ],
+    "day": 12,
+    "month": 11,
+    "date": 532248837.44627202
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 532493689.41686898
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 532493800.97326899
+      }
+    ],
+    "day": 15,
+    "month": 11,
+    "date": 532493689.41686898
+  },
+  {
+    "year": 2017,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 8,
+            "incorrect": 1
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 532857279.17423499
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 13,
+            "falseTrue": 2,
+            "falseFalse": 13,
+            "incorrect": 2
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 532856454.20777798
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 8,
+            "falseTrue": 2,
+            "falseFalse": 8,
+            "incorrect": 2
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 532857709.17585802
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 13,
+            "incorrect": 1
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 13,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 532856527.19298702
+      }
+    ],
+    "day": 20,
+    "month": 11,
+    "date": 532856454.20777798
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 537746137.56757903
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 537746230.28263795
+      }
+    ],
+    "day": 15,
+    "month": 1,
+    "date": 537746137.56757903
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 8,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 538559180.49184704
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 8,
+            "incorrect": 1
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 538559297.75611496
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 7,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 538559237.95228195
+      }
+    ],
+    "day": 24,
+    "month": 1,
+    "date": 538559180.49184704
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 8,
+            "falseTrue": 2,
+            "falseFalse": 8,
+            "incorrect": 2
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 540197658.48067701
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 8,
+            "incorrect": 1
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 540197717.48739803
+      }
+    ],
+    "day": 12,
+    "month": 2,
+    "date": 540197658.48067701
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 4,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 6,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 8,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 540536433.56019604
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 8,
+            "incorrect": 1
+          },
+          {
+            "matches": 2,
+            "trueFalse": 1,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 9,
+            "falseTrue": 0,
+            "falseFalse": 7,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 540535949.032125
+      }
+    ],
+    "day": 16,
+    "month": 2,
+    "date": 540535949.032125
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 7,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 541807727.64976394
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 7,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 541808020.46464705
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 541807896.66547
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 8,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 541807782.95620203
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 8,
+            "falseTrue": 2,
+            "falseFalse": 8,
+            "incorrect": 2
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 541807955.59889197
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 7,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 541807837.28451097
+      }
+    ],
+    "day": 3,
+    "month": 3,
+    "date": 541807727.64976394
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 547702195.33113694
+      }
+    ],
+    "day": 10,
+    "month": 5,
+    "date": 547702195.33113694
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 548827023.01543701
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 548826962.24898601
+      }
+    ],
+    "day": 23,
+    "month": 5,
+    "date": 548826962.24898601
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 6,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 549058547.76295602
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          },
+          {
+            "matches": 2,
+            "trueFalse": 1,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 7,
+            "falseTrue": 2,
+            "falseFalse": 7,
+            "incorrect": 3
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 549058489.50026703
+      }
+    ],
+    "day": 26,
+    "month": 5,
+    "date": 549058489.50026703
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 7,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 558346579.09198499
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 558346518.50784504
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 558346638.051893
+      }
+    ],
+    "day": 11,
+    "month": 9,
+    "date": 558346518.50784504
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 560055849.89225304
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 8,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 1,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 0,
+            "falseFalse": 8,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 560056038.88383305
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 560055910.37441897
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 8,
+            "incorrect": 1
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 560055978.56976902
+      }
+    ],
+    "day": 30,
+    "month": 9,
+    "date": 560055849.89225304
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 560239198.49007702
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 560239139.24800205
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 8,
+            "incorrect": 1
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 560239384.99058497
+      }
+    ],
+    "day": 2,
+    "month": 10,
+    "date": 560239139.24800205
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 562196431.26373398
+      }
+    ],
+    "day": 25,
+    "month": 10,
+    "date": 562196431.26373398
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 8,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566110227.56171298
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566113210.74451196
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566086322.72508001
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 6,
+            "falseTrue": 4,
+            "falseFalse": 6,
+            "incorrect": 4
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566115390.75269902
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 8,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566086689.26259995
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 1,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 1
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566088196.02186894
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566106386.68521905
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 8,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566108536.10666394
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 8,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566086249.237324
+      }
+    ],
+    "day": 9,
+    "month": 12,
+    "date": 566086249.237324
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 1,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 8,
+            "falseTrue": 1,
+            "falseFalse": 8,
+            "incorrect": 2
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566207228.88784397
+      }
+    ],
+    "day": 10,
+    "month": 12,
+    "date": 566207228.88784397
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 566607548.47178304
+      }
+    ],
+    "day": 15,
+    "month": 12,
+    "date": 566607548.47178304
+  },
+  {
+    "year": 2018,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 567932712.62199295
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 567932489.87377703
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 567932430.46468997
+      }
+    ],
+    "day": 31,
+    "month": 12,
+    "date": 567932430.46468997
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 568239356.63606203
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 4,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 6,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 568236833.29206502
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 1,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 9,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 1
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 568236778.02844596
+      }
+    ],
+    "day": 3,
+    "month": 1,
+    "date": 568236778.02844596
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 568418929.43236005
+      }
+    ],
+    "day": 5,
+    "month": 1,
+    "date": 568418929.43236005
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 571538808.11447406
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 7,
+            "incorrect": 1
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 8,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 571538747.78050804
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 1,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 9,
+            "falseTrue": 0,
+            "falseFalse": 8,
+            "incorrect": 1
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 9,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 571538692.63919306
+      }
+    ],
+    "day": 10,
+    "month": 2,
+    "date": 571538692.63919306
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 7,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 572857714.38152003
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          },
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 8,
+            "falseTrue": 2,
+            "falseFalse": 6,
+            "incorrect": 2
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 572857289.75413096
+      },
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 9,
+            "falseTrue": 1,
+            "falseFalse": 8,
+            "incorrect": 1
+          },
+          {
+            "matches": 1,
+            "trueFalse": 1,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 8,
+            "falseTrue": 1,
+            "falseFalse": 8,
+            "incorrect": 2
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 572857234.66182601
+      }
+    ],
+    "day": 25,
+    "month": 2,
+    "date": 572857234.66182601
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 10,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 9,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 10,
+            "falseTrue": 0,
+            "falseFalse": 10,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 585303046.49333298
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 13,
+            "incorrect": 1
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 14,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 585303295.66259694
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 585303119.99881101
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 14,
+            "incorrect": 1
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 585303375.25718498
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 1,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 12,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 585303217.268556
+      }
+    ],
+    "day": 20,
+    "month": 7,
+    "date": 585303046.49333298
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 13,
+            "incorrect": 1
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 585461416.11708903
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 13,
+            "falseTrue": 2,
+            "falseFalse": 13,
+            "incorrect": 2
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 585461337.712991
+      }
+    ],
+    "day": 21,
+    "month": 7,
+    "date": 585461337.712991
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 12,
+            "falseTrue": 3,
+            "falseFalse": 12,
+            "incorrect": 3
+          },
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 13,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 587872618.26597297
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 12,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 587872539.81668496
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 587864939.72369301
+      }
+    ],
+    "day": 18,
+    "month": 8,
+    "date": 587864939.72369301
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 12,
+            "incorrect": 1
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 13,
+            "falseTrue": 2,
+            "falseFalse": 12,
+            "incorrect": 2
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 596095774.00764704
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 596095594.14193404
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 12,
+            "falseTrue": 3,
+            "falseFalse": 12,
+            "incorrect": 3
+          },
+          {
+            "matches": 1,
+            "trueFalse": 1,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 14,
+            "falseTrue": 0,
+            "falseFalse": 13,
+            "incorrect": 1
+          }
+        ],
+        "level": 5,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 596095672.66403794
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 13,
+            "falseTrue": 2,
+            "falseFalse": 13,
+            "incorrect": 2
+          },
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 2,
+            "ttype": 0,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 12,
+            "incorrect": 1
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 596095517.14069104
+      }
+    ],
+    "day": 21,
+    "month": 11,
+    "date": 596095517.14069104
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 14,
+            "incorrect": 1
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 596789757.05404198
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 5,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 0,
+            "correct": 13,
+            "falseTrue": 2,
+            "falseFalse": 10,
+            "incorrect": 2
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 596789683.50755894
+      }
+    ],
+    "day": 30,
+    "month": 11,
+    "date": 596789683.50755894
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 4,
+            "trueFalse": 0,
+            "trueTrue": 3,
+            "ttype": 1,
+            "correct": 14,
+            "falseTrue": 1,
+            "falseFalse": 11,
+            "incorrect": 1
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 597130608.99007106
+      }
+    ],
+    "day": 3,
+    "month": 12,
+    "date": 597130608.99007106
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 597232715.098544
+      }
+    ],
+    "day": 5,
+    "month": 12,
+    "date": 597232715.098544
+  },
+  {
+    "year": 2019,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 3,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 13,
+            "falseTrue": 2,
+            "falseFalse": 12,
+            "incorrect": 2
+          },
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 598085548.54836905
+      }
+    ],
+    "day": 14,
+    "month": 12,
+    "date": 598085548.54836905
+  },
+  {
+    "year": 2020,
+    "results": [
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 2,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 13,
+            "falseTrue": 2,
+            "falseFalse": 13,
+            "incorrect": 2
+          },
+          {
+            "matches": 2,
+            "trueFalse": 1,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 13,
+            "falseTrue": 1,
+            "falseFalse": 12,
+            "incorrect": 2
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 600553792.52274299
+      }
+    ],
+    "day": 12,
+    "month": 1,
+    "date": 600553792.52274299
+  },
+  {
+    "year": 2020,
+    "results": [
+      {
+        "numberOfTurns": 5,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 5,
+            "falseTrue": 0,
+            "falseFalse": 4,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 5,
+            "falseTrue": 0,
+            "falseFalse": 5,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 601697034.580158
+      },
+      {
+        "numberOfTurns": 5,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 5,
+            "falseTrue": 0,
+            "falseFalse": 5,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 5,
+            "falseTrue": 0,
+            "falseFalse": 5,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 601696304.06688404
+      },
+      {
+        "numberOfTurns": 5,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 0,
+            "correct": 5,
+            "falseTrue": 0,
+            "falseFalse": 4,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 5,
+            "falseTrue": 0,
+            "falseFalse": 5,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 601697184.36884499
+      },
+      {
+        "numberOfTurns": 5,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 5,
+            "falseTrue": 0,
+            "falseFalse": 5,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 1,
+            "correct": 5,
+            "falseTrue": 0,
+            "falseFalse": 5,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 601696816.14159799
+      },
+      {
+        "numberOfTurns": 15,
+        "secondsBetweenTurns": 3.5,
+        "columns": 3,
+        "types": [
+          {
+            "matches": 1,
+            "trueFalse": 0,
+            "trueTrue": 1,
+            "ttype": 1,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 14,
+            "incorrect": 0
+          },
+          {
+            "matches": 0,
+            "trueFalse": 0,
+            "trueTrue": 0,
+            "ttype": 0,
+            "correct": 15,
+            "falseTrue": 0,
+            "falseFalse": 15,
+            "incorrect": 0
+          }
+        ],
+        "level": 4,
+        "rows": 3,
+        "squareHighlightTime": 1,
+        "date": 601694448.88508999
+      }
+    ],
+    "day": 25,
+    "month": 1,
+    "date": 601694448.88508999
+  }
+]
