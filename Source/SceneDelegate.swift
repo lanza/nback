@@ -15,11 +15,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // `window` property will automatically be initialized and attached to the
     // scene.  This delegate does not imply the connecting scene or session are
     // new (see `application:configurationForConnectingSceneSession` instead).
-    
+
     if !AppDelegate.main.useSwiftUI {
       self.window = AppDelegate.main.window
       window?.windowScene = scene as? UIWindowScene
       AppDelegate.main.window?.makeKeyAndVisible()
+
+      UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
+        .forEach { windowScene in
+          windowScene.sizeRestrictions?.minimumSize = CGSize(
+            width: 1280, height: 800)
+          windowScene.sizeRestrictions?.maximumSize = CGSize(
+            width: 1280, height: 800)
+        }
       return
     }
 
@@ -35,6 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       self.window = window
       window.makeKeyAndVisible()
     }
+
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {
@@ -44,6 +53,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // the next time the scene connects.  The scene may re-connect later, as its
     // session was not neccessarily discarded (see
     // `application:didDiscardSceneSessions` instead).
+
+    CoreData.shared.context.save(errorHandler: nil)
   }
 
   func sceneDidBecomeActive(_ scene: UIScene) {
@@ -68,6 +79,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // Use this method to save data, release shared resources, and store enough
     // scene-specific state information to restore the scene back to its current
     // state.
+
+    CoreData.shared.context.save(errorHandler: nil)
   }
 
 }

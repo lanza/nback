@@ -53,6 +53,7 @@
 		AECC1A387F133096F20A9BA5 /* ManagedObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192B7CD1DBFD8A8FC2FEFAD /* ManagedObjectType.swift */; };
 		AF156A36D70EF8C61BE1FA63 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067364762F4B8AA34C932DD /* AppCoordinator.swift */; };
 		B31A904F23DD127700BEDC99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A904E23DD127700BEDC99 /* SceneDelegate.swift */; };
+		B31A909223DD1DDA00BEDC99 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A909123DD1DDA00BEDC99 /* CloudKit.framework */; };
 		B38B2C41104942850D19BCD2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9120707CE63C51A9A5E95AD /* NavigationController.swift */; };
 		BC8B98106EB4E0723B5D3EDF /* TypeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917DAE4642FA97BEDCEEF17C /* TypeResult.swift */; };
 		C0C8D81A751B4B4BCA8032A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F127490226991F1EE470997F /* ViewController.swift */; };
@@ -98,7 +99,7 @@
 		5C150F43B9EC9F6F6AEBDDB1 /* DaysTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTableViewCell.swift; sourceTree = "<group>"; };
 		6117B4A0A4635AD130669E66 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		6ED3F164270C12311B3DA685 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		6F9BAB6226BE60D9178F8403 /* nBack.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = nBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F9BAB6226BE60D9178F8403 /* nBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73AA63050F4E20782E113A85 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		7569435FFF1B5FEB28BD4805 /* ManagedObjectObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectObserver.swift; sourceTree = "<group>"; };
 		804B61A4255B4946DE816EA3 /* GameResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameResultCell.xib; sourceTree = "<group>"; };
@@ -113,6 +114,8 @@
 		A83CA9AA6E1D7EB02DE7D209 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		AC85E8FA51B142448AD93DED /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B31A904E23DD127700BEDC99 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B31A908F23DD1D8B00BEDC99 /* nBack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nBack.entitlements; sourceTree = "<group>"; };
+		B31A909123DD1DDA00BEDC99 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B392009AC18E3D5030E09950 /* HasX-Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HasX-Protocols.swift"; sourceTree = "<group>"; };
 		B90FA544E7595DB55C523CF0 /* PlayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCoordinator.swift; sourceTree = "<group>"; };
 		B9120707CE63C51A9A5E95AD /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -139,6 +142,17 @@
 		FB6DA5C32B1F624D7204D206 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		FF9974577B318649FA371BEE /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B31A909323DD1DDA00BEDC99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B31A909223DD1DDA00BEDC99 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0A68DA0FF9CC39A11094A2E7 /* ViewModel */ = {
@@ -294,6 +308,14 @@
 			path = TableViewDataSources;
 			sourceTree = "<group>";
 		};
+		B31A909023DD1DDA00BEDC99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B31A909123DD1DDA00BEDC99 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BAA5D5783B2313E7058A558B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,8 +345,10 @@
 		C7DAF8A0184C0233BF52C29D = {
 			isa = PBXGroup;
 			children = (
+				B31A908F23DD1D8B00BEDC99 /* nBack.entitlements */,
 				3DC597027BF9B791620FA483 /* Source */,
 				E28553F2B95A871A585266FA /* Products */,
+				B31A909023DD1DDA00BEDC99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -365,6 +389,7 @@
 			buildPhases = (
 				6673D47513361E7F209C2BB2 /* Sources */,
 				8050FEA3F9829108F69B0D87 /* Resources */,
+				B31A909323DD1DDA00BEDC99 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -499,8 +524,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = nBack.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CUSTOM_BUILD_SETTING = my_release_value;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = 72MNHNDUNH;
 				INFOPLIST_FILE = Source/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -509,6 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBack;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -517,8 +546,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = nBack.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CUSTOM_BUILD_SETTING = my_debug_value;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = 72MNHNDUNH;
 				INFOPLIST_FILE = Source/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -527,6 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.lanza.nBack;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;

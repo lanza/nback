@@ -1,12 +1,29 @@
 import CoreData
 
-public class Day: ManagedObject {
+public class Day: ManagedObject, Encodable {
   @NSManaged public var date: Date
   @NSManaged public var day: Int16
   @NSManaged public var month: Int16
   @NSManaged public var year: Int16
 
   @NSManaged public var results: Set<GameResult>!
+
+  private enum CodingKeys: String, CodingKey {
+    case date
+    case day
+    case month
+    case year
+    case results
+  }
+
+  public func encode(to encoder: Encoder) throws {
+    var container = encoder.container(keyedBy: CodingKeys.self)
+    try container.encode(date, forKey: .date)
+    try container.encode(day, forKey: .day)
+    try container.encode(month, forKey: .month)
+    try container.encode(year, forKey: .year)
+    try container.encode(results, forKey: .results)
+  }
 
   static func findOrCreateDay(
     in context: NSManagedObjectContext,

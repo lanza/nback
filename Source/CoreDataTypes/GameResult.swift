@@ -1,6 +1,6 @@
 import CoreData
 
-public class GameResult: ManagedObject {
+public class GameResult: ManagedObject, Encodable {
   @NSManaged public var date: Date
   @NSManaged public var level: Int16
   @NSManaged public var numberOfTurns: Int16
@@ -11,6 +11,30 @@ public class GameResult: ManagedObject {
 
   @NSManaged public var dayPlayed: Day?
   @NSManaged public var types: Set<TypeResult>
+
+  private enum CodingKeys: String, CodingKey {
+    case date
+    case level
+    case numberOfTurns
+    case secondsBetweenTurns
+    case rows
+    case columns
+    case squareHighlightTime
+    case types
+  }
+
+  public func encode(to encoder: Encoder) throws {
+    var container = encoder.container(keyedBy: CodingKeys.self)
+
+    try container.encode(date, forKey: .date)
+    try container.encode(level, forKey: .level)
+    try container.encode(numberOfTurns, forKey: .numberOfTurns)
+    try container.encode(secondsBetweenTurns, forKey: .secondsBetweenTurns)
+    try container.encode(rows, forKey: .rows)
+    try container.encode(columns, forKey: .columns)
+    try container.encode(squareHighlightTime, forKey: .squareHighlightTime)
+    try container.encode(types, forKey: .types)
+  }
 
   var totalCorrect: Int {
     return Int(types.map { $0.correct }.reduce(0) { $0 + $1 })
