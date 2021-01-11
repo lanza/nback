@@ -7,7 +7,7 @@ struct Theme: HasWindow {
     navBarAppearance.titleTextAttributes =
       convertToOptionalNSAttributedStringKeyDictionary(
         [
-          NSAttributedString.Key.foregroundColor.rawValue: Colors.tint,
+          NSAttributedString.Key.foregroundColor.rawValue: Colors.tint
         ]
       )
     navBarAppearance.barStyle = .black
@@ -30,16 +30,19 @@ struct Theme: HasWindow {
   }
 
   struct Colors {
-    static let secondary = #colorLiteral(red: 0.1411764771, green: 0.3960784376,
-    blue: 0.5647059083, alpha: 1)
+    static let secondary = #colorLiteral(
+      red: 0.1411764771, green: 0.3960784376,
+      blue: 0.5647059083, alpha: 1)
 
-    static let primary = #colorLiteral(red: 0.2549019754, green: 0.2745098174,
-    blue: 0.3019607961, alpha: 1)
+    static let primary = #colorLiteral(
+      red: 0.2549019754, green: 0.2745098174,
+      blue: 0.3019607961, alpha: 1)
 
     static let white = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 
-    static let gray = #colorLiteral(red: 0.8039215803, green: 0.8039215803,
-    blue: 0.8039215803, alpha: 1)
+    static let gray = #colorLiteral(
+      red: 0.8039215803, green: 0.8039215803,
+      blue: 0.8039215803, alpha: 1)
 
     static let tint = Colors.white
     static let normalSquare = Colors.primary

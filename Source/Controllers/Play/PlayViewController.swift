@@ -41,7 +41,8 @@ class PlayViewController: ViewController, HasContext {
       let lastResultString = defaults.value(forKey: Lets.lastResultString)
         as? String
     {
-      lastGameLabel.text = "Last Game \n" + lastResultString + "\n"
+      lastGameLabel.text =
+        "Last Game \n" + lastResultString + "\n"
         + lastScoreString
     }
   }

@@ -22,7 +22,8 @@ import UIKit
 //    }
 // }
 
-class AnyDataProviderDelegate<Object: ManagedObject>: FetchedResultsDataProviderDelegate
+class AnyDataProviderDelegate<Object: ManagedObject>:
+  FetchedResultsDataProviderDelegate
 {
   var dataProviderDidUpdate: (([DataProviderUpdate<Object>]?) -> Void)?
 

@@ -164,7 +164,8 @@ class GameView: BaseView {
     )
 
     let boardWidth = frame.width - 40
-    let boardHeight = frame.height - (8 + 16 + 8 + 8)
+    let boardHeight =
+      frame.height - (8 + 16 + 8 + 8)
       - quitGameButton.frame
       .height - buttonStackView.frame.height
 

@@ -15,7 +15,8 @@ class DayTableViewDataSource: TableViewDataSource<
 >
 {}
 
-class TableViewDataSource<Source: DataProvider, Cell: UITableViewCell>: NSObject,
+class TableViewDataSource<Source: DataProvider, Cell: UITableViewCell>:
+  NSObject,
   UITableViewDataSource
 where Cell: ConfigurableCell, Cell.Object == Source.Object {
   required init(tableView: UITableView, dataProvider: Source) {

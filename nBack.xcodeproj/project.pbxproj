@@ -14,11 +14,9 @@
 		182CDBEF4B349E92B1DF234E /* ManagedObjectObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7569435FFF1B5FEB28BD4805 /* ManagedObjectObserver.swift */; };
 		184B117D109238F4C1549160 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327A416B7FEF7C4BAD3EB4C0 /* GameType.swift */; };
 		228263356EF3CD9FDCC9D2B0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237718D1A5E1D43BF4855520 /* BaseView.swift */; };
-		2820244DED04FAA2DE77CFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93A2A82810D11E91FE283EC6 /* Assets.xcassets */; };
 		28B3FF234A81E777226C02C8 /* UIViewController+CoordinatorKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65887D1B28CBCC513CDE63 /* UIViewController+CoordinatorKit.swift */; };
 		290A6DB6DB8F1D447657F885 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5777D9C339A1E5B6882BB237 /* GameView.swift */; };
 		2F2FCFC0F55F52A5A61A6AFF /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923845B41328817494F2E44 /* PlayViewController.swift */; };
-		30C5345F27106C2B171CF8E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038869FB196B8F14BCAA7B83 /* LaunchScreen.storyboard */; };
 		3742073D2DF6A75752F818C9 /* DaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C150F43B9EC9F6F6AEBDDB1 /* DaysTableViewCell.swift */; };
 		3D667B483D4876E209D1A063 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3F164270C12311B3DA685 /* Color.swift */; };
 		3E7E00F754FF0E89F37282C7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C565418232274FAC67B71 /* HeaderView.swift */; };
@@ -55,6 +53,8 @@
 		B31A904F23DD127700BEDC99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A904E23DD127700BEDC99 /* SceneDelegate.swift */; };
 		B31A909223DD1DDA00BEDC99 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A909123DD1DDA00BEDC99 /* CloudKit.framework */; };
 		B38B2C41104942850D19BCD2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9120707CE63C51A9A5E95AD /* NavigationController.swift */; };
+		B3B2BBCF25AD04A0004BBA9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B2BBCE25AD04A0004BBA9B /* Assets.xcassets */; };
+		B3B2BBD325AD04C2004BBA9B /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B3B2BBD225AD04C2004BBA9B /* Base.lproj */; };
 		BC8B98106EB4E0723B5D3EDF /* TypeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917DAE4642FA97BEDCEEF17C /* TypeResult.swift */; };
 		C0C8D81A751B4B4BCA8032A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F127490226991F1EE470997F /* ViewController.swift */; };
 		C6FEA32999C71A90102D04B4 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A486EF7A9D277AD005E4D9 /* ConfigurableCell.swift */; };
@@ -107,7 +107,6 @@
 		87D58A6D146237F11F01A8B2 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		9067364762F4B8AA34C932DD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		917DAE4642FA97BEDCEEF17C /* TypeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeResult.swift; sourceTree = "<group>"; };
-		93A2A82810D11E91FE283EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95EA34CC552CA5BB50B240D2 /* GameResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultCell.swift; sourceTree = "<group>"; };
 		9E639A4E2B4611BD483308DD /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		A7A486EF7A9D277AD005E4D9 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
@@ -117,10 +116,11 @@
 		B31A908F23DD1D8B00BEDC99 /* nBack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nBack.entitlements; sourceTree = "<group>"; };
 		B31A909123DD1DDA00BEDC99 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B392009AC18E3D5030E09950 /* HasX-Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HasX-Protocols.swift"; sourceTree = "<group>"; };
+		B3B2BBCE25AD04A0004BBA9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Other/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		B3B2BBD225AD04C2004BBA9B /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base.lproj; path = Other/Base.lproj; sourceTree = SOURCE_ROOT; };
 		B90FA544E7595DB55C523CF0 /* PlayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCoordinator.swift; sourceTree = "<group>"; };
 		B9120707CE63C51A9A5E95AD /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		C080C8A0D12CAA761C675706 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
-		C75E63B456D09D6A98B3F463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C82B00B1F79A546AE4D25FE9 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CC21D241CC075E8CA974F26C /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		CCEC4E32DDB22D0BEF6C756B /* DaysTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTableViewController.swift; sourceTree = "<group>"; };
@@ -294,8 +294,8 @@
 		9BC0B175A9394E1097583C78 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				93A2A82810D11E91FE283EC6 /* Assets.xcassets */,
-				038869FB196B8F14BCAA7B83 /* LaunchScreen.storyboard */,
+				B3B2BBD225AD04C2004BBA9B /* Base.lproj */,
+				B3B2BBCE25AD04A0004BBA9B /* Assets.xcassets */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -387,6 +387,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83F7566B9BCE7E4B710229D9 /* Build configuration list for PBXNativeTarget "nBack" */;
 			buildPhases = (
+				B3B2BBCC25AD0453004BBA9B /* ShellScript */,
 				6673D47513361E7F209C2BB2 /* Sources */,
 				8050FEA3F9829108F69B0D87 /* Resources */,
 				B31A909323DD1DDA00BEDC99 /* Frameworks */,
@@ -430,15 +431,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2820244DED04FAA2DE77CFEA /* Assets.xcassets in Resources */,
 				7ADE4E264C9C5851C2B90428 /* DaysTableViewCell.xib in Resources */,
 				A1F28931FD71341BC72CC40F /* GameResultCell.xib in Resources */,
 				A9F0C8A1B468878A91193568 /* HeaderView.xib in Resources */,
-				30C5345F27106C2B171CF8E7 /* LaunchScreen.storyboard in Resources */,
+				B3B2BBCF25AD04A0004BBA9B /* Assets.xcassets in Resources */,
+				B3B2BBD325AD04C2004BBA9B /* Base.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B3B2BBCC25AD0453004BBA9B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/lanza/.local/bin/xcode-format\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6673D47513361E7F209C2BB2 /* Sources */ = {
@@ -507,17 +528,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		038869FB196B8F14BCAA7B83 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C75E63B456D09D6A98B3F463 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2AEA8C48AB7B9FDA7F776FE2 /* Release */ = {
